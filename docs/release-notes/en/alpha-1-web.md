@@ -21,11 +21,12 @@ comes as an optional package.
 
 **Tested:** the packages pass the mandatory test on a fresh Ubuntu 26.04,
 with login on the text console and through GDM. Alongside Ubuntu Desktop they
-can be installed and removed again; afterwards the installed packages are the
-same as before.
+can be installed and removed again; afterwards Querencia is removed completely
+and on Ubuntu Desktop the package list is as before.
 
-**Installation:** follows with the APT repository at
-`dl.querencialinux.org/apt`. Until then there is no download.
+**Installation:** from the signed APT repository at `dl.querencialinux.org/apt`;
+add the repository as described on the Alpha page, then `sudo apt install
+querencia-desktop`. Tested on 21 October 2026 on a fresh Ubuntu 26.04.
 
 **Known limitations:** on Ubuntu Server, Querencia Software needs
 NetworkManager as the netplan renderer, otherwise it cannot install

@@ -56,10 +56,10 @@ active in the development environment the same evening.
 
 | Package | Version | Contents |
 |---|---|---|
-| querencia-desktop | 0.1.0~alpha2-5 | metapackage: pulls in all components |
+| querencia-desktop | 0.1.0~alpha2-6 | metapackage: pulls in all components |
 | labwc | 0.9.8-0querencia4 | backport of the window manager (Ubuntu 26.04 ships 0.9.3) |
-| querencia-session | 0.1.0~alpha6-1 | session starter 2.1, labwc defaults, portal and gsettings defaults |
-| querencia-shell | 0.1.0~alpha5-1 | panel, desktop, volume, network, keyboard shortcut overview (Super+?), theme Querencia-Klassisch, backgrounds |
+| querencia-session | 0.1.0~alpha7-1 | session starter 2.1, labwc defaults, portal and gsettings defaults |
+| querencia-shell | 0.1.0~alpha6-1 | panel, desktop, volume, network, keyboard shortcut overview (Super+?), theme Querencia-Klassisch, backgrounds |
 | querencia-sitzung | 0.1.3-2 | Session 0.1.3: lock screen, session dialog, polkit agent |
 | querencia-benachrichtigungen | 0.2.0-1 | Notifications 0.2.0 with notification center |
 | querencia-einstellungen | 0.1.0-1 | System Settings 0.1.0 |
@@ -94,20 +94,39 @@ querencia-shell: open.**
 | Querencia Files | state QF-0p | Querencia icon instead of the Strata logo in the About dialog |
 | Image Viewer | 0.2.3 | info window keeps its title bar when opened a second time |
 | System Settings | 0.1.1 | own backup files with a limit, resetting leaves no traces in the labwc configuration |
-| Signed APT repository | – | packages via `dl.querencialinux.org/apt` |
 
 ## Installation
 
 Requirements: Ubuntu 26.04 (desktop or server image), a user with sudo
 rights, network access to the Ubuntu archive.
 
-> **Not available yet.** The packages will come from a signed APT
-> repository. It **follows with the APT repository** at
-> `dl.querencialinux.org/apt`; until then the commands for adding the
-> repository do not work, and this section describes the planned way.
+> **Available since 21 October 2026.** The packages come from the signed
+> APT repository at `dl.querencialinux.org/apt` (suite `resolute`, component
+> `main`). The installation was tested on 21 October 2026 on a fresh Ubuntu
+> 26.04, word for word as described here, from the text console and through
+> GDM.
 
-1. **Add the repository:** follows with the APT repository (signing key
-   “Querencia Desktop Archive Signing Key”).
+1. **Add the repository.** The signing key is “Querencia Desktop Archive
+   Signing Key” with the fingerprint `63F6 C499 246E 3699 CA04 726D 342F 12D2
+   0CE7 1CBD` (ed25519, valid until 19 October 2028). The third command shows
+   the fingerprint of the key you fetched; if it does not match, delete the
+   file and stop. If `curl` is missing: `sudo apt install curl`.
+
+   ```bash
+   sudo install -d -m 0755 /etc/apt/keyrings
+   ```
+
+   ```bash
+   curl -fsSL https://dl.querencialinux.org/apt/querencia.gpg | sudo tee /etc/apt/keyrings/querencia.gpg >/dev/null
+   ```
+
+   ```bash
+   gpg --show-keys --with-fingerprint /etc/apt/keyrings/querencia.gpg
+   ```
+
+   ```bash
+   curl -fsSL https://dl.querencialinux.org/apt/querencia.sources | sudo tee /etc/apt/sources.list.d/querencia.sources >/dev/null
+   ```
 
 2. **Install:**
 
@@ -121,7 +140,7 @@ rights, network access to the Ubuntu archive.
 
    apt also installs the recommended packages (Recommends): PipeWire for
    sound, NetworkManager, Avahi and wsdd for the network view in Files, the
-   GTK portal and more. On a **server image** that is **about 360 packages**
+   GTK portal and more. On a **server image** that is **about 385 packages**
    from the Ubuntu archive, on Ubuntu Desktop only a few. With
    `--no-install-recommends` the installation stays small; then sound,
    connecting through the network applet, the network view in Files and

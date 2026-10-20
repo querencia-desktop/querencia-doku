@@ -21,11 +21,12 @@ Anmeldebildschirm liegt als optionales Paket bei.
 
 **Geprüft:** Die Pakete bestehen die Pflichtprobe auf einem frischen Ubuntu
 26.04, mit Anmeldung an der Textkonsole und über GDM. Neben Ubuntu Desktop
-lassen sie sich installieren und wieder entfernen; danach sind die
-installierten Pakete wie vorher.
+lassen sie sich installieren und wieder entfernen; danach ist Querencia
+vollständig entfernt und die Paketliste auf Ubuntu Desktop wie vorher.
 
-**Installation:** folgt mit der APT-Quelle unter `dl.querencialinux.org/apt`.
-Bis dahin gibt es keinen Download.
+**Installation:** aus der signierten APT-Quelle unter `dl.querencialinux.org/apt`;
+Quelle einbinden wie auf der Alpha-Seite beschrieben, dann `sudo apt install
+querencia-desktop`. Am 21. Oktober 2026 auf einem frischen Ubuntu 26.04 geprüft.
 
 **Bekannte Grenzen:** Auf Ubuntu Server braucht Querencia Software
 NetworkManager als netplan-Renderer, sonst kann es nichts installieren. Der

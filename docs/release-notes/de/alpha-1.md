@@ -55,10 +55,10 @@ Abend in der Entwicklungsumgebung aktiv war.
 
 | Paket | Fassung | Inhalt |
 |---|---|---|
-| querencia-desktop | 0.1.0~alpha2-5 | Metapaket: zieht alle Bestandteile nach |
+| querencia-desktop | 0.1.0~alpha2-6 | Metapaket: zieht alle Bestandteile nach |
 | labwc | 0.9.8-0querencia4 | Backport des Fensterverwalters (Ubuntu 26.04 liefert 0.9.3) |
-| querencia-session | 0.1.0~alpha6-1 | Sitzungsstarter 2.1, labwc-Vorgaben, Portal- und gsettings-Vorgaben |
-| querencia-shell | 0.1.0~alpha5-1 | Panel, Arbeitsfläche, Lautstärke, Netzwerk, Tastenkürzel-Übersicht (Super+?), Thema Querencia-Klassisch, Hintergründe |
+| querencia-session | 0.1.0~alpha7-1 | Sitzungsstarter 2.1, labwc-Vorgaben, Portal- und gsettings-Vorgaben |
+| querencia-shell | 0.1.0~alpha6-1 | Panel, Arbeitsfläche, Lautstärke, Netzwerk, Tastenkürzel-Übersicht (Super+?), Thema Querencia-Klassisch, Hintergründe |
 | querencia-sitzung | 0.1.3-2 | Sitzung 0.1.3: Sperrbildschirm, Sitzungsdialog, polkit-Agent |
 | querencia-benachrichtigungen | 0.2.0-1 | Benachrichtigungen 0.2.0 mit Mitteilungszentrale |
 | querencia-einstellungen | 0.1.0-1 | Systemeinstellungen 0.1.0 |
@@ -79,8 +79,9 @@ Abend in der Entwicklungsumgebung aktiv war.
 Dazu aus dem Ubuntu-Archiv: Schrift DejaVu Sans und Mauszeiger DMZ-White.
 
 Der Knopf „Arbeitsfläche anzeigen“ und die Glocke (Panel, Stand G2-AL) sind
-seit dem 20.10.2026, 22:25, in der Entwicklungsumgebung aktiv; im Paketsatz
-oben sind sie noch nicht enthalten. **Aufnahme in querencia-shell: offen.**
+im Paketsatz enthalten: `querencia-shell 0.1.0~alpha6-1`, das Kürzel Super+D
+über `querencia-session 0.1.0~alpha7-1` (Endsatz, eingefroren am 20.10.2026
+um 22:55).
 
 ### In Arbeit (nicht in Alpha 1)
 
@@ -91,21 +92,39 @@ oben sind sie noch nicht enthalten. **Aufnahme in querencia-shell: offen.**
 | Querencia Files | Stand QF-0p | Querencia-Symbol statt Strata-Logo im Info-Dialog |
 | Bildbetrachter | 0.2.3 | Info-Fenster beim zweiten Öffnen wieder mit Titelleiste |
 | Systemeinstellungen | 0.1.1 | eigene Sicherungsdateien mit Begrenzung, Zurückstellen ohne Reste in der labwc-Konfiguration |
-| Signierte APT-Quelle | – | Bezug der Pakete über `dl.querencialinux.org/apt` |
 
 ## Installation
 
 Voraussetzung: Ubuntu 26.04 (Desktop- oder Server-Abbild), ein Benutzer mit
 sudo-Rechten, Netzzugang zum Ubuntu-Archiv.
 
-> **Noch nicht verfügbar.** Die Pakete kommen über eine signierte
-> APT-Quelle. Sie **folgt mit der APT-Quelle** unter
-> `dl.querencialinux.org/apt`; bis dahin funktionieren die Befehle zum
-> Einbinden der Quelle nicht, und dieser Abschnitt beschreibt den geplanten
-> Weg.
+> **Verfügbar seit 21. Oktober 2026.** Die Pakete kommen aus der signierten
+> APT-Quelle unter `dl.querencialinux.org/apt` (Suite `resolute`, Komponente
+> `main`). Die Installation wurde am 21. Oktober 2026 auf einem frischen
+> Ubuntu 26.04 wörtlich nach dieser Anleitung geprüft, über die Textkonsole
+> und über GDM.
 
-1. **Quelle einbinden:** folgt mit der APT-Quelle (Signierschlüssel
-   „Querencia Desktop Archive Signing Key“).
+1. **Quelle einbinden.** Der Signierschlüssel ist „Querencia Desktop Archive
+   Signing Key“ mit dem Fingerabdruck `63F6 C499 246E 3699 CA04 726D 342F
+   12D2 0CE7 1CBD` (ed25519, gültig bis 19. Oktober 2028). Der dritte Befehl
+   zeigt den Fingerabdruck des geholten Schlüssels; stimmt er nicht überein,
+   die Datei löschen und abbrechen. Fehlt `curl`: `sudo apt install curl`.
+
+   ```bash
+   sudo install -d -m 0755 /etc/apt/keyrings
+   ```
+
+   ```bash
+   curl -fsSL https://dl.querencialinux.org/apt/querencia.gpg | sudo tee /etc/apt/keyrings/querencia.gpg >/dev/null
+   ```
+
+   ```bash
+   gpg --show-keys --with-fingerprint /etc/apt/keyrings/querencia.gpg
+   ```
+
+   ```bash
+   curl -fsSL https://dl.querencialinux.org/apt/querencia.sources | sudo tee /etc/apt/sources.list.d/querencia.sources >/dev/null
+   ```
 
 2. **Installieren:**
 
@@ -120,7 +139,7 @@ sudo-Rechten, Netzzugang zum Ubuntu-Archiv.
    apt installiert dabei auch die empfohlenen Pakete (Recommends): PipeWire
    für den Ton, NetworkManager, Avahi und wsdd für die Netzwerkansicht in
    Files, das GTK-Portal und weitere. Auf einem **Server-Abbild** sind das
-   **rund 360 Pakete** aus dem Ubuntu-Archiv, auf einem Ubuntu Desktop nur
+   **rund 385 Pakete** aus dem Ubuntu-Archiv, auf einem Ubuntu Desktop nur
    wenige. Mit `--no-install-recommends` bleibt die Installation schlank;
    dann fehlen Ton, das Verbinden über das Netzwerk-Applet, die
    Netzwerkansicht in Files und `notify-send`.
