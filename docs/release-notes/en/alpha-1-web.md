@@ -12,11 +12,12 @@ Ubuntu 26.04, as a desktop or server installation. Querencia does not replace
 GNOME, it sits next to it. GDM remains the login screen and, after a restart,
 offers “Querencia Desktop” under the gear.
 
-**New in Alpha 1:** a notification center with history, System Settings in
-German and English with Language and Region and several keyboard layouts, a
-window list per workspace, screen locking from the panel, full screen with
-Super+F, an archive manager and a PDF viewer. An own login screen comes as an
-optional package.
+**New in Alpha 1:** a notification center with history and a bell in the
+panel, System Settings in German and English with Language and Region and
+several keyboard layouts, a window list per workspace, screen locking from
+the panel, a button “Arbeitsfläche anzeigen” (show desktop, Super+D), full
+screen with Super+F, an archive manager and a PDF viewer. An own login screen
+comes as an optional package.
 
 **Tested:** the packages pass the mandatory test on a fresh Ubuntu 26.04,
 with login on the text console and through GDM. Alongside Ubuntu Desktop they

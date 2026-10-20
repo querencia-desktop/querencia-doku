@@ -29,6 +29,10 @@ Gegenüber dem Entwicklungsstand vom 19.10.2026:
 - **Panel:** Die Fensterliste zeigt nur die Fenster der aktuellen
   Arbeitsfläche; im Menü System gibt es **Bildschirm sperren** (Strg+Alt+L).
   Abmelden und Ausschalten laufen über den Sitzungsdialog, auch im Paket.
+- **Arbeitsfläche anzeigen:** Ein Knopf unten links im Panel minimiert alle
+  Fenster der aktuellen Arbeitsfläche, ein zweiter Klick stellt sie wieder
+  her; dazu das Tastenkürzel **Super+D**.
+- **Glocke der Mitteilungszentrale** oben rechts im Panel, mit Zähler.
 - **Vollbild** für das aktive Fenster mit **Super+F** oder **Alt+F11**.
 - **Querencia Archiv 0.1.0**, eine Archivverwaltung (Archive öffnen,
   anzeigen, entpacken, erstellen).
@@ -70,24 +74,23 @@ Abend in der Entwicklungsumgebung aktiv war.
 | querencia-dateisuche | 0.1.3-1 | Nach Dateien suchen 0.1.3 |
 | querencia-screenshot | 0.2.8-2 | Bildschirmfoto 0.2.8 mit Editor und Fensterwahl |
 | querencia-software | 0.1.3-1 | Programme installieren über PackageKit, 0.1.3 |
-| querencia-anmeldung | 0.1.1-1 | Anmeldebildschirm (greetd und ReGreet 0.5.0), optional |
+| querencia-anmeldung | 0.1.1-2 | Anmeldebildschirm (greetd und ReGreet 0.5.0), optional |
 
 Dazu aus dem Ubuntu-Archiv: Schrift DejaVu Sans und Mauszeiger DMZ-White.
 
-`querencia-anmeldung` **0.1.1-2** mit der Abhängigkeit `accountsservice`
-ist **in Arbeit** und ersetzt 0.1.1-1 vor der Freigabe (siehe Installation).
+Der Knopf „Arbeitsfläche anzeigen“ und die Glocke (Panel, Stand G2-AL) sind
+seit dem 20.10.2026, 22:25, in der Entwicklungsumgebung aktiv; im Paketsatz
+oben sind sie noch nicht enthalten. **Aufnahme in querencia-shell: offen.**
 
 ### In Arbeit (nicht in Alpha 1)
 
 | Bestandteil | Fassung | Was sich ändert |
 |---|---|---|
 | Querencia Terminal | 0.3.0 | Reiter (Strg+Umschalt+T, Reiterleiste, Kontextmenü) |
-| Panel | Stand G2-AL | Knopf „Arbeitsfläche anzeigen“ unten im Panel (Super+D), Symbol der Mitteilungszentrale im Panel |
 | Thema | 0.2 | dunkle Variante „Querencia-Klassisch-Dunkel“ |
 | Querencia Files | Stand QF-0p | Querencia-Symbol statt Strata-Logo im Info-Dialog |
 | Bildbetrachter | 0.2.3 | Info-Fenster beim zweiten Öffnen wieder mit Titelleiste |
 | Systemeinstellungen | 0.1.1 | eigene Sicherungsdateien mit Begrenzung, Zurückstellen ohne Reste in der labwc-Konfiguration |
-| querencia-anmeldung | 0.1.1-2 | Abhängigkeit `accountsservice` |
 | Signierte APT-Quelle | – | Bezug der Pakete über `dl.querencialinux.org/apt` |
 
 ## Installation
@@ -142,10 +145,8 @@ installieren** und zeigt einen klaren Hinweis mit Abhilfe.
 
 Abhilfe: NetworkManager als netplan-Renderer einrichten (`renderer:
 NetworkManager` unter `network:` in `/etc/netplan/`). Auf Cloud- und
-VM-Abbildern mit cloud-init und dracut reicht diese eine Zeile allein nicht:
-Dort hat das Projekt ein geprüftes Umstellskript (`nm-umstellen.sh`, mit
-`pruefen`, `umstellen` und `zurueck`), das die Adresse behält. **Bezugsweg
-des Skripts: offen.**
+VM-Abbildern mit cloud-init und dracut reicht diese eine Zeile allein nicht;
+dafür **folgt ein geprüftes Umstellskript**, das die Adresse behält.
 
 ### Neben GNOME (Ubuntu Desktop)
 
@@ -190,9 +191,8 @@ nicht automatisch installiert. **Empfohlen bleibt GDM.**
   läuft unter diesem Anmeldebildschirm ohne Bildschirmsperre:** gnome-shell
   koppelt die Sperre an GDM. Das gilt für jeden fremden Anmeldebildschirm und
   ist kein Querencia-Fehler.
-- Voraussetzung ist `accountsservice`. Ab **0.1.1-2** ist es eine
-  Abhängigkeit des Pakets; mit 0.1.1-1 bleibt der Bildschirm auf einem
-  Server-Abbild ohne `accountsservice` schwarz.
+- `accountsservice`, das ReGreet braucht, installiert apt als Abhängigkeit
+  mit.
 - Die Oberfläche des Anmeldebildschirms ist englisch, die Uhr ebenfalls.
 
 ### Entfernen
@@ -259,9 +259,9 @@ Die wichtigsten in Alpha 1:
   Abmelden mit sofortiger Neuanmeldung, Sperren, polkit, Portale und Sprache.
   - Anmeldung an der **Textkonsole (tty1)**: bestanden;
   - Anmeldung über **GDM**: bestanden;
-  - Anmeldung über **querencia-anmeldung**: bestanden mit
-    nachinstalliertem `accountsservice`; ohne ihn schwarzer Bildschirm
-    (daher 0.1.1-2). Nach dem Entfernen bleibt greetd stehen (siehe oben).
+  - Anmeldung über **querencia-anmeldung**: bestanden. Aus dieser Probe
+    stammt die Abhängigkeit `accountsservice` (0.1.1-2). Nach dem Entfernen
+    bleibt greetd stehen (siehe oben).
   - Messwerte: Einstellungs-Portal antwortet in 9–11 ms, Terminal aus dem
     Menü in höchstens 2,2 s, Neuanmeldung nach dem Abmelden in unter 10 s.
   - Nicht geprüft: Alt+Druck, Kopieren und Einfügen im Terminal, Kopieren in

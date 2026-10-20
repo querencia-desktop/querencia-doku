@@ -29,6 +29,10 @@ Compared with the development state of 19 October 2026:
   workspace; the System menu has **Bildschirm sperren** (lock screen,
   Ctrl+Alt+L). Log out and shut down go through the session dialog, in the
   packages too.
+- **Show the desktop:** a button “Arbeitsfläche anzeigen” at the bottom left
+  of the panel minimises all windows of the current workspace, a second click
+  restores them; the shortcut is **Super+D**.
+- **Notification center bell** at the top right of the panel, with a counter.
 - **Full screen** for the active window with **Super+F** or **Alt+F11**.
 - **Archive Manager 0.1.0** (Querencia Archiv): open, list, extract and
   create archives.
@@ -71,25 +75,25 @@ active in the development environment the same evening.
 | querencia-dateisuche | 0.1.3-1 | Search for Files 0.1.3 |
 | querencia-screenshot | 0.2.8-2 | Screenshot 0.2.8 with editor and window selection |
 | querencia-software | 0.1.3-1 | install programs through PackageKit, 0.1.3 |
-| querencia-anmeldung | 0.1.1-1 | login screen (greetd and ReGreet 0.5.0), optional |
+| querencia-anmeldung | 0.1.1-2 | login screen (greetd and ReGreet 0.5.0), optional |
 
 From the Ubuntu archive: the DejaVu Sans font and the DMZ-White mouse
 pointer.
 
-`querencia-anmeldung` **0.1.1-2** with the `accountsservice` dependency is
-**in progress** and replaces 0.1.1-1 before the release (see Installation).
+The “Arbeitsfläche anzeigen” button and the bell (panel, state G2-AL) have
+been active in the development environment since 20 October 2026, 22:25;
+they are not yet included in the package set above. **Inclusion in
+querencia-shell: open.**
 
 ### In progress (not in Alpha 1)
 
 | Component | Version | What changes |
 |---|---|---|
 | Querencia Terminal | 0.3.0 | tabs (Ctrl+Shift+T, tab bar, context menu) |
-| Panel | state G2-AL | button “Arbeitsfläche anzeigen” (show desktop) in the bottom panel (Super+D), notification center icon in the panel |
 | Theme | 0.2 | dark variant “Querencia-Klassisch-Dunkel” |
 | Querencia Files | state QF-0p | Querencia icon instead of the Strata logo in the About dialog |
 | Image Viewer | 0.2.3 | info window keeps its title bar when opened a second time |
 | System Settings | 0.1.1 | own backup files with a limit, resetting leaves no traces in the labwc configuration |
-| querencia-anmeldung | 0.1.1-2 | dependency on `accountsservice` |
 | Signed APT repository | – | packages via `dl.querencialinux.org/apt` |
 
 ## Installation
@@ -143,10 +147,8 @@ then** and shows a clear message with the remedy.
 
 Remedy: set up NetworkManager as the netplan renderer (`renderer:
 NetworkManager` under `network:` in `/etc/netplan/`). On cloud and VM images
-with cloud-init and dracut this one line alone is not enough: for those the
-project has a tested switch-over script (`nm-umstellen.sh`, with `pruefen`,
-`umstellen` and `zurueck`) that keeps the address. **How the script is
-distributed: open.**
+with cloud-init and dracut this one line alone is not enough; for those **a
+tested switch-over script follows** that keeps the address.
 
 ### Alongside GNOME (Ubuntu Desktop)
 
@@ -189,9 +191,7 @@ automatically. **GDM remains the recommendation.**
   enabled in `/etc/querencia/greetd/sitzungen.conf`. **GNOME runs without a
   screen lock under this login screen:** gnome-shell ties the lock to GDM.
   This applies to every other login screen and is not a Querencia bug.
-- It requires `accountsservice`. From **0.1.1-2** on it is a dependency of
-  the package; with 0.1.1-1 the screen stays black on a server image without
-  `accountsservice`.
+- apt installs `accountsservice`, which ReGreet needs, as a dependency.
 - The login screen interface is in English, and so is the clock.
 
 ### Removing
@@ -260,9 +260,9 @@ The most important ones in Alpha 1:
   language.
   - Login on the **text console (tty1)**: passed;
   - login through **GDM**: passed;
-  - login through **querencia-anmeldung**: passed with `accountsservice`
-    installed afterwards; without it a black screen (hence 0.1.1-2). After
-    removal greetd stays (see above).
+  - login through **querencia-anmeldung**: passed. The `accountsservice`
+    dependency (0.1.1-2) comes from this test. After removal greetd stays
+    (see above).
   - Measurements: the settings portal answers in 9–11 ms, Terminal from the
     menu in at most 2.2 s, a new login after logging out in under 10 s.
   - Not tested: Alt+Print, copy and paste in Terminal, copying in Files,

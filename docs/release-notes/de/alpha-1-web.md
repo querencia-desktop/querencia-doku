@@ -12,11 +12,12 @@ Ubuntu 26.04, als Desktop- oder Server-Installation. Querencia ersetzt GNOME
 nicht, es steht daneben. GDM bleibt der Anmeldebildschirm und bietet nach
 einem Neustart „Querencia Desktop“ im Zahnrad an.
 
-**Neu in Alpha 1:** eine Mitteilungszentrale mit Verlauf, Systemeinstellungen
-auf Deutsch und Englisch mit Sprache und Region und mehreren
-Tastaturbelegungen, eine Fensterliste je Arbeitsfläche, Bildschirm sperren im
-Panel, Vollbild mit Super+F, eine Archivverwaltung und ein PDF-Betrachter.
-Ein eigener Anmeldebildschirm liegt als optionales Paket bei.
+**Neu in Alpha 1:** eine Mitteilungszentrale mit Verlauf und Glocke im Panel,
+Systemeinstellungen auf Deutsch und Englisch mit Sprache und Region und
+mehreren Tastaturbelegungen, eine Fensterliste je Arbeitsfläche, Bildschirm
+sperren im Panel, ein Knopf „Arbeitsfläche anzeigen“ (Super+D), Vollbild mit
+Super+F, eine Archivverwaltung und ein PDF-Betrachter. Ein eigener
+Anmeldebildschirm liegt als optionales Paket bei.
 
 **Geprüft:** Die Pakete bestehen die Pflichtprobe auf einem frischen Ubuntu
 26.04, mit Anmeldung an der Textkonsole und über GDM. Neben Ubuntu Desktop
