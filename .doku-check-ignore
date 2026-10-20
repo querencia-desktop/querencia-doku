@@ -3,6 +3,7 @@
 # gemeinsame bilder/), Quelle für Webseite und Paket; die Unterordner sind
 # Vorgabe des Auftrags. Alle Dateien stehen in der Doc-Map.
 docs/benutzerhandbuch/
-# docs/release-notes/ – je Veröffentlichung eine Datei (alpha-1.md, später
-# weitere), Vorgabe des Auftrags; ebenfalls in der Doc-Map.
+# docs/release-notes/ – je Veröffentlichung eine Datei je Sprache (de/, en/,
+# gleiche Dateinamen wie im Handbuch; alpha-1.md, alpha-1-web.md, später
+# weitere), Vorgabe des Auftrags (DOKU-1, DOKU-2); ebenfalls in der Doc-Map.
 docs/release-notes/
