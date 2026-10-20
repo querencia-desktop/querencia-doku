@@ -1,0 +1,8 @@
+# Ausnahmen vom Doku-Standard (DOKU-1, Auftrag pottrauschen 2026-10-20):
+# docs/benutzerhandbuch/ – Handbuch mit fester Struktur je Sprache (de/, en/,
+# gemeinsame bilder/), Quelle für Webseite und Paket; die Unterordner sind
+# Vorgabe des Auftrags. Alle Dateien stehen in der Doc-Map.
+docs/benutzerhandbuch/
+# docs/release-notes/ – je Veröffentlichung eine Datei (alpha-1.md, später
+# weitere), Vorgabe des Auftrags; ebenfalls in der Doc-Map.
+docs/release-notes/

@@ -1,0 +1,28 @@
+# Herkunft der Bildschirmfotos des Benutzerhandbuchs (DOKU-1, 20.10.2026)
+# Alle aus abgeschotteten Prüfläufen der Programm-Repos (eigener labwc ohne Bildschirm,
+# eigenes Profil, eigener D-Bus), nie aus einer echten Benutzersitzung. Vor der Übernahme
+# einzeln angesehen; Ausschnitte (x, y, Breite, Höhe) entfernen schwarzen Rand bzw.
+# Pfade mit Benutzernamen. Datei | Quelle | Bearbeitung
+de-einstieg-orte.png |  | ganz
+de-dokumente.png |  | ganz
+en-dokumente.png |  | ganz
+de-archiv.png |  | Ausschnitt 128x106x768x556
+en-archiv.png |  | Ausschnitt 128x106x768x556
+de-screenshot-auswahl.png |  | Ausschnitt 230x198x562x372
+en-screenshot-auswahl.png |  | Ausschnitt 230x198x562x372
+de-systemmonitor.png |  | Ausschnitt 126x80x772x608
+en-systemmonitor.png |  | Ausschnitt 126x80x772x608
+de-dateisuche.png |  | Ausschnitt 150x88x724x214
+en-dateisuche.png |  | Ausschnitt 150x88x724x214
+de-rechner.png |  | Ausschnitt 58x58x308x392
+en-rechner.png |  | Ausschnitt 58x58x308x392
+de-editor.png |  | Ausschnitt 128x88x768x592
+en-editor.png |  | Ausschnitt 128x88x768x592
+de-bilder.png |  | Ausschnitt 14x10x806x632
+en-bilder.png |  | Ausschnitt 108x66x808x634
+de-einstellungen.png |  | ganz
+de-software.png |  | Ausschnitt 18x18x966x672
+de-benachrichtigungen.png |  | Ausschnitt 1548x36x368x116
+en-benachrichtigungen.png |  | Ausschnitt 1548x36x368x116
+de-sitzung-dialog.png |  | Ausschnitt 150x292x722x184
+en-sitzung-dialog.png |  | Ausschnitt 150x292x722x184

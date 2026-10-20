@@ -1,0 +1,8 @@
+# Editor- und Systemreste
+*~
+*.swp
+*.orig
+*.rej
+*.tmp
+.directory
+__pycache__/
