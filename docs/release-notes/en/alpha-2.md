@@ -122,6 +122,10 @@ theme, gsettings values are shared with GNOME, greetd stays after removing
   GTK 4 and follow it.
 - After switching between light and dark in a running program, the
   keyboard focus may sit somewhere else than after a start.
+- **Panel crash in a test run:** in one test run the panel crashed the
+  first time the Applications menu was opened and did not restart by
+  itself; logging out and back in restores it. The cause is being
+  investigated (QD-106).
 - Fixed since Alpha 1: terminal without tabs, no dark appearance, secondary
   windows without title bar, Strata logo in the About dialog of Files,
   default values in `rc.xml` after resetting.

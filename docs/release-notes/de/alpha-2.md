@@ -126,6 +126,10 @@ geteilte gsettings-Werte neben GNOME, greetd bleibt nach dem Entfernen von
   Tastaturfokus an einer anderen Stelle stehen als beim Start.
 - **Panel und Arbeitsfläche** übernehmen ein geändertes Thema erst nach
   einer Neuanmeldung; das Umschalten hell/dunkel wirkt sofort.
+- **Panel-Absturz im Testlauf:** In einem Testlauf stürzte das Panel beim
+  ersten Öffnen des Menüs Anwendungen ab und startete nicht von selbst neu;
+  Abmelden und neu Anmelden stellt es wieder her. Die Ursache wird
+  untersucht (QD-106).
 - Behoben gegenüber Alpha 1: Terminal ohne Reiter, keine dunkle
   Darstellung, Nebenfenster ohne Titelleiste, Strata-Logo im Info-Dialog,
   Standardwerte in `rc.xml` nach dem Zurückstellen.
