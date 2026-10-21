@@ -5,9 +5,9 @@ published · Values marked “open” are not yet confirmed or not yet decided.
 
 Alpha 2 brings the state of the development environment of 21 October 2026
 into the package repository: a **dark appearance** for the whole desktop,
-more readable colours in the light appearance, **tabs in the terminal** and
-a file manager that no longer contacts update servers. Like Alpha 1 it
-consists of 20 Debian packages for Ubuntu 26.04 (“resolute”) from the same
+more readable colours in the light appearance, **16 new backgrounds**,
+**tabs in the terminal** and a file manager that no longer contacts update
+servers. It consists of 21 Debian packages for Ubuntu 26.04 (“resolute”) from the same
 signed APT repository.
 
 > **Alpha.** Meant for test systems, not for everyday use. No guarantee
@@ -22,6 +22,16 @@ signed APT repository.
   except Querencia Files, which keeps its own light theme for now. Switching
   it off restores the light appearance. Running programs change at once,
   so does the panel; the labwc window frames stay light.
+- **16 new backgrounds** in the new data package `querencia-hintergruende`:
+  twelve motifs (deep blue, blue-green, blue glow, ember, hills, coast,
+  dunes, lake, desert, mountains, beach, glass) and four variants with the
+  Querencia logo, each in 2560×1440 and as a separate 4:3 crop. **The
+  default background is deep blue (“Tiefblau”).** The pictures were
+  generated with FLUX1.1 [pro] Ultra (Black Forest Labs) through fal.ai and
+  selected by the project owner; the logo was added afterwards by a
+  script, never painted by the AI. System Settings 0.1.4 show them as a
+  gallery, and the icon labels on the desktop (desktop 0.2.1) have a
+  backing so they stay readable on every picture.
 - **Contrast in the light appearance** raised to WCAG AA: keyboard
   shortcuts in menus, the memory mark in the calculator, the empty-state
   hint in the image viewer, notification text, the chart colours of the
@@ -47,7 +57,7 @@ signed APT repository.
 
 ## Versions
 
-Package set of 21 October 2026 (20 packages), built from the state that was
+Package set of 21 October 2026 (21 packages), built from the state that was
 active in the development environment at 18:52 that day.
 
 | Package | Version | Contents |
@@ -55,10 +65,11 @@ active in the development environment at 18:52 that day.
 | querencia-desktop | 0.1.0~alpha2-7 | metapackage: pulls in all parts |
 | labwc | 0.9.8-0querencia5 | backport of the window manager (unchanged, new revision) |
 | querencia-session | 0.1.0~alpha7-2 | session starter (unchanged, new revision) |
-| querencia-shell | 0.1.0~alpha7-1 | panel 0.2.1, desktop 0.2.0, shortcut overview 0.2.0, Querencia-Klassisch theme 0.2.1 light and dark |
+| querencia-shell | open | panel 0.2.1, desktop 0.2.1, shortcut overview 0.2.0, Querencia-Klassisch theme 0.2.1 light and dark, the 17 backgrounds of Alpha 1 |
+| querencia-hintergruende | 0.2-1 | 16 backgrounds (default deep blue), new |
 | querencia-sitzung | 0.1.3-3 | session tools 0.1.3 (unchanged, new revision) |
 | querencia-benachrichtigungen | 0.2.2-1 | notifications 0.2.2 |
-| querencia-einstellungen | 0.1.3-1 | System Settings 0.1.3 |
+| querencia-einstellungen | open | System Settings 0.1.4 with background gallery |
 | querencia-symbole | 0.7-1 | program icons and the “Querencia” icon theme |
 | querencia-files | 0.1.0~alpha5-1 | Querencia Files, state QF-0q-1 |
 | querencia-terminal | 0.3.0-1 | Querencia Terminal 0.3.0 with tabs |
@@ -73,7 +84,8 @@ active in the development environment at 18:52 that day.
 | querencia-software | 0.1.4-1 | install programs through PackageKit, 0.1.4 |
 | querencia-anmeldung | 0.1.1-2 | login screen, optional (unchanged from Alpha 1) |
 
-Not in Alpha 2: the new backgrounds (licence review open).
+The versions of the shell and System Settings follow in this draft once
+desktop 0.2.1 and System Settings 0.1.4 are approved.
 
 ## Upgrading from Alpha 1
 
@@ -125,10 +137,19 @@ theme, gsettings values are shared with GNOME, greetd stays after removing
 
 ## Licences and origin
 
-As in Alpha 1. New: the five program icons in the icon theme (Archiv,
-Software, Dateisuche, Rechner, shortcut overview) are licensed like their
-programs under GPL-3.0-or-later; the rest of the icon theme under
-CC-BY-SA-4.0. The name and logo “Querencia” are not free content.
+As in Alpha 1. New:
+
+- **Backgrounds 0.2:** CC-BY-SA-4.0 with an AI caveat (pictures generated
+  purely by AI may not be protected by copyright in every jurisdiction;
+  the licence statement is then a notice). For the four logo variants only
+  the base picture is free; the name and logo “Querencia” fall under the
+  project's trademark rule. The origin of every picture is described in
+  `/usr/share/doc/querencia-hintergruende/herkunft.md`.
+- The five program icons in the icon theme (Archiv, Software, Dateisuche,
+  Rechner, shortcut overview) are licensed like their programs under
+  GPL-3.0-or-later; the rest of the icon theme under CC-BY-SA-4.0.
+
+The name and logo “Querencia” are not free content.
 
 Copyright 2026 Querencia Desktop contributors.
 
