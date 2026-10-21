@@ -54,7 +54,7 @@ APT-Quelle.
   im Editor und die Dialoge im PDF-Betrachter erscheinen auch beim zweiten
   Öffnen mit Titelleiste; ebenso das Auswahlfenster des Bildschirmfotos
   nach einem Abbruch mit Esc.
-- **Systemeinstellungen 0.1.3:** Zurückstellen lässt keine Standardwerte in
+- **Systemeinstellungen 0.1.4:** Galerie der Hintergründe; Zurückstellen lässt keine Standardwerte in
   der labwc-Konfiguration stehen, Sicherungsdateien sind begrenzt.
 
 ## Versionen

@@ -52,7 +52,7 @@ signed APT repository.
   Replace in the editor and the dialogs of the PDF viewer also have a title
   bar when opened a second time; so does the selection window of the
   screenshot tool after cancelling with Esc.
-- **System Settings 0.1.3:** resetting no longer leaves default values in
+- **System Settings 0.1.4:** background gallery; resetting no longer leaves default values in
   the labwc configuration, backup files are limited.
 
 ## Versions
