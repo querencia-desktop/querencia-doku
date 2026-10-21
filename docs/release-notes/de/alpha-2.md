@@ -130,6 +130,25 @@ geteilte gsettings-Werte neben GNOME, greetd bleibt nach dem Entfernen von
   Darstellung, Nebenfenster ohne Titelleiste, Strata-Logo im Info-Dialog,
   Standardwerte in `rc.xml` nach dem Zurückstellen.
 
+## Fehler melden
+
+Per E-Mail an fehler@querencialinux.org, Deutsch oder Englisch. Bitte
+angeben:
+
+- Ausgabe von `dpkg -l 'querencia-*' labwc` und `lsb_release -ds`
+- was Sie getan haben, was Sie erwartet haben, was passiert ist
+- etwa 50 Zeilen aus dem passenden Protokoll in `~/.local/state/querencia/`
+  (Sitzungsstart: `sitzung-start.log`)
+
+Die Meldung wird ohne Namen und Adresse in den öffentlichen Fehlertracker
+übernommen. Heimpfade, Rechnernamen und IP-Adressen im Protokoll bitte
+vorher schwärzen.
+
+Mit GitHub-Konto geht es auch direkt:
+<https://github.com/querencia-desktop/querencia/issues/new/choose>.
+Sicherheitslücken nicht per E-Mail, sondern über
+<https://github.com/querencia-desktop/querencia/security/advisories/new>.
+
 ## Geprüft
 
 - Jede Quelle ist ein getaggter Stand; für jedes Programm ist belegt, dass
