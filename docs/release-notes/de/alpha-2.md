@@ -129,7 +129,7 @@ geteilte gsettings-Werte neben GNOME, greetd bleibt nach dem Entfernen von
 - **Panel-Absturz im Testlauf:** In einem Testlauf stürzte das Panel beim
   ersten Öffnen des Menüs Anwendungen ab und startete nicht von selbst neu;
   Abmelden und neu Anmelden stellt es wieder her. Die Ursache wird
-  untersucht (QD-106).
+  untersucht.
 - Behoben gegenüber Alpha 1: Terminal ohne Reiter, keine dunkle
   Darstellung, Nebenfenster ohne Titelleiste, Strata-Logo im Info-Dialog,
   Standardwerte in `rc.xml` nach dem Zurückstellen.

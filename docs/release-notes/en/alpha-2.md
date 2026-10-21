@@ -125,7 +125,7 @@ theme, gsettings values are shared with GNOME, greetd stays after removing
 - **Panel crash in a test run:** in one test run the panel crashed the
   first time the Applications menu was opened and did not restart by
   itself; logging out and back in restores it. The cause is being
-  investigated (QD-106).
+  investigated.
 - Fixed since Alpha 1: terminal without tabs, no dark appearance, secondary
   windows without title bar, Strata logo in the About dialog of Files,
   default values in `rc.xml` after resetting.
