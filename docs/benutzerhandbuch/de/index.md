@@ -1,6 +1,6 @@
 # Querencia Desktop – Benutzerhandbuch
 
-**Stand:** Alpha 1 (Entwurf), 20.10.2026 · [English version](../en/index.md)
+**Stand:** Alpha 2, 22.10.2026 · [English version](../en/index.md)
 
 Querencia Desktop ist eine klassische Desktopumgebung im Stil von GNOME 2
 (Ubuntu 10.04) für Wayland. Sie besteht aus dem Fensterverwalter labwc, zwei
@@ -8,9 +8,10 @@ Panels, einer Arbeitsfläche mit Symbolen und einem Satz eigener Programme
 (Rust und GTK 4). Die Oberfläche ist deutsch; die meisten Programme gibt es
 auch auf Englisch.
 
-> **Alpha.** Querencia ist in Entwicklung. Was hier steht, ist der geprüfte
-> Stand der Entwicklungsumgebung vom 20.10.2026. Es gibt keine Sicherheits-
-> oder Datenverlustgarantie. Bekannte Lücken stehen in
+> **Alpha.** Querencia ist in Entwicklung. Was hier steht, beschreibt den
+> Paketsatz Alpha 2 vom 21.10.2026 (siehe
+> [Release-Notes Alpha 2](../../release-notes/de/alpha-2.md)). Es gibt keine
+> Sicherheits- oder Datenverlustgarantie. Bekannte Lücken stehen in
 > [Bekannte Einschränkungen](bekannte-einschraenkungen.md).
 
 ## Inhalt
@@ -29,7 +30,7 @@ auch auf Englisch.
 | Querencia Files (Dateiverwaltung) | Orte, Anwendungen → Zubehör | [files.md](files.md) |
 | Querencia Terminal | Anwendungen → Zubehör | [terminal.md](terminal.md) |
 | Texteditor | Anwendungen → Zubehör | [editor.md](editor.md) |
-| Bildbetrachter | Anwendungen → Zubehör | [bilder.md](bilder.md) |
+| Bildbetrachter | Anwendungen → Grafik | [bilder.md](bilder.md) |
 | Dokumentenbetrachter (PDF) | Anwendungen → Büro | [dokumente.md](dokumente.md) |
 | Archivverwaltung | Anwendungen → Zubehör | [archiv.md](archiv.md) |
 | Taschenrechner | Anwendungen → Zubehör | [rechner.md](rechner.md) |
@@ -38,7 +39,7 @@ auch auf Englisch.
 | Bildschirmfoto aufnehmen | Druck-Taste, Anwendungen → Zubehör | [screenshot.md](screenshot.md) |
 | Systemeinstellungen | System → Einstellungen | [einstellungen.md](einstellungen.md) |
 | Software | System → Systemverwaltung | [software.md](software.md) |
-| Benachrichtigungen | läuft im Hintergrund | [benachrichtigungen.md](benachrichtigungen.md) |
+| Benachrichtigungen, Mitteilungszentrale | läuft im Hintergrund; Glocke im oberen Panel | [benachrichtigungen.md](benachrichtigungen.md) |
 | Sitzung: Abmelden, Sperren, Ausschalten | System, Strg+Alt+Entf, Strg+Alt+L | [sitzung.md](sitzung.md) |
 
 **Hilfe**

@@ -19,8 +19,13 @@ legen die Einstellungen eine Sicherung an.
   Steuerelemente-Thema (Querencia-Klassisch oder GTK-Standard),
   „Dunkle Darstellung bevorzugen“, Mauszeiger (Thema und Größe 24/32/48).
 - Wirkt sofort in allen GTK-Programmen, im Panel und auf der Arbeitsfläche.
-  Die dunkle Darstellung färben nur Programme um, die sie auswerten; die
-  Querencia-Programme behalten ihr Thema.
+- **Dunkle Darstellung:** Seit Alpha 2 hat das Thema Querencia-Klassisch
+  eine dunkle Fassung. Panel, Arbeitsfläche und die Querencia-Programme
+  folgen ihr; laufende Programme und das Panel wechseln sofort, Ausschalten
+  stellt die helle Darstellung wieder her. Hell bleiben vorerst die
+  Fensterrahmen (labwc), Querencia Files, Bildschirmfoto und einige Dialoge
+  (Sitzungsdialog, Tastenkürzel-Übersicht, die Leisten des Terminals). Fremde
+  GTK-3-Programme folgen der Einstellung nicht.
 
 **Hintergrundbild**
 - Galerie der mitgelieferten Hintergründe mit Vorschau; ein Klick wählt,
@@ -51,7 +56,9 @@ legen die Einstellungen eine Sicherung an.
 **Tastatur**
 - Tastaturbelegung aus allen Belegungen und Varianten (mit Suche),
   Wiederholverzögerung, Wiederholrate, Num-Taste.
-- Mehrere Belegungen mit Umschalttaste gibt es noch nicht.
+- „Weitere Belegungen und Umschalten“: Mit mehreren Belegungen wechselt die
+  Umschalttaste der Reihe nach zur nächsten; nach der Anmeldung gilt die
+  erste. Eine Anzeige der aktiven Belegung im Panel gibt es noch nicht.
 
 **Maus**
 - Doppelklick-Zeit, Geschwindigkeit, Beschleunigung, Linkshänder,
@@ -70,6 +77,12 @@ legen die Einstellungen eine Sicherung an.
 - Welches Programm öffnet Webseiten, E-Mail, Text, Bilder, Musik, Video,
   Ordner, PDF und Archive. Das Terminal wird nur angezeigt.
 
+**Sprache und Region**
+- Anzeigesprache (Sprache der Menüs und Texte) und Formate (Datum und
+  Uhrzeit, Zahlen, Währung, Papier, Maßeinheiten).
+- Wirkt ab der nächsten Anmeldung; schon laufende Programme behalten ihre
+  Sprache.
+
 **Informationen über Querencia**
 - Versionen der Einstellungen, des Systems und von labwc.
 
@@ -83,6 +96,5 @@ Tastatur.
 
 ## Noch nicht enthalten
 
-Sprache und Region (Anzeigesprache, Datums- und Zahlenformate), Energie,
-Startprogramme und ein schreibender Bereich „Panels“ folgen in späteren
-Fassungen. Die Einstellungen selbst sind noch nur deutsch.
+Energie, Startprogramme und ein schreibender Bereich „Panels“ fehlen noch.
+Die Einstellungen selbst gibt es auf Deutsch und Englisch.

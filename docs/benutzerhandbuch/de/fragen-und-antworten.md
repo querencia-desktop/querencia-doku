@@ -11,6 +11,12 @@ Rechtsklick auf eine freie Stelle im oberen Panel → „Zum Panel hinzufügen �
 → „Lautstärke“ bzw. „Netzwerk“. Auf einem frischen Benutzerprofil sind beide
 noch nicht da.
 
+**Wie schalte ich auf die dunkle Darstellung um?**
+System → Einstellungen → Systemeinstellungen → Erscheinungsbild, „Dunkle
+Darstellung bevorzugen“ einschalten und „Übernehmen“. Panel, Arbeitsfläche
+und die Querencia-Programme wechseln sofort; Fensterrahmen, Querencia Files,
+Bildschirmfoto und einige Dialoge bleiben vorerst hell.
+
 **Wo sind die Einstellungen?**
 System → Einstellungen → Systemeinstellungen. Den Hintergrund erreicht man
 auch über Rechtsklick auf die Arbeitsfläche.
@@ -32,14 +38,16 @@ Ja. Rückfragen zählen nicht von selbst herunter. Einen Countdown kann man in
 `~/.config/querencia/sitzung.ini` einschalten, siehe [Sitzung](sitzung.md).
 
 **Warum sind einige Dialoge englisch?**
-Die Querencia-Programme sind deutsch und englisch; manche Dialoge kommen
-aus Systembibliotheken (z. B. GVfs, GTK-Dateidialog) und folgen deren
-Übersetzungen. Panel, Arbeitsfläche und Einstellungen sind bisher nur deutsch.
+Die Querencia-Programme, auch die Systemeinstellungen, sind deutsch und
+englisch; manche Dialoge kommen aus Systembibliotheken (z. B. GVfs,
+GTK-Dateidialog) und folgen deren Übersetzungen. Panel, Arbeitsfläche und
+Sperrbildschirm sind bisher nur deutsch.
 
 **Wie stelle ich das Programm auf Englisch um?**
-Die Programme folgen der Spracheinstellung (`LANGUAGE`/`LANG`). Ein Bereich
-„Sprache und Region“ in den Einstellungen folgt; bis dahin kann man ein
-Programm zum Ausprobieren so starten:
+Die Programme folgen der Spracheinstellung (`LANGUAGE`/`LANG`). Einstellen
+lässt sie sich in den Systemeinstellungen unter „Sprache und Region“; sie
+gilt ab der nächsten Anmeldung. Zum Ausprobieren kann man ein einzelnes
+Programm auch so starten:
 
 ```bash
 LANGUAGE=en querencia-rechner

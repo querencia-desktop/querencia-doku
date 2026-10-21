@@ -32,5 +32,5 @@ Auf einem Ubuntu-Server-System verwaltet oft systemd-networkd das Netz,
 NetworkManager aber nicht. PackageKit hält das System dann für offline und
 lädt nichts herunter. Abhilfe in der Installationsanleitung: in
 `/etc/netplan/*.yaml` unter `network:` die Zeile `renderer: NetworkManager`
-ergänzen und `sudo netplan apply` ausführen. Eine Fassung, die den Grund in
-der Statuszeile erklärt, ist fertig und wird als Nächstes eingespielt.
+ergänzen und `sudo netplan apply` ausführen. Software erkennt diesen Fall
+selbst und zeigt einen Hinweis mit dieser Abhilfe.

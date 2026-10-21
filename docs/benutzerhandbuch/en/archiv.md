@@ -51,4 +51,4 @@ already inside a single folder.
 
 Creating 7z and RAR, passwords when creating, changing encrypted archives,
 dragging files out of the window, renaming inside the archive, integrity
-check. An “Extract here” entry in the Files context menu will follow.
+check. “Extract here” in Querencia Files uses Querencia Archiv.

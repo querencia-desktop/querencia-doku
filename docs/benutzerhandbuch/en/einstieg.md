@@ -17,8 +17,11 @@ system:
 | Ubuntu 26.04 Desktop (GDM login screen) | After installing, **restart once** (GDM reads new sessions only at start-up). On the login screen pick the user, click the gear at the bottom right, choose “Querencia Desktop”, enter the password. |
 | Ubuntu 26.04 Server (no login screen) | Log in on the text console (tty1) and type `querencia-session`. |
 
-A Querencia login screen of its own is being packaged (see
-[Known limitations](bekannte-einschraenkungen.md)).
+Querencia also comes with a login screen of its own as an optional package
+(`querencia-anmeldung`); it is not installed automatically, GDM remains the
+recommendation. Details are in the
+[Alpha 1 release notes](../../release-notes/en/alpha-1.md#own-login-screen-optional),
+limits under [Known limitations](bekannte-einschraenkungen.md).
 
 After logging in, the desktop with background and icons appears first, then
 the two panels.
@@ -28,12 +31,18 @@ the two panels.
 Like GNOME 2, Querencia has two panels.
 
 **Top:** on the left the Q logo with the menus **Anwendungen**
-(Applications), **Orte** (Places) and **System**; on the right the **clock**.
-Clicking the clock opens a month calendar. Volume and network icons can be
-added at the top right (see below).
+(Applications), **Orte** (Places) and **System**; on the right the **bell**
+(notifications) and the **clock**. The bell counts unread notifications; a
+click opens the notification centre (see
+[Notifications](benachrichtigungen.md)). Clicking the clock opens a month
+calendar. Volume and network icons can be added at the top right (see
+below).
 
-**Bottom:** on the left the **window list** (one button per window), on the
-right the **workspace switcher** with four workspaces.
+**Bottom:** on the left the **Arbeitsfläche anzeigen** (show desktop) button
+and the **window list** (one button per window of the current workspace), on
+the right the **workspace switcher** with four workspaces. “Arbeitsfläche
+anzeigen” minimises all windows of the current workspace, a second click
+brings exactly these back; **Super+D** does the same.
 
 ### Menu “Anwendungen” (Applications)
 
@@ -55,18 +64,20 @@ in Querencia Files.
 - **Einstellungen** (Preferences) and **Systemverwaltung** (Administration)
   with the matching programs, among them [System Settings](einstellungen.md)
   and [Software](software.md).
-- **Informationen über Querencia** (About Querencia) – versions of the parts.
-- **Abmelden …** (Log Out) and **Ausschalten …** (Shut Down) – with a
-  question first, see [Session](sitzung.md).
+- **Informationen über Querencia** (About Querencia) – version and licence.
+- **Bildschirm sperren** (Lock Screen, Ctrl+Alt+L), **Abmelden …** (Log Out)
+  and **Ausschalten …** (Shut Down) – logging out and shutting down ask
+  first, see [Session](sitzung.md).
 
 ### Customising the panels
 
 Right-click a free spot of a panel to open the panel menu:
 
 - **Zum Panel hinzufügen …** (Add to Panel) opens a list with a search field:
-  Anwendungen, Orte, System, Fensterliste (window list),
-  Arbeitsflächenumschalter (workspace switcher), Uhr (clock),
-  Anwendungsstarter … (launcher), Lautstärke (volume), Netzwerk (network). The
+  Anwendungen, Orte, System, Fensterliste (window list), Arbeitsfläche
+  anzeigen (show desktop), Arbeitsflächenumschalter (workspace switcher), Uhr
+  (clock), Mitteilungen (notifications), Anwendungsstarter … (launcher),
+  Lautstärke (volume), Netzwerk (network). The
   new item goes into the area (left, centre, right) that was clicked.
 - Right-click an item: **Aus dem Panel entfernen** (Remove from Panel), for
   launchers also **Starten** (Launch).
@@ -94,9 +105,10 @@ under “Symbole der Arbeitsfläche”, desktop icons).
 - **Right-click on the trash:** open, empty (with a safety question).
 - **Right-click on a drive:** open, unmount or eject.
 
-Several backgrounds are included (“Querencia Blau” and four more motifs, each
-with and without logo); choose them in System Settings under
-“Hintergrundbild” (background).
+Included are 16 new backgrounds (default “Tiefblau”, deep blue; twelve
+motifs and four variants with the Querencia logo) and the five motifs of
+Alpha 1, four of them each with and without logo; choose them in System
+Settings under “Background Image”.
 
 ## Workspaces
 
@@ -121,6 +133,7 @@ program icon in the title bar.
 | Alt+Tab / Alt+Shift+Tab | switch windows (with list) |
 | Alt+F4 | close window |
 | Super+A | maximise / restore |
+| Super+F or Alt+F11 | fullscreen on / off |
 | Super+←, →, ↑, ↓ | snap to the screen edge |
 | Alt+Space | window menu |
 
@@ -132,8 +145,8 @@ minimises it, another click brings it back.
 
 ## Log out, lock, shut down
 
-- **Lock the screen:** Ctrl+Alt+L. After 10 minutes without input the screen
-  locks itself.
+- **Lock the screen:** System → Bildschirm sperren (Lock Screen) or
+  Ctrl+Alt+L. After 10 minutes without input the screen locks itself.
 - **Log out:** System → Abmelden … or Ctrl+Alt+Del.
 - **Shut down or restart:** System → Ausschalten … or Ctrl+Alt+Del.
 

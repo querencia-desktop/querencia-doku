@@ -1,6 +1,6 @@
 # Querencia Desktop – User Guide
 
-**Status:** Alpha 1 (draft), 20 October 2026 · [Deutsche Fassung](../de/index.md)
+**Status:** Alpha 2, 22 October 2026 · [Deutsche Fassung](../de/index.md)
 
 Querencia Desktop is a classic desktop environment in the style of GNOME 2
 (Ubuntu 10.04) for Wayland. It consists of the window manager labwc, two
@@ -8,8 +8,9 @@ panels, a desktop with icons and a set of its own programs (Rust and GTK 4).
 The interface is German; most programs are also available in English. Parts
 that are still German only are named on each page.
 
-> **Alpha.** Querencia is under development. This guide describes the tested
-> state of the development environment on 20 October 2026. There is no
+> **Alpha.** Querencia is under development. This guide describes the
+> Alpha 2 package set of 21 October 2026 (see the
+> [Alpha 2 release notes](../../release-notes/en/alpha-2.md)). There is no
 > security or data-loss guarantee. Known gaps are listed under
 > [Known limitations](bekannte-einschraenkungen.md).
 
@@ -29,7 +30,7 @@ that are still German only are named on each page.
 | Querencia Files (file manager) | Orte (Places), Anwendungen → Zubehör (Applications → Accessories) | [files.md](files.md) |
 | Querencia Terminal | Applications → Accessories | [terminal.md](terminal.md) |
 | Text Editor | Applications → Accessories | [editor.md](editor.md) |
-| Image Viewer | Applications → Accessories | [bilder.md](bilder.md) |
+| Image Viewer | Applications → Grafik (Graphics) | [bilder.md](bilder.md) |
 | Document Viewer (PDF) | Applications → Büro (Office) | [dokumente.md](dokumente.md) |
 | Archive Manager | Applications → Accessories | [archiv.md](archiv.md) |
 | Calculator | Applications → Accessories | [rechner.md](rechner.md) |
@@ -38,7 +39,7 @@ that are still German only are named on each page.
 | Take Screenshot | Print key, Applications → Accessories | [screenshot.md](screenshot.md) |
 | System Settings | System → Einstellungen (Preferences) | [einstellungen.md](einstellungen.md) |
 | Software | System → Systemverwaltung (Administration) | [software.md](software.md) |
-| Notifications | runs in the background | [benachrichtigungen.md](benachrichtigungen.md) |
+| Notifications, notification centre | runs in the background; bell in the top panel | [benachrichtigungen.md](benachrichtigungen.md) |
 | Session: log out, lock, shut down | System, Ctrl+Alt+Del, Ctrl+Alt+L | [sitzung.md](sitzung.md) |
 
 **Help**

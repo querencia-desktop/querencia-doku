@@ -14,8 +14,11 @@ ab, wie das System eingerichtet ist:
 | Ubuntu 26.04 Desktop (Anmeldebildschirm GDM) | Nach der Installation **einmal neu starten** (GDM liest neue Sitzungen nur beim Start). Im Anmeldebildschirm den Benutzer wählen, unten rechts auf das Zahnrad klicken, „Querencia Desktop“ wählen, Passwort eingeben. |
 | Ubuntu 26.04 Server (ohne Anmeldebildschirm) | An der Textkonsole (tty1) anmelden und `querencia-session` eingeben. |
 
-Ein eigener Querencia-Anmeldebildschirm wird gerade paketiert (siehe
-[Bekannte Einschränkungen](bekannte-einschraenkungen.md)).
+Querencia bringt außerdem einen eigenen Anmeldebildschirm als wahlweises
+Paket mit (`querencia-anmeldung`); er wird nicht automatisch installiert,
+empfohlen bleibt GDM. Einzelheiten stehen in den
+[Release-Notes Alpha 1](../../release-notes/de/alpha-1.md#eigener-anmeldebildschirm-optional),
+Grenzen unter [Bekannte Einschränkungen](bekannte-einschraenkungen.md).
 
 Nach dem Anmelden erscheinen nacheinander die Arbeitsfläche mit Hintergrund
 und Symbolen, dann die beiden Panels.
@@ -25,12 +28,17 @@ und Symbolen, dann die beiden Panels.
 Querencia hat wie GNOME 2 zwei Panels.
 
 **Oben** stehen links das Q-Logo mit den Menüs **Anwendungen**, **Orte** und
-**System**, rechts die **Uhr**. Ein Klick auf die Uhr öffnet einen
-Monatskalender. Lautstärke und Netzwerk lassen sich als Symbole oben rechts
-hinzufügen (siehe unten).
+**System**, rechts die **Glocke** (Mitteilungen) und die **Uhr**. Die Glocke
+zählt ungelesene Meldungen; ein Klick öffnet die Mitteilungszentrale (siehe
+[Benachrichtigungen](benachrichtigungen.md)). Ein Klick auf die Uhr öffnet
+einen Monatskalender. Lautstärke und Netzwerk lassen sich als Symbole oben
+rechts hinzufügen (siehe unten).
 
-**Unten** stehen links die **Fensterliste** (ein Knopf je Fenster) und rechts
-der **Arbeitsflächenumschalter** mit vier Arbeitsflächen.
+**Unten** stehen links der Knopf **Arbeitsfläche anzeigen** und die
+**Fensterliste** (ein Knopf je Fenster der aktuellen Arbeitsfläche), rechts
+der **Arbeitsflächenumschalter** mit vier Arbeitsflächen. „Arbeitsfläche
+anzeigen“ minimiert alle Fenster der aktuellen Arbeitsfläche, ein zweiter
+Klick holt genau diese zurück; dasselbe macht **Super+D**.
 
 ### Menü „Anwendungen“
 
@@ -51,17 +59,18 @@ Ein Klick öffnet den Ort in Querencia Files.
 - **Einstellungen** und **Systemverwaltung** mit den passenden Programmen,
   darunter [Systemeinstellungen](einstellungen.md) und
   [Software](software.md).
-- **Informationen über Querencia** – Versionen der Bestandteile.
-- **Abmelden …** und **Ausschalten …** – mit Rückfrage, siehe
-  [Sitzung](sitzung.md).
+- **Informationen über Querencia** – Version und Lizenz.
+- **Bildschirm sperren** (Strg+Alt+L), **Abmelden …** und **Ausschalten …**
+  – Abmelden und Ausschalten mit Rückfrage, siehe [Sitzung](sitzung.md).
 
 ### Panel anpassen
 
 Rechtsklick auf eine freie Stelle eines Panels öffnet das Panelmenü:
 
 - **Zum Panel hinzufügen …** öffnet eine Liste mit Suchfeld: Anwendungen,
-  Orte, System, Fensterliste, Arbeitsflächenumschalter, Uhr,
-  Anwendungsstarter …, Lautstärke, Netzwerk. Das neue Element landet in dem
+  Orte, System, Fensterliste, Arbeitsfläche anzeigen,
+  Arbeitsflächenumschalter, Uhr, Mitteilungen, Anwendungsstarter …,
+  Lautstärke, Netzwerk. Das neue Element landet in dem
   Bereich (links, Mitte, rechts), in den geklickt wurde.
 - Rechtsklick auf ein Element: **Aus dem Panel entfernen**, bei Startern auch
   **Starten**.
@@ -93,8 +102,9 @@ CDs, Netzlaufwerke – was angezeigt wird, stellt man in den
   (mit Sicherheitsabfrage).
 - **Rechtsklick auf einen Datenträger:** Öffnen, Aushängen bzw. Auswerfen.
 
-Mitgeliefert werden mehrere Hintergründe („Querencia Blau“ und vier weitere
-Motive, je mit und ohne Logo); ausgewählt werden sie in den
+Mitgeliefert werden 16 neue Hintergründe (Standard „Tiefblau“; zwölf Motive
+und vier Fassungen mit dem Querencia-Logo) und die fünf Motive aus Alpha 1,
+vier davon je mit und ohne Logo; ausgewählt werden sie in den
 Systemeinstellungen unter „Hintergrundbild“.
 
 ## Arbeitsflächen
@@ -120,6 +130,7 @@ Programmsymbol in der Titelleiste.
 | Alt+Tab / Alt+Umschalt+Tab | Fenster wechseln (mit Liste) |
 | Alt+F4 | Fenster schließen |
 | Super+A | maximieren / zurück |
+| Super+F oder Alt+F11 | Vollbild ein / aus |
 | Super+←, →, ↑, ↓ | an den Bildschirmrand andocken |
 | Alt+Leertaste | Fenstermenü |
 
@@ -131,8 +142,8 @@ Alle Kürzel auf einen Blick zeigt **Super+?** (Programm „Tastenkürzel“), s
 
 ## Abmelden, Sperren, Ausschalten
 
-- **Bildschirm sperren:** Strg+Alt+L. Nach 10 Minuten ohne Eingabe sperrt
-  sich der Bildschirm selbst.
+- **Bildschirm sperren:** System → Bildschirm sperren oder Strg+Alt+L. Nach
+  10 Minuten ohne Eingabe sperrt sich der Bildschirm selbst.
 - **Abmelden:** System → Abmelden … oder Strg+Alt+Entf.
 - **Ausschalten oder neu starten:** System → Ausschalten … oder Strg+Alt+Entf.
 

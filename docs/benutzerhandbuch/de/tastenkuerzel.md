@@ -18,11 +18,13 @@ was gerade gilt. Esc oder Strg+W schließt es.
 | Strg+Alt+L | Bildschirm sperren |
 | Strg+Alt+Entf | Sitzungsdialog (Abmelden, Bildschirm sperren, Neu starten, Herunterfahren) |
 | Super+? | Übersicht der Tastenkürzel |
+| Super+D | Arbeitsfläche anzeigen: alle Fenster der aktuellen Arbeitsfläche minimieren, noch einmal drücken holt sie zurück |
 | Strg+Alt+← / → | Arbeitsfläche links / rechts |
 | Strg+Alt+Umschalt+← / → | aktives Fenster auf die Arbeitsfläche links / rechts mitnehmen |
 | Alt+Tab / Alt+Umschalt+Tab | nächstes / voriges Fenster |
 | Alt+F4 | Fenster schließen |
 | Super+A | Fenster maximieren / zurück |
+| Super+F oder Alt+F11 | Vollbild für das aktive Fenster ein / aus (die Panels werden verdeckt) |
 | Super+←, →, ↑, ↓ | Fenster an den Rand andocken |
 | Alt+Leertaste | Fenstermenü |
 | Super+Eingabe | Terminal öffnen (Standardbelegung von labwc) |
@@ -43,8 +45,12 @@ Umschalt+Entf endgültig löschen · Strg+K suchen · Strg+L Ort eingeben · Str
 neu laden · Strg+B Seitenleiste · Strg+, Einstellungen · Alt+←/→ zurück/vor ·
 Alt+↑ übergeordneter Ordner · Alt+Pos1 Persönlicher Ordner.
 
-**Querencia Terminal:** Strg+Umschalt+C kopieren · Strg+Umschalt+V oder
-Umschalt+Einfg einfügen · Menü-Taste oder Umschalt+F10 Kontextmenü.
+**Querencia Terminal:** Strg+Umschalt+T neuer Reiter · Strg+Umschalt+W
+Reiter schließen · Strg+Umschalt+Q Fenster schließen · Strg+Bild↑/Bild↓
+vorheriger/nächster Reiter · Strg+Umschalt+Bild↑/Bild↓ Reiter nach
+links/rechts verschieben · Alt+1 bis Alt+9 zu Reiter 1 bis 9 ·
+Strg+Umschalt+C kopieren · Strg+Umschalt+V oder Umschalt+Einfg einfügen ·
+Menü-Taste oder Umschalt+F10 Kontextmenü.
 
 **Texteditor:** Strg+N/O/S neu/öffnen/speichern · Strg+Umschalt+S speichern
 unter · Strg+W Dokument schließen · Strg+Q beenden · Strg+Z/Strg+Umschalt+Z ·

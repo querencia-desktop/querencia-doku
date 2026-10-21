@@ -9,8 +9,10 @@ werden.
 Querencia Desktop, a classic GNOME-2-style desktop for Wayland. Alpha; the
 German text is the reference.
 
-> **Alpha.** Texte zur ersten internen Alpha (Stand 20.10.2026, abends). Was
-> nicht belegt ist, steht als „offen“ im Text.
+> **Alpha.** Texte zu Querencia Desktop Alpha 2 (Stand 22.10.2026). Was neu
+> ist und welche Grenzen gelten, steht in den
+> [Release-Notes Alpha 2](docs/release-notes/de/alpha-2.md); Installation und
+> Projektseite: <https://querencialinux.org>.
 
 ## Inhalt
 
@@ -27,9 +29,9 @@ German text is the reference.
 
 | | |
 |---|---|
-| Fassung | Release-Notes Alpha 1 und Alpha 2 auf dem Stand des jeweiligen Paketsatzes, kein Tag |
-| Grundlage | Live-Stand der Entwicklungsumgebung, Paketsatz Alpha 1 und Prüfberichte vom 20.10.2026 |
-| Offen | signierte APT-Quelle (Bezugsweg der Pakete), Freigabe der Hintergründe (KI-erzeugt, siehe Lizenz); das Handbuch beschreibt noch den Stand vom Nachmittag des 20.10. |
+| Fassung | Release-Notes Alpha 1 und Alpha 2 auf dem Stand des jeweiligen Paketsatzes, Benutzerhandbuch auf Alpha 2; kein Tag |
+| Grundlage | Paketsatz Alpha 2 vom 21.10.2026 (in der APT-Quelle seit 21.10.2026), Release-Notes Alpha 2 und der Quellcode der Programme |
+| Offen | Bildschirmfotos für Files und Terminal fehlen; einzelne Bilder zeigen eine frühere Fassung des Programms (Herkunft in `docs/benutzerhandbuch/bilder/herkunft.txt`) |
 
 ## Bauen und Prüfen
 

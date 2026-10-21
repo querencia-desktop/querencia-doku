@@ -33,7 +33,10 @@ Werkzeugleiste, Ortszeile, Seitenleiste mit Orten und Geräten.
   Verbundene SMB-Freigaben lassen sich über einen Trennen-Knopf lösen.
 - **Öffnen mit:** Doppelklick öffnet eine Datei mit dem Standardprogramm,
   z. B. Textdateien im Texteditor, PNG im Bildbetrachter, PDF im
-  Dokumentenbetrachter, Archive in der Archivverwaltung.
+  Dokumentenbetrachter, Archive in der Archivverwaltung. „Hier entpacken“
+  läuft über Querencia Archiv.
+- **Updates** kommen nur über apt; Files fragt nicht bei GitHub oder im AUR
+  nach neuen Versionen und zeigt keinen Update-Hinweis.
 
 ## Tastenkürzel
 
@@ -45,6 +48,7 @@ Siehe [Tastenkürzel](tastenkuerzel.md#programme) oder Super+?.
   Einhängen) können englisch erscheinen.
 - In der Netzwerkansicht kann derselbe Rechner zweimal auftauchen, weil zwei
   Suchdienste ihn melden.
-- Der Info-Dialog zeigt noch das Logo von Strata.
+- In der dunklen Darstellung bleibt Files vorerst hell; es hat ein eigenes
+  Thema.
 
 Siehe auch [Bekannte Einschränkungen](bekannte-einschraenkungen.md).

@@ -31,7 +31,10 @@ sidebar with places and devices.
   disconnected with a button.
 - **Open with:** a double-click opens a file with the default program, e.g.
   text files in the Text Editor, PNG in the Image Viewer, PDF in the Document
-  Viewer, archives in the Archive Manager.
+  Viewer, archives in the Archive Manager. “Extract here” uses Querencia
+  Archiv.
+- **Updates** come only through apt; Files does not ask GitHub or the AUR
+  for new versions and shows no update notice.
 
 ## Shortcuts
 
@@ -43,6 +46,7 @@ See [Keyboard shortcuts](tastenkuerzel.md#programs) or Super+?.
   German depending on the system language.
 - In the network view the same computer can appear twice because two
   discovery services report it.
-- The About dialog still shows the Strata logo.
+- In the dark appearance Files stays light for now; it has a theme of its
+  own.
 
 See also [Known limitations](bekannte-einschraenkungen.md).

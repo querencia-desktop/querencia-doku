@@ -18,9 +18,29 @@ The service starts with the session and shows messages from programs
   program offers some. The “Close” button removes the message.
 - Pictures in messages are scaled down to at most 48 pixels.
 
-## Do not disturb and history
+## Notification centre
 
-Until there is a panel icon for it, both work in the terminal:
+Every message (except short-lived ones the program marks as such) goes into
+a history that also survives a new login. The **notification centre** window
+(“Mitteilungszentrale”) shows it grouped by program, newest on top, with a
+search field, “Mark as Read”, “Remove”, “Remove All” and the “Do Not
+Disturb” switch. Keys: Esc closes, Del removes, Return triggers the main
+action, Ctrl+F searches.
+
+Open it with the **bell** in the top panel, through Applications →
+Accessories → Notification Center, or with the hint “in the notification
+center” at the bottom right of a message.
+
+- **Bell:** shows the number of unread messages; a left click opens or closes
+  the centre, a right click offers “Nicht stören” (do not disturb) and “Alle
+  als gelesen markieren” (mark all as read).
+- **Do not disturb** suppresses messages except critical ones; the history
+  keeps filling.
+- In the dark appearance messages and the centre are dark.
+
+## In the terminal
+
+The same works in the terminal:
 
 ```bash
 querencia-benachrichtigungen --nicht-stoeren an
@@ -34,5 +54,9 @@ querencia-benachrichtigungen --nicht-stoeren aus
 querencia-benachrichtigungen --verlauf
 ```
 
-(`an` = on, `aus` = off, `--verlauf` = history.) A **notification centre**
-with a stored history and a panel icon are in progress.
+```bash
+querencia-benachrichtigungen --zentrale
+```
+
+(`an` = on, `aus` = off, `--verlauf` = history, `--zentrale` = open the
+notification centre.)

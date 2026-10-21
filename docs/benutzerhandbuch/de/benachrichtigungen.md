@@ -19,9 +19,29 @@ Der Dienst startet mit der Sitzung und zeigt Meldungen von Programmen an
   Meldung.
 - Bilder in Meldungen werden auf höchstens 48 Pixel verkleinert.
 
-## Nicht stören und Verlauf
+## Mitteilungszentrale
 
-Bis es dafür ein Panel-Symbol gibt, geht beides im Terminal:
+Jede Meldung (außer kurzlebigen, die das Programm als solche kennzeichnet)
+kommt in einen Verlauf, der auch eine Neuanmeldung übersteht. Das Fenster
+**Mitteilungszentrale** zeigt ihn nach Programm gruppiert, neueste oben, mit
+Suchfeld, „Als gelesen“, „Entfernen“, „Alle entfernen“ und dem Schalter
+„Nicht stören“. Tasten: Esc schließt, Entf entfernt, Eingabe löst die
+Hauptaktion aus, Strg+F sucht.
+
+Öffnen lässt sie sich über die **Glocke** im oberen Panel, über Anwendungen
+→ Zubehör → Mitteilungszentrale oder über den Hinweis „in der Zentrale“ unten
+rechts in einer Meldung.
+
+- **Glocke:** zeigt die Zahl ungelesener Meldungen; Linksklick öffnet oder
+  schließt die Zentrale, Rechtsklick bietet „Nicht stören“ und „Alle als
+  gelesen markieren“.
+- **Nicht stören** unterdrückt Meldungen außer kritischen; der Verlauf füllt
+  sich weiter.
+- In der dunklen Darstellung sind Meldungen und Zentrale dunkel.
+
+## Im Terminal
+
+Dasselbe geht auch im Terminal:
 
 ```bash
 querencia-benachrichtigungen --nicht-stoeren an
@@ -35,5 +55,6 @@ querencia-benachrichtigungen --nicht-stoeren aus
 querencia-benachrichtigungen --verlauf
 ```
 
-Eine **Mitteilungszentrale** mit gespeichertem Verlauf und ein Panel-Symbol
-sind in Arbeit.
+```bash
+querencia-benachrichtigungen --zentrale
+```

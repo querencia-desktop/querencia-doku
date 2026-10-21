@@ -11,6 +11,12 @@ Right-click a free spot in the top panel → “Zum Panel hinzufügen …” (Ad
 Panel) → “Lautstärke” (volume) or “Netzwerk” (network). On a fresh user
 profile neither is there yet.
 
+**How do I switch to the dark appearance?**
+System → Einstellungen → Systemeinstellungen → Appearance, switch on “Prefer
+dark appearance” and click “Apply”. The panel, the desktop and the Querencia
+programs change at once; window frames, Querencia Files, Screenshot and a
+few dialogs stay light for now.
+
 **Where are the settings?**
 System → Einstellungen → Systemeinstellungen. The background can also be
 reached by right-clicking the desktop.
@@ -32,14 +38,15 @@ Yes. Questions do not count down by themselves. A countdown can be switched
 on in `~/.config/querencia/sitzung.ini`, see [Session](sitzung.md).
 
 **Why are some parts German?**
-The Querencia programs are German and English; panel, desktop and settings
-are German only so far. Some dialogs come from system libraries (e.g. GVfs,
-the GTK file dialog) and follow their translations.
+The Querencia programs, System Settings included, are German and English;
+panel, desktop and lock screen are German only so far. Some dialogs come
+from system libraries (e.g. GVfs, the GTK file dialog) and follow their
+translations.
 
 **How do I switch a program to English?**
-The programs follow the language setting (`LANGUAGE`/`LANG`). A “language and
-region” area in the settings will follow; until then you can try a program
-like this:
+The programs follow the language setting (`LANGUAGE`/`LANG`). Set it in
+System Settings under “Language and Region”; it applies from the next login.
+To try out a single program you can also start it like this:
 
 ```bash
 LANGUAGE=en querencia-rechner

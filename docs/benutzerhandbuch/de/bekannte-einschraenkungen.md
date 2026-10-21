@@ -2,52 +2,63 @@
 
 [Zurück zum Inhalt](index.md)
 
-Stand Alpha 1 (20.10.2026). Die Kennungen (QD-…) verweisen auf die Liste der
-offenen Punkte des Projekts; P1 ist wichtig, P2 mittel.
+Stand Alpha 2 (22.10.2026). Grundlage sind die
+[Release-Notes Alpha 2](../../release-notes/de/alpha-2.md), Abschnitt
+„Bekannte Grenzen“.
 
 ## Installation und Anmeldung
 
 | Punkt | Was das heißt |
 |---|---|
-| Eigener Anmeldebildschirm fehlt im Paket (QD-075, P1) | Angemeldet wird über GDM („Querencia Desktop“ am Zahnrad wählen) oder an der Textkonsole mit `querencia-session`. |
-| Neben einem Ubuntu-Desktop noch nicht fertig geprüft (QD-074, P1) | Die Probe auf einem Ubuntu-Desktop-System läuft. |
-| Aussehen auf dem GDM-Weg (QD-068, P2) | Schrift-, Symbol- und Zeigervorgaben von Querencia fehlen dort noch; die Sitzung sieht dann anders aus. In Arbeit. |
-| Software offline auf Server-Systemen (QD-067, P2) | Siehe [Software](software.md#wenn-software-keine-netzwerkverbindung-meldet). |
-| Paketsatz hinter der Entwicklungsumgebung | Einige Pakete sind eine Fassung älter als die hier beschriebenen Programme (siehe Release-Notes). |
+| Nur Ubuntu 26.04 | Die Pakete gibt es nur für Ubuntu 26.04 („resolute“), amd64. |
+| Nicht auf echter Hardware getestet | Geprüft wurde in virtuellen Maschinen. Echte Hardware, Drucken auf einem echten Drucker und Windows-Freigaben (SMB) sind noch ungeprüft. |
+| Eigener Anmeldebildschirm englisch | Der wahlweise Anmeldebildschirm `querencia-anmeldung` zeigt Knöpfe und Uhr auf Englisch. Für Alpha 2 wurde er nicht erneut geprüft (unverändert seit Alpha 1). |
+| greetd bleibt nach dem Entfernen von `querencia-anmeldung` | War vorher kein Anmeldedienst eingerichtet (Server-Abbild), bleibt greetd mit einer Textanmeldung stehen. Neben GDM kehrt GDM zurück. |
+| Neben GNOME: geteilte Einstellungen | Querencia und GNOME lesen dieselben gsettings-Werte; ein in Querencia geändertes Symbolthema gilt auch in GNOME. Neben Ubuntu Desktop zeigt Querencia die Yaru-Symbole, weil Ubuntu das Symbolthema als Benutzerwert setzt. GNOME-Programme erscheinen auch im Querencia-Menü. |
+| Netzwerkverbindungen nur mit NetworkManager | Verbinden und Trennen im Netzwerk-Applet geht nur, wenn NetworkManager das Netz verwaltet. Auf dem Server-Abbild zeigt das Applet sonst kein Gerät, und Software kann nichts installieren; siehe [Software](software.md#wenn-software-keine-netzwerkverbindung-meldet). |
+
+## Dunkle Darstellung
+
+| Punkt | Was das heißt |
+|---|---|
+| Fensterrahmen, Files und einige Dialoge bleiben hell | labwc zeichnet die Rahmen mit dem eigenen Thema, Querencia Files hat ein eigenes Thema. Bildschirmfoto, Sitzungsdialog, Tastenkürzel-Übersicht und die Leisten des Terminals bleiben ebenfalls hell. |
+| Fremde GTK-3-Programme folgen nicht | GTK 3 wertet „Dunkle Darstellung bevorzugen“ nicht aus. Die Querencia-Programme sind GTK 4 und folgen der Einstellung (bis auf die Ausnahmen oben). |
+| Tastaturfokus nach dem Wechsel | Nach einem Wechsel hell/dunkel im laufenden Programm kann der Tastaturfokus an einer anderen Stelle stehen als beim Start. |
+| Geändertes Thema erst nach Neuanmeldung | Panel und Arbeitsfläche übernehmen ein geändertes Thema erst nach einer Neuanmeldung; das Umschalten hell/dunkel wirkt sofort. |
+| Firefox als Snap | übernimmt das GTK-Thema nicht. |
 
 ## Panel und Arbeitsfläche
 
 | Punkt | Was das heißt |
 |---|---|
-| Fensterliste zeigt alle Arbeitsflächen (QD-013, P2) | Eine Einstellung „nur aktuelle Arbeitsfläche“ ist in Arbeit. |
-| Arbeitsflächenumschalter ohne Fenster-Miniaturen (QD-012, P2) | Die Zellen zeigen keine Fenster. |
-| Panel-Elemente nicht zwischen den Panels verschiebbar (QD-044) | Innerhalb eines Panels geht Verschieben. |
-| Panel im Paket ruft den alten Abmelden-Dialog (QD-069, P2) | Betrifft die installierten Pakete; in Arbeit. |
-| Bereich „Panels“ in den Einstellungen nur Anzeige (QD-046) | Ändern geht direkt im Panel. |
-| Bildschirm-Skalierung 1,5 (QD-028, P2) | Zentrierte oder gekachelte Hintergründe erscheinen zu klein. |
-| Vollbild von X11-Programmen (QD-065) | Manche X11-Programme liegen im Vollbild unter den Panels. In Arbeit. |
+| Panel-Absturz im Testlauf | In einem Testlauf stürzte das Panel beim ersten Öffnen des Menüs Anwendungen ab und startete nicht von selbst neu. Schon am 18.10. waren Panel und Arbeitsfläche einmal ohne erkennbare Ursache beendet. Abhilfe: Strg+Alt+Entf → Abmelden, dann neu anmelden. Die Ursache wird untersucht. |
+| Arbeitsflächenumschalter ohne Fenster-Miniaturen | Die Zellen zeigen keine Fenster. |
+| Panel-Elemente nicht zwischen den Panels verschiebbar | Innerhalb eines Panels geht Verschieben; sonst entfernen und im anderen Panel neu hinzufügen. |
+| Bereich „Panels“ in den Einstellungen nur Anzeige | Ändern geht direkt im Panel. |
+| Bildschirm-Skalierung 1,5 | Zentrierte oder gekachelte Hintergründe erscheinen zu klein. |
+| Vollbild von X11-Programmen | Manche X11-Programme liegen im Vollbild unter den Panels. Super+F oder Alt+F11 schaltet das aktive Fenster in echtes Vollbild, dann verdeckt es die Panels. |
+
+## Sprache
+
+| Punkt | Was das heißt |
+|---|---|
+| Nur deutsch | Panel, Arbeitsfläche, Sperrbildschirm und Tastenkürzel-Übersicht sind vorerst nur deutsch; die Programme sprechen Deutsch und Englisch. |
+| Systemdialoge teils englisch | z. B. Meldungen von GVfs beim Einhängen in Files. |
+| Vorläufige Programmkennungen | Panel und einige Programme nutzen bis Alpha 3 noch vorläufige Kennungen (`org.example…`). Für die Bedienung spielt das keine Rolle. |
 
 ## Programme
 
 | Punkt | Was das heißt |
 |---|---|
-| Englisch noch nicht überall (QD-055, P1) | Panel, Arbeitsfläche, Einstellungen, Tastenkürzel-Übersicht und der Sperrbildschirm sind nur deutsch. |
-| Sprache und Region nicht einstellbar (QD-056, P2) | Texte sind deutsch, Datums- und Zahlenformate folgen noch der englischen Grundeinstellung der Sitzung. |
-| Nur eine Tastaturbelegung (QD-057, P1) | Mehrere Belegungen mit Umschalttaste fehlen. |
-| Systemdialoge teils englisch (QD-015, P2) | z. B. Meldungen von GVfs beim Einhängen in Files. |
-| Files: Rechner doppelt in der Netzwerkansicht (QD-036, P2) | Zwei Suchdienste melden denselben Rechner. |
-| Files: Strata-Logo im Info-Dialog (QD-071, P1) | Wird durch das Querencia-Symbol ersetzt. |
-| Bildbetrachter: Nebenfenster ohne Titelleiste | Ein zum zweiten Mal geöffneter Dialog erscheint ohne Titelleiste. |
+| Files: Rechner doppelt in der Netzwerkansicht | Zwei Suchdienste melden denselben Rechner. |
 | Terminal: Einfügen mit der mittleren Maustaste | Eine Auswahl aus einem anderen Programm kommt nicht immer an. |
-| Dokumentenbetrachter: Drucken | Auf einen echten Drucker noch nicht geprüft. |
-| Benachrichtigungen ohne Mitteilungszentrale (QD-073) | In Arbeit; bis dahin „Nicht stören“ über die Kommandozeile. |
-| Blasse Textreste beim Seitenwechsel (QD-070, P2) | Ein Zeichenfehler von GTK 4.22; die Sitzung schaltet ihn ab, ein Bericht an GTK steht aus. |
+| Drucken ungetestet | Auf einen echten Drucker (z. B. aus dem Dokumentenbetrachter) noch nicht geprüft. |
+| Blasse Textreste beim Seitenwechsel | Ein Zeichenfehler von GTK 4.22; die Sitzung umgeht ihn, indem GTK-Programme ihre Fenster ganz neu zeichnen. |
 
 ## Hardware und virtuelle Maschinen
 
 | Punkt | Was das heißt |
 |---|---|
-| Falsche Auflösung nach dem Start einer VM (QD-027, P2) | Die durchgereichte Grafik meldet manchmal keine Bildschirmdaten; den Bildschirm kurz ab- und wieder anstecken hilft. |
+| Alt+Druck in VMs | Das Bildschirmfoto des aktiven Fensters kam in virtuellen Maschinen nicht an; an echter Hardware ungeprüft. |
+| Falsche Auflösung nach dem Start einer VM | Die durchgereichte Grafik meldet manchmal keine Bildschirmdaten; den Bildschirm kurz ab- und wieder anstecken hilft. |
 | Ton in VMs | Ohne Soundkarte zeigt der Lautstärkeregler nur „Dummy Output“. |
-| Alt+Druck in VMs | Kam bei der Probe nicht an; an echter Hardware zu prüfen. |
-| Panel und Arbeitsfläche einmal ohne Spur beendet (QD-025, P1) | Am 18.10. einmal beobachtet, Ursache unbekannt. Abhilfe: Strg+Alt+Entf → Abmelden, dann neu anmelden. |

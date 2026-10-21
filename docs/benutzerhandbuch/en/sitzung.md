@@ -6,7 +6,8 @@
 
 ## Locking the screen
 
-- **Ctrl+Alt+L** locks at once.
+- **Ctrl+Alt+L** or **System → Bildschirm sperren** (Lock Screen) locks at
+  once.
 - After **10 minutes** without input the screen locks itself.
 - The lock screen shows a clock and a password field on every screen; unlock
   with your own password. The lock screen is German only.
@@ -19,8 +20,8 @@ it; arrow keys and Return work.
 
 ## Log out and shut down from the menu
 
-- **System → Abmelden …** (Log Out) asks before logging out.
-- **System → Ausschalten …** (Shut Down) asks before shutting down.
+- **System → Abmelden …** (Log Out) asks “Log out of this system now?”.
+- **System → Ausschalten …** (Shut Down) asks “Shut down this system now?”.
 
 The questions wait until you choose; they do not count down by themselves.
 If you want a countdown, add it to `~/.config/querencia/sitzung.ini`:
@@ -38,3 +39,7 @@ the session services; you can log in again right away.
 When a program needs administrator rights (e.g. Software when installing,
 restarting), the session's password dialog (“Authenticate”) asks for your own
 password.
+
+## Good to know
+
+The session dialog stays light in the dark appearance too.

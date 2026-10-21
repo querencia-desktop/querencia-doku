@@ -2,52 +2,63 @@
 
 [Back to contents](index.md)
 
-State of Alpha 1 (20 October 2026). The identifiers (QD-…) refer to the
-project's list of open items; P1 is important, P2 medium.
+State of Alpha 2 (22 October 2026). Based on the
+[Alpha 2 release notes](../../release-notes/en/alpha-2.md), section “Known
+limitations”.
 
 ## Installation and login
 
 | Item | What it means |
 |---|---|
-| Own login screen not yet packaged (QD-075, P1) | Log in via GDM (choose “Querencia Desktop” at the gear) or on the text console with `querencia-session`. |
-| Side by side with an Ubuntu desktop not fully tested (QD-074, P1) | The test on an Ubuntu Desktop system is running. |
-| Look on the GDM path (QD-068, P2) | Querencia's font, icon and pointer defaults are still missing there; the session then looks different. In progress. |
-| Software offline on server systems (QD-067, P2) | See [Software](software.md#when-software-reports-no-network-connection). |
-| Package set behind the development environment | Some packages are one version older than the programs described here (see the release notes). |
+| Ubuntu 26.04 only | The packages exist only for Ubuntu 26.04 (“resolute”), amd64. |
+| Not tested on real hardware | Testing was done in virtual machines. Real hardware, printing on a real printer and Windows shares (SMB) are not tested yet. |
+| Own login screen in English | The optional login screen `querencia-anmeldung` shows its buttons and clock in English. It was not tested again for Alpha 2 (unchanged since Alpha 1). |
+| greetd stays after removing `querencia-anmeldung` | If no login service was set up before (server image), greetd stays with a text login. Next to GDM, GDM comes back. |
+| Next to GNOME: shared settings | Querencia and GNOME read the same gsettings values; an icon theme changed in Querencia also applies in GNOME. Next to Ubuntu Desktop, Querencia shows the Yaru icons because Ubuntu sets the icon theme as a user value. GNOME programs also appear in the Querencia menu. |
+| Network connections only with NetworkManager | Connecting and disconnecting in the network applet only works when NetworkManager manages the network. Otherwise, on the server image the applet shows no device and Software cannot install anything; see [Software](software.md#when-software-reports-no-network-connection). |
+
+## Dark appearance
+
+| Item | What it means |
+|---|---|
+| Window frames, Files and a few dialogs stay light | labwc draws the frames with its own theme, Querencia Files has a theme of its own. Screenshot, the session dialog, the shortcut overview and the terminal's bars stay light too. |
+| Third-party GTK 3 programs do not follow | GTK 3 ignores “Prefer dark appearance”. The Querencia programs use GTK 4 and follow the setting (except as listed above). |
+| Keyboard focus after switching | After switching between light and dark in a running program, the keyboard focus may sit somewhere else than after a start. |
+| Changed theme only after a new login | The panel and the desktop take over a changed theme only after logging in again; switching between light and dark takes effect at once. |
+| Firefox as a snap | ignores the GTK theme. |
 
 ## Panel and desktop
 
 | Item | What it means |
 |---|---|
-| Window list shows all workspaces (QD-013, P2) | A setting “current workspace only” is in progress. |
-| Workspace switcher without window thumbnails (QD-012, P2) | The cells show no windows. |
-| Panel items cannot be moved between panels (QD-044) | Moving within one panel works. |
-| Panel from the package opens the old log-out dialog (QD-069, P2) | Affects the installed packages; in progress. |
-| “Panels” area in the settings is display only (QD-046) | Change the panels directly. |
-| Display scale 1.5 (QD-028, P2) | Centred or tiled backgrounds appear too small. |
-| Fullscreen of X11 programs (QD-065) | Some X11 programs lie under the panels in fullscreen. In progress. |
+| Panel crash in a test run | In one test run the panel crashed the first time the Applications menu was opened and did not restart by itself. Already on 18 October the panel and the desktop once ended without a visible cause. Remedy: Ctrl+Alt+Del → Log Out, then log in again. The cause is being investigated. |
+| Workspace switcher without window thumbnails | The cells show no windows. |
+| Panel items cannot be moved between panels | Moving within one panel works; otherwise remove the item and add it to the other panel again. |
+| “Panels” area in the settings is display only | Change the panels directly. |
+| Display scale 1.5 | Centred or tiled backgrounds appear too small. |
+| Fullscreen of X11 programs | Some X11 programs lie under the panels in fullscreen. Super+F or Alt+F11 switches the active window to real fullscreen, which then covers the panels. |
+
+## Language
+
+| Item | What it means |
+|---|---|
+| German only | The panel, the desktop, the lock screen and the shortcut overview are German only for now; the programs speak German and English. |
+| System dialogs partly in another language | e.g. messages from GVfs when mounting in Files. |
+| Placeholder program identifiers | The panel and some programs still use placeholder identifiers (`org.example…`) until Alpha 3. This makes no difference in use. |
 
 ## Programs
 
 | Item | What it means |
 |---|---|
-| English not everywhere yet (QD-055, P1) | Panel, desktop, settings, the shortcut overview and the lock screen are German only. |
-| Language and region not adjustable (QD-056, P2) | Texts follow the language setting, date and number formats still follow the session's English base setting. |
-| Only one keyboard layout (QD-057, P1) | Several layouts with a switch key are missing. |
-| System dialogs partly in another language (QD-015, P2) | e.g. messages from GVfs when mounting in Files. |
-| Files: computers twice in the network view (QD-036, P2) | Two discovery services report the same computer. |
-| Files: Strata logo in the About dialog (QD-071, P1) | Will be replaced by the Querencia icon. |
-| Image Viewer: secondary windows without title bar | A dialog opened for the second time appears without title bar. |
+| Files: computers twice in the network view | Two discovery services report the same computer. |
 | Terminal: middle-click paste | A selection from another program does not always arrive. |
-| Document Viewer: printing | Not yet tested on a real printer. |
-| Notifications without notification centre (QD-073) | In progress; until then “do not disturb” via the command line. |
-| Faint text remnants when switching pages (QD-070, P2) | A drawing bug in GTK 4.22; the session switches it off, a report to GTK is pending. |
+| Printing not tested | Not yet tested on a real printer (e.g. from the Document Viewer). |
+| Faint text remnants when switching pages | A drawing bug in GTK 4.22; the session works around it by having GTK programs redraw their whole window. |
 
 ## Hardware and virtual machines
 
 | Item | What it means |
 |---|---|
-| Wrong resolution after a VM starts (QD-027, P2) | The passed-through graphics sometimes report no monitor data; unplugging and replugging the monitor helps. |
+| Alt+Print in VMs | The screenshot of the active window did not arrive in virtual machines; not tested on real hardware. |
+| Wrong resolution after a VM starts | The passed-through graphics sometimes report no monitor data; unplugging and replugging the monitor helps. |
 | Sound in VMs | Without a sound card the volume control only shows “Dummy Output”. |
-| Alt+Print in VMs | Did not arrive during the test; to be checked on real hardware. |
-| Panel and desktop once ended without a trace (QD-025, P1) | Seen once on 18 October, cause unknown. Remedy: Ctrl+Alt+Del → Log Out, then log in again. |

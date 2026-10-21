@@ -3,8 +3,7 @@
 [Back to contents](index.md)
 
 **Start:** double-click an image (Bilder is the default for PNG) or
-Applications → Accessories → Image Viewer. From Bilder 0.2.2 on the entry is
-under Applications → Graphics.
+Applications → Graphics → Image Viewer.
 
 ![Image Viewer with the Image menu open](../bilder/en-bilder.png)
 

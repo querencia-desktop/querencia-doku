@@ -51,5 +51,5 @@ liegt schon in einem einzigen Ordner.
 
 7z und RAR erstellen, Kennwörter beim Erstellen, verschlüsselte Archive
 ändern, Dateien aus dem Fenster herausziehen, Umbenennen im Archiv,
-Integritätsprüfung. Ein Eintrag „Hier entpacken“ im Kontextmenü von Files
-folgt.
+Integritätsprüfung. „Hier entpacken“ in Querencia Files läuft über
+Querencia Archiv.

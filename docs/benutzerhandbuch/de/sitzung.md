@@ -6,7 +6,7 @@
 
 ## Bildschirm sperren
 
-- **Strg+Alt+L** sperrt sofort.
+- **Strg+Alt+L** oder **System → Bildschirm sperren** sperrt sofort.
 - Nach **10 Minuten** ohne Eingabe sperrt sich der Bildschirm selbst.
 - Der Sperrbildschirm zeigt Uhr und Passwortfeld auf jedem Bildschirm;
   entsperrt wird mit dem eigenen Passwort.
@@ -19,8 +19,8 @@ schließt ihn; Pfeiltasten und Eingabe funktionieren.
 
 ## Abmelden und Ausschalten über das Menü
 
-- **System → Abmelden …** fragt „Möchten Sie sich wirklich abmelden?“.
-- **System → Ausschalten …** fragt vor dem Herunterfahren.
+- **System → Abmelden …** fragt „Möchten Sie sich jetzt abmelden?“.
+- **System → Ausschalten …** fragt „Möchten Sie den Rechner jetzt herunterfahren?“.
 
 Die Rückfragen warten, bis man wählt; sie zählen nicht von selbst herunter.
 Wer einen Countdown möchte, trägt ihn in `~/.config/querencia/sitzung.ini`
@@ -42,4 +42,5 @@ fragt nach dem eigenen Passwort.
 
 ## Gut zu wissen
 
-Der Sperrbildschirm und seine Meldungen sind nur deutsch.
+Der Sperrbildschirm und seine Meldungen sind nur deutsch. Der Sitzungsdialog
+bleibt auch in der dunklen Darstellung hell.

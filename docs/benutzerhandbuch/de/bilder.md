@@ -3,8 +3,7 @@
 [Zurück zum Inhalt](index.md)
 
 **Starten:** Doppelklick auf ein Bild (Bilder ist der Standard für PNG) oder
-Anwendungen → Zubehör → Bildbetrachter. Ab Bilder 0.2.2 steht der Eintrag
-unter Anwendungen → Grafik.
+Anwendungen → Grafik → Bildbetrachter.
 
 ![Bildbetrachter](../bilder/de-bilder.png)
 

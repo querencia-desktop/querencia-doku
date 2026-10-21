@@ -19,11 +19,13 @@ closes it.
 | Ctrl+Alt+L | Lock screen |
 | Ctrl+Alt+Del | Session dialog (Log Out, Lock Screen, Restart, Shut Down) |
 | Super+? | Shortcut overview |
+| Super+D | Show desktop: minimise all windows of the current workspace, press again to bring them back |
 | Ctrl+Alt+← / → | Workspace left / right |
 | Ctrl+Alt+Shift+← / → | Move the active window to the workspace left / right |
 | Alt+Tab / Alt+Shift+Tab | Next / previous window |
 | Alt+F4 | Close window |
 | Super+A | Maximise / restore window |
+| Super+F or Alt+F11 | Fullscreen on / off for the active window (covers the panels) |
 | Super+←, →, ↑, ↓ | Snap window to the edge |
 | Alt+Space | Window menu |
 | Super+Return | Open a terminal (labwc default binding) |
@@ -43,8 +45,11 @@ Shift+Del delete permanently · Ctrl+K search · Ctrl+L enter location · Ctrl+R
 reload · Ctrl+B sidebar · Ctrl+, preferences · Alt+←/→ back/forward · Alt+↑
 parent folder · Alt+Home home folder.
 
-**Querencia Terminal:** Ctrl+Shift+C copy · Ctrl+Shift+V or Shift+Insert
-paste · Menu key or Shift+F10 context menu.
+**Querencia Terminal:** Ctrl+Shift+T new tab · Ctrl+Shift+W close tab ·
+Ctrl+Shift+Q close window · Ctrl+PgUp/PgDn previous/next tab ·
+Ctrl+Shift+PgUp/PgDn move tab left/right · Alt+1 to Alt+9 go to tab 1 to 9 ·
+Ctrl+Shift+C copy · Ctrl+Shift+V or Shift+Insert paste · Menu key or
+Shift+F10 context menu.
 
 **Text Editor:** Ctrl+N/O/S new/open/save · Ctrl+Shift+S save as · Ctrl+W
 close document · Ctrl+Q quit · Ctrl+Z/Ctrl+Shift+Z · Ctrl+A · Ctrl+F find ·

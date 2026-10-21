@@ -32,5 +32,5 @@ On an Ubuntu Server system the network is often managed by systemd-networkd,
 not by NetworkManager. PackageKit then considers the system offline and
 downloads nothing. The fix from the installation guide: in
 `/etc/netplan/*.yaml` add the line `renderer: NetworkManager` under
-`network:` and run `sudo netplan apply`. A version that explains the reason
-in the status bar is ready and will be installed next.
+`network:` and run `sudo netplan apply`. Software detects this case itself
+and shows a notice with this fix.
