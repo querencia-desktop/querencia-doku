@@ -1,8 +1,7 @@
 # Querencia Desktop – Alpha 2
 
-**Stand:** 21.10.2026, 22:10, Entwurf zum eingefrorenen Paketsatz · **Status:**
-interne Alpha, nicht veröffentlicht · Werte mit „offen“ sind noch nicht belegt oder nicht
-entschieden.
+**Stand:** 21.10.2026 · **Status:** in der APT-Quelle seit 21. Oktober 2026,
+22:25
 
 Alpha 2 bringt den Stand der Entwicklungsumgebung vom 21. Oktober 2026 in
 die Paketquelle: eine **dunkle Darstellung** für den ganzen Desktop, besser
@@ -21,7 +20,7 @@ APT-Quelle.
   „Dunkle Darstellung bevorzugen“ einschalten: Das Thema
   Querencia-Klassisch 0.2.1 hat jetzt eine dunkle Fassung, und Panel,
   Arbeitsfläche und die Querencia-Programme folgen ihr – bis auf Querencia
-  Files, das vorerst sein eigenes helles Thema behält. Ausschalten stellt
+  Files, Bildschirmfoto und einige Dialoge, die vorerst hell bleiben. Ausschalten stellt
   die helle Darstellung wieder her. Laufende Programme wechseln sofort,
   das Panel ebenfalls; die Fensterrahmen von labwc bleiben hell.
 - **16 neue Hintergründe** im neuen Datenpaket `querencia-hintergruende`:
@@ -32,7 +31,7 @@ APT-Quelle.
   (Black Forest Labs) über fal.ai erzeugt und vom Projektbesitzer
   ausgewählt; das Logo ist nachträglich per Skript aufgeprägt, nie von der
   KI gemalt. Die Systemeinstellungen 0.1.4 zeigen sie als Galerie, die
-  Symbolbeschriftungen der Arbeitsfläche (Desktop 0.2.1) haben eine
+  Symbolbeschriftungen der Arbeitsfläche (Desktop 0.2.2) haben eine
   Hinterlegung und bleiben auf jedem Bild lesbar.
 - **Kontrast in der hellen Darstellung** nach WCAG AA nachgezogen:
   Tastenkürzel in Menüs, Speichermarke im Rechner, Leerhinweis im
@@ -73,7 +72,7 @@ Tag um 21:43 in der Entwicklungsumgebung aktiv war.
 | querencia-benachrichtigungen | 0.2.2-1 | Benachrichtigungen 0.2.2 |
 | querencia-einstellungen | 0.1.4-1 | Systemeinstellungen 0.1.4 mit Hintergrund-Galerie |
 | querencia-symbole | 0.7-1 | Programmsymbole und Symbolthema „Querencia“ |
-| querencia-files | 0.1.0~alpha6-1 | Querencia Files, Stand QF-0r-1 |
+| querencia-files | 0.1.0~alpha6-1 | Querencia Files (Tag `querencia/qf-0r-1`) |
 | querencia-terminal | 0.3.0-1 | Querencia Terminal 0.3.0 mit Reitern |
 | querencia-editor | 0.2.3-1 | Texteditor 0.2.3 |
 | querencia-bilder | 0.2.5-1 | Bildbetrachter 0.2.5 |
@@ -116,12 +115,17 @@ Netzwerk-Applet nur mit NetworkManager, Firefox als Snap ohne GTK-Thema,
 geteilte gsettings-Werte neben GNOME, greetd bleibt nach dem Entfernen von
 `querencia-anmeldung`. Neu bzw. geändert:
 
-- **Fensterrahmen und Files bleiben hell:** labwc zeichnet die Rahmen mit
-  dem eigenen Thema, Querencia Files hat ein eigenes Thema; dunkle
-  Fassungen dafür sind Folgepunkte.
+- **Fensterrahmen, Files und einige Dialoge bleiben hell:** labwc zeichnet
+  die Rahmen mit dem eigenen Thema, Querencia Files hat ein eigenes Thema;
+  Bildschirmfoto, Sitzungsdialog, Tastenkürzel-Übersicht und die Leisten
+  des Terminals bleiben ebenfalls hell. Dunkle Fassungen sind Folgepunkte.
 - **Fremde GTK-3-Programme folgen dem Dunkelmodus nicht:** GTK 3 wertet
-  die Einstellung „Dunkle Darstellung bevorzugen“ nicht aus; alle
-  Querencia-Programme sind GTK 4 und folgen ihr.
+  die Einstellung „Dunkle Darstellung bevorzugen“ nicht aus; die
+  Querencia-Programme sind GTK 4 und folgen ihr, bis auf Querencia Files,
+  Bildschirmfoto und einige Dialoge, die vorerst hell bleiben.
+- **Nur deutsch:** Panel, Arbeitsfläche und Sperrbildschirm sind vorerst
+  nur deutsch; die Programme sprechen Deutsch und Englisch. Panel und einige
+  Programme nutzen bis Alpha 3 noch vorläufige Kennungen (`org.example…`).
 - Nach einem Wechsel hell/dunkel im laufenden Programm kann der
   Tastaturfokus an einer anderen Stelle stehen als beim Start.
 - **Panel und Arbeitsfläche** übernehmen ein geändertes Thema erst nach
@@ -165,11 +169,15 @@ schwärzen. Sicherheitslücken nicht öffentlich melden, sondern über
     sofort), Terminal mit drei Reitern, Files ohne Update-Hinweis und ohne
     Netzverbindung, Benachrichtigung, Tastenkürzel-Übersicht,
     PDF-Betrachter nach Neuschreiben der Datei;
-  - Messwerte: Einstellungs-Portal antwortet in 7–12 ms, Panel und
+  - Messwerte: Einstellungs-Portal antwortet in 7–17 ms, Panel und
     Arbeitsfläche 1,1–1,3 s nach dem Fensterverwalter.
   - Nicht geprüft: Anmeldung über querencia-anmeldung (unverändert seit
     Alpha 1), echte Hardware, SMB-Freigaben, Kopieren und Einfügen im
     Terminal.
+- **Aus der echten Paketquelle**, bestanden am 21.10.2026 (VM): frische
+  Installation auf dem Server-Abbild mit den Befehlen der Alpha-Seite, 386
+  Pakete; Upgrade von Alpha 1 mit `apt full-upgrade`, eigener Hintergrund
+  und eigene Tastenkürzel bleiben.
 
 ## Lizenzen und Herkunft
 

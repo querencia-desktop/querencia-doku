@@ -1,7 +1,7 @@
 # Querencia Desktop – Alpha 2
 
-**As of:** 21 October 2026, 22:10, draft for the frozen package set ·
-**Status:** internal alpha, not published · Values marked “open” are not yet confirmed or not yet decided.
+**As of:** 21 October 2026 ·
+**Status:** in the APT repository since 21 October 2026, 22:25
 
 Alpha 2 brings the state of the development environment of 21 October 2026
 into the package repository: a **dark appearance** for the whole desktop,
@@ -19,7 +19,8 @@ signed APT repository.
 - **Dark appearance.** In System Settings → Appearance, switch on “Prefer
   dark appearance”: the Querencia-Klassisch theme 0.2.1 now has a dark
   variant, and the panel, the desktop and the Querencia programs follow it –
-  except Querencia Files, which keeps its own light theme for now. Switching
+  except Querencia Files, Screenshot and a few dialogs, which stay light
+  for now. Switching
   it off restores the light appearance. Running programs change at once,
   so does the panel; the labwc window frames stay light.
 - **16 new backgrounds** in the new data package `querencia-hintergruende`:
@@ -30,7 +31,7 @@ signed APT repository.
   generated with FLUX1.1 [pro] Ultra (Black Forest Labs) through fal.ai and
   selected by the project owner; the logo was added afterwards by a
   script, never painted by the AI. System Settings 0.1.4 show them as a
-  gallery, and the icon labels on the desktop (desktop 0.2.1) have a
+  gallery, and the icon labels on the desktop (desktop 0.2.2) have a
   backing so they stay readable on every picture.
 - **Contrast in the light appearance** raised to WCAG AA: keyboard
   shortcuts in menus, the memory mark in the calculator, the empty-state
@@ -71,7 +72,7 @@ active in the development environment at 21:43 that day.
 | querencia-benachrichtigungen | 0.2.2-1 | notifications 0.2.2 |
 | querencia-einstellungen | 0.1.4-1 | System Settings 0.1.4 with background gallery |
 | querencia-symbole | 0.7-1 | program icons and the “Querencia” icon theme |
-| querencia-files | 0.1.0~alpha6-1 | Querencia Files, state QF-0r-1 |
+| querencia-files | 0.1.0~alpha6-1 | Querencia Files (tag `querencia/qf-0r-1`) |
 | querencia-terminal | 0.3.0-1 | Querencia Terminal 0.3.0 with tabs |
 | querencia-editor | 0.2.3-1 | text editor 0.2.3 |
 | querencia-bilder | 0.2.5-1 | image viewer 0.2.5 |
@@ -114,12 +115,18 @@ network applet needs NetworkManager, Firefox as a snap ignores the GTK
 theme, gsettings values are shared with GNOME, greetd stays after removing
 `querencia-anmeldung`. New or changed:
 
-- **Window frames and Files stay light:** labwc draws the frames with its
-  own theme, Querencia Files has a theme of its own; dark variants for both
-  are follow-up items.
+- **Window frames, Files and a few dialogs stay light:** labwc draws the
+  frames with its own theme, Querencia Files has a theme of its own;
+  Screenshot, the session dialog, the shortcut overview and the terminal's
+  bars stay light too. Dark variants are follow-up items.
 - **Third-party GTK 3 programs do not follow the dark appearance:** GTK 3
-  ignores the “Prefer dark appearance” setting; all Querencia programs use
-  GTK 4 and follow it.
+  ignores the “Prefer dark appearance” setting; the Querencia programs use
+  GTK 4 and follow it, except Querencia Files, Screenshot and a few
+  dialogs, which stay light for now.
+- **German only:** the panel, the desktop and the lock screen are German
+  only for now; the programs speak German and English. The panel and
+  some programs still use placeholder identifiers (`org.example…`) until
+  Alpha 3.
 - After switching between light and dark in a running program, the
   keyboard focus may sit somewhere else than after a start.
 - **Panel crash in a test run:** in one test run the panel crashed the
@@ -161,10 +168,14 @@ Do not report security vulnerabilities publicly, but via
     once), terminal with three tabs, Files without update notice and
     without network connection, notification, shortcut overview, PDF viewer
     after the file was rewritten;
-  - measurements: settings portal answers in 7–12 ms, panel and desktop
+  - measurements: settings portal answers in 7–17 ms, panel and desktop
     1.1–1.3 s after the window manager.
   - Not tested: login through querencia-anmeldung (unchanged since Alpha
     1), real hardware, SMB shares, copy and paste in the terminal.
+- **From the real repository**, passed on 21 October 2026 (VM): fresh
+  install on the server image with the commands of the Alpha page, 386
+  packages; upgrade from Alpha 1 with `apt full-upgrade`, your own
+  background and keyboard shortcuts stay.
 
 ## Licences and origin
 
