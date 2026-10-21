@@ -1,0 +1,140 @@
+# Querencia Desktop – Alpha 2
+
+**Stand:** 21.10.2026, Entwurf · **Status:** interne Alpha, nicht
+veröffentlicht · Werte mit „offen“ sind noch nicht belegt oder nicht
+entschieden.
+
+Alpha 2 bringt den Stand der Entwicklungsumgebung vom 21. Oktober 2026 in
+die Paketquelle: eine **dunkle Darstellung** für den ganzen Desktop, besser
+lesbare Farben in der hellen Darstellung, **Reiter im Terminal** und eine
+Dateiverwaltung, die keine Update-Server mehr anfragt. Wie Alpha 1 sind es
+20 Debian-Pakete für Ubuntu 26.04 („resolute“) aus derselben signierten
+APT-Quelle.
+
+> **Alpha.** Für Testsysteme gedacht, nicht für den Alltag. Keine
+> Sicherheits- oder Datenverlustgarantie. Erst auf einer virtuellen Maschine
+> mit Snapshot ausprobieren.
+
+## Neu in Alpha 2
+
+- **Dunkle Darstellung.** In den Systemeinstellungen unter Erscheinungsbild
+  „Dunkle Darstellung bevorzugen“ einschalten: Das Thema
+  Querencia-Klassisch 0.2.1 hat jetzt eine dunkle Fassung, und Panel,
+  Arbeitsfläche und die Querencia-Programme folgen ihr – bis auf Querencia
+  Files, das vorerst sein eigenes helles Thema behält. Ausschalten stellt
+  die helle Darstellung wieder her. Laufende Programme wechseln sofort,
+  das Panel ebenfalls; die Fensterrahmen von labwc bleiben hell.
+- **Kontrast in der hellen Darstellung** nach WCAG AA nachgezogen:
+  Tastenkürzel in Menüs, Speichermarke im Rechner, Leerhinweis im
+  Bildbetrachter, Text der Benachrichtigungen, Diagrammfarben der
+  Systemüberwachung, Kürzel und Auswahl in den Systemeinstellungen.
+- **Reiter im Terminal** (Querencia Terminal 0.3.0) wie im GNOME Terminal
+  2.x: Strg+Umschalt+T öffnet einen Reiter, Strg+Umschalt+W schließt ihn,
+  Strg+Bild auf/ab wechselt, Alt+1 bis Alt+9 springt direkt. Die
+  Reiterleiste erscheint ab dem zweiten Reiter. Die Tastenkürzel-Übersicht
+  (Super+?) nennt die neuen Kürzel.
+- **Files ohne Update-Abfrage.** Querencia Files fragt nicht mehr bei
+  GitHub oder im AUR nach neuen Versionen und zeigt keinen Update-Hinweis;
+  Updates kommen nur über apt. „Hier entpacken“ läuft über Querencia
+  Archiv, der Info-Dialog zeigt das Querencia-Symbol.
+- **Symbole 0.7:** eigenes Symbol für den Knopf „Arbeitsfläche anzeigen“
+  und Programmsymbole für Archiv, Software, Dateisuche, Rechner und die
+  Tastenkürzel-Übersicht im Symbolthema.
+- **Nebenfenster mit Titelleiste:** Bildinformationen, Suchen und Ersetzen
+  im Editor und die Dialoge im PDF-Betrachter erscheinen auch beim zweiten
+  Öffnen mit Titelleiste; ebenso das Auswahlfenster des Bildschirmfotos
+  nach einem Abbruch mit Esc.
+- **Systemeinstellungen 0.1.3:** Zurückstellen lässt keine Standardwerte in
+  der labwc-Konfiguration stehen, Sicherungsdateien sind begrenzt.
+
+## Versionen
+
+Paketsatz vom 21.10.2026 (20 Pakete), gebaut aus dem Stand, der am selben
+Tag um 18:52 in der Entwicklungsumgebung aktiv war.
+
+| Paket | Fassung | Inhalt |
+|---|---|---|
+| querencia-desktop | 0.1.0~alpha2-7 | Metapaket: zieht alle Bestandteile nach |
+| labwc | 0.9.8-0querencia5 | Backport des Fensterverwalters (unverändert, neue Revision) |
+| querencia-session | 0.1.0~alpha7-2 | Sitzungsstarter (unverändert, neue Revision) |
+| querencia-shell | 0.1.0~alpha7-1 | Panel 0.2.1, Arbeitsfläche 0.2.0, Tastenkürzel-Übersicht 0.2.0, Thema Querencia-Klassisch 0.2.1 hell und dunkel |
+| querencia-sitzung | 0.1.3-3 | Sitzung 0.1.3 (unverändert, neue Revision) |
+| querencia-benachrichtigungen | 0.2.2-1 | Benachrichtigungen 0.2.2 |
+| querencia-einstellungen | 0.1.3-1 | Systemeinstellungen 0.1.3 |
+| querencia-symbole | 0.7-1 | Programmsymbole und Symbolthema „Querencia“ |
+| querencia-files | 0.1.0~alpha5-1 | Querencia Files, Stand QF-0q-1 |
+| querencia-terminal | 0.3.0-1 | Querencia Terminal 0.3.0 mit Reitern |
+| querencia-editor | 0.2.3-1 | Texteditor 0.2.3 |
+| querencia-bilder | 0.2.5-1 | Bildbetrachter 0.2.5 |
+| querencia-dokumente | 0.1.2-1 | PDF-Betrachter 0.1.2 |
+| querencia-archiv | 0.1.1-1 | Archivverwaltung 0.1.1 |
+| querencia-rechner | 0.1.5-1 | Taschenrechner 0.1.5 |
+| querencia-systemmonitor | 0.1.4-1 | Systemüberwachung 0.1.4 |
+| querencia-dateisuche | 0.1.4-1 | Nach Dateien suchen 0.1.4 |
+| querencia-screenshot | 0.2.9-1 | Bildschirmfoto 0.2.9 |
+| querencia-software | 0.1.4-1 | Programme installieren über PackageKit, 0.1.4 |
+| querencia-anmeldung | 0.1.1-2 | Anmeldebildschirm, optional (unverändert aus Alpha 1) |
+
+Nicht in Alpha 2: die neuen Hintergründe (Lizenzprüfung offen).
+
+## Aktualisieren von Alpha 1
+
+```bash
+sudo apt update
+```
+
+```bash
+sudo apt full-upgrade
+```
+
+Danach abmelden und neu anmelden, damit Panel und Arbeitsfläche die neue
+Fassung starten.
+
+## Neu installieren
+
+Unverändert gegenüber Alpha 1: Quelle einbinden, `sudo apt install
+querencia-desktop`, neu starten, am Zahnrad „Querencia Desktop“ wählen
+(siehe [Alpha 1, Installation](alpha-1.md#installation), auch für Server,
+GNOME und Entfernen). Fingerabdruck des Signierschlüssels: `63F6 C499 246E
+3699 CA04 726D 342F 12D2 0CE7 1CBD`.
+
+## Bekannte Grenzen
+
+Weiter gültig aus Alpha 1: Anmeldebildschirm englisch, Alt+Druck in VMs,
+Netzwerk-Applet nur mit NetworkManager, Firefox als Snap ohne GTK-Thema,
+geteilte gsettings-Werte neben GNOME, greetd bleibt nach dem Entfernen von
+`querencia-anmeldung`. Neu bzw. geändert:
+
+- **Fensterrahmen und Files bleiben hell:** labwc zeichnet die Rahmen mit
+  dem eigenen Thema, Querencia Files hat ein eigenes Thema; dunkle
+  Fassungen dafür sind Folgepunkte.
+- Nach einem Wechsel hell/dunkel im laufenden Programm kann der
+  Tastaturfokus an einer anderen Stelle stehen als beim Start.
+- **Panel und Arbeitsfläche** übernehmen ein geändertes Thema erst nach
+  einer Neuanmeldung; das Umschalten hell/dunkel wirkt sofort.
+- **Files:** Die Seite „Updates“ in den Einstellungen nennt nur noch die
+  Paketquelle; einige übersetzte Texte verweisen noch auf Strata.
+- Behoben gegenüber Alpha 1: Terminal ohne Reiter, keine dunkle
+  Darstellung, Nebenfenster ohne Titelleiste, Strata-Logo im Info-Dialog,
+  Standardwerte in `rc.xml` nach dem Zurückstellen.
+
+## Geprüft
+
+- Jede Quelle ist ein getaggter Stand; für jedes Programm ist belegt, dass
+  das in der Entwicklungsumgebung laufende Programm aus genau diesem Stand
+  gebaut wurde.
+- Statische Paketprüfung, Lintian ohne Fehler, Probe-Installation in einer
+  abgeschotteten Kopie des Systems: **offen** (Ergebnisse folgen).
+- **Pflichtprobe auf frischem Ubuntu 26.04** (Textkonsole und GDM, dazu
+  dunkle Darstellung, Terminal-Reiter, Files ohne Update-Hinweis,
+  Kontrast hell): **offen**.
+
+## Lizenzen und Herkunft
+
+Wie Alpha 1. Neu: Die fünf Programmsymbole im Symbolthema (Archiv,
+Software, Dateisuche, Rechner, Tastenkürzel-Übersicht) stehen wie ihre
+Programme unter GPL-3.0-or-later; das übrige Symbolthema unter
+CC-BY-SA-4.0. Name und Logo „Querencia“ sind keine freien Inhalte.
+
+Copyright 2026 Querencia Desktop contributors.
+
