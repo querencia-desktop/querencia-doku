@@ -186,4 +186,3 @@ Wie Alpha 1. Neu:
 Name und Logo „Querencia“ sind keine freien Inhalte.
 
 Copyright 2026 Querencia Desktop contributors.
-

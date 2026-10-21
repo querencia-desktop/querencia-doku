@@ -179,4 +179,3 @@ As in Alpha 1. New:
 The name and logo “Querencia” are not free content.
 
 Copyright 2026 Querencia Desktop contributors.
-
