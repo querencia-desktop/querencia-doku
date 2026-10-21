@@ -1,7 +1,7 @@
 # Querencia Desktop – Alpha 2
 
-**Stand:** 21.10.2026, Entwurf · **Status:** interne Alpha, nicht
-veröffentlicht · Werte mit „offen“ sind noch nicht belegt oder nicht
+**Stand:** 21.10.2026, 22:10, Entwurf zum eingefrorenen Paketsatz · **Status:**
+interne Alpha, nicht veröffentlicht · Werte mit „offen“ sind noch nicht belegt oder nicht
 entschieden.
 
 Alpha 2 bringt den Stand der Entwicklungsumgebung vom 21. Oktober 2026 in
@@ -67,27 +67,26 @@ Tag um 18:52 in der Entwicklungsumgebung aktiv war.
 | querencia-desktop | 0.1.0~alpha2-7 | Metapaket: zieht alle Bestandteile nach |
 | labwc | 0.9.8-0querencia5 | Backport des Fensterverwalters (unverändert, neue Revision) |
 | querencia-session | 0.1.0~alpha7-2 | Sitzungsstarter (unverändert, neue Revision) |
-| querencia-shell | offen | Panel 0.2.1, Arbeitsfläche 0.2.1, Tastenkürzel-Übersicht 0.2.0, Thema Querencia-Klassisch 0.2.1 hell und dunkel, die 17 Hintergründe aus Alpha 1 |
+| querencia-shell | 0.1.0~alpha7-1 | Panel 0.2.1, Arbeitsfläche 0.2.2, Tastenkürzel-Übersicht 0.2.0, Thema Querencia-Klassisch 0.2.1 hell und dunkel, die 17 Hintergründe aus Alpha 1 |
 | querencia-hintergruende | 0.2-1 | 16 Hintergründe (Standard Tiefblau), neu |
 | querencia-sitzung | 0.1.3-3 | Sitzung 0.1.3 (unverändert, neue Revision) |
 | querencia-benachrichtigungen | 0.2.2-1 | Benachrichtigungen 0.2.2 |
-| querencia-einstellungen | offen | Systemeinstellungen 0.1.4 mit Hintergrund-Galerie |
+| querencia-einstellungen | 0.1.4-1 | Systemeinstellungen 0.1.4 mit Hintergrund-Galerie |
 | querencia-symbole | 0.7-1 | Programmsymbole und Symbolthema „Querencia“ |
-| querencia-files | 0.1.0~alpha5-1 | Querencia Files, Stand QF-0q-1 |
+| querencia-files | 0.1.0~alpha6-1 | Querencia Files, Stand QF-0r-1 |
 | querencia-terminal | 0.3.0-1 | Querencia Terminal 0.3.0 mit Reitern |
 | querencia-editor | 0.2.3-1 | Texteditor 0.2.3 |
 | querencia-bilder | 0.2.5-1 | Bildbetrachter 0.2.5 |
-| querencia-dokumente | 0.1.2-1 | PDF-Betrachter 0.1.2 |
+| querencia-dokumente | 0.1.3-1 | PDF-Betrachter 0.1.3 (keine weißen Seiten nach Neuschreiben des PDFs) |
 | querencia-archiv | 0.1.1-1 | Archivverwaltung 0.1.1 |
 | querencia-rechner | 0.1.5-1 | Taschenrechner 0.1.5 |
 | querencia-systemmonitor | 0.1.4-1 | Systemüberwachung 0.1.4 |
 | querencia-dateisuche | 0.1.4-1 | Nach Dateien suchen 0.1.4 |
 | querencia-screenshot | 0.2.9-1 | Bildschirmfoto 0.2.9 |
 | querencia-software | 0.1.4-1 | Programme installieren über PackageKit, 0.1.4 |
-| querencia-anmeldung | 0.1.1-2 | Anmeldebildschirm, optional (unverändert aus Alpha 1) |
+| querencia-anmeldung | 0.1.1-3 | Anmeldebildschirm, optional (unverändert, neue Revision) |
 
-Die Fassungen von Shell und Einstellungen trägt der Entwurf nach, sobald
-Arbeitsfläche 0.2.1 und Einstellungen 0.1.4 freigegeben sind.
+Prüfsumme der Paketliste (SHA256SUMS): `5cbe6f81fbb58017b50bf340c1bd2c65120b27718e2b7a929986d5de3c3c183d`.
 
 ## Aktualisieren von Alpha 1
 
@@ -152,12 +151,23 @@ schwärzen. Sicherheitslücken nicht öffentlich melden, sondern über
 
 - Jede Quelle ist ein getaggter Stand; für jedes Programm ist belegt, dass
   das in der Entwicklungsumgebung laufende Programm aus genau diesem Stand
-  gebaut wurde.
-- Statische Paketprüfung, Lintian ohne Fehler, Probe-Installation in einer
-  abgeschotteten Kopie des Systems: **offen** (Ergebnisse folgen).
-- **Pflichtprobe auf frischem Ubuntu 26.04** (Textkonsole und GDM, dazu
-  dunkle Darstellung, Terminal-Reiter, Files ohne Update-Hinweis,
-  Kontrast hell): **offen**.
+  gebaut wurde (Panel und Tastenkürzel-Übersicht byte-gleich nachgebaut).
+- Statische Paketprüfung 242 bestanden, Lintian ohne Fehler, signierte
+  Testquelle, Probe-Installation in einer abgeschotteten Kopie des Systems
+  87 bestanden (darunter die dunkle Fassung für GTK 4 und GTK 3).
+- **Pflichtprobe auf frischem Ubuntu 26.04**, bestanden am 21.10.2026:
+  - Anmeldung an der **Textkonsole (tty1)** und über **GDM** auf Ubuntu
+    Desktop: Installation, Sitzung, Prüfskript in der Sitzung (28/28),
+    Neuanmeldung nach dem Abmelden in etwa 6 s;
+  - dunkle Darstellung ein- und ausgeschaltet (Panel und Programme wechseln
+    sofort), Terminal mit drei Reitern, Files ohne Update-Hinweis und ohne
+    Netzverbindung, Benachrichtigung, Tastenkürzel-Übersicht,
+    PDF-Betrachter nach Neuschreiben der Datei;
+  - Messwerte: Einstellungs-Portal antwortet in 7–12 ms, Panel und
+    Arbeitsfläche 1,1–1,3 s nach dem Fensterverwalter.
+  - Nicht geprüft: Anmeldung über querencia-anmeldung (unverändert seit
+    Alpha 1), echte Hardware, SMB-Freigaben, Kopieren und Einfügen im
+    Terminal.
 
 ## Lizenzen und Herkunft
 

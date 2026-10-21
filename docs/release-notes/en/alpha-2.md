@@ -1,7 +1,7 @@
 # Querencia Desktop – Alpha 2
 
-**As of:** 21 October 2026, draft · **Status:** internal alpha, not
-published · Values marked “open” are not yet confirmed or not yet decided.
+**As of:** 21 October 2026, 22:10, draft for the frozen package set ·
+**Status:** internal alpha, not published · Values marked “open” are not yet confirmed or not yet decided.
 
 Alpha 2 brings the state of the development environment of 21 October 2026
 into the package repository: a **dark appearance** for the whole desktop,
@@ -65,27 +65,26 @@ active in the development environment at 18:52 that day.
 | querencia-desktop | 0.1.0~alpha2-7 | metapackage: pulls in all parts |
 | labwc | 0.9.8-0querencia5 | backport of the window manager (unchanged, new revision) |
 | querencia-session | 0.1.0~alpha7-2 | session starter (unchanged, new revision) |
-| querencia-shell | open | panel 0.2.1, desktop 0.2.1, shortcut overview 0.2.0, Querencia-Klassisch theme 0.2.1 light and dark, the 17 backgrounds of Alpha 1 |
+| querencia-shell | 0.1.0~alpha7-1 | panel 0.2.1, desktop 0.2.2, shortcut overview 0.2.0, Querencia-Klassisch theme 0.2.1 light and dark, the 17 backgrounds of Alpha 1 |
 | querencia-hintergruende | 0.2-1 | 16 backgrounds (default deep blue), new |
 | querencia-sitzung | 0.1.3-3 | session tools 0.1.3 (unchanged, new revision) |
 | querencia-benachrichtigungen | 0.2.2-1 | notifications 0.2.2 |
-| querencia-einstellungen | open | System Settings 0.1.4 with background gallery |
+| querencia-einstellungen | 0.1.4-1 | System Settings 0.1.4 with background gallery |
 | querencia-symbole | 0.7-1 | program icons and the “Querencia” icon theme |
-| querencia-files | 0.1.0~alpha5-1 | Querencia Files, state QF-0q-1 |
+| querencia-files | 0.1.0~alpha6-1 | Querencia Files, state QF-0r-1 |
 | querencia-terminal | 0.3.0-1 | Querencia Terminal 0.3.0 with tabs |
 | querencia-editor | 0.2.3-1 | text editor 0.2.3 |
 | querencia-bilder | 0.2.5-1 | image viewer 0.2.5 |
-| querencia-dokumente | 0.1.2-1 | PDF viewer 0.1.2 |
+| querencia-dokumente | 0.1.3-1 | PDF viewer 0.1.3 (no blank pages after the PDF is rewritten) |
 | querencia-archiv | 0.1.1-1 | archive manager 0.1.1 |
 | querencia-rechner | 0.1.5-1 | calculator 0.1.5 |
 | querencia-systemmonitor | 0.1.4-1 | system monitor 0.1.4 |
 | querencia-dateisuche | 0.1.4-1 | search for files 0.1.4 |
 | querencia-screenshot | 0.2.9-1 | screenshot 0.2.9 |
 | querencia-software | 0.1.4-1 | install programs through PackageKit, 0.1.4 |
-| querencia-anmeldung | 0.1.1-2 | login screen, optional (unchanged from Alpha 1) |
+| querencia-anmeldung | 0.1.1-3 | login screen, optional (unchanged, new revision) |
 
-The versions of the shell and System Settings follow in this draft once
-desktop 0.2.1 and System Settings 0.1.4 are approved.
+Checksum of the package list (SHA256SUMS): `5cbe6f81fbb58017b50bf340c1bd2c65120b27718e2b7a929986d5de3c3c183d`.
 
 ## Upgrading from Alpha 1
 
@@ -146,12 +145,22 @@ Do not report security vulnerabilities publicly, but via
 
 - Every source is a tagged state; for every program it is shown that the
   program running in the development environment was built from exactly
-  this state.
-- Static package check, Lintian without errors, trial installation in an
-  isolated copy of the system: **open** (results follow).
-- **Mandatory test on a fresh Ubuntu 26.04** (text console and GDM, plus
-  dark appearance, terminal tabs, Files without update notice, light
-  contrast): **open**.
+  this state (panel and shortcut overview rebuilt byte-identical).
+- Static package check 242 passed, Lintian without errors, signed test
+  repository, trial installation in an isolated copy of the system 87
+  passed (including the dark variant for GTK 4 and GTK 3).
+- **Mandatory test on a fresh Ubuntu 26.04**, passed on 21 October 2026:
+  - login on the **text console (tty1)** and through **GDM** on Ubuntu
+    Desktop: installation, session, check script inside the session
+    (28/28), new login after logging out in about 6 s;
+  - dark appearance switched on and off (panel and programs change at
+    once), terminal with three tabs, Files without update notice and
+    without network connection, notification, shortcut overview, PDF viewer
+    after the file was rewritten;
+  - measurements: settings portal answers in 7–12 ms, panel and desktop
+    1.1–1.3 s after the window manager.
+  - Not tested: login through querencia-anmeldung (unchanged since Alpha
+    1), real hardware, SMB shares, copy and paste in the terminal.
 
 ## Licences and origin
 
