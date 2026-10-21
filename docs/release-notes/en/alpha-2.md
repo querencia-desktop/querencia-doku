@@ -58,7 +58,7 @@ signed APT repository.
 ## Versions
 
 Package set of 21 October 2026 (21 packages), built from the state that was
-active in the development environment at 18:52 that day.
+active in the development environment at 21:43 that day.
 
 | Package | Version | Contents |
 |---|---|---|

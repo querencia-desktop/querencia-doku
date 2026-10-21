@@ -60,7 +60,7 @@ APT-Quelle.
 ## Versionen
 
 Paketsatz vom 21.10.2026 (21 Pakete), gebaut aus dem Stand, der am selben
-Tag um 18:52 in der Entwicklungsumgebung aktiv war.
+Tag um 21:43 in der Entwicklungsumgebung aktiv war.
 
 | Paket | Fassung | Inhalt |
 |---|---|---|
@@ -126,8 +126,6 @@ geteilte gsettings-Werte neben GNOME, greetd bleibt nach dem Entfernen von
   Tastaturfokus an einer anderen Stelle stehen als beim Start.
 - **Panel und Arbeitsfläche** übernehmen ein geändertes Thema erst nach
   einer Neuanmeldung; das Umschalten hell/dunkel wirkt sofort.
-- **Files:** Die Seite „Updates“ in den Einstellungen nennt nur noch die
-  Paketquelle; einige übersetzte Texte verweisen noch auf Strata.
 - Behoben gegenüber Alpha 1: Terminal ohne Reiter, keine dunkle
   Darstellung, Nebenfenster ohne Titelleiste, Strata-Logo im Info-Dialog,
   Standardwerte in `rc.xml` nach dem Zurückstellen.
