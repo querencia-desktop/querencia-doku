@@ -120,6 +120,9 @@ geteilte gsettings-Werte neben GNOME, greetd bleibt nach dem Entfernen von
 - **Fensterrahmen und Files bleiben hell:** labwc zeichnet die Rahmen mit
   dem eigenen Thema, Querencia Files hat ein eigenes Thema; dunkle
   Fassungen dafür sind Folgepunkte.
+- **Fremde GTK-3-Programme folgen dem Dunkelmodus nicht:** GTK 3 wertet
+  die Einstellung „Dunkle Darstellung bevorzugen“ nicht aus; alle
+  Querencia-Programme sind GTK 4 und folgen ihr.
 - Nach einem Wechsel hell/dunkel im laufenden Programm kann der
   Tastaturfokus an einer anderen Stelle stehen als beim Start.
 - **Panel und Arbeitsfläche** übernehmen ein geändertes Thema erst nach

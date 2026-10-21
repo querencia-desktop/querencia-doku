@@ -118,6 +118,9 @@ theme, gsettings values are shared with GNOME, greetd stays after removing
 - **Window frames and Files stay light:** labwc draws the frames with its
   own theme, Querencia Files has a theme of its own; dark variants for both
   are follow-up items.
+- **Third-party GTK 3 programs do not follow the dark appearance:** GTK 3
+  ignores the “Prefer dark appearance” setting; all Querencia programs use
+  GTK 4 and follow it.
 - After switching between light and dark in a running program, the
   keyboard focus may sit somewhere else than after a start.
 - Fixed since Alpha 1: terminal without tabs, no dark appearance, secondary
