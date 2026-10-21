@@ -32,14 +32,22 @@ German text is the reference.
 
 ## Bauen und Prüfen
 
-Nichts zu bauen; geprüft wird mit `python3 ~/brain/system/scripts/brain_doku_check.py .` und `python3 -I ~/ai-clean/scripts/clean_check.py .`.
-Ablauf und Regeln für Änderungen: [CONTRIBUTING.md](CONTRIBUTING.md).
+Nichts zu bauen. Vor jeder Änderung: Markdown-Links prüfen, Bildschirmfotos
+nur aus abgeschotteten Prüfläufen (eigenes Profil ohne Benutzernamen in
+Pfaden) und Herkunft in `docs/benutzerhandbuch/bilder/herkunft.txt`
+eintragen. Arbeitsweise: [CONTRIBUTING.md](CONTRIBUTING.md); Änderungen:
+[CHANGELOG.md](CHANGELOG.md).
 
 ## Lizenz
 
 Texte und Bilder: CC-BY-SA-4.0, siehe [LICENSE](LICENSE); Namensnennung
 „Querencia Desktop contributors“. Rechteinhaber in
 [COPYRIGHT](COPYRIGHT). Name und Logo „Querencia“ sind keine freien Inhalte
-(Markenregel); die Bildschirmfotos zeigen das Logo nur als Teil der
+([MARKE.md](MARKE.md)); die Bildschirmfotos zeigen das Logo nur als Teil der
 Oberfläche.
 
+## Fehler melden
+
+Fehler, Wünsche und Fragen zu Querencia gehen an die gemeinsame Meldestelle:
+<https://github.com/querencia-desktop/querencia/issues/new/choose>.
+Sicherheitslücken bitte nicht öffentlich melden, siehe [SECURITY.md](SECURITY.md).
