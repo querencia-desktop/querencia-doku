@@ -129,21 +129,17 @@ theme, gsettings values are shared with GNOME, greetd stays after removing
 
 ## Reporting bugs
 
-By email to fehler@querencialinux.org, in English or German. Please
-include:
+In the project's bug tracker,
+<https://github.com/querencia-desktop/querencia/issues/new/choose>,
+in English or German. Please include:
 
 - output of `dpkg -l 'querencia-*' labwc` and `lsb_release -ds`
 - what you did, what you expected, what happened
 - about 50 lines from the matching log in `~/.local/state/querencia/`
   (session start: `sitzung-start.log`)
 
-The report is copied to the public bug tracker without your name and
-address. Please redact home paths, host names and IP addresses in the log
-first.
-
-With a GitHub account you can also report directly:
-<https://github.com/querencia-desktop/querencia/issues/new/choose>.
-Security vulnerabilities not by email, but via
+Please redact home paths, host names and IP addresses in the log first.
+Do not report security vulnerabilities publicly, but via
 <https://github.com/querencia-desktop/querencia/security/advisories/new>.
 
 ## Tested

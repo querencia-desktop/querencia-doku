@@ -135,21 +135,17 @@ geteilte gsettings-Werte neben GNOME, greetd bleibt nach dem Entfernen von
 
 ## Fehler melden
 
-Per E-Mail an fehler@querencialinux.org, Deutsch oder Englisch. Bitte
-angeben:
+Im Fehlertracker des Projekts,
+<https://github.com/querencia-desktop/querencia/issues/new/choose>,
+Deutsch oder Englisch. Bitte angeben:
 
 - Ausgabe von `dpkg -l 'querencia-*' labwc` und `lsb_release -ds`
 - was Sie getan haben, was Sie erwartet haben, was passiert ist
 - etwa 50 Zeilen aus dem passenden Protokoll in `~/.local/state/querencia/`
   (Sitzungsstart: `sitzung-start.log`)
 
-Die Meldung wird ohne Namen und Adresse in den öffentlichen Fehlertracker
-übernommen. Heimpfade, Rechnernamen und IP-Adressen im Protokoll bitte
-vorher schwärzen.
-
-Mit GitHub-Konto geht es auch direkt:
-<https://github.com/querencia-desktop/querencia/issues/new/choose>.
-Sicherheitslücken nicht per E-Mail, sondern über
+Heimpfade, Rechnernamen und IP-Adressen im Protokoll bitte vorher
+schwärzen. Sicherheitslücken nicht öffentlich melden, sondern über
 <https://github.com/querencia-desktop/querencia/security/advisories/new>.
 
 ## Geprüft
