@@ -26,10 +26,10 @@ backup.
 - **Dark appearance:** since Alpha 2 the Querencia-Klassisch theme has a dark
   variant. The panel, the desktop and the Querencia programs follow it;
   running programs and the panel change at once, switching it off restores
-  the light appearance. For now the window frames (labwc), Querencia Files,
-  Screenshot and a few dialogs (session dialog, shortcut overview, the
-  terminal's bars) stay light. Third-party GTK 3 programs do not follow the
-  setting.
+  the light appearance. For now the window frames (labwc) and Querencia
+  Files stay light; the session dialog, confirmations and the password prompt
+  are dark only when the dark appearance is already on at login. Third-party
+  GTK 3 programs do not follow the setting.
 
 **Background Image (Hintergrundbild)**
 - Gallery of the included backgrounds with preview; a click selects, Apply

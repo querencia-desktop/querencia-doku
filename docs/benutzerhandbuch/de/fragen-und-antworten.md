@@ -14,8 +14,8 @@ noch nicht da.
 **Wie schalte ich auf die dunkle Darstellung um?**
 System → Einstellungen → Systemeinstellungen → Erscheinungsbild, „Dunkle
 Darstellung bevorzugen“ einschalten und „Übernehmen“. Panel, Arbeitsfläche
-und die Querencia-Programme wechseln sofort; Fensterrahmen, Querencia Files,
-Bildschirmfoto und einige Dialoge bleiben vorerst hell.
+und die Querencia-Programme wechseln sofort; Fensterrahmen und Querencia
+Files bleiben vorerst hell.
 
 **Wo sind die Einstellungen?**
 System → Einstellungen → Systemeinstellungen. Den Hintergrund erreicht man
@@ -31,7 +31,8 @@ dass eine neue Anmeldung sauber startet.
 
 **Der Bildschirm wird dunkel und gesperrt, obwohl ich nichts getan habe.**
 Nach 10 Minuten ohne Eingabe sperrt Querencia den Bildschirm. Mit dem eigenen
-Passwort entsperren.
+Passwort entsperren. Browser und Videoprogramme können die Sperre anhalten,
+solange sie etwas abspielen.
 
 **Der Abmelden-Dialog wartet einfach – ist das richtig?**
 Ja. Rückfragen zählen nicht von selbst herunter. Einen Countdown kann man in
@@ -66,7 +67,9 @@ Unter `~/.local/state/querencia/` (je Programm eine `.log`-Datei, der
 Sitzungsstart in `sitzung-start.log`).
 
 **Panel oder Arbeitsfläche sind verschwunden.**
-Strg+Alt+Entf → Abmelden und neu anmelden. Hängt die ganze Sitzung, an einer
+Das Panel startet nach einem Absturz nach einigen Sekunden von selbst neu.
+Kommt es nicht wieder oder fehlt die Arbeitsfläche: Strg+Alt+Entf → Abmelden
+und neu anmelden. Hängt die ganze Sitzung, an einer
 Textkonsole (Strg+Alt+F3) anmelden und `querencia-session --exit` eingeben.
 
 **Wie entferne ich Querencia wieder?**

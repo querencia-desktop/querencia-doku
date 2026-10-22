@@ -8,6 +8,8 @@
 
 - **Strg+Alt+L** oder **System → Bildschirm sperren** sperrt sofort.
 - Nach **10 Minuten** ohne Eingabe sperrt sich der Bildschirm selbst.
+  Browser und Videoprogramme können das anhalten, solange sie etwas
+  abspielen.
 - Der Sperrbildschirm zeigt Uhr und Passwortfeld auf jedem Bildschirm;
   entsperrt wird mit dem eigenen Passwort.
 
@@ -42,5 +44,6 @@ fragt nach dem eigenen Passwort.
 
 ## Gut zu wissen
 
-Der Sperrbildschirm und seine Meldungen sind nur deutsch. Der Sitzungsdialog
-bleibt auch in der dunklen Darstellung hell.
+Der Sperrbildschirm und seine Meldungen sind nur deutsch. Sitzungsdialog,
+Rückfragen und Passwortdialog erscheinen dunkel, wenn die dunkle Darstellung
+schon beim Anmelden eingeschaltet ist.

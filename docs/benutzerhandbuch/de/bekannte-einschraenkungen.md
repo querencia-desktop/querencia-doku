@@ -2,8 +2,8 @@
 
 [Zurück zum Inhalt](index.md)
 
-Stand Alpha 2 (22.10.2026). Grundlage sind die
-[Release-Notes Alpha 2](../../release-notes/de/alpha-2.md), Abschnitt
+Stand Alpha 2.1 (22.10.2026). Grundlage sind die
+[Release-Notes Alpha 2.1](../../release-notes/de/alpha-2.1.md), Abschnitt
 „Bekannte Grenzen“.
 
 ## Installation und Anmeldung
@@ -12,7 +12,7 @@ Stand Alpha 2 (22.10.2026). Grundlage sind die
 |---|---|
 | Nur Ubuntu 26.04 | Die Pakete gibt es nur für Ubuntu 26.04 („resolute“), amd64. |
 | Nicht auf echter Hardware getestet | Geprüft wurde in virtuellen Maschinen. Echte Hardware, Drucken auf einem echten Drucker und Windows-Freigaben (SMB) sind noch ungeprüft. |
-| Eigener Anmeldebildschirm englisch | Der wahlweise Anmeldebildschirm `querencia-anmeldung` zeigt Knöpfe und Uhr auf Englisch. Für Alpha 2 wurde er nicht erneut geprüft (unverändert seit Alpha 1). |
+| Eigener Anmeldebildschirm ungeprüft | Der wahlweise Anmeldebildschirm `querencia-anmeldung` spricht seit Alpha 2.1 die Systemsprache. Die Anmeldung darüber mit dem Paket aus der Paketquelle ist noch ungeprüft. |
 | greetd bleibt nach dem Entfernen von `querencia-anmeldung` | War vorher kein Anmeldedienst eingerichtet (Server-Abbild), bleibt greetd mit einer Textanmeldung stehen. Neben GDM kehrt GDM zurück. |
 | Neben GNOME: geteilte Einstellungen | Querencia und GNOME lesen dieselben gsettings-Werte; ein in Querencia geändertes Symbolthema gilt auch in GNOME. Neben Ubuntu Desktop zeigt Querencia die Yaru-Symbole, weil Ubuntu das Symbolthema als Benutzerwert setzt. GNOME-Programme erscheinen auch im Querencia-Menü. |
 | Netzwerkverbindungen nur mit NetworkManager | Verbinden und Trennen im Netzwerk-Applet geht nur, wenn NetworkManager das Netz verwaltet. Auf dem Server-Abbild zeigt das Applet sonst kein Gerät, und Software kann nichts installieren; siehe [Software](software.md#wenn-software-keine-netzwerkverbindung-meldet). |
@@ -21,7 +21,7 @@ Stand Alpha 2 (22.10.2026). Grundlage sind die
 
 | Punkt | Was das heißt |
 |---|---|
-| Fensterrahmen, Files und einige Dialoge bleiben hell | labwc zeichnet die Rahmen mit dem eigenen Thema, Querencia Files hat ein eigenes Thema. Bildschirmfoto, Sitzungsdialog, Tastenkürzel-Übersicht und die Leisten des Terminals bleiben ebenfalls hell. |
+| Fensterrahmen und Files bleiben hell | labwc zeichnet die Rahmen mit dem eigenen Thema, Querencia Files hat ein eigenes Thema. Sitzungsdialog, Rückfragen und Passwortabfrage sind nur dunkel, wenn die dunkle Darstellung schon beim Anmelden gilt. |
 | Fremde GTK-3-Programme folgen nicht | GTK 3 wertet „Dunkle Darstellung bevorzugen“ nicht aus. Die Querencia-Programme sind GTK 4 und folgen der Einstellung (bis auf die Ausnahmen oben). |
 | Tastaturfokus nach dem Wechsel | Nach einem Wechsel hell/dunkel im laufenden Programm kann der Tastaturfokus an einer anderen Stelle stehen als beim Start. |
 | Geändertes Thema erst nach Neuanmeldung | Panel und Arbeitsfläche übernehmen ein geändertes Thema erst nach einer Neuanmeldung; das Umschalten hell/dunkel wirkt sofort. |
@@ -31,7 +31,7 @@ Stand Alpha 2 (22.10.2026). Grundlage sind die
 
 | Punkt | Was das heißt |
 |---|---|
-| Panel-Absturz im Testlauf | In einem Testlauf stürzte das Panel beim ersten Öffnen des Menüs Anwendungen ab und startete nicht von selbst neu. Schon am 18.10. waren Panel und Arbeitsfläche einmal ohne erkennbare Ursache beendet. Abhilfe: Strg+Alt+Entf → Abmelden, dann neu anmelden. Die Ursache wird untersucht. |
+| Panel-Absturz | In Testläufen stürzte das Panel beim ersten Öffnen des Menüs Anwendungen ab. Seit Alpha 2.1 startet es nach einem Absturz von selbst neu, nach einigen Sekunden und höchstens dreimal in zehn Minuten. Kommt es nicht wieder: Strg+Alt+Entf → Abmelden, dann neu anmelden. Die Ursache des Absturzes wird untersucht. |
 | Arbeitsflächenumschalter ohne Fenster-Miniaturen | Die Zellen zeigen keine Fenster. |
 | Panel-Elemente nicht zwischen den Panels verschiebbar | Innerhalb eines Panels geht Verschieben; sonst entfernen und im anderen Panel neu hinzufügen. |
 | Bereich „Panels“ in den Einstellungen nur Anzeige | Ändern geht direkt im Panel. |

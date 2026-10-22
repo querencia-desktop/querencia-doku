@@ -53,5 +53,4 @@ with a menu bar, tabs and the user's shell, scroll bar on the right.
 
 Search, profiles, font and colour choice, and use as the default terminal
 with a command (`-e`/`-x`). Middle-click pasting of a selection made in
-another program does not always work yet. In the dark appearance the menu
-bar and the tab bar stay light.
+another program does not always work yet.

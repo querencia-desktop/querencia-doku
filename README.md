@@ -9,9 +9,9 @@ werden.
 Querencia Desktop, a classic GNOME-2-style desktop for Wayland. Alpha; the
 German text is the reference.
 
-> **Alpha.** Texte zu Querencia Desktop Alpha 2 (Stand 22.10.2026). Was neu
+> **Alpha.** Texte zu Querencia Desktop Alpha 2.1 (Stand 22.10.2026). Was neu
 > ist und welche Grenzen gelten, steht in den
-> [Release-Notes Alpha 2](docs/release-notes/de/alpha-2.md); Installation und
+> [Release-Notes Alpha 2.1](docs/release-notes/de/alpha-2.1.md); Installation und
 > Projektseite: <https://querencialinux.org>.
 
 ## Inhalt
@@ -21,6 +21,7 @@ German text is the reference.
 | [docs/benutzerhandbuch/de/](docs/benutzerhandbuch/de/index.md) | Benutzerhandbuch Deutsch: Einstieg, Tastenkürzel, je Programm eine Seite, bekannte Einschränkungen, Fragen und Antworten |
 | [docs/benutzerhandbuch/en/](docs/benutzerhandbuch/en/index.md) | dieselbe Struktur auf Englisch (Übersetzung) |
 | `docs/benutzerhandbuch/bilder/` | Bildschirmfotos aus abgeschotteten Prüfläufen, Herkunft in `herkunft.txt` |
+| [docs/release-notes/de/alpha-2.1.md](docs/release-notes/de/alpha-2.1.md) | Release-Notes Alpha 2.1, Englisch unter [en/](docs/release-notes/en/alpha-2.1.md) |
 | [docs/release-notes/de/alpha-2.md](docs/release-notes/de/alpha-2.md) | Release-Notes Alpha 2, Englisch unter [en/](docs/release-notes/en/alpha-2.md) |
 | [docs/release-notes/de/alpha-1.md](docs/release-notes/de/alpha-1.md) | Release-Notes Alpha 1, Englisch unter [en/](docs/release-notes/en/alpha-1.md) |
 | [docs/release-notes/de/alpha-1-web.md](docs/release-notes/de/alpha-1-web.md) | Kurztext Alpha 1 für die Webseite, Englisch unter [en/](docs/release-notes/en/alpha-1-web.md) |
@@ -29,8 +30,8 @@ German text is the reference.
 
 | | |
 |---|---|
-| Fassung | Release-Notes Alpha 1 und Alpha 2 auf dem Stand des jeweiligen Paketsatzes, Benutzerhandbuch auf Alpha 2; kein Tag |
-| Grundlage | Paketsatz Alpha 2 vom 21.10.2026 (in der APT-Quelle seit 21.10.2026), Release-Notes Alpha 2 und der Quellcode der Programme |
+| Fassung | Release-Notes Alpha 1, Alpha 2 und Alpha 2.1 auf dem Stand des jeweiligen Paketsatzes, Benutzerhandbuch auf Alpha 2.1; kein Tag |
+| Grundlage | Paketsatz Alpha 2.1 vom 22.10.2026 (in der APT-Quelle seit 22.10.2026), Release-Notes Alpha 2.1 und der Quellcode der Programme |
 | Offen | Bildschirmfotos für Files und Terminal fehlen; einzelne Bilder zeigen eine frühere Fassung des Programms (Herkunft in `docs/benutzerhandbuch/bilder/herkunft.txt`) |
 
 ## Bauen und Prüfen

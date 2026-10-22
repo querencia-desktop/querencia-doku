@@ -8,7 +8,8 @@
 
 - **Ctrl+Alt+L** or **System → Bildschirm sperren** (Lock Screen) locks at
   once.
-- After **10 minutes** without input the screen locks itself.
+- After **10 minutes** without input the screen locks itself. Browsers and
+  video players can hold this off while they play.
 - The lock screen shows a clock and a password field on every screen; unlock
   with your own password. The lock screen is German only.
 
@@ -42,4 +43,5 @@ password.
 
 ## Good to know
 
-The session dialog stays light in the dark appearance too.
+The session dialog, confirmations and the password dialog appear dark when
+the dark appearance is already on at login.

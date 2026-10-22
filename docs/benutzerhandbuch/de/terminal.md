@@ -57,5 +57,4 @@ Bildlaufleiste rechts.
 
 Suche, Profile, Schrift- und Farbwahl und der Aufruf als Standardterminal mit
 einem Befehl (`-e`/`-x`). Fügt die mittlere Maustaste eine Auswahl ein, die
-ein anderes Programm gesetzt hat, klappt das noch nicht immer. In der dunklen
-Darstellung bleiben Menü- und Reiterleiste hell.
+ein anderes Programm gesetzt hat, klappt das noch nicht immer.

@@ -14,8 +14,8 @@ profile neither is there yet.
 **How do I switch to the dark appearance?**
 System → Einstellungen → Systemeinstellungen → Appearance, switch on “Prefer
 dark appearance” and click “Apply”. The panel, the desktop and the Querencia
-programs change at once; window frames, Querencia Files, Screenshot and a
-few dialogs stay light for now.
+programs change at once; window frames and Querencia Files stay light for
+now.
 
 **Where are the settings?**
 System → Einstellungen → Systemeinstellungen. The background can also be
@@ -31,7 +31,8 @@ session, so that a new login starts cleanly.
 
 **The screen went dark and locked although I did nothing.**
 After 10 minutes without input Querencia locks the screen. Unlock with your
-own password.
+own password. Browsers and video players can hold off the lock while they
+play.
 
 **The log-out question just waits – is that right?**
 Yes. Questions do not count down by themselves. A countdown can be switched
@@ -65,7 +66,9 @@ Under `~/.local/state/querencia/` (one `.log` file per program, the session
 start in `sitzung-start.log`).
 
 **The panel or the desktop has disappeared.**
-Ctrl+Alt+Del → Log Out and log in again. If the whole session hangs, log in on
+After a crash the panel restarts by itself within a few seconds. If it does
+not come back, or the desktop is missing: Ctrl+Alt+Del → Log Out and log in
+again. If the whole session hangs, log in on
 a text console (Ctrl+Alt+F3) and type `querencia-session --exit`.
 
 **How do I remove Querencia?**

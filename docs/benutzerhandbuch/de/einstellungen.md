@@ -23,9 +23,9 @@ legen die Einstellungen eine Sicherung an.
   eine dunkle Fassung. Panel, Arbeitsfläche und die Querencia-Programme
   folgen ihr; laufende Programme und das Panel wechseln sofort, Ausschalten
   stellt die helle Darstellung wieder her. Hell bleiben vorerst die
-  Fensterrahmen (labwc), Querencia Files, Bildschirmfoto und einige Dialoge
-  (Sitzungsdialog, Tastenkürzel-Übersicht, die Leisten des Terminals). Fremde
-  GTK-3-Programme folgen der Einstellung nicht.
+  Fensterrahmen (labwc) und Querencia Files; Sitzungsdialog, Rückfragen und
+  Passwortabfrage sind nur dunkel, wenn die dunkle Darstellung schon beim
+  Anmelden gilt. Fremde GTK-3-Programme folgen der Einstellung nicht.
 
 **Hintergrundbild**
 - Galerie der mitgelieferten Hintergründe mit Vorschau; ein Klick wählt,

@@ -1,6 +1,6 @@
 # Querencia Desktop – User Guide
 
-**Status:** Alpha 2, 22 October 2026 · [Deutsche Fassung](../de/index.md)
+**Status:** Alpha 2.1, 22 October 2026 · [Deutsche Fassung](../de/index.md)
 
 Querencia Desktop is a classic desktop environment in the style of GNOME 2
 (Ubuntu 10.04) for Wayland. It consists of the window manager labwc, two
@@ -9,8 +9,8 @@ The interface is German; most programs are also available in English. Parts
 that are still German only are named on each page.
 
 > **Alpha.** Querencia is under development. This guide describes the
-> Alpha 2 package set of 21 October 2026 (see the
-> [Alpha 2 release notes](../../release-notes/en/alpha-2.md)). There is no
+> Alpha 2.1 package set of 22 October 2026 (see the
+> [Alpha 2.1 release notes](../../release-notes/en/alpha-2.1.md)). There is no
 > security or data-loss guarantee. Known gaps are listed under
 > [Known limitations](bekannte-einschraenkungen.md).
 
