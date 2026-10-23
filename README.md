@@ -21,6 +21,8 @@ German text is the reference.
 | `docs/benutzerhandbuch/bilder/` | Bildschirmfotos aus abgeschotteten Prüfläufen, Herkunft in `herkunft.txt` |
 | [docs/release-notes/de/alpha-1.md](docs/release-notes/de/alpha-1.md) | Release-Notes Alpha 1, Englisch unter [en/](docs/release-notes/en/alpha-1.md) |
 | [docs/release-notes/de/alpha-1-web.md](docs/release-notes/de/alpha-1-web.md) | Kurztext Alpha 1 für die Webseite, Englisch unter [en/](docs/release-notes/en/alpha-1-web.md) |
+| [docs/release-notes/de/alpha-2.md](docs/release-notes/de/alpha-2.md) | Release-Notes Alpha 2, Englisch unter [en/](docs/release-notes/en/alpha-2.md) |
+| [docs/release-notes/de/alpha-3.md](docs/release-notes/de/alpha-3.md) | Release-Notes Alpha 3 (Querencia Dateien statt Files), Englisch unter [en/](docs/release-notes/en/alpha-3.md); Entwurf mit Platzhaltern bis zum endgültigen Paketsatz |
 
 ## Stand
 
@@ -29,6 +31,7 @@ German text is the reference.
 | Fassung | Release-Notes Alpha 1 auf dem Stand des Paketsatzes, kein Tag |
 | Grundlage | Live-Stand der Entwicklungsumgebung, Paketsatz Alpha 1 und Prüfberichte vom 20.10.2026 |
 | Offen | signierte APT-Quelle (Bezugsweg der Pakete), Freigabe der Hintergründe (KI-erzeugt, siehe Lizenz); das Handbuch beschreibt noch den Stand vom Nachmittag des 20.10. |
+| Nachtrag 24.10.2026 | Handbuch: Querencia Dateien (Beta 0.2.0) statt Querencia Files; Release-Notes Alpha 3 als Entwurf |
 
 ## Bauen und Prüfen
 

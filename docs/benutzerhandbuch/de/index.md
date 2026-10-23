@@ -26,7 +26,7 @@ auch auf Englisch.
 
 | Programm | Menü | Seite |
 |---|---|---|
-| Querencia Files (Dateiverwaltung) | Orte, Anwendungen → Zubehör | [files.md](files.md) |
+| Querencia Dateien (Dateimanager) | Orte, Anwendungen → Zubehör | [dateien.md](dateien.md) |
 | Querencia Terminal | Anwendungen → Zubehör | [terminal.md](terminal.md) |
 | Texteditor | Anwendungen → Zubehör | [editor.md](editor.md) |
 | Bildbetrachter | Anwendungen → Zubehör | [bilder.md](bilder.md) |

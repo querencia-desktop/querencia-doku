@@ -12,8 +12,8 @@ Dokumente.
 
 ## Was der Dokumentenbetrachter kann
 
-- PDF öffnen über den Dialog, aus Files oder durch Ziehen ins Fenster; auch
-  passwortgeschützte PDF (mit Passwortabfrage).
+- PDF öffnen über den Dialog, aus Querencia Dateien oder durch Ziehen ins
+  Fenster; auch passwortgeschützte PDF (mit Passwortabfrage).
 - Fortlaufend blättern, Seitenleiste mit Miniaturen, Seitenfeld „Seite X von
   Y“ (auch Seitenbezeichnungen wie „iv“).
 - Zoom in Stufen von 10 % bis 400 %, „Ganze Seite“, „Seitenbreite“,

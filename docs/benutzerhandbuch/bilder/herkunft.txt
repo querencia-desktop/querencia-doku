@@ -26,3 +26,9 @@ de-benachrichtigungen.png |  | Ausschnitt 1548x36x368x116
 en-benachrichtigungen.png |  | Ausschnitt 1548x36x368x116
 de-sitzung-dialog.png |  | Ausschnitt 150x292x722x184
 en-sitzung-dialog.png |  | Ausschnitt 150x292x722x184
+# Nachtrag doku-web-dateien, 24.10.2026: Querencia Dateien (Beta), Prüfrahmen der Runtime
+# (headless labwc, eigenes HOME mit Testbaum, eigenes XDG_RUNTIME_DIR); Summen der Quellen
+# gegen die SHA256SUMS der Bildordner geprüft.
+de-dateien.png |  | Ausschnitt 0x0x802x578
+de-dateien-verbinden.png |  | Ausschnitt 0x0x802x578
+en-dateien-verbinden.png |  | Ausschnitt 0x0x802x578
