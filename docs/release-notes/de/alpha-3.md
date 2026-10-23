@@ -104,12 +104,12 @@ signierten APT-Quelle.
   gleichen Namen wie in Querencia Dateien; neu angesteckte USB-Sticks und
   eingelegte CDs werden eingehängt, ohne dass sich ein Fenster öffnet;
   Rechner, Papierkorb und Laufwerke öffnen in Dateien.
-- `<nur wenn Alpha 2.2 nicht vorher veröffentlicht wird:>` **Aus dem Stand
-  Alpha 2.2:** Die Ursache der Panel-Abstürze beim Öffnen von „Anwendungen“
+- **Aus dem nicht eigens veröffentlichten Stand Alpha 2.2:** Die Ursache der Panel-Abstürze beim Öffnen von „Anwendungen“
   ist behoben; die dunkle Darstellung schaltet auch Fensterrahmen und
   GTK-3-Programme um; in der Sperre geht der Bildschirm nach zwei Minuten
   aus; „Ausschalten …“ bietet „Neu starten“ an; Panel und Arbeitsfläche
-  sprechen auch Englisch; Bildschirm-Einstellungen je Monitor.
+  sprechen auch Englisch; Bildschirm-Einstellungen je Monitor; das Panel
+  meldet sich unter seiner endgültigen Kennung `org.querencia.Panel`.
 - **Symbole 0.8:** eigenes Programmsymbol für Querencia Dateien.
 
 ## Versionen
@@ -122,7 +122,7 @@ Paketsatz vom `<Datum>` (`<Anzahl>` Pakete).
 | querencia-dateien | `<0.2.0-n>` | **neu:** Dateimanager Querencia Dateien 0.2.0 (Beta) |
 | querencia-files | `<0.2.0-1>` | Übergangspaket: Files entfällt, die versteckten Starter öffnen Querencia Dateien |
 | querencia-shell | `<0.1.0~alpha10-n>` | Panel 0.3.2, Arbeitsfläche 0.3.0, Tastenkürzel-Übersicht 0.2.2, Thema `<Fassung>` |
-| querencia-session | `<0.1.0~alpha9-n>` | Sitzungsstarter: Ordner öffnen mit Querencia Dateien |
+| querencia-session | `<0.1.0~alpha9-n>` | Sitzungsstarter 0.1.0~alpha9: Ordner öffnen mit Querencia Dateien |
 | querencia-sitzung | `<0.1.7-1 oder 0.1.8-1>` | Sitzungsdialog, Sperre, Passwortdialog |
 | querencia-symbole | `<0.8-1>` | Programmsymbole und Symbolthema, neu das Symbol von Dateien |
 | querencia-dateisuche | `<0.1.5-2>` | Nach Dateien suchen; empfiehlt Querencia Dateien statt Files |
@@ -130,7 +130,7 @@ Paketsatz vom `<Datum>` (`<Anzahl>` Pakete).
 
 Prüfsumme der Paketliste (SHA256SUMS): `<SHA256SUMS>`.
 
-## Aktualisieren von `<Alpha 2.1 oder 2.2>`
+## Aktualisieren von Alpha 2.1
 
 ```bash
 sudo apt update
@@ -157,7 +157,7 @@ Querencia Files wird nicht mehr installiert.
 
 ## Bekannte Grenzen
 
-Weiter gültig aus Alpha 2 (siehe dort). Neu bzw. geändert:
+Weiter gültig aus Alpha 2 und 2.1 (siehe dort), soweit oben nicht als behoben genannt. Neu bzw. geändert:
 
 - **Querencia Dateien ist eine Beta.** Rückgängig (Strg+Z) gibt es noch
   nicht; eine Spaltenansicht und einen Ordnerbaum in der Seitenleiste gibt

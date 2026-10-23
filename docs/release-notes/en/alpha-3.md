@@ -96,12 +96,12 @@ signed APT repository.
   progress, cancel and the same question for equal names as in Querencia
   Dateien; newly plugged-in USB sticks and inserted CDs are mounted without
   opening a window; Computer, Trash and drives open in Dateien.
-- `<only if Alpha 2.2 is not published first:>` **From the Alpha 2.2
-  state:** the cause of the panel crashes when opening „Anwendungen“
+- **From the Alpha 2.2 state, which was not released on its own:** the cause of the panel crashes when opening „Anwendungen“
   (Applications) is fixed; the dark appearance also switches window borders
   and GTK 3 programs; while locked, the screen turns off after two minutes;
   „Ausschalten …“ (Shut Down) offers „Neu starten“ (Restart); the panel and
-  the desktop also speak English; display settings per monitor.
+  the desktop also speak English; display settings per monitor; the panel
+  registers under its final identifier `org.querencia.Panel`.
 - **Symbole 0.8:** own program icon for Querencia Dateien.
 
 ## Versions
@@ -114,7 +114,7 @@ Package set of `<date>` (`<number>` packages).
 | querencia-dateien | `<0.2.0-n>` | **new:** file manager Querencia Dateien 0.2.0 (beta) |
 | querencia-files | `<0.2.0-1>` | Transitional package: Files goes away, the hidden starters open Querencia Dateien |
 | querencia-shell | `<0.1.0~alpha10-n>` | Panel 0.3.2, desktop 0.3.0, keyboard shortcut overview 0.2.2, theme `<version>` |
-| querencia-session | `<0.1.0~alpha9-n>` | Session starter: folders open in Querencia Dateien |
+| querencia-session | `<0.1.0~alpha9-n>` | Session starter 0.1.0~alpha9: folders open in Querencia Dateien |
 | querencia-sitzung | `<0.1.7-1 or 0.1.8-1>` | Session dialog, lock, password dialog |
 | querencia-symbole | `<0.8-1>` | Program icons and icon theme, new: the Dateien icon |
 | querencia-dateisuche | `<0.1.5-2>` | Search for Files; recommends Querencia Dateien instead of Files |
@@ -122,7 +122,7 @@ Package set of `<date>` (`<number>` packages).
 
 Checksum of the package list (SHA256SUMS): `<SHA256SUMS>`.
 
-## Upgrading from `<Alpha 2.1 or 2.2>`
+## Upgrading from Alpha 2.1
 
 ```bash
 sudo apt update
@@ -149,7 +149,7 @@ Files is no longer installed.
 
 ## Known limitations
 
-Still valid from Alpha 2 (see there). New or changed:
+Still valid from Alpha 2 and 2.1 (see there), unless listed as fixed above. New or changed:
 
 - **Querencia Dateien is a beta.** Undo (Ctrl+Z) does not exist yet; there
   is no column view and no folder tree in the side pane. Search only finds
