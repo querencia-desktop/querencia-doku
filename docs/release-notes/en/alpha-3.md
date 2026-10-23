@@ -41,7 +41,11 @@ signed APT repository.
 - **Querencia Files is retired.** Folders open in Querencia Dateien, also
   through an older own choice in `~/.config/mimeapps.list`. Launchers and
   panel buttons that still point to Files open Querencia Dateien.
-  `<Behaviour when upgrading according to the final set: is querencia-files removed or does it stay until removed by hand?>`
+  The package `querencia-files` becomes a transitional package: the Files
+  program and the command `querencia-files` go away with the upgrade, the
+  two hidden starters stay and open Querencia Dateien. The transitional
+  package can be removed once no link points to Files any more.
+  `<according to the packaging draft of 24 October, check against the final set>`
   On its first start Dateien takes over six Files settings once (hidden
   files, view, sorting, folders first, single or double click, side pane);
   both share the bookmarks (`~/.config/gtk-3.0/bookmarks`). The Files
@@ -70,11 +74,13 @@ signed APT repository.
   program and knows Querencia Dateien even without a default set.
 - **Keyboard shortcut overview 0.2.2:** Super+? shows the block „Querencia
   Dateien“ with all shortcuts instead of the Files block.
-- **Sitzung `<0.1.8 or 0.1.9>`:** after polkitd restarts, for example during
+- `<only if querencia-sitzung 0.1.8 is in the set; as of 24 October: 0.1.7>`
+  **Sitzung 0.1.8:** after polkitd restarts, for example during
   an update, the password dialog for administrative tasks registers with the
   new polkitd by itself; until now such requests then failed without a
   dialog.
-- **Software OpenGL with zink on nouveau:** when OpenGL runs over zink on an
+- `<only if the querencia-session package contains the session starter's graphics check; as of 24 October: development build only>`
+  **Software OpenGL with zink on nouveau:** when OpenGL runs over zink on an
   NVIDIA card with the free nouveau driver, the session starter gives the
   session's programs software OpenGL (llvmpipe). In testing, the web content
   of Querencia Nachrichten crashed and Firefox froze otherwise; with software
@@ -86,10 +92,16 @@ signed APT repository.
   0.1.1:** the same graphics fallback (setting “Software-Grafik”, from the
   next start); links with schemes other than http, https and mailto only
   open after a question. Calls still do not work.
-- `<only if the shell is built from the new state:>` **Desktop
-  `<version>`:** copying, moving and deleting on the desktop with progress,
-  cancel and the same question for equal names as in Querencia Dateien;
-  Computer, Trash and drives open in Dateien.
+- **Desktop 0.3.0:** copying, moving and deleting on the desktop with
+  progress, cancel and the same question for equal names as in Querencia
+  Dateien; newly plugged-in USB sticks and inserted CDs are mounted without
+  opening a window; Computer, Trash and drives open in Dateien.
+- `<only if Alpha 2.2 is not published first:>` **From the Alpha 2.2
+  state:** the cause of the panel crashes when opening „Anwendungen“
+  (Applications) is fixed; the dark appearance also switches window borders
+  and GTK 3 programs; while locked, the screen turns off after two minutes;
+  „Ausschalten …“ (Shut Down) offers „Neu starten“ (Restart); the panel and
+  the desktop also speak English; display settings per monitor.
 - **Symbole 0.8:** own program icon for Querencia Dateien.
 
 ## Versions
@@ -100,10 +112,10 @@ Package set of `<date>` (`<number>` packages).
 |---|---|---|
 | querencia-desktop | `<0.1.0~alpha3-n>` | Meta package: pulls in Querencia Dateien instead of Files, version file “Alpha 3” |
 | querencia-dateien | `<0.2.0-n>` | **new:** file manager Querencia Dateien 0.2.0 (beta) |
-| querencia-files | `<dropped or transitional version>` | Querencia Files, retired |
-| querencia-shell | `<version>` | Panel 0.3.2, desktop `<version>`, keyboard shortcut overview 0.2.2, theme `<version>` |
-| querencia-session | `<version>` | Session starter: folders open in Querencia Dateien, software OpenGL with zink on nouveau |
-| querencia-sitzung | `<version>` | Session dialog, lock, password dialog after a polkitd restart |
+| querencia-files | `<0.2.0-1>` | Transitional package: Files goes away, the hidden starters open Querencia Dateien |
+| querencia-shell | `<0.1.0~alpha10-n>` | Panel 0.3.2, desktop 0.3.0, keyboard shortcut overview 0.2.2, theme `<version>` |
+| querencia-session | `<0.1.0~alpha9-n>` | Session starter: folders open in Querencia Dateien |
+| querencia-sitzung | `<0.1.7-1 or 0.1.8-1>` | Session dialog, lock, password dialog |
 | querencia-symbole | `<0.8-1>` | Program icons and icon theme, new: the Dateien icon |
 | querencia-dateisuche | `<0.1.5-2>` | Search for Files; recommends Querencia Dateien instead of Files |
 | `<other packages>` | `<version>` | `<unchanged since the predecessor, list according to the final set>` |
@@ -154,7 +166,7 @@ Still valid from Alpha 2 (see there). New or changed:
   window, the column view and extracting inside the program. Archives open
   in the Archive Manager on double-click; an “Extract here” entry in the
   Dateien context menu is still missing.
-- **Software OpenGL** costs CPU time and memory; programs started by the
+- `<only if software OpenGL is in the set:>` **Software OpenGL** costs CPU time and memory; programs started by the
   window manager itself (e.g. through shortcuts) do not get it.
 - `<only if querencia-nachrichten is in the set:>` **Querencia Nachrichten:**
   no calls.
@@ -171,7 +183,7 @@ Querencia Dateien please also include the output from a terminal (start
 
 ## Tested
 
-- Every source is a tagged state; Querencia Dateien from `<tag>`.
+- Every source is a tagged state; Querencia Dateien from `dateien/0.2.0`.
 - Querencia Dateien in isolated runs (own window manager without a screen,
   own profile with test files, network only inside its own namespace), at
   1024×768 and 1920×1080, light and dark, all passed: tabs 20 cases, compact

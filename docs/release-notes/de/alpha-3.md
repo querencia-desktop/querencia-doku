@@ -46,7 +46,11 @@ signierten APT-Quelle.
 - **Querencia Files wird ausgemustert.** Ordner öffnen in Querencia Dateien,
   auch über eine ältere eigene Wahl in `~/.config/mimeapps.list`. Starter
   und Panel-Knöpfe, die noch auf Files zeigen, öffnen Querencia Dateien.
-  `<Verhalten beim Aktualisieren laut endgültigem Satz: wird querencia-files entfernt oder bleibt es bis zum eigenen Entfernen?>`
+  Das Paket `querencia-files` wird zu einem Übergangspaket: Das Programm
+  Files und der Befehl `querencia-files` entfallen mit dem Aktualisieren,
+  die beiden versteckten Starter bleiben und öffnen Querencia Dateien. Das
+  Übergangspaket kann weg, sobald keine Verknüpfung mehr auf Files zeigt.
+  `<laut Packaging-Entwurf vom 24.10., gegen den endgültigen Satz prüfen>`
   Beim ersten Start übernimmt Dateien einmal sechs Einstellungen von Files
   (verborgene Dateien, Ansicht, Sortierung, Ordner zuerst, Einfach- oder
   Doppelklick, Seitenleiste); die Lesezeichen
@@ -76,11 +80,13 @@ signierten APT-Quelle.
   Sitzung und kennt Querencia Dateien auch ohne gesetzte Vorgabe.
 - **Tastenkürzel-Übersicht 0.2.2:** Super+? zeigt den Block „Querencia
   Dateien“ mit allen Kürzeln statt des Blocks von Files.
-- **Sitzung `<0.1.8 oder 0.1.9>`:** Nach einem Neustart von polkitd, etwa
+- `<nur wenn querencia-sitzung 0.1.8 im Satz ist; Stand 24.10.: 0.1.7>`
+  **Sitzung 0.1.8:** Nach einem Neustart von polkitd, etwa
   durch ein Update, meldet sich der Passwortdialog für Verwaltungsaufgaben
   von selbst beim neuen polkitd an; bisher scheiterten solche Anfragen dann
   ohne Dialog.
-- **Software-OpenGL bei zink auf nouveau:** Läuft OpenGL auf einer
+- `<nur wenn das Paket querencia-session die Grafikprüfung des Sitzungsstarters enthält; Stand 24.10.: nur im Entwicklungsstand>`
+  **Software-OpenGL bei zink auf nouveau:** Läuft OpenGL auf einer
   NVIDIA-Karte mit dem freien Treiber nouveau über zink, gibt der
   Sitzungsstarter den Programmen der Sitzung Software-OpenGL (llvmpipe). In
   der Prüfung stürzte sonst der Webinhalt von Querencia Nachrichten ab und
@@ -93,10 +99,17 @@ signierten APT-Quelle.
   0.1.1:** derselbe Grafik-Rückfall (Einstellung „Software-Grafik“, ab dem
   nächsten Start); Links mit anderen Schemata als http, https und mailto
   öffnen erst nach Rückfrage. Anrufe gehen weiterhin nicht.
-- `<nur wenn die Shell aus dem neuen Stand gebaut wird:>` **Arbeitsfläche
-  `<Fassung>`:** Kopieren, Verschieben und Löschen auf der Arbeitsfläche mit
-  Fortschritt, Abbrechen und derselben Rückfrage bei gleichen Namen wie in
-  Querencia Dateien; Rechner, Papierkorb und Laufwerke öffnen in Dateien.
+- **Arbeitsfläche 0.3.0:** Kopieren, Verschieben und Löschen auf der
+  Arbeitsfläche mit Fortschritt, Abbrechen und derselben Rückfrage bei
+  gleichen Namen wie in Querencia Dateien; neu angesteckte USB-Sticks und
+  eingelegte CDs werden eingehängt, ohne dass sich ein Fenster öffnet;
+  Rechner, Papierkorb und Laufwerke öffnen in Dateien.
+- `<nur wenn Alpha 2.2 nicht vorher veröffentlicht wird:>` **Aus dem Stand
+  Alpha 2.2:** Die Ursache der Panel-Abstürze beim Öffnen von „Anwendungen“
+  ist behoben; die dunkle Darstellung schaltet auch Fensterrahmen und
+  GTK-3-Programme um; in der Sperre geht der Bildschirm nach zwei Minuten
+  aus; „Ausschalten …“ bietet „Neu starten“ an; Panel und Arbeitsfläche
+  sprechen auch Englisch; Bildschirm-Einstellungen je Monitor.
 - **Symbole 0.8:** eigenes Programmsymbol für Querencia Dateien.
 
 ## Versionen
@@ -107,10 +120,10 @@ Paketsatz vom `<Datum>` (`<Anzahl>` Pakete).
 |---|---|---|
 | querencia-desktop | `<0.1.0~alpha3-n>` | Metapaket: zieht Querencia Dateien statt Files nach, Versionsdatei „Alpha 3“ |
 | querencia-dateien | `<0.2.0-n>` | **neu:** Dateimanager Querencia Dateien 0.2.0 (Beta) |
-| querencia-files | `<entfällt oder Übergangsfassung>` | Querencia Files, ausgemustert |
-| querencia-shell | `<Fassung>` | Panel 0.3.2, Arbeitsfläche `<Fassung>`, Tastenkürzel-Übersicht 0.2.2, Thema `<Fassung>` |
-| querencia-session | `<Fassung>` | Sitzungsstarter: Ordner öffnen mit Querencia Dateien, Software-OpenGL bei zink auf nouveau |
-| querencia-sitzung | `<Fassung>` | Sitzungsdialog, Sperre, Passwortdialog nach polkitd-Neustart |
+| querencia-files | `<0.2.0-1>` | Übergangspaket: Files entfällt, die versteckten Starter öffnen Querencia Dateien |
+| querencia-shell | `<0.1.0~alpha10-n>` | Panel 0.3.2, Arbeitsfläche 0.3.0, Tastenkürzel-Übersicht 0.2.2, Thema `<Fassung>` |
+| querencia-session | `<0.1.0~alpha9-n>` | Sitzungsstarter: Ordner öffnen mit Querencia Dateien |
+| querencia-sitzung | `<0.1.7-1 oder 0.1.8-1>` | Sitzungsdialog, Sperre, Passwortdialog |
 | querencia-symbole | `<0.8-1>` | Programmsymbole und Symbolthema, neu das Symbol von Dateien |
 | querencia-dateisuche | `<0.1.5-2>` | Nach Dateien suchen; empfiehlt Querencia Dateien statt Files |
 | `<übrige Pakete>` | `<Fassung>` | `<unverändert seit Vorgänger, Liste laut endgültigem Satz>` |
@@ -161,7 +174,7 @@ Weiter gültig aus Alpha 2 (siehe dort). Neu bzw. geändert:
   Spaltenansicht und das Entpacken im Programm. Archive öffnet die
   Archivverwaltung per Doppelklick; ein Eintrag „Hier entpacken“ im
   Kontextmenü von Dateien fehlt noch.
-- **Software-OpenGL** kostet Rechenzeit und Speicher; Programme, die der
+- `<nur wenn Software-OpenGL im Satz ist:>` **Software-OpenGL** kostet Rechenzeit und Speicher; Programme, die der
   Fensterverwalter selbst startet (z. B. über Tastenkürzel), bekommen es
   nicht.
 - `<nur wenn querencia-nachrichten im Satz ist:>` **Querencia Nachrichten:**
@@ -179,7 +192,7 @@ Querencia Dateien bitte zusätzlich die Ausgabe aus dem Terminal angeben
 
 ## Geprüft
 
-- Jede Quelle ist ein getaggter Stand; Querencia Dateien aus `<Tag>`.
+- Jede Quelle ist ein getaggter Stand; Querencia Dateien aus `dateien/0.2.0`.
 - Querencia Dateien in abgeschotteten Läufen (eigener Fensterverwalter ohne
   Bildschirm, eigenes Profil mit Testdateien, Netz nur im eigenen
   Namensraum), in 1024×768 und 1920×1080, hell und dunkel, alle bestanden:
