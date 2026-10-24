@@ -55,6 +55,7 @@ Projekts; P1 ist wichtig, P2 mittel.
 | Nur eine Tastaturbelegung (QD-057, P1) | Mehrere Belegungen mit Umschalttaste fehlen. |
 | Systemdialoge teils englisch (QD-015, P2) | z. B. die „Meldung des Systems“ beim Verbinden mit einem Server in Querencia Dateien. |
 | Querencia Dateien: kein Rückgängig | Strg+Z und Umschalt+Strg+Z gibt es noch nicht. Gelöschtes lässt sich aus dem Papierkorb wiederherstellen. |
+| Querencia Dateien: Einstellungen von Files nicht übernommen | Nach einem Upgrade von Alpha 2.1 bitte Ansicht, Sortierung, verborgene Dateien, Klickverhalten und Seitenleiste in Bearbeiten → Einstellungen neu setzen; Lesezeichen bleiben. |
 | Querencia Dateien: keine Spaltenansicht | Die Spaltenansicht von Querencia Files entfällt; Strg+1, Strg+2 und Strg+3 sind Symbole, Liste und Kompakt. |
 | Querencia Dateien: kein Ordnerbaum | Die Seitenleiste zeigt nur „Orte“; die Ansicht wird nicht je Ordner gemerkt. |
 | Querencia Dateien: Suche nur nach Namen | Keine Suche im Dateiinhalt (dafür [Nach Dateien suchen](dateisuche.md)); die Treffer aktualisieren sich nicht, Kopieren und Ziehen aus den Suchergebnissen geht noch nicht. |

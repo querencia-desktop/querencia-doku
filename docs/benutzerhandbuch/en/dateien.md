@@ -190,10 +190,9 @@ five tabs. Every change applies at once in all windows, without “Apply”.
 | List Columns | which columns the list view shows |
 | Preview | thumbnails (see [Thumbnails](#thumbnails)) |
 
-On its first start Querencia Dateien takes over six settings from Querencia
-Files once, if present: hidden files, view, sorting, folders first, single or
-double click and the side pane. The settings are stored in
-`~/.config/querencia/dateien.ini`.
+The settings are stored in `~/.config/querencia/dateien.ini`. After an
+upgrade from Alpha 2.1 Querencia Dateien does not take over the settings of
+Querencia Files; set them again here. Bookmarks are kept.
 
 ## Help
 
@@ -207,8 +206,7 @@ All shortcuts: [Keyboard shortcuts](tastenkuerzel.md#programs) or Super+?.
 ## Good to know
 
 - Undo (Ctrl+Z) does not exist yet.
-- There is no column view as in Querencia Files; whoever used the columns
-  there gets the list view on the first start.
+- There is no column view as in Querencia Files.
 - Search only finds names, not file contents, and does not update the hits
   when files change meanwhile. In the search results Del, F2 and
   Ctrl+X/C/V have no effect.

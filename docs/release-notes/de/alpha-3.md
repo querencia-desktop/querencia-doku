@@ -1,6 +1,6 @@
 # Querencia Desktop – Alpha 3
 
-**Stand:** `<Datum>` · **Status:** in der APT-Quelle seit `<Datum>`, `<Uhrzeit>`
+**Stand:** 24.10.2026 · **Status:** in der APT-Quelle seit 24. Oktober 2026, 12:18
 
 Mit Alpha 3 bekommt Querencia seinen **eigenen Dateimanager: Querencia
 Dateien** 0.2.0, eine Beta. Er folgt Nautilus 2.30 – Menüleiste,
@@ -8,12 +8,12 @@ Werkzeugleiste, Knopfpfad, Seitenleiste „Orte“, Statusleiste – und bringt
 Reiter, drei Ansichten, Miniaturen, eine Namenssuche und „Mit Server
 verbinden …“ mit. Querencia Dateien ist jetzt das Programm für Ordner; das
 bisherige Querencia Files (ein Fork von Strata) wird ausgemustert. Es sind
-`<Anzahl>` Debian-Pakete für Ubuntu 26.04 („resolute“) aus derselben
+22 Debian-Pakete für Ubuntu 26.04 („resolute“) aus derselben
 signierten APT-Quelle.
 
 > **Alpha.** Für Testsysteme gedacht, nicht für den Alltag. Keine
 > Sicherheits- oder Datenverlustgarantie. Erst auf einer virtuellen Maschine
-> mit Snapshot ausprobieren.
+> mit Snapshot ausprobieren. Querencia Dateien selbst trägt die Stufe „Beta“.
 
 ## Neu in Alpha 3
 
@@ -48,14 +48,10 @@ signierten APT-Quelle.
   und Panel-Knöpfe, die noch auf Files zeigen, öffnen Querencia Dateien.
   Das Paket `querencia-files` wird zu einem Übergangspaket: Das Programm
   Files und der Befehl `querencia-files` entfallen mit dem Aktualisieren,
-  die beiden versteckten Starter bleiben und öffnen Querencia Dateien. Das
-  Übergangspaket kann weg, sobald keine Verknüpfung mehr auf Files zeigt.
-  `<laut Packaging-Entwurf vom 24.10., gegen den endgültigen Satz prüfen>`
-  Beim ersten Start übernimmt Dateien einmal sechs Einstellungen von Files
-  (verborgene Dateien, Ansicht, Sortierung, Ordner zuerst, Einfach- oder
-  Doppelklick, Seitenleiste); die Lesezeichen
-  (`~/.config/gtk-3.0/bookmarks`) teilen sich beide. Die Einstellungen von
-  Files in `~/.config/querencia-files` bleiben unverändert liegen.
+  die beiden versteckten Starter bleiben und öffnen Querencia Dateien.
+  Die Lesezeichen (`~/.config/gtk-3.0/bookmarks`) teilen sich beide. Die
+  Einstellungen von Files übernimmt Dateien nach einem Upgrade von Alpha 2.1
+  nicht (siehe Bekannte Grenzen).
 - **Andere Tastenkürzel als in Files.** In Querencia Dateien gilt:
 
   | Wirkung | Querencia Files | Querencia Dateien |
@@ -80,25 +76,18 @@ signierten APT-Quelle.
   Sitzung und kennt Querencia Dateien auch ohne gesetzte Vorgabe.
 - **Tastenkürzel-Übersicht 0.2.2:** Super+? zeigt den Block „Querencia
   Dateien“ mit allen Kürzeln statt des Blocks von Files.
-- `<nur wenn querencia-sitzung 0.1.8 im Satz ist; Stand 24.10.: 0.1.7>`
-  **Sitzung 0.1.8:** Nach einem Neustart von polkitd, etwa
+- **Sitzung 0.1.8:** Nach einem Neustart von polkitd, etwa
   durch ein Update, meldet sich der Passwortdialog für Verwaltungsaufgaben
   von selbst beim neuen polkitd an; bisher scheiterten solche Anfragen dann
   ohne Dialog.
-- `<nur wenn das Paket querencia-session die Grafikprüfung des Sitzungsstarters enthält; Stand 24.10.: nur im Entwicklungsstand>`
-  **Software-OpenGL bei zink auf nouveau:** Läuft OpenGL auf einer
+- **Software-OpenGL bei zink auf nouveau** (Sitzungsstarter 0.1.0~alpha10): Läuft OpenGL auf einer
   NVIDIA-Karte mit dem freien Treiber nouveau über zink, gibt der
   Sitzungsstarter den Programmen der Sitzung Software-OpenGL (llvmpipe). In
-  der Prüfung stürzte sonst der Webinhalt von Querencia Nachrichten ab und
-  Firefox fror ein; mit Software-OpenGL laufen beide, dafür rechnet der
-  Prozessor. Der Fensterverwalter selbst bleibt unverändert. Steuerbar in
+  der Prüfung fror Firefox sonst ein; mit Software-OpenGL läuft er, dafür
+  rechnet der Prozessor. Der Fensterverwalter selbst bleibt unverändert. Steuerbar in
   `~/.config/querencia/grafik.ini` (`[Grafik] Software-OpenGL =
   automatisch|an|aus`), Protokoll in
   `~/.local/state/querencia/sitzung-start.log`.
-- `<nur wenn querencia-nachrichten im Satz ist:>` **Querencia Nachrichten
-  0.1.1:** derselbe Grafik-Rückfall (Einstellung „Software-Grafik“, ab dem
-  nächsten Start); Links mit anderen Schemata als http, https und mailto
-  öffnen erst nach Rückfrage. Anrufe gehen weiterhin nicht.
 - **Arbeitsfläche 0.3.0:** Kopieren, Verschieben und Löschen auf der
   Arbeitsfläche mit Fortschritt, Abbrechen und derselben Rückfrage bei
   gleichen Namen wie in Querencia Dateien; neu angesteckte USB-Sticks und
@@ -114,21 +103,34 @@ signierten APT-Quelle.
 
 ## Versionen
 
-Paketsatz vom `<Datum>` (`<Anzahl>` Pakete).
+Paketsatz vom 24.10.2026 (22 Pakete).
 
 | Paket | Fassung | Inhalt |
 |---|---|---|
-| querencia-desktop | `<0.1.0~alpha3-n>` | Metapaket: zieht Querencia Dateien statt Files nach, Versionsdatei „Alpha 3“ |
-| querencia-dateien | `<0.2.0-n>` | **neu:** Dateimanager Querencia Dateien 0.2.0 (Beta) |
-| querencia-files | `<0.2.0-1>` | Übergangspaket: Files entfällt, die versteckten Starter öffnen Querencia Dateien |
-| querencia-shell | `<0.1.0~alpha10-n>` | Panel 0.3.2, Arbeitsfläche 0.3.0, Tastenkürzel-Übersicht 0.2.2, Thema `<Fassung>` |
-| querencia-session | `<0.1.0~alpha9-n>` | Sitzungsstarter 0.1.0~alpha9: Ordner öffnen mit Querencia Dateien |
-| querencia-sitzung | `<0.1.7-1 oder 0.1.8-1>` | Sitzungsdialog, Sperre, Passwortdialog |
-| querencia-symbole | `<0.8-1>` | Programmsymbole und Symbolthema, neu das Symbol von Dateien |
-| querencia-dateisuche | `<0.1.5-2>` | Nach Dateien suchen; empfiehlt Querencia Dateien statt Files |
-| `<übrige Pakete>` | `<Fassung>` | `<unverändert seit Vorgänger, Liste laut endgültigem Satz>` |
+| querencia-desktop | 0.1.0~alpha3-1 | Metapaket: zieht Querencia Dateien statt Files nach, Versionsdatei „Alpha 3“ |
+| querencia-dateien | 0.2.0-1 | **neu:** Dateimanager Querencia Dateien 0.2.0 (Beta) |
+| querencia-files | 0.2.0-1 | **Übergangspaket:** Files entfällt, zwei versteckte Starter öffnen Querencia Dateien |
+| querencia-shell | 0.1.0~alpha10-1 | Panel 0.3.2, Arbeitsfläche 0.3.0, Tastenkürzel-Übersicht 0.2.2, Thema 0.2.2 |
+| querencia-session | 0.1.0~alpha10-1 | Sitzungsstarter: Ordner öffnen mit Querencia Dateien, Software-OpenGL bei NVIDIA mit nouveau |
+| querencia-sitzung | 0.1.8-1 | Sitzungsdialog, Sperre, Passwortdialog; übersteht einen Neustart von polkitd |
+| querencia-symbole | 0.8-1 | Programmsymbole und Symbolthema, neu das Symbol von Dateien |
+| querencia-dateisuche | 0.1.5-2 | Nach Dateien suchen; empfiehlt Querencia Dateien statt Files (Programm unverändert) |
+| querencia-einstellungen | 0.1.6-1 | Systemeinstellungen (neu seit Alpha 2.1) |
+| querencia-benachrichtigungen | 0.2.2-1 | Benachrichtigungen (unverändert seit Alpha 2) |
+| querencia-hintergruende | 0.2-1 | 16 Hintergründe (unverändert seit Alpha 2) |
+| labwc | 0.9.8-0querencia5 | Backport des Fensterverwalters (unverändert seit Alpha 2) |
+| querencia-terminal | 0.3.2-1 | Terminal (unverändert seit Alpha 2.1) |
+| querencia-editor | 0.2.4-1 | Texteditor (unverändert seit Alpha 2.1) |
+| querencia-bilder | 0.2.6-1 | Bildbetrachter (unverändert seit Alpha 2.1) |
+| querencia-dokumente | 0.1.4-1 | PDF-Betrachter (unverändert seit Alpha 2.1) |
+| querencia-archiv | 0.1.2-1 | Archivverwaltung (unverändert seit Alpha 2.1) |
+| querencia-rechner | 0.1.6-1 | Taschenrechner (unverändert seit Alpha 2.1) |
+| querencia-systemmonitor | 0.1.5-1 | Systemüberwachung (unverändert seit Alpha 2.1) |
+| querencia-screenshot | 0.2.10-1 | Bildschirmfoto (unverändert seit Alpha 2.1) |
+| querencia-software | 0.1.5-1 | Programme installieren über PackageKit (unverändert seit Alpha 2.1) |
+| querencia-anmeldung | 0.1.2-1 | Anmeldebildschirm auf Deutsch, optional (unverändert seit Alpha 2.1) |
 
-Prüfsumme der Paketliste (SHA256SUMS): `<SHA256SUMS>`.
+Prüfsumme der Paketliste (SHA256SUMS): `488348b69015ba318e6ec2cf5077d1c532c15a720edf8943d4e2bec8965a2c05`.
 
 ## Aktualisieren von Alpha 2.1
 
@@ -140,11 +142,30 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
-`<Was APT dabei installiert, aktualisiert und entfernt, laut Upgrade-Probe des endgültigen Satzes>`
-Danach abmelden und neu anmelden. Ordner öffnen dann in Querencia Dateien;
-„Querencia Files“ steht nicht mehr im Menü.
+`sudo apt upgrade` genügt ebenfalls. APT installiert Querencia Dateien neu
+und aktualisiert unter anderem Panel und Arbeitsfläche, Files, Session,
+Sitzungsdialog, Systemeinstellungen, Symbole, Dateisuche und das Metapaket;
+entfernt wird nichts, und es gibt keine Rückfrage zu Konfigurationsdateien.
+Das Upgrade dauerte in einer virtuellen Maschine aus der veröffentlichten
+Quelle etwa 20 Sekunden. Danach abmelden und neu anmelden. Ordner öffnen dann
+in Querencia Dateien;
+„Querencia Files“ steht nicht mehr im Menü, und der Befehl
+`querencia-files` ist entfallen. Verknüpfungen auf Files im Panel, auf der
+Arbeitsfläche oder in einer eigenen `~/.config/mimeapps.list` öffnen
+Querencia Dateien.
 
-`<Rückfallhinweis laut endgültigem Satz, z. B. ob und wie sich Files noch installieren lässt>`
+Das Paket `querencia-files` ist danach nur noch ein Übergangspaket mit den
+zwei versteckten Startern; `sudo apt autoremove` lässt es stehen. Wer keine
+Verknüpfung auf Files mehr hat, kann es entfernen:
+
+```bash
+sudo apt remove querencia-files
+```
+
+Ein Panel-Starter, der noch auf Files zeigt, startet danach nichts mehr und
+kann durch „Querencia Dateien“ ersetzt werden. Die Einstellungen von Files
+(`~/.config/strata`, nach Alpha 2.2 `~/.config/querencia-files`) bleiben
+liegen und können gelöscht werden.
 
 ## Neu installieren
 
@@ -153,7 +174,8 @@ starten, am Zahnrad „Querencia Desktop“ wählen (siehe
 [Alpha 1, Installation](alpha-1.md#installation)). Fingerabdruck des
 Signierschlüssels: `63F6 C499 246E 3699 CA04 726D 342F 12D2 0CE7 1CBD`.
 Querencia Files wird nicht mehr installiert.
-`<Neuinstallation: Paketzahl und Dauer>`
+Auf einem frischen Ubuntu-26.04-Server-Abbild installiert APT 389 Pakete in
+etwa 1,5 bis 2 Minuten (je nach Ubuntu-Archiv).
 
 ## Bekannte Grenzen
 
@@ -170,15 +192,17 @@ Weiter gültig aus Alpha 2 und 2.1 (siehe dort), soweit oben nicht als behoben g
   echte Netzlaufwerke sind ungeprüft.
 - **Miniaturen für PDF** erscheinen nur, wenn ein Vorschauprogramm für PDF
   und `bubblewrap` installiert sind.
+- **Einstellungen von Files werden nicht übernommen.** Nach einem Upgrade
+  von Alpha 2.1 übernimmt Dateien Ansicht, Sortierung, verborgene Dateien,
+  Ordner zuerst, Klickverhalten und Seitenleiste nicht von Files; bitte in
+  Bearbeiten → Einstellungen neu setzen. Lesezeichen bleiben erhalten.
 - **Was Files konnte und Dateien nicht:** die Vorschau im Fenster, die
   Spaltenansicht und das Entpacken im Programm. Archive öffnet die
   Archivverwaltung per Doppelklick; ein Eintrag „Hier entpacken“ im
   Kontextmenü von Dateien fehlt noch.
-- `<nur wenn Software-OpenGL im Satz ist:>` **Software-OpenGL** kostet Rechenzeit und Speicher; Programme, die der
+- **Software-OpenGL** kostet Rechenzeit und Speicher; Programme, die der
   Fensterverwalter selbst startet (z. B. über Tastenkürzel), bekommen es
   nicht.
-- `<nur wenn querencia-nachrichten im Satz ist:>` **Querencia Nachrichten:**
-  keine Anrufe.
 - **Nicht auf echter Hardware geprüft**, nur in virtuellen Maschinen und in
   abgeschotteten Kopien des Systems.
 
@@ -200,7 +224,25 @@ Querencia Dateien bitte zusätzlich die Ausgabe aus dem Terminal angeben
   Kompaktansicht 14, Suche in Reitern 5, Übernahme der Files-Einstellungen
   je 3, Netzwerk 53, Miniaturen und Suche 26, Ansichten 80, Dateioperationen
   35; dazu 656 automatische Tests des Quellbaums.
-- `<Paketprüfung, Lintian, Probe-Installation und Upgrade-Probe des endgültigen Satzes>`
+- Statische Paketprüfung (266 bestanden), Lintian ohne Fehler, Tests der
+  Quellen beim Bau (Dateien und seine zwei Bibliotheken 227, Panel,
+  Arbeitsfläche und Applets 429, Sitzungsdialog 85, Sitzungsstarter 106),
+  Probe-Installation in einer abgeschotteten Kopie des Systems (91
+  Prüfungen bestanden).
+- **Upgrade von Alpha 2.1 und von Alpha 2.2** (je in einer abgeschotteten
+  Kopie des Systems, je 144 Prüfungen bestanden): alter Paketsatz
+  installiert, ein Benutzer mit Lesezeichen, Files-Einstellungen und einer
+  eigenen Ordnerwahl auf die alte Files-Kennung angelegt, dann der neue Satz
+  darüber: `apt upgrade` und `apt full-upgrade` entfernen nichts und halten
+  nichts zurück; Ordner öffnen mit Dateien, auch über die alte Wahl; die
+  alten Files-Starter öffnen Dateien und verschwinden aus dem Menü; kein
+  Starter und kein Eintrag einer `mimeapps.list` zeigt ins Leere.
+- **Aus der veröffentlichten Quelle** in einer virtuellen Maschine:
+  Neuinstallation (389 Pakete, Prüfskript in der Sitzung 28 von 28, auch
+  über den eigenen Anmeldebildschirm) und Upgrade von Alpha 2.1 (etwa
+  20 Sekunden, nichts entfernt, keine Rückfragen; eigene Einstellungen wie
+  Hintergrund, Kürzel und Panel-Starter bleiben, ein alter Files-Starter im
+  Panel öffnet Dateien); der Passwortdialog nach einem Neustart von polkitd.
 - Nicht geprüft: echte Windows-Freigaben und Netzlaufwerke, echte
   USB-Geräte, Anmeldung über GDM.
 
