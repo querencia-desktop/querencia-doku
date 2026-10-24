@@ -32,10 +32,9 @@ German text is the reference.
 
 | | |
 |---|---|
-| Fassung | Release-Notes Alpha 1 auf dem Stand des Paketsatzes, kein Tag |
-| Grundlage | Live-Stand der Entwicklungsumgebung, Paketsatz Alpha 1 und Prüfberichte vom 20.10.2026 |
-| Offen | signierte APT-Quelle (Bezugsweg der Pakete), Freigabe der Hintergründe (KI-erzeugt, siehe Lizenz); das Handbuch beschreibt noch den Stand vom Nachmittag des 20.10. |
-| Nachtrag 24.10.2026 | Handbuch: Querencia Dateien (Beta 0.2.0) statt Querencia Files; Release-Notes Alpha 3 als Entwurf |
+| Fassung | Release-Notes Alpha 1, Alpha 2 und Alpha 2.1 auf dem Stand des jeweiligen Paketsatzes, Alpha 3 als Entwurf; Benutzerhandbuch auf Alpha 2.1, Dateimanager Querencia Dateien (Beta 0.2.0) statt Querencia Files; kein Tag |
+| Grundlage | Paketsatz Alpha 2.1 vom 22.10.2026 (in der APT-Quelle seit 22.10.2026), Release-Notes Alpha 2.1, der Quellcode der Programme und für Alpha 3 der Stand von Querencia Dateien 0.2.0 |
+| Offen | Bildschirmfotos für Terminal fehlen; einzelne Bilder zeigen eine frühere Fassung des Programms (Herkunft in `docs/benutzerhandbuch/bilder/herkunft.txt`) |
 
 ## Bauen und Prüfen
 
