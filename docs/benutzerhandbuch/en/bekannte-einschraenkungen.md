@@ -37,6 +37,7 @@ open items; P1 is important, P2 medium.
 | Only one keyboard layout (QD-057, P1) | Several layouts with a switch key are missing. |
 | System dialogs partly in another language (QD-015, P2) | e.g. the “Message from the system” when connecting to a server in Querencia Dateien. |
 | Querencia Dateien: no undo | Ctrl+Z and Shift+Ctrl+Z do not exist yet. Deleted items can be restored from the trash. |
+| Querencia Dateien: Files settings not taken over | After an upgrade from Alpha 2.1 please set view, sorting, hidden files, click behaviour and side pane again under Edit → Preferences; bookmarks are kept. |
 | Querencia Dateien: no column view | The column view of Querencia Files is gone; Ctrl+1, Ctrl+2 and Ctrl+3 are icons, list and compact. |
 | Querencia Dateien: no folder tree | The side pane only shows “Places”; the view is not remembered per folder. |
 | Querencia Dateien: search by name only | No search in file contents (use [Search for Files](dateisuche.md)); the hits do not update, copying and dragging from the search results does not work yet. |

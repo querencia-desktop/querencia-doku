@@ -49,11 +49,9 @@ signierten APT-Quelle.
   Das Paket `querencia-files` wird zu einem Übergangspaket: Das Programm
   Files und der Befehl `querencia-files` entfallen mit dem Aktualisieren,
   die beiden versteckten Starter bleiben und öffnen Querencia Dateien.
-  Beim ersten Start übernimmt Dateien einmal sechs Einstellungen von Files
-  (verborgene Dateien, Ansicht, Sortierung, Ordner zuerst, Einfach- oder
-  Doppelklick, Seitenleiste); die Lesezeichen
-  (`~/.config/gtk-3.0/bookmarks`) teilen sich beide. Die Einstellungen von
-  Files in `~/.config/querencia-files` bleiben unverändert liegen.
+  Die Lesezeichen (`~/.config/gtk-3.0/bookmarks`) teilen sich beide. Die
+  Einstellungen von Files übernimmt Dateien nach einem Upgrade von Alpha 2.1
+  nicht (siehe Bekannte Grenzen).
 - **Andere Tastenkürzel als in Files.** In Querencia Dateien gilt:
 
   | Wirkung | Querencia Files | Querencia Dateien |
@@ -148,7 +146,9 @@ sudo apt full-upgrade
 und aktualisiert unter anderem Panel und Arbeitsfläche, Files, Session,
 Sitzungsdialog, Systemeinstellungen, Symbole, Dateisuche und das Metapaket;
 entfernt wird nichts, und es gibt keine Rückfrage zu Konfigurationsdateien.
-Danach abmelden und neu anmelden. Ordner öffnen dann in Querencia Dateien;
+Das Upgrade dauerte in einer virtuellen Maschine aus der veröffentlichten
+Quelle etwa 20 Sekunden. Danach abmelden und neu anmelden. Ordner öffnen dann
+in Querencia Dateien;
 „Querencia Files“ steht nicht mehr im Menü, und der Befehl
 `querencia-files` ist entfallen. Verknüpfungen auf Files im Panel, auf der
 Arbeitsfläche oder in einer eigenen `~/.config/mimeapps.list` öffnen
@@ -164,7 +164,8 @@ sudo apt remove querencia-files
 
 Ein Panel-Starter, der noch auf Files zeigt, startet danach nichts mehr und
 kann durch „Querencia Dateien“ ersetzt werden. Die Einstellungen von Files
-(`~/.config/querencia-files`) bleiben liegen und können gelöscht werden.
+(`~/.config/strata`, nach Alpha 2.2 `~/.config/querencia-files`) bleiben
+liegen und können gelöscht werden.
 
 ## Neu installieren
 
@@ -173,7 +174,8 @@ starten, am Zahnrad „Querencia Desktop“ wählen (siehe
 [Alpha 1, Installation](alpha-1.md#installation)). Fingerabdruck des
 Signierschlüssels: `63F6 C499 246E 3699 CA04 726D 342F 12D2 0CE7 1CBD`.
 Querencia Files wird nicht mehr installiert.
-`<Neuinstallation: Paketzahl und Dauer>`
+Auf einem frischen Ubuntu-26.04-Server-Abbild installiert APT 389 Pakete in
+etwa 1,5 bis 2 Minuten (je nach Ubuntu-Archiv).
 
 ## Bekannte Grenzen
 
@@ -190,6 +192,10 @@ Weiter gültig aus Alpha 2 und 2.1 (siehe dort), soweit oben nicht als behoben g
   echte Netzlaufwerke sind ungeprüft.
 - **Miniaturen für PDF** erscheinen nur, wenn ein Vorschauprogramm für PDF
   und `bubblewrap` installiert sind.
+- **Einstellungen von Files werden nicht übernommen.** Nach einem Upgrade
+  von Alpha 2.1 übernimmt Dateien Ansicht, Sortierung, verborgene Dateien,
+  Ordner zuerst, Klickverhalten und Seitenleiste nicht von Files; bitte in
+  Bearbeiten → Einstellungen neu setzen. Lesezeichen bleiben erhalten.
 - **Was Files konnte und Dateien nicht:** die Vorschau im Fenster, die
   Spaltenansicht und das Entpacken im Programm. Archive öffnet die
   Archivverwaltung per Doppelklick; ein Eintrag „Hier entpacken“ im
@@ -231,6 +237,12 @@ Querencia Dateien bitte zusätzlich die Ausgabe aus dem Terminal angeben
   nichts zurück; Ordner öffnen mit Dateien, auch über die alte Wahl; die
   alten Files-Starter öffnen Dateien und verschwinden aus dem Menü; kein
   Starter und kein Eintrag einer `mimeapps.list` zeigt ins Leere.
+- **Aus der veröffentlichten Quelle** in einer virtuellen Maschine:
+  Neuinstallation (389 Pakete, Prüfskript in der Sitzung 28 von 28, auch
+  über den eigenen Anmeldebildschirm) und Upgrade von Alpha 2.1 (etwa
+  20 Sekunden, nichts entfernt, keine Rückfragen; eigene Einstellungen wie
+  Hintergrund, Kürzel und Panel-Starter bleiben, ein alter Files-Starter im
+  Panel öffnet Dateien); der Passwortdialog nach einem Neustart von polkitd.
 - Nicht geprüft: echte Windows-Freigaben und Netzlaufwerke, echte
   USB-Geräte, Anmeldung über GDM.
 

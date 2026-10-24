@@ -45,10 +45,9 @@ signed APT repository.
   The package `querencia-files` becomes a transitional package: the Files
   program and the command `querencia-files` go away with the upgrade, the
   two hidden starters stay and open Querencia Dateien.
-  On its first start Dateien takes over six Files settings once (hidden
-  files, view, sorting, folders first, single or double click, side pane);
-  both share the bookmarks (`~/.config/gtk-3.0/bookmarks`). The Files
-  settings in `~/.config/querencia-files` stay untouched.
+  Both share the bookmarks (`~/.config/gtk-3.0/bookmarks`). Dateien does not
+  take over the Files settings after an upgrade from Alpha 2.1 (see Known
+  limitations).
 - **Shortcuts differ from Files.** In Querencia Dateien:
 
   | Action | Querencia Files | Querencia Dateien |
@@ -141,7 +140,8 @@ sudo apt full-upgrade
 upgrades among others the panel and desktop, Files, the session, the session
 dialog, system settings, the icons, file search and the meta package;
 nothing is removed and there is no question about configuration files. Log
-out and in again afterwards. Folders then open in Querencia Dateien;
+out and in again afterwards; in a virtual machine the upgrade from the
+published repository took about 20 seconds. Folders then open in Querencia Dateien;
 “Querencia Files” is no longer in the menu and the command `querencia-files`
 is gone. Links to Files on the panel, the desktop or in your own
 `~/.config/mimeapps.list` open Querencia Dateien.
@@ -156,7 +156,8 @@ sudo apt remove querencia-files
 
 A panel launcher that still points to Files then no longer starts anything
 and can be replaced by “Querencia Dateien”. The Files settings
-(`~/.config/querencia-files`) stay and can be deleted.
+(`~/.config/strata`, after Alpha 2.2 `~/.config/querencia-files`) stay and
+can be deleted.
 
 ## New installation
 
@@ -165,7 +166,8 @@ restart, choose “Querencia Desktop” at the gear icon (see
 [Alpha 1, installation](alpha-1.md#installation)). Fingerprint of the
 signing key: `63F6 C499 246E 3699 CA04 726D 342F 12D2 0CE7 1CBD`. Querencia
 Files is no longer installed.
-`<New installation: package count and time>`
+On a fresh Ubuntu 26.04 server image APT installs 389 packages in about 1.5
+to 2 minutes (depending on the Ubuntu archive).
 
 ## Known limitations
 
@@ -182,6 +184,10 @@ Still valid from Alpha 2 and 2.1 (see there), unless listed as fixed above. New 
   drives are untested.
 - **Thumbnails for PDF** only appear when a PDF thumbnailer and
   `bubblewrap` are installed.
+- **Files settings are not taken over.** After an upgrade from Alpha 2.1,
+  Dateien does not take over view, sorting, hidden files, folders first,
+  click behaviour and side pane from Files; please set them again under
+  Edit → Preferences. Bookmarks are kept.
 - **What Files could do and Dateien cannot:** the preview inside the
   window, the column view and extracting inside the program. Archives open
   in the Archive Manager on double-click; an “Extract here” entry in the
@@ -220,6 +226,12 @@ Querencia Dateien please also include the output from a terminal (start
   Dateien, also through the old choice; the old Files starters open Dateien
   and leave the menu; no starter and no entry of a `mimeapps.list` points to
   nothing.
+- **From the published repository** in a virtual machine: new installation
+  (389 packages, check script in the session 28 of 28, also through
+  Querencia's own login screen) and upgrade from Alpha 2.1 (about 20
+  seconds, nothing removed, no questions; own settings such as background,
+  shortcuts and panel launchers stay, an old Files launcher on the panel
+  opens Dateien); the password dialog after a polkitd restart.
 - Not tested: real Windows shares and network drives, real USB devices,
   login through GDM.
 

@@ -196,10 +196,9 @@ Fenstern, ohne „Übernehmen“.
 | Listenspalten | welche Spalten die Listenansicht zeigt |
 | Vorschau | Vorschaubilder (siehe [Miniaturen](#miniaturen)) |
 
-Beim ersten Start übernimmt Querencia Dateien einmal sechs Einstellungen
-aus Querencia Files, falls vorhanden: verborgene Dateien, Ansicht,
-Sortierung, Ordner zuerst, Einfach- oder Doppelklick und die Seitenleiste.
-Die Einstellungen liegen in `~/.config/querencia/dateien.ini`.
+Die Einstellungen liegen in `~/.config/querencia/dateien.ini`. Einstellungen
+aus Querencia Files übernimmt Dateien nach einem Upgrade von Alpha 2.1 nicht;
+sie müssen hier neu gesetzt werden. Die Lesezeichen bleiben.
 
 ## Hilfe
 
@@ -213,8 +212,7 @@ Alle Kürzel: [Tastenkürzel](tastenkuerzel.md#programme) oder Super+?.
 ## Gut zu wissen
 
 - Rückgängig (Strg+Z) gibt es noch nicht.
-- Eine Spaltenansicht wie in Querencia Files gibt es nicht; wer dort die
-  Spalten nutzte, bekommt beim ersten Start die Listenansicht.
+- Eine Spaltenansicht wie in Querencia Files gibt es nicht.
 - Die Suche findet nur Namen, keinen Dateiinhalt, und aktualisiert die
   Treffer nicht, wenn sich Dateien währenddessen ändern. In den
   Suchergebnissen wirken Entf, F2 und Strg+X/C/V nicht.
