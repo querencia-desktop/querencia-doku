@@ -37,13 +37,23 @@ Die Kürzel der Programme stehen auch auf deren Seiten. Kurzfassung:
 **Arbeitsfläche:** F2 umbenennen · Strg+A alle auswählen · Esc Auswahl
 aufheben · Strg+Klick und Umschalt+Klick Mehrfachauswahl.
 
-**Querencia Files:** Strg+N neues Fenster · Strg+T neuer Reiter · Strg+W
-Reiter schließen · Strg+Umschalt+N neuer Ordner · Strg+X/C/V
-Ausschneiden/Kopieren/Einfügen · Strg+D duplizieren · Strg+Z/Strg+Umschalt+Z
-rückgängig/wiederholen · F2 umbenennen · Alt+Eingabe Eigenschaften ·
-Umschalt+Entf endgültig löschen · Strg+K suchen · Strg+L Ort eingeben · Strg+R
-neu laden · Strg+B Seitenleiste · Strg+, Einstellungen · Alt+←/→ zurück/vor ·
-Alt+↑ übergeordneter Ordner · Alt+Pos1 Persönlicher Ordner.
+**Querencia Dateien:** Strg+N neues Fenster · Strg+T neuer Reiter · Strg+W
+Reiter schließen (der letzte schließt das Fenster) · Umschalt+Strg+W alle
+Fenster schließen · Strg+Bild↑/Bild↓ vorheriger/nächster Reiter ·
+Umschalt+Strg+Bild↑/Bild↓ Reiter nach links/rechts verschieben · Alt+1 …
+Alt+0 Reiter 1 bis 10 · Umschalt+Strg+N Ordner anlegen · Strg+O öffnen ·
+Umschalt+Strg+O in neuem Reiter öffnen · mittlere Maustaste Ordner in neuem
+Reiter öffnen · Alt+Eingabe oder Strg+I Eigenschaften · Strg+X/C/V
+Ausschneiden/Kopieren/Einfügen · Strg+A alles auswählen · Umschalt+Strg+I
+Auswahl umkehren · F2 umbenennen (Umschalt+F2 mit ganzem Namen) · Entf in
+den Papierkorb · Umschalt+Entf löschen (mit Nachfrage) · Menü-Taste oder
+Umschalt+F10 Kontextmenü · Esc Laden anhalten · Strg+R oder F5 aktualisieren
+· F9 Seitenleiste ein/aus · Strg+H verborgene Dateien · Strg++/Strg+-/Strg+0
+vergrößern/verkleinern/normale Größe · Strg+1/2/3 Symbol-/Listen-/
+Kompaktansicht · Strg+L Ort eingeben · Strg+F suchen (Esc hält die Suche an
+oder schließt die Leiste) · Strg+D Lesezeichen hinzufügen · Alt+←/→
+zurück/vor · Alt+↑ übergeordneter Ordner · Alt+Pos1 Persönlicher Ordner · F1
+Online-Hilfe. Rückgängig (Strg+Z) gibt es noch nicht.
 
 **Querencia Terminal:** Strg+Umschalt+T neuer Reiter · Strg+Umschalt+W
 Reiter schließen · Strg+Umschalt+Q Fenster schließen · Strg+Bild↑/Bild↓

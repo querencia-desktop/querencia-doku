@@ -27,7 +27,7 @@ that are still German only are named on each page.
 
 | Program | Menu | Page |
 |---|---|---|
-| Querencia Files (file manager) | Orte (Places), Anwendungen → Zubehör (Applications → Accessories) | [files.md](files.md) |
+| Querencia Dateien (file manager, menu entry “Files”) | Orte (Places), Anwendungen → Zubehör (Applications → Accessories) | [dateien.md](dateien.md) |
 | Querencia Terminal | Applications → Accessories | [terminal.md](terminal.md) |
 | Text Editor | Applications → Accessories | [editor.md](editor.md) |
 | Image Viewer | Applications → Grafik (Graphics) | [bilder.md](bilder.md) |

@@ -51,4 +51,6 @@ already inside a single folder.
 
 Creating 7z and RAR, passwords when creating, changing encrypted archives,
 dragging files out of the window, renaming inside the archive, integrity
-check. “Extract here” in Querencia Files uses Querencia Archiv.
+check. An “Extract here” entry in the context menu of
+[Querencia Dateien](dateien.md) does not exist yet (open); there a
+double-click opens the archive in the Archive Manager.

@@ -57,7 +57,7 @@ exactly once. Newly installed programs appear without restarting the panel.
 
 Home folder, Desktop, Documents, Music, Pictures, Videos and Downloads (only
 those that exist), then Computer, Network and Trash. A click opens the place
-in Querencia Files.
+in [Querencia Dateien](dateien.md).
 
 ### Menu “System”
 

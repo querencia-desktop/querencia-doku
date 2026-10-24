@@ -2,9 +2,9 @@
 
 [Zurück zum Inhalt](index.md)
 
-Stand Alpha 2.1 (22.10.2026). Grundlage sind die
-[Release-Notes Alpha 2.1](../../release-notes/de/alpha-2.1.md), Abschnitt
-„Bekannte Grenzen“.
+Stand Alpha 1 (20.10.2026), Querencia Dateien Stand Alpha 3 (24.10.2026).
+Die Kennungen (QD-…) verweisen auf die Liste der offenen Punkte des
+Projekts; P1 ist wichtig, P2 mittel.
 
 ## Installation und Anmeldung
 
@@ -50,7 +50,19 @@ Stand Alpha 2.1 (22.10.2026). Grundlage sind die
 
 | Punkt | Was das heißt |
 |---|---|
-| Files: Rechner doppelt in der Netzwerkansicht | Zwei Suchdienste melden denselben Rechner. |
+| Englisch noch nicht überall (QD-055, P1) | Panel, Arbeitsfläche, Einstellungen, Tastenkürzel-Übersicht und der Sperrbildschirm sind nur deutsch. |
+| Sprache und Region nicht einstellbar (QD-056, P2) | Texte sind deutsch, Datums- und Zahlenformate folgen noch der englischen Grundeinstellung der Sitzung. |
+| Nur eine Tastaturbelegung (QD-057, P1) | Mehrere Belegungen mit Umschalttaste fehlen. |
+| Systemdialoge teils englisch (QD-015, P2) | z. B. die „Meldung des Systems“ beim Verbinden mit einem Server in Querencia Dateien. |
+| Querencia Dateien: kein Rückgängig | Strg+Z und Umschalt+Strg+Z gibt es noch nicht. Gelöschtes lässt sich aus dem Papierkorb wiederherstellen. |
+| Querencia Dateien: keine Spaltenansicht | Die Spaltenansicht von Querencia Files entfällt; Strg+1, Strg+2 und Strg+3 sind Symbole, Liste und Kompakt. |
+| Querencia Dateien: kein Ordnerbaum | Die Seitenleiste zeigt nur „Orte“; die Ansicht wird nicht je Ordner gemerkt. |
+| Querencia Dateien: Suche nur nach Namen | Keine Suche im Dateiinhalt (dafür [Nach Dateien suchen](dateisuche.md)); die Treffer aktualisieren sich nicht, Kopieren und Ziehen aus den Suchergebnissen geht noch nicht. |
+| Querencia Dateien: Miniaturen für PDF | Erscheinen nur mit einem installierten Vorschauprogramm für PDF und `bubblewrap`; sonst bleibt das Symbol. |
+| Querencia Dateien: Server teils ungeprüft | Geprüft mit Testservern für SFTP, WebDAV und FTP. Eine gelungene Verbindung zu einer Windows-Freigabe (SMB) und Zertifikatsfragen bei Sicherem WebDAV sind ungeprüft. |
+| Querencia Dateien: „Kennwort merken“ im zweiten Versuch | Nach einem falschen Kennwort bietet ein WebDAV-Server das Merken nicht mehr an. |
+| Querencia Dateien: echte Geräte ungeprüft | Laufwerke und Netzlaufwerke sind nur mit Abbildern und Testservern geprüft, nicht mit echten USB-Geräten. |
+| Bildbetrachter: Nebenfenster ohne Titelleiste | Ein zum zweiten Mal geöffneter Dialog erscheint ohne Titelleiste. |
 | Terminal: Einfügen mit der mittleren Maustaste | Eine Auswahl aus einem anderen Programm kommt nicht immer an. |
 | Drucken ungetestet | Auf einen echten Drucker (z. B. aus dem Dokumentenbetrachter) noch nicht geprüft. |
 | Blasse Textreste beim Seitenwechsel | Ein Zeichenfehler von GTK 4.22; die Sitzung umgeht ihn, indem GTK-Programme ihre Fenster ganz neu zeichnen. |

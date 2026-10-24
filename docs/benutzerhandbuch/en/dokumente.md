@@ -11,8 +11,8 @@ A PDF viewer modelled on Evince 2.30. It **never writes** to documents.
 
 ## What the Document Viewer can do
 
-- Open PDF via the dialog, from Files or by dropping it on the window; also
-  password-protected PDF (asks for the password).
+- Open PDF via the dialog, from Querencia Dateien or by dropping it on the
+  window; also password-protected PDF (asks for the password).
 - Continuous scrolling, side pane with thumbnails, page field “page X of Y”
   (also page labels such as “iv”).
 - Zoom in steps from 10 % to 400 %, “Best Fit”, “Fit Page Width”, Ctrl+mouse wheel.

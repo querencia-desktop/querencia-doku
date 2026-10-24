@@ -38,12 +38,20 @@ The program pages list their shortcuts too. In short:
 **Desktop:** F2 rename · Ctrl+A select all · Esc clear selection · Ctrl+click
 and Shift+click multiple selection.
 
-**Querencia Files:** Ctrl+N new window · Ctrl+T new tab · Ctrl+W close tab ·
-Ctrl+Shift+N new folder · Ctrl+X/C/V cut/copy/paste · Ctrl+D duplicate ·
-Ctrl+Z/Ctrl+Shift+Z undo/redo · F2 rename · Alt+Return properties ·
-Shift+Del delete permanently · Ctrl+K search · Ctrl+L enter location · Ctrl+R
-reload · Ctrl+B sidebar · Ctrl+, preferences · Alt+←/→ back/forward · Alt+↑
-parent folder · Alt+Home home folder.
+**Querencia Dateien (Files):** Ctrl+N new window · Ctrl+T new tab · Ctrl+W
+close tab (the last one closes the window) · Shift+Ctrl+W close all windows ·
+Ctrl+Page Up/Page Down previous/next tab · Shift+Ctrl+Page Up/Page Down move
+tab left/right · Alt+1 … Alt+0 tab 1 to 10 · Shift+Ctrl+N create folder ·
+Ctrl+O open · Shift+Ctrl+O open in new tab · middle mouse button open folder
+in new tab · Alt+Return or Ctrl+I properties · Ctrl+X/C/V cut/copy/paste ·
+Ctrl+A select all · Shift+Ctrl+I invert selection · F2 rename (Shift+F2 with
+the whole name) · Del move to trash · Shift+Del delete (asks first) · Menu key
+or Shift+F10 context menu · Esc stop loading · Ctrl+R or F5 reload · F9 side
+pane on/off · Ctrl+H hidden files · Ctrl++/Ctrl+-/Ctrl+0 zoom in/zoom
+out/normal size · Ctrl+1/2/3 icon/list/compact view · Ctrl+L enter location ·
+Ctrl+F search (Esc stops the search or closes the bar) · Ctrl+D add bookmark ·
+Alt+←/→ back/forward · Alt+↑ parent folder · Alt+Home home folder · F1 online
+help. Undo (Ctrl+Z) does not exist yet.
 
 **Querencia Terminal:** Ctrl+Shift+T new tab · Ctrl+Shift+W close tab ·
 Ctrl+Shift+Q close window · Ctrl+PgUp/PgDn previous/next tab ·

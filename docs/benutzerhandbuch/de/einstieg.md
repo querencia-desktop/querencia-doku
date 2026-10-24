@@ -52,7 +52,7 @@ installierte Programme erscheinen ohne Neustart des Panels.
 
 Persönlicher Ordner, Arbeitsfläche, Dokumente, Musik, Bilder, Videos und
 Downloads (nur die vorhandenen), darunter Computer, Netzwerk und Papierkorb.
-Ein Klick öffnet den Ort in Querencia Files.
+Ein Klick öffnet den Ort in [Querencia Dateien](dateien.md).
 
 ### Menü „System“
 
