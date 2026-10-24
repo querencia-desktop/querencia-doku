@@ -7,11 +7,12 @@ With Alpha 3 Querencia gets its **own file manager: Querencia Dateien**
 pane “Places”, status bar – and brings tabs, three views, thumbnails, a name
 search and “Connect to Server…”. Querencia Dateien is now the program for
 folders; the earlier Querencia Files (a fork of Strata) is retired. There
-are `<number>` Debian packages for Ubuntu 26.04 (“resolute”) from the same
+are 22 Debian packages for Ubuntu 26.04 (“resolute”) from the same
 signed APT repository.
 
 > **Alpha.** Meant for test systems, not for daily use. No security or
 > data-loss guarantees. Try it in a virtual machine with a snapshot first.
+> Querencia Dateien itself carries the stage “beta”.
 
 ## New in Alpha 3
 
@@ -43,9 +44,7 @@ signed APT repository.
   panel buttons that still point to Files open Querencia Dateien.
   The package `querencia-files` becomes a transitional package: the Files
   program and the command `querencia-files` go away with the upgrade, the
-  two hidden starters stay and open Querencia Dateien. The transitional
-  package can be removed once no link points to Files any more.
-  `<according to the packaging draft of 24 October, check against the final set>`
+  two hidden starters stay and open Querencia Dateien.
   On its first start Dateien takes over six Files settings once (hidden
   files, view, sorting, folders first, single or double click, side pane);
   both share the bookmarks (`~/.config/gtk-3.0/bookmarks`). The Files
@@ -74,24 +73,17 @@ signed APT repository.
   program and knows Querencia Dateien even without a default set.
 - **Keyboard shortcut overview 0.2.2:** Super+? shows the block „Querencia
   Dateien“ with all shortcuts instead of the Files block.
-- `<only if querencia-sitzung 0.1.8 is in the set; as of 24 October: 0.1.7>`
-  **Sitzung 0.1.8:** after polkitd restarts, for example during
+- **Sitzung 0.1.8:** after polkitd restarts, for example during
   an update, the password dialog for administrative tasks registers with the
   new polkitd by itself; until now such requests then failed without a
   dialog.
-- `<only if the querencia-session package contains the session starter's graphics check; as of 24 October: development build only>`
-  **Software OpenGL with zink on nouveau:** when OpenGL runs over zink on an
+- **Software OpenGL with zink on nouveau** (session starter 0.1.0~alpha10): when OpenGL runs over zink on an
   NVIDIA card with the free nouveau driver, the session starter gives the
-  session's programs software OpenGL (llvmpipe). In testing, the web content
-  of Querencia Nachrichten crashed and Firefox froze otherwise; with software
-  OpenGL both run, at the cost of CPU work. The window manager itself stays
+  session's programs software OpenGL (llvmpipe). In testing, Firefox froze
+  otherwise; with software OpenGL it runs, at the cost of CPU work. The window manager itself stays
   unchanged. Controlled in `~/.config/querencia/grafik.ini` (`[Grafik]
   Software-OpenGL = automatisch|an|aus`), logged in
   `~/.local/state/querencia/sitzung-start.log`.
-- `<only if querencia-nachrichten is in the set:>` **Querencia Nachrichten
-  0.1.1:** the same graphics fallback (setting “Software-Grafik”, from the
-  next start); links with schemes other than http, https and mailto only
-  open after a question. Calls still do not work.
 - **Desktop 0.3.0:** copying, moving and deleting on the desktop with
   progress, cancel and the same question for equal names as in Querencia
   Dateien; newly plugged-in USB sticks and inserted CDs are mounted without
@@ -106,21 +98,34 @@ signed APT repository.
 
 ## Versions
 
-Package set of `<date>` (`<number>` packages).
+Package set of 24 October 2026 (22 packages).
 
 | Package | Version | Content |
 |---|---|---|
-| querencia-desktop | `<0.1.0~alpha3-n>` | Meta package: pulls in Querencia Dateien instead of Files, version file “Alpha 3” |
-| querencia-dateien | `<0.2.0-n>` | **new:** file manager Querencia Dateien 0.2.0 (beta) |
-| querencia-files | `<0.2.0-1>` | Transitional package: Files goes away, the hidden starters open Querencia Dateien |
-| querencia-shell | `<0.1.0~alpha10-n>` | Panel 0.3.2, desktop 0.3.0, keyboard shortcut overview 0.2.2, theme `<version>` |
-| querencia-session | `<0.1.0~alpha9-n>` | Session starter 0.1.0~alpha9: folders open in Querencia Dateien |
-| querencia-sitzung | `<0.1.7-1 or 0.1.8-1>` | Session dialog, lock, password dialog |
-| querencia-symbole | `<0.8-1>` | Program icons and icon theme, new: the Dateien icon |
-| querencia-dateisuche | `<0.1.5-2>` | Search for Files; recommends Querencia Dateien instead of Files |
-| `<other packages>` | `<version>` | `<unchanged since the predecessor, list according to the final set>` |
+| querencia-desktop | 0.1.0~alpha3-1 | Meta package: pulls in Querencia Dateien instead of Files, version file “Alpha 3” |
+| querencia-dateien | 0.2.0-1 | **new:** file manager Querencia Dateien 0.2.0 (beta) |
+| querencia-files | 0.2.0-1 | **Transitional package:** Files goes away, two hidden starters open Querencia Dateien |
+| querencia-shell | 0.1.0~alpha10-1 | Panel 0.3.2, desktop 0.3.0, keyboard shortcut overview 0.2.2, theme 0.2.2 |
+| querencia-session | 0.1.0~alpha10-1 | Session starter: folders open in Querencia Dateien, software OpenGL for NVIDIA with nouveau |
+| querencia-sitzung | 0.1.8-1 | Session dialog, lock, password dialog; survives a restart of polkitd |
+| querencia-symbole | 0.8-1 | Program icons and icon theme, new: the Dateien icon |
+| querencia-dateisuche | 0.1.5-2 | Search for Files; recommends Querencia Dateien instead of Files (program unchanged) |
+| querencia-einstellungen | 0.1.6-1 | System settings (new since Alpha 2.1) |
+| querencia-benachrichtigungen | 0.2.2-1 | Notifications (unchanged since Alpha 2) |
+| querencia-hintergruende | 0.2-1 | 16 backgrounds (unchanged since Alpha 2) |
+| labwc | 0.9.8-0querencia5 | Backport of the window manager (unchanged since Alpha 2) |
+| querencia-terminal | 0.3.2-1 | Terminal (unchanged since Alpha 2.1) |
+| querencia-editor | 0.2.4-1 | Text editor (unchanged since Alpha 2.1) |
+| querencia-bilder | 0.2.6-1 | Image viewer (unchanged since Alpha 2.1) |
+| querencia-dokumente | 0.1.4-1 | PDF viewer (unchanged since Alpha 2.1) |
+| querencia-archiv | 0.1.2-1 | Archive manager (unchanged since Alpha 2.1) |
+| querencia-rechner | 0.1.6-1 | Calculator (unchanged since Alpha 2.1) |
+| querencia-systemmonitor | 0.1.5-1 | System monitor (unchanged since Alpha 2.1) |
+| querencia-screenshot | 0.2.10-1 | Screenshot (unchanged since Alpha 2.1) |
+| querencia-software | 0.1.5-1 | Installing programs via PackageKit (unchanged since Alpha 2.1) |
+| querencia-anmeldung | 0.1.2-1 | German login screen, optional (unchanged since Alpha 2.1) |
 
-Checksum of the package list (SHA256SUMS): `<SHA256SUMS>`.
+Checksum of the package list (SHA256SUMS): `488348b69015ba318e6ec2cf5077d1c532c15a720edf8943d4e2bec8965a2c05`.
 
 ## Upgrading from Alpha 2.1
 
@@ -132,11 +137,26 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
-`<What APT installs, upgrades and removes, according to the upgrade test of the final set>`
-Log out and in again afterwards. Folders then open in Querencia Dateien;
-“Querencia Files” is no longer in the menu.
+`sudo apt upgrade` is enough as well. APT installs Querencia Dateien and
+upgrades among others the panel and desktop, Files, the session, the session
+dialog, system settings, the icons, file search and the meta package;
+nothing is removed and there is no question about configuration files. Log
+out and in again afterwards. Folders then open in Querencia Dateien;
+“Querencia Files” is no longer in the menu and the command `querencia-files`
+is gone. Links to Files on the panel, the desktop or in your own
+`~/.config/mimeapps.list` open Querencia Dateien.
 
-`<Fallback note according to the final set, e.g. whether and how Files can still be installed>`
+After that the package `querencia-files` is only a transitional package with
+the two hidden starters; `sudo apt autoremove` leaves it in place. If no link
+points to Files any more, you can remove it:
+
+```bash
+sudo apt remove querencia-files
+```
+
+A panel launcher that still points to Files then no longer starts anything
+and can be replaced by “Querencia Dateien”. The Files settings
+(`~/.config/querencia-files`) stay and can be deleted.
 
 ## New installation
 
@@ -166,10 +186,8 @@ Still valid from Alpha 2 and 2.1 (see there), unless listed as fixed above. New 
   window, the column view and extracting inside the program. Archives open
   in the Archive Manager on double-click; an “Extract here” entry in the
   Dateien context menu is still missing.
-- `<only if software OpenGL is in the set:>` **Software OpenGL** costs CPU time and memory; programs started by the
+- **Software OpenGL** costs CPU time and memory; programs started by the
   window manager itself (e.g. through shortcuts) do not get it.
-- `<only if querencia-nachrichten is in the set:>` **Querencia Nachrichten:**
-  no calls.
 - **Not tested on real hardware**, only in virtual machines and in isolated
   copies of the system.
 
@@ -190,7 +208,18 @@ Querencia Dateien please also include the output from a terminal (start
   view 14, search in tabs 5, takeover of the Files settings 3 each, network
   53, thumbnails and search 26, views 80, file operations 35; plus 656
   automatic tests of the source tree.
-- `<Package check, Lintian, test installation and upgrade test of the final set>`
+- Static package check (266 passed), Lintian without errors, the sources'
+  tests during the build (Dateien and its two libraries 227, panel, desktop
+  and applets 429, session dialog 85, session starter 106), test
+  installation in an isolated copy of the system (91 checks passed).
+- **Upgrade from Alpha 2.1 and from Alpha 2.2** (each in an isolated copy of
+  the system, 144 checks passed each): old package set installed, a user
+  with bookmarks, Files settings and an own folder choice naming the old
+  Files ID created, then the new set on top: `apt upgrade` and
+  `apt full-upgrade` remove nothing and hold nothing back; folders open in
+  Dateien, also through the old choice; the old Files starters open Dateien
+  and leave the menu; no starter and no entry of a `mimeapps.list` points to
+  nothing.
 - Not tested: real Windows shares and network drives, real USB devices,
   login through GDM.
 
