@@ -1,6 +1,6 @@
 # Querencia Desktop – Alpha 3
 
-**As of:** `<date>` · **Status:** in the APT repository since `<date>`, `<time>`
+**As of:** 24 October 2026 · **Status:** in the APT repository since 24 October 2026, 12:18
 
 With Alpha 3 Querencia gets its **own file manager: Querencia Dateien**
 0.2.0, a beta. It follows Nautilus 2.30 – menu bar, toolbar, path bar, side

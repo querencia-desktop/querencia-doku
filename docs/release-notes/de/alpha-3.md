@@ -1,6 +1,6 @@
 # Querencia Desktop – Alpha 3
 
-**Stand:** `<Datum>` · **Status:** in der APT-Quelle seit `<Datum>`, `<Uhrzeit>`
+**Stand:** 24.10.2026 · **Status:** in der APT-Quelle seit 24. Oktober 2026, 12:18
 
 Mit Alpha 3 bekommt Querencia seinen **eigenen Dateimanager: Querencia
 Dateien** 0.2.0, eine Beta. Er folgt Nautilus 2.30 – Menüleiste,
