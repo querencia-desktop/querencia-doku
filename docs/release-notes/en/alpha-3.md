@@ -187,7 +187,8 @@ Still valid from Alpha 2 and 2.1 (see there), unless listed as fixed above. New 
 - **Files settings are not taken over.** After an upgrade from Alpha 2.1,
   Dateien does not take over view, sorting, hidden files, folders first,
   click behaviour and side pane from Files; please set them again under
-  Edit → Preferences. Bookmarks are kept.
+  Edit → Preferences. Bookmarks are kept. Fixed in
+  [Alpha 3.1](alpha-3.1.md).
 - **What Files could do and Dateien cannot:** the preview inside the
   window, the column view and extracting inside the program. Archives open
   in the Archive Manager on double-click; an “Extract here” entry in the

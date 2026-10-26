@@ -196,6 +196,7 @@ Weiter gültig aus Alpha 2 und 2.1 (siehe dort), soweit oben nicht als behoben g
   von Alpha 2.1 übernimmt Dateien Ansicht, Sortierung, verborgene Dateien,
   Ordner zuerst, Klickverhalten und Seitenleiste nicht von Files; bitte in
   Bearbeiten → Einstellungen neu setzen. Lesezeichen bleiben erhalten.
+  Behoben mit [Alpha 3.1](alpha-3.1.md).
 - **Was Files konnte und Dateien nicht:** die Vorschau im Fenster, die
   Spaltenansicht und das Entpacken im Programm. Archive öffnet die
   Archivverwaltung per Doppelklick; ein Eintrag „Hier entpacken“ im

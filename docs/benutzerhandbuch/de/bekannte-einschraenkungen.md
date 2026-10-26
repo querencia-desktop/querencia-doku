@@ -2,7 +2,8 @@
 
 [Zurück zum Inhalt](index.md)
 
-Stand Alpha 1 (20.10.2026), Querencia Dateien Stand Alpha 3 (24.10.2026).
+Stand Alpha 1 (20.10.2026), Querencia Dateien und Schnatter Stand Alpha 3.2
+(26.10.2026).
 Die Kennungen (QD-…) verweisen auf die Liste der offenen Punkte des
 Projekts; P1 ist wichtig, P2 mittel.
 
@@ -37,7 +38,7 @@ Projekts; P1 ist wichtig, P2 mittel.
 | Nur eine Tastaturbelegung (QD-057, P1) | Mehrere Belegungen mit Umschalttaste fehlen. |
 | Systemdialoge teils englisch (QD-015, P2) | z. B. die „Meldung des Systems“ beim Verbinden mit einem Server in Querencia Dateien. |
 | Querencia Dateien: kein Rückgängig | Strg+Z und Umschalt+Strg+Z gibt es noch nicht. Gelöschtes lässt sich aus dem Papierkorb wiederherstellen. |
-| Querencia Dateien: Einstellungen von Files nicht übernommen | Nach einem Upgrade von Alpha 2.1 bitte Ansicht, Sortierung, verborgene Dateien, Klickverhalten und Seitenleiste in Bearbeiten → Einstellungen neu setzen; Lesezeichen bleiben. |
+| Querencia Dateien: Einstellungen von Files nur beim ersten Start | Seit Alpha 3.1 übernimmt Dateien die Einstellungen von Files beim ersten Start. Wer Dateien unter Alpha 3 schon gestartet hat, behält dessen Einstellungen; nachholen: Dateien schließen, `~/.config/querencia/dateien.ini` löschen (die eigenen Einstellungen von Dateien gehen verloren), Dateien neu starten. Lesezeichen bleiben. |
 | Querencia Dateien: keine Spaltenansicht | Die Spaltenansicht von Querencia Files entfällt; Strg+1, Strg+2 und Strg+3 sind Symbole, Liste und Kompakt. |
 | Querencia Dateien: kein Ordnerbaum | Die Seitenleiste zeigt nur „Orte“; die Ansicht wird nicht je Ordner gemerkt. |
 | Querencia Dateien: Suche nur nach Namen | Keine Suche im Dateiinhalt (dafür [Nach Dateien suchen](dateisuche.md)); die Treffer aktualisieren sich nicht, Kopieren und Ziehen aus den Suchergebnissen geht noch nicht. |
@@ -45,6 +46,12 @@ Projekts; P1 ist wichtig, P2 mittel.
 | Querencia Dateien: Server teils ungeprüft | Geprüft mit Testservern für SFTP, WebDAV und FTP. Eine gelungene Verbindung zu einer Windows-Freigabe (SMB) und Zertifikatsfragen bei Sicherem WebDAV sind ungeprüft. |
 | Querencia Dateien: „Kennwort merken“ im zweiten Versuch | Nach einem falschen Kennwort bietet ein WebDAV-Server das Merken nicht mehr an. |
 | Querencia Dateien: echte Geräte ungeprüft | Laufwerke und Netzlaufwerke sind nur mit Abbildern und Testservern geprüft, nicht mit echten USB-Geräten. |
+| Querencia Dateien: Kompaktansicht kürzt Namen | Lange Namen werden in der Kompaktansicht gekürzt. |
+| Querencia Dateien: Statusleiste nach der Suche leer | Nach einer Suche zeigt die Statusleiste nichts an. |
+| Kein Infobereich im Panel | Programme, die ein Symbol im Panel anzeigen wollen („Tray“), zeigen keines. |
+| Schnatter: keine Anrufe | Die Web-Engine von Ubuntu ist ohne WebRTC gebaut. |
+| Schnatter: Meldungen nur bei offenem Fenster | Schließen beendet Schnatter; ein Symbol im Panel gibt es nicht (kein Infobereich). |
+| Schnatter: mit echtem Konto ungeprüft | Geprüft sind Umzug, Anmeldeseite und Fenster, nicht die Arbeit mit einem echten Konto. |
 | Bildbetrachter: Nebenfenster ohne Titelleiste | Ein zum zweiten Mal geöffneter Dialog erscheint ohne Titelleiste. |
 | Terminal: Einfügen mit der mittleren Maustaste | Eine Auswahl aus einem anderen Programm kommt nicht immer an. |
 | Dokumentenbetrachter: Drucken | Auf einen echten Drucker noch nicht geprüft. |
