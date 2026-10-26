@@ -26,14 +26,20 @@ German text is the reference.
 | [docs/release-notes/de/alpha-2.md](docs/release-notes/de/alpha-2.md) | Release-Notes Alpha 2, Englisch unter [en/](docs/release-notes/en/alpha-2.md) |
 | [docs/release-notes/de/alpha-1.md](docs/release-notes/de/alpha-1.md) | Release-Notes Alpha 1, Englisch unter [en/](docs/release-notes/en/alpha-1.md) |
 | [docs/release-notes/de/alpha-1-web.md](docs/release-notes/de/alpha-1-web.md) | Kurztext Alpha 1 für die Webseite, Englisch unter [en/](docs/release-notes/en/alpha-1-web.md) |
+| [docs/release-notes/de/alpha-2.md](docs/release-notes/de/alpha-2.md) | Release-Notes Alpha 2, Englisch unter [en/](docs/release-notes/en/alpha-2.md) |
+| [docs/release-notes/de/alpha-3.md](docs/release-notes/de/alpha-3.md) | Release-Notes Alpha 3 (Querencia Dateien statt Files), Englisch unter [en/](docs/release-notes/en/alpha-3.md) |
+| [docs/release-notes/de/alpha-3.1.md](docs/release-notes/de/alpha-3.1.md) | Release-Notes Alpha 3.1 (Dateien 0.2.1, Webhülle 0.2.0), Englisch unter [en/](docs/release-notes/en/alpha-3.1.md) |
+| [docs/release-notes/de/alpha-3.2.md](docs/release-notes/de/alpha-3.2.md) | Release-Notes Alpha 3.2 (Dateien 0.2.2, Schnatter 0.3.0), Englisch unter [en/](docs/release-notes/en/alpha-3.2.md) |
 
 ## Stand
 
 | | |
 |---|---|
-| Fassung | Release-Notes Alpha 1, Alpha 2, Alpha 2.1 und Alpha 3 auf dem Stand des jeweiligen Paketsatzes; Benutzerhandbuch auf Alpha 2.1, Dateimanager Querencia Dateien (Beta 0.2.0) statt Querencia Files; kein Tag |
-| Grundlage | Paketsatz Alpha 3 vom 24.10.2026 (in der APT-Quelle seit 24.10.2026), davor Alpha 2.1 vom 22.10.2026, der Quellcode der Programme und der Stand von Querencia Dateien 0.2.0 |
-| Offen | Bildschirmfotos für Terminal fehlen; einzelne Bilder zeigen eine frühere Fassung des Programms (Herkunft in `docs/benutzerhandbuch/bilder/herkunft.txt`) |
+| Fassung | Release-Notes Alpha 1 auf dem Stand des Paketsatzes, kein Tag |
+| Grundlage | Live-Stand der Entwicklungsumgebung, Paketsatz Alpha 1 und Prüfberichte vom 20.10.2026 |
+| Offen | signierte APT-Quelle (Bezugsweg der Pakete), Freigabe der Hintergründe (KI-erzeugt, siehe Lizenz); das Handbuch beschreibt noch den Stand vom Nachmittag des 20.10. |
+| Nachtrag 24.10.2026 | Handbuch: Querencia Dateien (Beta 0.2.0) statt Querencia Files; Release-Notes Alpha 3 als Entwurf |
+| Nachtrag 26.10.2026 | Release-Notes Alpha 3.1 und 3.2; Handbuch: Seite Schnatter, bekannte Einschränkungen auf Alpha 3.2 |
 
 ## Bauen und Prüfen
 

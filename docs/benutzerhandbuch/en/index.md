@@ -39,7 +39,8 @@ that are still German only are named on each page.
 | Take Screenshot | Print key, Applications → Accessories | [screenshot.md](screenshot.md) |
 | System Settings | System → Einstellungen (Preferences) | [einstellungen.md](einstellungen.md) |
 | Software | System → Systemverwaltung (Administration) | [software.md](software.md) |
-| Notifications, notification centre | runs in the background; bell in the top panel | [benachrichtigungen.md](benachrichtigungen.md) |
+| Schnatter (WhatsApp Web, optional) | Applications → Internet | [schnatter.md](schnatter.md) |
+| Notifications | runs in the background | [benachrichtigungen.md](benachrichtigungen.md) |
 | Session: log out, lock, shut down | System, Ctrl+Alt+Del, Ctrl+Alt+L | [sitzung.md](sitzung.md) |
 
 **Help**

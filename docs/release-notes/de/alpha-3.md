@@ -128,7 +128,7 @@ Paketsatz vom 24.10.2026 (22 Pakete).
 | querencia-systemmonitor | 0.1.5-1 | Systemüberwachung (unverändert seit Alpha 2.1) |
 | querencia-screenshot | 0.2.10-1 | Bildschirmfoto (unverändert seit Alpha 2.1) |
 | querencia-software | 0.1.5-1 | Programme installieren über PackageKit (unverändert seit Alpha 2.1) |
-| querencia-anmeldung | 0.1.2-1 | Anmeldebildschirm auf Deutsch, optional (unverändert seit Alpha 2.1) |
+| querencia-anmeldung | 0.1.2-1 | Anmeldebildschirm, Deutsch und Englisch, optional (unverändert seit Alpha 2.1) |
 
 Prüfsumme der Paketliste (SHA256SUMS): `488348b69015ba318e6ec2cf5077d1c532c15a720edf8943d4e2bec8965a2c05`.
 
@@ -196,6 +196,7 @@ Weiter gültig aus Alpha 2 und 2.1 (siehe dort), soweit oben nicht als behoben g
   von Alpha 2.1 übernimmt Dateien Ansicht, Sortierung, verborgene Dateien,
   Ordner zuerst, Klickverhalten und Seitenleiste nicht von Files; bitte in
   Bearbeiten → Einstellungen neu setzen. Lesezeichen bleiben erhalten.
+  Behoben mit [Alpha 3.1](alpha-3.1.md).
 - **Was Files konnte und Dateien nicht:** die Vorschau im Fenster, die
   Spaltenansicht und das Entpacken im Programm. Archive öffnet die
   Archivverwaltung per Doppelklick; ein Eintrag „Hier entpacken“ im

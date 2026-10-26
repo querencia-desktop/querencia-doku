@@ -2,9 +2,9 @@
 
 [Back to contents](index.md)
 
-State of Alpha 1 (20 October 2026), Querencia Dateien as of Alpha 3
-(24 October 2026). The identifiers (QD-…) refer to the project's list of
-open items; P1 is important, P2 medium.
+State of Alpha 1 (20 October 2026), Querencia Dateien and Schnatter as of
+Alpha 3.2 (26 October 2026). The identifiers (QD-…) refer to the project's
+list of open items; P1 is important, P2 medium.
 
 ## Installation and login
 
@@ -55,7 +55,7 @@ open items; P1 is important, P2 medium.
 | Only one keyboard layout (QD-057, P1) | Several layouts with a switch key are missing. |
 | System dialogs partly in another language (QD-015, P2) | e.g. the “Message from the system” when connecting to a server in Querencia Dateien. |
 | Querencia Dateien: no undo | Ctrl+Z and Shift+Ctrl+Z do not exist yet. Deleted items can be restored from the trash. |
-| Querencia Dateien: Files settings not taken over | After an upgrade from Alpha 2.1 please set view, sorting, hidden files, click behaviour and side pane again under Edit → Preferences; bookmarks are kept. |
+| Querencia Dateien: Files settings only on the first start | Since Alpha 3.1 Dateien takes over the Files settings on its first start. If you already started Dateien under Alpha 3, it keeps its own settings; to catch up: close Dateien, delete `~/.config/querencia/dateien.ini` (Dateien's own settings are lost), start Dateien again. Bookmarks are kept. |
 | Querencia Dateien: no column view | The column view of Querencia Files is gone; Ctrl+1, Ctrl+2 and Ctrl+3 are icons, list and compact. |
 | Querencia Dateien: no folder tree | The side pane only shows “Places”; the view is not remembered per folder. |
 | Querencia Dateien: search by name only | No search in file contents (use [Search for Files](dateisuche.md)); the hits do not update, copying and dragging from the search results does not work yet. |
@@ -63,6 +63,12 @@ open items; P1 is important, P2 medium.
 | Querencia Dateien: servers partly untested | Tested with test servers for SFTP, WebDAV and FTP. A successful connection to a Windows share (SMB) and certificate questions with Secure WebDAV are untested. |
 | Querencia Dateien: “Remember password” on the second try | After a wrong password a WebDAV server no longer offers to remember it. |
 | Querencia Dateien: real devices untested | Drives and network drives are only tested with images and test servers, not with real USB devices. |
+| Querencia Dateien: compact view shortens names | Long names are shortened in the compact view. |
+| Querencia Dateien: status bar empty after a search | After a search the status bar shows nothing. |
+| No notification area in the panel | Programs that want to show an icon in the panel (“tray”) show none. |
+| Schnatter: no calls | Ubuntu's web engine is built without WebRTC. |
+| Schnatter: notifications only while the window is open | Closing quits Schnatter; there is no icon in the panel (no notification area). |
+| Schnatter: untested with a real account | Tested are the move of the folders, the sign-in page and the window, not working with a real account. |
 | Image Viewer: secondary windows without title bar | A dialog opened for the second time appears without title bar. |
 | Terminal: middle-click paste | A selection from another program does not always arrive. |
 | Printing not tested | Not yet tested on a real printer (e.g. from the Document Viewer). |

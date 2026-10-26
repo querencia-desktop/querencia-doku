@@ -39,7 +39,8 @@ auch auf Englisch.
 | Bildschirmfoto aufnehmen | Druck-Taste, Anwendungen → Zubehör | [screenshot.md](screenshot.md) |
 | Systemeinstellungen | System → Einstellungen | [einstellungen.md](einstellungen.md) |
 | Software | System → Systemverwaltung | [software.md](software.md) |
-| Benachrichtigungen, Mitteilungszentrale | läuft im Hintergrund; Glocke im oberen Panel | [benachrichtigungen.md](benachrichtigungen.md) |
+| Schnatter (WhatsApp Web, wahlweise) | Anwendungen → Internet | [schnatter.md](schnatter.md) |
+| Benachrichtigungen | läuft im Hintergrund | [benachrichtigungen.md](benachrichtigungen.md) |
 | Sitzung: Abmelden, Sperren, Ausschalten | System, Strg+Alt+Entf, Strg+Alt+L | [sitzung.md](sitzung.md) |
 
 **Hilfe**
