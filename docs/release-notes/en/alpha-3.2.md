@@ -78,7 +78,7 @@ Package set of 26 October 2026 (24 packages).
 | querencia-systemmonitor | 0.1.5-1 | System monitor (unchanged since Alpha 2.1) |
 | querencia-screenshot | 0.2.10-1 | Screenshot (unchanged since Alpha 2.1) |
 | querencia-software | 0.1.5-1 | Installing programs via PackageKit (unchanged since Alpha 2.1) |
-| querencia-anmeldung | 0.1.2-1 | German login screen, optional (unchanged since Alpha 2.1) |
+| querencia-anmeldung | 0.1.2-1 | Login screen, German and English, optional (unchanged since Alpha 2.1) |
 
 Checksum of the package list (SHA256SUMS): `fbf26227628c91d94d37faf2f222aaa397b4e475a4dbf24da029b157afed3c7f`.
 
@@ -146,6 +146,11 @@ In particular:
   announces new messages while its window is open; closing it quits it.
 - **Schnatter with a real account** has not been tested in the test VM;
   tested are the move of the folders, the sign-in page and the window.
+- **Own login screen** (`querencia-anmeldung`, optional): it speaks German
+  and English. Still English or untranslated are the session names, the
+  messages of the login check (PAM, because greetd sets no language) and some
+  texts of GTK itself as long as `language-pack-gnome-de` is not installed
+  (the meta package deliberately does not pull it in).
 - **Software OpenGL** costs CPU time and memory; programs started by the
   window manager itself (e.g. through shortcuts) do not get it.
 - **Not tested on real hardware**, only in virtual machines and in isolated

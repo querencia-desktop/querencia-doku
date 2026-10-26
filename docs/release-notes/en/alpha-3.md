@@ -122,7 +122,7 @@ Package set of 24 October 2026 (22 packages).
 | querencia-systemmonitor | 0.1.5-1 | System monitor (unchanged since Alpha 2.1) |
 | querencia-screenshot | 0.2.10-1 | Screenshot (unchanged since Alpha 2.1) |
 | querencia-software | 0.1.5-1 | Installing programs via PackageKit (unchanged since Alpha 2.1) |
-| querencia-anmeldung | 0.1.2-1 | German login screen, optional (unchanged since Alpha 2.1) |
+| querencia-anmeldung | 0.1.2-1 | Login screen, German and English, optional (unchanged since Alpha 2.1) |
 
 Checksum of the package list (SHA256SUMS): `488348b69015ba318e6ec2cf5077d1c532c15a720edf8943d4e2bec8965a2c05`.
 

@@ -79,7 +79,7 @@ Paketsatz vom 26.10.2026 (24 Pakete).
 | querencia-systemmonitor | 0.1.5-1 | Systemüberwachung (unverändert seit Alpha 2.1) |
 | querencia-screenshot | 0.2.10-1 | Bildschirmfoto (unverändert seit Alpha 2.1) |
 | querencia-software | 0.1.5-1 | Programme installieren über PackageKit (unverändert seit Alpha 2.1) |
-| querencia-anmeldung | 0.1.2-1 | Anmeldebildschirm auf Deutsch, optional (unverändert seit Alpha 2.1) |
+| querencia-anmeldung | 0.1.2-1 | Anmeldebildschirm, Deutsch und Englisch, optional (unverändert seit Alpha 2.1) |
 
 Prüfsumme der Paketliste (SHA256SUMS): `fbf26227628c91d94d37faf2f222aaa397b4e475a4dbf24da029b157afed3c7f`.
 
@@ -149,6 +149,12 @@ behoben genannt. Davon besonders:
   Nachrichten nur, solange sein Fenster offen ist; Schließen beendet es.
 - **Schnatter mit echtem Konto** ist nicht in der Test-VM geprüft; geprüft
   sind Umzug, Anmeldeseite und Fenster.
+- **Eigener Anmeldebildschirm** (`querencia-anmeldung`, wahlweise): Er
+  spricht Deutsch und Englisch. Noch englisch bzw. unübersetzt sind die
+  Namen der Sitzungen, die Meldungen der Anmeldeprüfung (PAM, weil greetd
+  keine Sprache setzt) und einige Texte von GTK selbst, solange
+  `language-pack-gnome-de` nicht installiert ist (das Metapaket zieht es
+  bewusst nicht nach).
 - **Software-OpenGL** kostet Rechenzeit und Speicher; Programme, die der
   Fensterverwalter selbst startet (z. B. über Tastenkürzel), bekommen es
   nicht.
