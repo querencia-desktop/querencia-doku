@@ -23,8 +23,11 @@ Optionally there is a login screen of its own, `querencia-anmeldung`
 `sudo apt install querencia-anmeldung`, switch with
 `sudo dpkg-reconfigure querencia-anmeldung`; this applies from the next
 restart (see [Alpha 1](../../release-notes/en/alpha-1.md#own-login-screen-optional)).
-It follows the system language for German and English, otherwise it shows
-English.
+It follows the system language in all five languages (German, English and,
+since Alpha 3.5, Italian, Spanish and French), also for the date of the
+clock. Some texts from GTK itself, such as the tooltip at the eye in the
+password field, stay English without the language pack
+`language-pack-gnome-<xx>-base`.
 
 **Password expired?** Since Alpha 3.4 the login screen then says “Your
 password has expired. Please choose a new one.” and below “To do so, log in

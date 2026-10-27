@@ -86,8 +86,21 @@ legen die Einstellungen eine Sicherung an.
 **Treiber** (seit Alpha 3.4)
 - Auch direkt über System → Systemverwaltung → „Treiber“.
 - **Grafik:** Grafikkarte, Kerneltreiber, OpenGL-Renderer und „Diese
-  Sitzung:“, also ob OpenGL auf der Grafikkarte läuft oder als
-  Software-OpenGL (llvmpipe).
+  Sitzung:“. Seit Alpha 3.5 (Einstellungen 0.2.1) folgt diese Zeile dem
+  gemessenen Renderer und dem geladenen Kernelmodul und zeigt einen von drei
+  Fällen:
+  - „OpenGL auf der Grafikkarte mit dem freien Treiber“,
+  - „OpenGL auf der Grafikkarte mit dem proprietären NVIDIA-Treiber“,
+  - „Software-Darstellung“ mit dem Grund: Die Sitzung hat bei der Anmeldung
+    umgeschaltet, weil es mit dieser Karte ein Grafikproblem gibt (oder weil
+    es in `~/.config/querencia/grafik.ini` eingeschaltet ist), oder es gibt
+    keine 3D-Beschleunigung, zum Beispiel in einer virtuellen Maschine ohne
+    3D-Grafik.
+
+  „OpenGL-Renderer:“ nennt, was die Programme der Sitzung bekommen, etwa
+  llvmpipe. Hat die Sitzung umgeschaltet, nennt „OpenGL der Karte:“ den
+  Renderer der Grafikkarte. Bei virtueller Grafik steht als Kerneltreiber
+  `virtio_gpu`.
 - **Verfügbare Treiber:** die Treiber, die Ubuntu für die Karte kennt, mit
   „frei“ oder „proprietär“, „von Ubuntu empfohlen“ und dem Zustand („in
   Gebrauch“, „installiert, in Gebrauch nach einem Neustart“, „verfügbar“,

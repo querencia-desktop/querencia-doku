@@ -19,8 +19,10 @@ Wahlweise gibt es einen eigenen Anmeldebildschirm, `querencia-anmeldung`
 `sudo apt install querencia-anmeldung`, umschalten mit
 `sudo dpkg-reconfigure querencia-anmeldung`; das gilt ab dem nächsten
 Neustart (siehe [Alpha 1](../../release-notes/de/alpha-1.md#eigener-anmeldebildschirm-optional)).
-Er folgt der Systemsprache bei Deutsch und Englisch, sonst zeigt er
-Englisch.
+Er folgt der Systemsprache in allen fünf Sprachen (Deutsch, Englisch, seit
+Alpha 3.5 auch Italienisch, Spanisch und Französisch), auch beim Datum der
+Uhr. Einige Texte von GTK selbst, etwa der Tooltip am Auge im Passwortfeld,
+bleiben ohne das Sprachpaket `language-pack-gnome-<xx>-base` englisch.
 
 **Passwort abgelaufen?** Seit Alpha 3.4 sagt der Anmeldebildschirm dann
 „Ihr Passwort ist abgelaufen. Bitte wählen Sie ein neues.“ und darunter

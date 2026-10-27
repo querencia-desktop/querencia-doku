@@ -3,15 +3,15 @@
 [Back to contents](index.md)
 
 State of Alpha 1 (20 October 2026); notification area and Schnatter as of
-Alpha 3.3, languages, login screen, drivers and Querencia Dateien as of
-Alpha 3.4 (27 October 2026). The identifiers (QD-…) refer to the project's
+Alpha 3.3, Querencia Dateien as of Alpha 3.4, languages, login screen and
+drivers as of Alpha 3.5 ([Datum]). The identifiers (QD-…) refer to the project's
 list of open items; P1 is important, P2 medium.
 
 ## Installation and login
 
 | Item | What it means |
 |---|---|
-| Own login screen German and English only | The optional login screen (`querencia-anmeldung`) follows the system language for German and English; for Italian, Spanish or French it shows English. Since Alpha 3.4 it reports an expired password clearly, but it can only be changed on the text console (see [Getting started](einstieg.md#logging-in)). Without it, log in via GDM (choose “Querencia Desktop” at the gear) or on the text console with `querencia-session`. |
+| Own login screen: password and GTK texts | Since Alpha 3.5 the optional login screen (`querencia-anmeldung`) follows the system language in all five languages; some texts from GTK itself (such as the tooltip at the eye) stay English without `language-pack-gnome-<xx>-base`. Since Alpha 3.4 it reports an expired password clearly, but it can only be changed on the text console (see [Getting started](einstieg.md#logging-in)). Without it, log in via GDM (choose “Querencia Desktop” at the gear) or on the text console with `querencia-session`. |
 | Side by side with an Ubuntu desktop not fully tested (QD-074, P1) | The test on an Ubuntu Desktop system is running. |
 | Look on the GDM path (QD-068, P2) | Querencia's font, icon and pointer defaults are still missing there; the session then looks different. In progress. |
 | Software offline on server systems (QD-067, P2) | See [Software](software.md#when-software-reports-no-network-connection). |
@@ -65,7 +65,6 @@ list of open items; P1 is important, P2 medium.
 | Item | What it means |
 |---|---|
 | Driver change untested | The page “Drivers” is only tested with simulated cards. A real change to the NVIDIA driver, computers with two graphics cards and Secure Boot are untested. A change needs `ubuntu-drivers-common`, network and password and only takes effect after a restart. Take a snapshot first. |
-| Drivers: “This session” wrong in VMs | In a virtual machine with software rendering (llvmpipe) the page “Drivers” shows “OpenGL on the graphics card” for “This session:”; the renderer above correctly says llvmpipe. To be fixed in a later version. |
 | Wrong resolution after a VM starts (QD-027, P2) | The passed-through graphics sometimes report no monitor data; unplugging and replugging the monitor helps. |
 | Sound in VMs | Without a sound card the volume control only shows “Dummy Output”. |
 | Alt+Print in VMs | Did not arrive during the test; to be checked on real hardware. |
