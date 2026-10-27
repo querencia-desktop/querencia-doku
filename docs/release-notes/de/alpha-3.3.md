@@ -1,6 +1,6 @@
 # Querencia Desktop – Alpha 3.3
 
-**Stand:** 27.10.2026 · **Status:** in der APT-Quelle seit [Datum], [Uhrzeit]
+**Stand:** 27.10.2026 · **Status:** in der APT-Quelle seit 27. Oktober 2026, 12:05
 
 Alpha 3.3 spricht fünf Sprachen: Deutsch, Englisch, Italienisch, Spanisch
 und Französisch. Neu sind außerdem ein Infobereich im Panel für die Symbole
@@ -123,9 +123,10 @@ sudo apt full-upgrade
 `sudo apt upgrade` genügt ebenfalls. APT aktualisiert alle Pakete mit neuer
 Fassung (16 bis 18, je nachdem, ob Schnatter und der Anmeldebildschirm
 installiert sind) und installiert `locales-all` neu. Dafür lädt es rund
-[Download-Größe] herunter; danach belegt `locales-all` rund 230 MB.
+45 MB herunter (mit Schnatter und Anmeldebildschirm); danach belegt `locales-all` rund 230 MB.
 Entfernt wird nichts, und es gibt keine Rückfrage zu Konfigurationsdateien.
-In einer virtuellen Maschine dauerte das Upgrade [Upgrade-Dauer]. Danach
+In einer virtuellen Maschine dauerte das Upgrade wenige Sekunden, ohne die
+Zeit zum Herunterladen. Danach
 abmelden und neu anmelden.
 
 Wer das Panel nie angepasst hat, sieht den Infobereich dann von selbst.
@@ -143,7 +144,7 @@ starten, am Zahnrad „Querencia Desktop“ wählen (siehe
 [Alpha 1, Installation](alpha-1.md#installation)). Fingerabdruck des
 Signierschlüssels: `63F6 C499 246E 3699 CA04 726D 342F 12D2 0CE7 1CBD`.
 `locales-all` kommt dabei mit, Schnatter nicht. Auf einem frischen
-Ubuntu-26.04-Server-Abbild installiert APT [Paketzahl] Pakete.
+Ubuntu-26.04-Server-Abbild installiert APT 390 Pakete.
 
 ## Bekannte Grenzen
 
@@ -227,8 +228,17 @@ Wie Alpha 3, im Fehlertracker des Projekts,
   und Webhülle (169) und von Alpha 3.1 mit Webhülle (170): nichts entfernt,
   nichts zurückgehalten, keine Rückfragen; eigene Einstellungen von Dateien
   und Schnatter erhalten.
-- **In einer virtuellen Maschine:** [Weg B Lauf 1: Upgrade 3.2 → 3.3 mit
-  Anmeldebildschirm, Zahlen]. [Weg B Lauf 2: Neuinstallation, Zahlen].
+- **In einer virtuellen Maschine:** Alpha 3.2 mit Schnatter und
+  Anmeldebildschirm aus der veröffentlichten Quelle, dann das Upgrade auf
+  3.3: 18 Querencia-Pakete aktualisiert, `locales-all` neu, nichts
+  entfernt, keine Rückfragen, eigene Einstellungen erhalten; Prüfskript 104
+  von 104, Sitzung 28 von 28. Sichtproben: Anmeldebildschirm Deutsch und
+  Englisch mit übersetzten Sitzungsnamen (die Meldung bei abgelaufenem
+  Passwort blieb technisch, siehe [Bekannte Grenzen](#bekannte-grenzen)),
+  ein Testprogramm im Infobereich mit Menü, Kompaktansicht und Statusleiste
+  in Dateien, Italienisch in Menü, Dateien, Bildbetrachter und
+  Einstellungen. Neuinstallation (390 Pakete mit `locales-all`, kein
+  Schnatter): Prüfskript 102 von 102, Sitzung 28 von 28.
 - Nicht geprüft: der Infobereich mit Webex, Nextcloud oder Discord, Spanisch
   und Französisch in der VM, Schnatter mit echtem Konto, echte
   Windows-Freigaben und Netzlaufwerke, echte USB-Geräte, Anmeldung über GDM,

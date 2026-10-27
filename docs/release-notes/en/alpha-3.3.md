@@ -1,6 +1,6 @@
 # Querencia Desktop – Alpha 3.3
 
-**As of:** 27 October 2026 · **Status:** in the APT repository since [date], [time]
+**As of:** 27 October 2026 · **Status:** in the APT repository since 27 October 2026, 12:05
 
 Alpha 3.3 speaks five languages: German, English, Italian, Spanish and
 French. Also new are a notification area in the panel for the icons of other
@@ -121,9 +121,9 @@ sudo apt full-upgrade
 `sudo apt upgrade` is enough as well. APT upgrades all packages with a new
 version (16 to 18, depending on whether Schnatter and the login screen are
 installed) and newly installs `locales-all`. For that it downloads about
-[download size]; afterwards `locales-all` takes about 230 MB. Nothing is
+45 MB (with Schnatter and the login screen); afterwards `locales-all` takes about 230 MB. Nothing is
 removed and there is no question about configuration files. In a virtual
-machine the upgrade took [upgrade duration]. Log out and in again
+machine the upgrade took a few seconds, not counting the download. Log out and in again
 afterwards.
 
 If you never customized the panel, the notification area then appears by
@@ -140,7 +140,7 @@ restart, choose “Querencia Desktop” at the gear icon (see
 [Alpha 1, installation](alpha-1.md#installation)). Fingerprint of the
 signing key: `63F6 C499 246E 3699 CA04 726D 342F 12D2 0CE7 1CBD`.
 `locales-all` comes along, Schnatter does not. On a fresh Ubuntu 26.04
-server image APT installs [package count] packages.
+server image APT installs 390 packages.
 
 ## Known limitations
 
@@ -221,8 +221,17 @@ As for Alpha 3, in the project's issue tracker,
   web wrapper (169) and from Alpha 3.1 with web wrapper (170): nothing
   removed, nothing held back, no questions; own settings of Dateien and
   Schnatter kept.
-- **In a virtual machine:** [Weg B run 1: upgrade 3.2 → 3.3 with login
-  screen, numbers]. [Weg B run 2: new installation, numbers].
+- **In a virtual machine:** Alpha 3.2 with Schnatter and the login screen
+  from the published repository, then the upgrade to 3.3: 18 Querencia
+  packages upgraded, `locales-all` added, nothing removed, no questions,
+  own settings kept; check script 104 of 104, session 28 of 28. Visual
+  checks: login screen in German and English with translated session names
+  (the message for an expired password stayed technical, see
+  [Known limitations](#known-limitations)), a test program in the
+  notification area with its menu, compact view and status bar in Dateien,
+  Italian in the menu, Dateien, the image viewer and the settings. New
+  installation (390 packages with `locales-all`, no Schnatter): check script
+  102 of 102, session 28 of 28.
 - Not tested: the notification area with Webex, Nextcloud or Discord,
   Spanish and French in the VM, Schnatter with a real account, real Windows
   shares and network drives, real USB devices, login through GDM, real
