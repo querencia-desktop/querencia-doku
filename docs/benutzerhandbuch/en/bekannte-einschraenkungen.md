@@ -2,15 +2,16 @@
 
 [Back to contents](index.md)
 
-State of Alpha 1 (20 October 2026); languages, login screen, notification
-area, Querencia Dateien and Schnatter as of Alpha 3.3 (27 October 2026). The identifiers (QD-…) refer to the project's
+State of Alpha 1 (20 October 2026); notification area and Schnatter as of
+Alpha 3.3, languages, login screen, drivers and Querencia Dateien as of
+Alpha 3.4 (27 October 2026). The identifiers (QD-…) refer to the project's
 list of open items; P1 is important, P2 medium.
 
 ## Installation and login
 
 | Item | What it means |
 |---|---|
-| Own login screen German and English only | The optional login screen (`querencia-anmeldung`) follows the system language for German and English; for Italian, Spanish or French it shows English. For an expired password it still shows the English, technical message `Pam_acct_mgmt: NEW_AUTHTOK_REQD`. Without it, log in via GDM (choose “Querencia Desktop” at the gear) or on the text console with `querencia-session`. |
+| Own login screen German and English only | The optional login screen (`querencia-anmeldung`) follows the system language for German and English; for Italian, Spanish or French it shows English. Since Alpha 3.4 it reports an expired password clearly, but it can only be changed on the text console (see [Getting started](einstieg.md#logging-in)). Without it, log in via GDM (choose “Querencia Desktop” at the gear) or on the text console with `querencia-session`. |
 | Side by side with an Ubuntu desktop not fully tested (QD-074, P1) | The test on an Ubuntu Desktop system is running. |
 | Look on the GDM path (QD-068, P2) | Querencia's font, icon and pointer defaults are still missing there; the session then looks different. In progress. |
 | Software offline on server systems (QD-067, P2) | See [Software](software.md#when-software-reports-no-network-connection). |
@@ -36,15 +37,16 @@ list of open items; P1 is important, P2 medium.
 
 | Item | What it means |
 |---|---|
-| Some surfaces German only | Since Alpha 3.3 all programs, the panel and the desktop are available in German, English, Italian, Spanish and French. The lock screen, the volume control window and the keyboard shortcuts overview stay German. In Italian the key name “Return” stays English in menu shortcuts. |
+| Small language gaps | Since Alpha 3.4 all programs, the panel, the desktop, the lock screen, the volume control and the keyboard shortcuts overview are available in German, English, Italian, Spanish and French. In Italian the key name “Return” stays English in menu shortcuts. |
 | Language and Region: only languages with a locale | The page only offers languages for which a locale is installed. The recommended package `locales-all` (about 230 MB) brings all of them. A change takes effect from the next login. |
 | Only one keyboard layout (QD-057, P1) | Several layouts with a switch key are missing. |
 | System dialogs partly in another language (QD-015, P2) | e.g. the “Message from the system” when connecting to a server in Querencia Dateien. |
-| Querencia Dateien: no undo | Ctrl+Z and Shift+Ctrl+Z do not exist yet. Deleted items can be restored from the trash. |
+| Querencia Dateien: undo with limits | Undo only works within its own window and until Querencia Dateien is closed. Deleting permanently and “Empty Trash” cannot be undone; replaced items do not come back; “Extract Here” is not in the history. See [Undo and redo](dateien.md#undo-and-redo). |
 | Querencia Dateien: Files settings only on the first start | Since Alpha 3.1 Dateien takes over the Files settings on its first start. If you already started Dateien under Alpha 3, it keeps its own settings; to catch up: close Dateien, delete `~/.config/querencia/dateien.ini` (Dateien's own settings are lost), start Dateien again. Bookmarks are kept. |
 | Querencia Dateien: no column view | The column view of Querencia Files is gone; Ctrl+1, Ctrl+2 and Ctrl+3 are icons, list and compact. |
 | Querencia Dateien: no folder tree | The side pane only shows “Places”; the view is not remembered per folder. |
-| Querencia Dateien: search by name only | No search in file contents (use [Search for Files](dateisuche.md)); the hits do not update, copying and dragging from the search results does not work yet. |
+| Querencia Dateien: content search without index | “Also file contents” only reads text files up to 10 MB, no network places and no documents such as odt or pdf; large folders take time. The hits do not update, copying and dragging from the search results does not work yet. |
+| Querencia Dateien: tabs keep only the folder | Restored tabs only keep the folder, not view, zoom or history. |
 | Querencia Dateien: thumbnails for PDF | Only appear with an installed PDF thumbnailer and `bubblewrap`; otherwise the icon stays. |
 | Querencia Dateien: servers partly untested | Tested with test servers for SFTP, WebDAV and FTP. A successful connection to a Windows share (SMB) and certificate questions with Secure WebDAV are untested. |
 | Querencia Dateien: “Remember password” on the second try | After a wrong password a WebDAV server no longer offers to remember it. |
@@ -61,6 +63,7 @@ list of open items; P1 is important, P2 medium.
 
 | Item | What it means |
 |---|---|
-| Alt+Print in VMs | The screenshot of the active window did not arrive in virtual machines; not tested on real hardware. |
-| Wrong resolution after a VM starts | The passed-through graphics sometimes report no monitor data; unplugging and replugging the monitor helps. |
+| Driver change untested | The page “Drivers” is only tested with simulated cards. A real change to the NVIDIA driver, computers with two graphics cards and Secure Boot are untested. A change needs `ubuntu-drivers-common`, network and password and only takes effect after a restart. Take a snapshot first. |
+| Drivers: “This session” wrong in VMs | In a virtual machine with software rendering (llvmpipe) the page “Drivers” shows “OpenGL on the graphics card” for “This session:”; the renderer above correctly says llvmpipe. To be fixed in a later version. |
+| Wrong resolution after a VM starts (QD-027, P2) | The passed-through graphics sometimes report no monitor data; unplugging and replugging the monitor helps. |
 | Sound in VMs | Without a sound card the volume control only shows “Dummy Output”. |

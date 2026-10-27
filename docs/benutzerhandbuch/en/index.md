@@ -40,6 +40,7 @@ still German only are named on each page.
 | Search for Files… | Applications → Accessories | [dateisuche.md](dateisuche.md) |
 | Take Screenshot | Print key, Applications → Accessories | [screenshot.md](screenshot.md) |
 | System Settings | System → Einstellungen (Preferences) | [einstellungen.md](einstellungen.md) |
+| Drivers (in the System Settings) | System → Systemverwaltung (Administration) | [einstellungen.md](einstellungen.md) |
 | Software | System → Systemverwaltung (Administration) | [software.md](software.md) |
 | Schnatter (WhatsApp Web, optional) | Applications → Internet | [schnatter.md](schnatter.md) |
 | Notifications | runs in the background | [benachrichtigungen.md](benachrichtigungen.md) |

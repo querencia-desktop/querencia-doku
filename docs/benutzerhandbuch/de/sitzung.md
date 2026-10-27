@@ -44,6 +44,5 @@ fragt nach dem eigenen Passwort.
 
 ## Gut zu wissen
 
-Der Sperrbildschirm und seine Meldungen sind nur deutsch. Sitzungsdialog,
-Rückfragen und Passwortdialog erscheinen dunkel, wenn die dunkle Darstellung
-schon beim Anmelden eingeschaltet ist.
+Den Sperrbildschirm gibt es seit Alpha 3.4 in allen fünf Sprachen; er
+folgt der Systemsprache.

@@ -4,8 +4,9 @@
 
 ![Querencia Desktop with the „Orte“ (Places) menu open](../bilder/de-einstieg-orte.png)
 
-The panels and the desktop are German only for now; their labels are quoted
-in German with an English translation.
+Since Alpha 3.3 the panels and the desktop are also available in English;
+some labels on these pages are still quoted in German with an English
+translation.
 
 ## Logging in
 
@@ -17,11 +18,20 @@ system:
 | Ubuntu 26.04 Desktop (GDM login screen) | After installing, **restart once** (GDM reads new sessions only at start-up). On the login screen pick the user, click the gear at the bottom right, choose “Querencia Desktop”, enter the password. |
 | Ubuntu 26.04 Server (no login screen) | Log in on the text console (tty1) and type `querencia-session`. |
 
-Querencia also comes with a login screen of its own as an optional package
-(`querencia-anmeldung`); it is not installed automatically, GDM remains the
-recommendation. Details are in the
-[Alpha 1 release notes](../../release-notes/en/alpha-1.md#own-login-screen-optional),
-limits under [Known limitations](bekannte-einschraenkungen.md).
+Optionally there is a login screen of its own, `querencia-anmeldung`
+(greetd with ReGreet); the meta package only suggests it. Install it with
+`sudo apt install querencia-anmeldung`, switch with
+`sudo dpkg-reconfigure querencia-anmeldung`; this applies from the next
+restart (see [Alpha 1](../../release-notes/en/alpha-1.md#own-login-screen-optional)).
+It follows the system language for German and English, otherwise it shows
+English.
+
+**Password expired?** Since Alpha 3.4 the login screen then says “Your
+password has expired. Please choose a new one.” and below “To do so, log in
+on the text console (Ctrl+Alt+F1); Ctrl+Alt+F7 brings you back here.” On the
+text console the login asks for the old password and twice for the new one;
+then go back with Ctrl+Alt+F7 and log in with the new password. The password
+cannot be changed on the login screen itself.
 
 After logging in, the desktop with background and icons appears first, then
 the two panels.

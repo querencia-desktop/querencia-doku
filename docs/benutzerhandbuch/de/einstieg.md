@@ -14,11 +14,21 @@ ab, wie das System eingerichtet ist:
 | Ubuntu 26.04 Desktop (Anmeldebildschirm GDM) | Nach der Installation **einmal neu starten** (GDM liest neue Sitzungen nur beim Start). Im Anmeldebildschirm den Benutzer wählen, unten rechts auf das Zahnrad klicken, „Querencia Desktop“ wählen, Passwort eingeben. |
 | Ubuntu 26.04 Server (ohne Anmeldebildschirm) | An der Textkonsole (tty1) anmelden und `querencia-session` eingeben. |
 
-Querencia bringt außerdem einen eigenen Anmeldebildschirm als wahlweises
-Paket mit (`querencia-anmeldung`); er wird nicht automatisch installiert,
-empfohlen bleibt GDM. Einzelheiten stehen in den
-[Release-Notes Alpha 1](../../release-notes/de/alpha-1.md#eigener-anmeldebildschirm-optional),
-Grenzen unter [Bekannte Einschränkungen](bekannte-einschraenkungen.md).
+Wahlweise gibt es einen eigenen Anmeldebildschirm, `querencia-anmeldung`
+(greetd mit ReGreet); das Metapaket schlägt ihn nur vor. Installieren mit
+`sudo apt install querencia-anmeldung`, umschalten mit
+`sudo dpkg-reconfigure querencia-anmeldung`; das gilt ab dem nächsten
+Neustart (siehe [Alpha 1](../../release-notes/de/alpha-1.md#eigener-anmeldebildschirm-optional)).
+Er folgt der Systemsprache bei Deutsch und Englisch, sonst zeigt er
+Englisch.
+
+**Passwort abgelaufen?** Seit Alpha 3.4 sagt der Anmeldebildschirm dann
+„Ihr Passwort ist abgelaufen. Bitte wählen Sie ein neues.“ und darunter
+„Dazu an der Textkonsole anmelden (Strg+Alt+F1); Strg+Alt+F7 führt hierher
+zurück.“ An der Textkonsole fragt die Anmeldung nach dem alten und zweimal
+nach dem neuen Passwort; danach mit Strg+Alt+F7 zurück und mit dem neuen
+Passwort anmelden. Im Anmeldebildschirm selbst lässt sich das Passwort nicht
+ändern.
 
 Nach dem Anmelden erscheinen nacheinander die Arbeitsfläche mit Hintergrund
 und Symbolen, dann die beiden Panels.

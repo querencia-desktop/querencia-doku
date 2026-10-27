@@ -25,6 +25,16 @@ auch über Rechtsklick auf die Arbeitsfläche.
 System → Systemverwaltung → Software. Zum Installieren fragt der
 Passwortdialog nach dem eigenen Passwort. Siehe [Software](software.md).
 
+**Wie bekomme ich den NVIDIA-Treiber?**
+System → Systemverwaltung → Treiber, den NVIDIA-Treiber wählen, „Änderungen
+anwenden“, Passwort, danach neu starten. Querencia-Vorgabe ist der freie
+Treiber. Siehe [Systemeinstellungen](einstellungen.md), Bereich „Treiber“.
+
+**Mein Passwort ist abgelaufen.**
+Der Anmeldebildschirm sagt das und schickt an die Textkonsole
+(Strg+Alt+F1); dort anmelden, ein neues Passwort setzen und mit
+Strg+Alt+F7 zurück. Siehe [Einstieg](einstieg.md#anmelden).
+
 **Ich habe mich abgemeldet – kann ich mich sofort wieder anmelden?**
 Ja. Querencia beendet beim Abmelden die Programme und Dienste der Sitzung, so
 dass eine neue Anmeldung sauber startet.
@@ -43,9 +53,8 @@ Die Querencia-Programme, das Panel und die Arbeitsfläche gibt es seit
 Alpha 3.3 auf Deutsch, Englisch, Italienisch, Spanisch und Französisch.
 Manche Dialoge kommen aus Systembibliotheken (z. B. GVfs, GTK-Dateidialog)
 und folgen deren Übersetzungen; für GTK braucht es das Sprachpaket
-`language-pack-gnome-<xx>` der gewählten Sprache. Fest deutsch sind noch
-der Sperrbildschirm, das Fenster des Lautstärkereglers und die
-Tastenkürzel-Übersicht.
+`language-pack-gnome-<xx>` der gewählten Sprache. Seit Alpha 3.4 sind auch
+Sperrbildschirm, Lautstärkeregler und Tastenkürzel-Übersicht übersetzt.
 
 **Wie stelle ich eine andere Sprache ein?**
 In den Einstellungen unter „Sprache und Region“, wirksam ab der nächsten

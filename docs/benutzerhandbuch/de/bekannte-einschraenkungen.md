@@ -2,8 +2,9 @@
 
 [Zurück zum Inhalt](index.md)
 
-Stand Alpha 1 (20.10.2026); Sprachen, Anmeldebildschirm, Infobereich,
-Querencia Dateien und Schnatter Stand Alpha 3.3 (27.10.2026).
+Stand Alpha 1 (20.10.2026); Infobereich und Schnatter Stand Alpha 3.3,
+Sprachen, Anmeldebildschirm, Treiber und Querencia Dateien Stand Alpha 3.4
+(27.10.2026).
 Die Kennungen (QD-…) verweisen auf die Liste der offenen Punkte des
 Projekts; P1 ist wichtig, P2 mittel.
 
@@ -11,7 +12,7 @@ Projekts; P1 ist wichtig, P2 mittel.
 
 | Punkt | Was das heißt |
 |---|---|
-| Eigener Anmeldebildschirm nur Deutsch und Englisch | Der wahlweise Anmeldebildschirm (`querencia-anmeldung`) folgt der Systemsprache bei Deutsch und Englisch; bei Italienisch, Spanisch oder Französisch zeigt er Englisch. Bei abgelaufenem Passwort zeigt er noch die englische, technische Meldung `Pam_acct_mgmt: NEW_AUTHTOK_REQD`. Ohne ihn wird über GDM („Querencia Desktop“ am Zahnrad wählen) oder an der Textkonsole mit `querencia-session` angemeldet. |
+| Eigener Anmeldebildschirm nur Deutsch und Englisch | Der wahlweise Anmeldebildschirm (`querencia-anmeldung`) folgt der Systemsprache bei Deutsch und Englisch; bei Italienisch, Spanisch oder Französisch zeigt er Englisch. Ein abgelaufenes Passwort meldet er seit Alpha 3.4 verständlich, ändern lässt es sich aber nur an der Textkonsole (siehe [Einstieg](einstieg.md#anmelden)). Ohne ihn wird über GDM („Querencia Desktop“ am Zahnrad wählen) oder an der Textkonsole mit `querencia-session` angemeldet. |
 | Neben einem Ubuntu-Desktop noch nicht fertig geprüft (QD-074, P1) | Die Probe auf einem Ubuntu-Desktop-System läuft. |
 | Aussehen auf dem GDM-Weg (QD-068, P2) | Schrift-, Symbol- und Zeigervorgaben von Querencia fehlen dort noch; die Sitzung sieht dann anders aus. In Arbeit. |
 | Software offline auf Server-Systemen (QD-067, P2) | Siehe [Software](software.md#wenn-software-keine-netzwerkverbindung-meldet). |
@@ -37,15 +38,16 @@ Projekts; P1 ist wichtig, P2 mittel.
 
 | Punkt | Was das heißt |
 |---|---|
-| Einige Oberflächen nur deutsch | Seit Alpha 3.3 gibt es alle Programme, Panel und Arbeitsfläche auf Deutsch, Englisch, Italienisch, Spanisch und Französisch. Fest deutsch bleiben der Sperrbildschirm, das Fenster des Lautstärkereglers und die Tastenkürzel-Übersicht. Im Italienischen bleibt der Tastenname „Return“ in Menükürzeln englisch. |
+| Kleine Sprachreste | Seit Alpha 3.4 gibt es alle Programme, Panel, Arbeitsfläche, Sperrbildschirm, Lautstärkeregler und Tastenkürzel-Übersicht auf Deutsch, Englisch, Italienisch, Spanisch und Französisch. Im Italienischen bleibt der Tastenname „Return“ in Menükürzeln englisch. |
 | Sprache und Region: nur Sprachen mit Locale | Die Seite bietet nur Sprachen an, für die eine Locale installiert ist. Das empfohlene Paket `locales-all` (rund 230 MB) bringt alle mit. Eine Änderung wirkt ab der nächsten Anmeldung. |
 | Nur eine Tastaturbelegung (QD-057, P1) | Mehrere Belegungen mit Umschalttaste fehlen. |
 | Systemdialoge teils englisch (QD-015, P2) | z. B. die „Meldung des Systems“ beim Verbinden mit einem Server in Querencia Dateien. |
-| Querencia Dateien: kein Rückgängig | Strg+Z und Umschalt+Strg+Z gibt es noch nicht. Gelöschtes lässt sich aus dem Papierkorb wiederherstellen. |
+| Querencia Dateien: Rückgängig mit Grenzen | Rückgängig gilt nur im eigenen Fenster und bis Querencia Dateien geschlossen wird. Endgültiges Löschen und „Papierkorb leeren“ lassen sich nicht zurücknehmen; Ersetztes kommt nicht zurück; „Hier entpacken“ steht nicht in der Liste. Siehe [Rückgängig und Wiederholen](dateien.md#rückgängig-und-wiederholen). |
 | Querencia Dateien: Einstellungen von Files nur beim ersten Start | Seit Alpha 3.1 übernimmt Dateien die Einstellungen von Files beim ersten Start. Wer Dateien unter Alpha 3 schon gestartet hat, behält dessen Einstellungen; nachholen: Dateien schließen, `~/.config/querencia/dateien.ini` löschen (die eigenen Einstellungen von Dateien gehen verloren), Dateien neu starten. Lesezeichen bleiben. |
 | Querencia Dateien: keine Spaltenansicht | Die Spaltenansicht von Querencia Files entfällt; Strg+1, Strg+2 und Strg+3 sind Symbole, Liste und Kompakt. |
 | Querencia Dateien: kein Ordnerbaum | Die Seitenleiste zeigt nur „Orte“; die Ansicht wird nicht je Ordner gemerkt. |
-| Querencia Dateien: Suche nur nach Namen | Keine Suche im Dateiinhalt (dafür [Nach Dateien suchen](dateisuche.md)); die Treffer aktualisieren sich nicht, Kopieren und Ziehen aus den Suchergebnissen geht noch nicht. |
+| Querencia Dateien: Suche im Inhalt ohne Index | „Auch Dateiinhalt“ liest nur Textdateien bis 10 MB, keine Netzwerkorte und keine Dokumente wie odt oder pdf; große Ordner dauern. Die Treffer aktualisieren sich nicht, Kopieren und Ziehen aus den Suchergebnissen geht noch nicht. |
+| Querencia Dateien: Reiter nur mit Ordner | Wiederhergestellte Reiter merken nur den Ordner, nicht Ansicht, Zoom oder Verlauf. |
 | Querencia Dateien: Miniaturen für PDF | Erscheinen nur mit einem installierten Vorschauprogramm für PDF und `bubblewrap`; sonst bleibt das Symbol. |
 | Querencia Dateien: Server teils ungeprüft | Geprüft mit Testservern für SFTP, WebDAV und FTP. Eine gelungene Verbindung zu einer Windows-Freigabe (SMB) und Zertifikatsfragen bei Sicherem WebDAV sind ungeprüft. |
 | Querencia Dateien: „Kennwort merken“ im zweiten Versuch | Nach einem falschen Kennwort bietet ein WebDAV-Server das Merken nicht mehr an. |
@@ -62,6 +64,7 @@ Projekts; P1 ist wichtig, P2 mittel.
 
 | Punkt | Was das heißt |
 |---|---|
-| Alt+Druck in VMs | Das Bildschirmfoto des aktiven Fensters kam in virtuellen Maschinen nicht an; an echter Hardware ungeprüft. |
-| Falsche Auflösung nach dem Start einer VM | Die durchgereichte Grafik meldet manchmal keine Bildschirmdaten; den Bildschirm kurz ab- und wieder anstecken hilft. |
+| Treiberwechsel ungeprüft | Die Seite „Treiber“ ist nur mit nachgebildeten Karten geprüft. Ein echter Wechsel auf den NVIDIA-Treiber, Rechner mit zwei Grafikkarten und Secure Boot sind ungeprüft. Ein Wechsel braucht `ubuntu-drivers-common`, Netz und Passwort und wirkt erst nach einem Neustart. Vorher einen Snapshot anlegen. |
+| Treiber: „Diese Sitzung“ in VMs falsch | In einer virtuellen Maschine mit Software-Rendering (llvmpipe) zeigt die Seite „Treiber“ bei „Diese Sitzung:“ „OpenGL auf der Grafikkarte“; der Renderer darüber nennt richtig llvmpipe. Wird in einer späteren Fassung berichtigt. |
+| Falsche Auflösung nach dem Start einer VM (QD-027, P2) | Die durchgereichte Grafik meldet manchmal keine Bildschirmdaten; den Bildschirm kurz ab- und wieder anstecken hilft. |
 | Ton in VMs | Ohne Soundkarte zeigt der Lautstärkeregler nur „Dummy Output“. |

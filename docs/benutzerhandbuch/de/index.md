@@ -40,6 +40,7 @@ Handbuch gibt es auf Deutsch und Englisch.
 | Nach Dateien suchen … | Anwendungen → Zubehör | [dateisuche.md](dateisuche.md) |
 | Bildschirmfoto aufnehmen | Druck-Taste, Anwendungen → Zubehör | [screenshot.md](screenshot.md) |
 | Systemeinstellungen | System → Einstellungen | [einstellungen.md](einstellungen.md) |
+| Treiber (in den Systemeinstellungen) | System → Systemverwaltung | [einstellungen.md](einstellungen.md) |
 | Software | System → Systemverwaltung | [software.md](software.md) |
 | Schnatter (WhatsApp Web, wahlweise) | Anwendungen → Internet | [schnatter.md](schnatter.md) |
 | Benachrichtigungen | läuft im Hintergrund | [benachrichtigungen.md](benachrichtigungen.md) |

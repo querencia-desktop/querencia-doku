@@ -2,10 +2,10 @@
 
 [Back to contents](index.md)
 
-**Super+?** opens the program “Tastenkürzel” (Applications → Accessories,
-German only). It reads the shortcuts from the window manager configuration of
-the running session and shows on two tabs, “Arbeitsfläche” (desktop) and
-“Programme” (programs), everything that currently applies. Esc or Ctrl+W
+**Super+?** opens the program “Tastenkürzel” (window title “Keyboard
+Shortcuts”; Applications → Accessories). It reads the shortcuts from the
+window manager configuration of the running session and shows on two tabs,
+“Desktop” and “Programs”, everything that currently applies. Esc or Ctrl+W
 closes it.
 
 “Super” is the Windows key.
@@ -51,7 +51,7 @@ pane on/off · Ctrl+H hidden files · Ctrl++/Ctrl+-/Ctrl+0 zoom in/zoom
 out/normal size · Ctrl+1/2/3 icon/list/compact view · Ctrl+L enter location ·
 Ctrl+F search (Esc stops the search or closes the bar) · Ctrl+D add bookmark ·
 Alt+←/→ back/forward · Alt+↑ parent folder · Alt+Home home folder · F1 online
-help. Undo (Ctrl+Z) does not exist yet.
+help · Ctrl+Z undo · Shift+Ctrl+Z redo.
 
 **Querencia Terminal:** Ctrl+Shift+T new tab · Ctrl+Shift+W close tab ·
 Ctrl+Shift+Q close window · Ctrl+PgUp/PgDn previous/next tab ·

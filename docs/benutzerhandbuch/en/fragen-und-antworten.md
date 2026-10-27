@@ -25,6 +25,16 @@ reached by right-clicking the desktop.
 System → Systemverwaltung → Software. Installing asks for your own password.
 See [Software](software.md).
 
+**How do I get the NVIDIA driver?**
+System → Administration → Drivers, choose the NVIDIA driver, “Apply
+Changes”, password, then restart. Querencia's default is the free driver.
+See [System Settings](einstellungen.md), area “Drivers”.
+
+**My password has expired.**
+The login screen says so and sends you to the text console (Ctrl+Alt+F1);
+log in there, set a new password and go back with Ctrl+Alt+F7. See
+[Getting started](einstieg.md#logging-in).
+
 **I logged out – can I log in again right away?**
 Yes. When logging out, Querencia ends the programs and services of the
 session, so that a new login starts cleanly.
@@ -40,8 +50,8 @@ on in `~/.config/querencia/sitzung.ini`, see [Session](sitzung.md).
 
 **Why are some parts German?**
 Since Alpha 3.3 the Querencia programs, the panel and the desktop are
-available in German, English, Italian, Spanish and French. Still German only
-are the lock screen, the volume control window and the keyboard shortcuts
+available in German, English, Italian, Spanish and French; since Alpha 3.4
+also the lock screen, the volume control and the keyboard shortcuts
 overview. Some dialogs come from system libraries (e.g. GVfs, the GTK file
 dialog) and follow their translations; GTK needs the language pack
 `language-pack-gnome-<xx>` of the chosen language.

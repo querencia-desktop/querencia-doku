@@ -62,6 +62,13 @@ eigene Ansicht und seinen eigenen Verlauf.
   den Kontextmenüs. Mehrere ausgewählte Ordner öffnen sich je in einem Reiter.
 - Dateien, die auf einen Reiterkopf gezogen werden, landen im Ordner dieses
   Reiters.
+- **Reiter beim Start wiederherstellen** (seit Alpha 3.4): Startet Querencia
+  Dateien ohne Ordner, öffnet es die Reiter des zuletzt geschlossenen
+  Fensters wieder, in derselben Reihenfolge und mit demselben aktiven
+  Reiter. Orte, die dann nicht erreichbar sind, werden übersprungen; es wird
+  nichts eingehängt. Gemerkt wird nur der Ordner, nicht Ansicht, Zoom oder
+  Verlauf. Abschalten unter Bearbeiten → Einstellungen → Verhalten →
+  „Reiter beim Start wiederherstellen“.
 
 ## Seitenleiste und Lesezeichen
 
@@ -128,6 +135,13 @@ eingegebene Wort enthalten, ohne Rücksicht auf Groß- und Kleinschreibung.
   Auswahl in den Treffern deren Name und Größe; nach dem Schließen wieder
   den Ordner.
 - Verborgene Dateien werden nur gefunden, wenn sie angezeigt werden (Strg+H).
+- **Auch Dateiinhalt** (Schalter in der Suchleiste, seit Alpha 3.4, Vorgabe
+  aus): Dann sind auch Textdateien bis 10 MB Treffer, in denen alle Wörter
+  vorkommen. Die Spalte „Fundstelle“ zeigt die erste Zeile mit dem Wort, der
+  Tooltip „Zeile N: …“ und bei einem gewählten Treffer auch die
+  Statusleiste. Binärdateien, Netzwerkorte und Dokumente wie odt oder pdf
+  werden nicht gelesen; einen Index gibt es nicht, große Ordner dauern. Der
+  Schalter gilt für das Fenster, bis es geschlossen wird.
 - **Erweiterte Suche …** öffnet [Nach Dateien suchen](dateisuche.md) mit
   Ordner und Suchwort, etwa für die Suche im Dateiinhalt.
 
@@ -162,6 +176,32 @@ Programme laufen immer abgeschottet.
   (Ordner), Umbenennen, Überspringen, auf Wunsch für alle Dateien.
 - **Auswählen:** Strg+A alles, Umschalt+Strg+I Auswahl umkehren.
 
+## Rückgängig und Wiederholen
+
+Seit Alpha 3.4 nimmt **Strg+Z** (Bearbeiten → Rückgängig) den letzten
+Vorgang zurück, **Umschalt+Strg+Z** (Bearbeiten → Wiederholen) führt ihn
+wieder aus. Das Menü sagt, was geschieht, etwa „Rückgängig: Verschieben von
+„a.txt““.
+
+| Vorgang | Rückgängig |
+|---|---|
+| Verschieben, auch durch Ziehen | zurück in die alten Ordner |
+| Umbenennen | alter Name |
+| In den Papierkorb verschieben | aus dem Papierkorb wiederherstellen |
+| Kopieren | die Kopien kommen ohne Rückfrage in den Papierkorb; das Menü sagt „(in den Papierkorb)“. Hat der Ort keinen Papierkorb, fragt Querencia Dateien vorher, ob endgültig gelöscht wird. |
+| Ordner anlegen, Dokument anlegen | leer: gelöscht, sonst in den Papierkorb |
+
+- Jedes Fenster hat eine eigene Liste für alle seine Reiter, bis 50
+  Schritte. Sie gilt nur, bis das Fenster bzw. Querencia Dateien
+  geschlossen wird.
+- **Nicht rückgängig** zu machen sind endgültiges Löschen (Umschalt+Entf)
+  und „Papierkorb leeren“; danach ist die Liste leer. Was beim Einfügen
+  ersetzt oder zusammengeführt wurde, kommt nicht zurück. „Hier entpacken“
+  steht nicht in der Liste.
+- Objekte, die inzwischen fehlen, werden übergangen; fehlen alle, kommt
+  „Der Vorgang kann nicht rückgängig gemacht werden.“
+- In Textfeldern (etwa beim Umbenennen) gehört Strg+Z dem Feld.
+
 ## Papierkorb und Löschen
 
 - **Entf** verschiebt die Auswahl in den Papierkorb. Im Papierkorb (Gehe zu
@@ -184,6 +224,9 @@ Programme laufen immer abgeschottet.
 - **Eigenschaften** (Alt+Eingabe oder Strg+I) mit den Reitern Grundlegend,
   Zugriffsrechte und Öffnen mit. Unter Zugriffsrechte lässt sich auch
   „Datei als Programm ausführen“ setzen.
+- **Hier entpacken** (seit Alpha 3.4) steht im Kontextmenü von Archiven,
+  wenn die Archivverwaltung installiert ist. Sie entpackt jedes gewählte
+  Archiv in seinen Ordner und zeigt Fortschritt, Fragen und Fehler selbst.
 
 ## Einstellungen
 
@@ -194,7 +237,7 @@ Fenstern, ohne „Übernehmen“.
 | Reiter | Was sich einstellen lässt |
 |---|---|
 | Ansichten | Ansicht für neue Ordner, Anordnung, Ordner vor Dateien, verborgene Dateien, Standard-Zoomstufen |
-| Verhalten | Einfacher oder Doppelklick zum Öffnen, ausführbare Textdateien, Nachfrage vor dem Leeren und Löschen, Befehl „Löschen“, Adressleiste immer als Textfeld |
+| Verhalten | Einfacher oder Doppelklick zum Öffnen, ausführbare Textdateien, Nachfrage vor dem Leeren und Löschen, Befehl „Löschen“, Adressleiste immer als Textfeld, „Reiter beim Start wiederherstellen“ |
 | Anzeige | Angaben unter dem Namen in der Symbolansicht, Datumsformat, „Alle Spalten haben dieselbe Breite“ für die Kompaktansicht |
 | Listenspalten | welche Spalten die Listenansicht zeigt |
 | Vorschau | Vorschaubilder (siehe [Miniaturen](#miniaturen)) |
@@ -214,13 +257,11 @@ Alle Kürzel: [Tastenkürzel](tastenkuerzel.md#programme) oder Super+?.
 
 ## Gut zu wissen
 
-- Rückgängig (Strg+Z) gibt es noch nicht.
+- Rückgängig gilt nur im eigenen Fenster und nur bis zum Schließen.
 - Eine Spaltenansicht wie in Querencia Files gibt es nicht.
-- Die Suche findet nur Namen, keinen Dateiinhalt, und aktualisiert die
-  Treffer nicht, wenn sich Dateien währenddessen ändern. In den
-  Suchergebnissen wirken Entf, F2 und Strg+X/C/V nicht.
-- Geöffnete Reiter werden beim nächsten Start nicht wiederhergestellt;
-  Reiter lassen sich nicht mit der Maus verschieben.
+- Die Suche aktualisiert die Treffer nicht, wenn sich Dateien währenddessen
+  ändern. In den Suchergebnissen wirken Entf, F2 und Strg+X/C/V nicht.
+- Reiter lassen sich nicht mit der Maus verschieben.
 - „Anzahl der Objekte in Ordnern zählen“ (Reiter Vorschau) wird gespeichert,
   wirkt aber noch nicht.
 - Meldet das System beim Verbinden etwas, das Querencia Dateien nicht kennt,
