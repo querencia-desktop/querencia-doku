@@ -120,10 +120,11 @@ sudo apt full-upgrade
 ```
 
 `sudo apt upgrade` genügt ebenfalls. APT aktualisiert 5 Pakete, mit dem
-Anmeldebildschirm 6, und installiert `ubuntu-drivers-common` neu. Dafür lädt
-es rund [Download-Größe] herunter. Entfernt wird nichts, und es gibt keine
-Rückfrage zu Konfigurationsdateien. In einer virtuellen Maschine dauerte
-das Upgrade [Upgrade-Dauer], ohne die Zeit zum Herunterladen. Danach
+Anmeldebildschirm 6, und installiert `ubuntu-drivers-common` (mit
+`python3-xkit`) neu. Dafür lädt es rund 29 MB herunter (mit
+Anmeldebildschirm). Entfernt wird nichts, und es gibt keine Rückfrage zu
+Konfigurationsdateien. In einer virtuellen Maschine dauerte das Upgrade rund
+8 Sekunden, ohne die Zeit zum Herunterladen. Danach
 abmelden und neu anmelden.
 
 Ein Upgrade von Alpha 3.2 geht genauso; was dabei sonst geschieht, steht
@@ -137,8 +138,7 @@ starten, am Zahnrad „Querencia Desktop“ wählen (siehe
 [Alpha 1, Installation](alpha-1.md#installation)). Fingerabdruck des
 Signierschlüssels: `63F6 C499 246E 3699 CA04 726D 342F 12D2 0CE7 1CBD`.
 `ubuntu-drivers-common` kommt dabei mit, Schnatter nicht. Auf einem
-frischen Ubuntu-26.04-Server-Abbild installiert APT [Pakete Neuinstallation]
-Pakete.
+frischen Ubuntu-26.04-Server-Abbild installiert APT 392 Pakete.
 
 ## Bekannte Grenzen
 
@@ -148,6 +148,10 @@ behoben genannt. Davon besonders:
 - **Seite „Treiber“:**
   - Ein Wechsel braucht `ubuntu-drivers-common`, eine Netzverbindung und
     das Passwort, und er wirkt erst nach einem Neustart.
+  - In einer virtuellen Maschine mit Software-Rendering (llvmpipe) zeigt
+    die Seite bei „Diese Sitzung:“ fälschlich „OpenGL auf der Grafikkarte“.
+    Der Renderer darüber nennt richtig llvmpipe. Das berichtigt eine spätere
+    Fassung der Einstellungen.
   - Die Seite zeigt nur, was `ubuntu-drivers` nennt. Mit einer echten
     NVIDIA-Karte ist der Wechsel noch nicht geprüft, ebenso wenig Rechner
     mit zwei Grafikkarten (etwa Notebooks mit Intel und NVIDIA) und Secure
@@ -216,17 +220,30 @@ Wie Alpha 3, im Fehlertracker des Projekts,
 - **Sprachen:** Sperrbildschirm, Lautstärkeregler und Tastenkürzel-Hilfe
   in abgeschotteten Läufen in fünf Sprachen mit Bildschirmfotos;
   Kataloge, Starter und Beschreibungen in allen Paketen 18 von 18.
-- [Packaging: statische Prüfung, Lintian, Probe-Installation, Kontrollbau]
+- Statische Paketprüfung (304 bestanden), Lintian ohne Fehler,
+  Probe-Installation in einer abgeschotteten Kopie des Systems (96
+  Prüfungen bestanden, mit italienischer Systemsprache 103, mit
+  Bildschirmfotos), ein Kontrollbau ergab dieselben Pakete.
 - **Upgrade** in einer abgeschotteten Kopie des Systems: von Alpha 3.3 mit
-  Schnatter (168 Prüfungen bestanden) [weitere Upgrade-Läufe]: nichts
-  entfernt, nichts zurückgehalten, keine Rückfragen; `ubuntu-drivers-common`
-  neu.
-- **In einer virtuellen Maschine:** [Weg B Lauf 1: Upgrade, Pakete,
-  Prüfskript, Sitzung, Sichtproben]. Neuinstallation: [Weg B Lauf 2].
+  Schnatter (168 Prüfungen bestanden), ohne Schnatter (155) und von Alpha
+  3.2 mit Schnatter (169): nichts entfernt, nichts zurückgehalten, keine
+  Rückfragen; `ubuntu-drivers-common` neu.
+- **In einer virtuellen Maschine:** Alpha 3.3 mit Schnatter und
+  Anmeldebildschirm aus der veröffentlichten Quelle, dann das Upgrade auf
+  3.4: 6 Querencia-Pakete aktualisiert, `ubuntu-drivers-common` neu, nichts
+  entfernt, keine Rückfragen, eigene Einstellungen erhalten; Sitzung 28 von
+  28, Anmeldebildschirm 3 von 3, Prüfskript 107 bestanden (die drei übrigen
+  Meldungen betreffen nicht das Upgrade: zwei verglichen mit einem Stand vor
+  der Installation des Anmeldebildschirms, eine ist das Protokoll des
+  laufenden Panels). Sichtproben: Seite „Treiber“, Rückgängig,
+  Inhaltssuche, Reiter und „Hier entpacken“ in Dateien, abgelaufenes
+  Passwort in Deutsch und Englisch samt Wechsel an der Textkonsole und
+  Anmeldung mit dem neuen Passwort, Sperrbildschirm, Lautstärkeregler und
+  Tastenkürzel-Hilfe auf Italienisch. Neuinstallation (392 Pakete mit
+  `locales-all` und `ubuntu-drivers-common`, kein Schnatter): Prüfskript
+  108 von 108, Sitzung 28 von 28.
 - Nicht geprüft: ein echter Treiberwechsel mit Neustart, echte NVIDIA-,
-  AMD- oder Intel-Karten, Secure Boot, der Passwortwechsel an der
-  Textkonsole mit Rückkehr in den Anmeldebildschirm [falls Weg B ihn nicht
-  zeigt], der Infobereich mit Webex, Nextcloud oder Discord, Schnatter mit
+  AMD- oder Intel-Karten, Secure Boot, der Infobereich mit Webex, Nextcloud oder Discord, Schnatter mit
   echtem Konto, echte Windows-Freigaben und Netzlaufwerke, Anmeldung über
   GDM, echte Hardware.
 

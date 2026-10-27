@@ -117,10 +117,11 @@ sudo apt full-upgrade
 ```
 
 `sudo apt upgrade` works as well. APT upgrades 5 packages, 6 with the
-login screen, and newly installs `ubuntu-drivers-common`. It downloads
-about [Download-Größe]. Nothing is removed, and there is no question about
-configuration files. In a virtual machine the upgrade took [Upgrade-Dauer],
-not counting the download. Then log out and log in again.
+login screen, and newly installs `ubuntu-drivers-common` (with
+`python3-xkit`). It downloads about 29 MB (with the login screen). Nothing
+is removed, and there is no question about configuration files. In a
+virtual machine the upgrade took about 8 seconds, not counting the
+download. Then log out and log in again.
 
 An upgrade from Alpha 3.2 works the same way; what else happens is
 described in the [notes for Alpha 3.3](alpha-3.3.md#upgrading-from-alpha-32-or-31).
@@ -133,7 +134,7 @@ restart, choose “Querencia Desktop” at the gear icon (see
 [Alpha 1, installation](alpha-1.md#installation)). Fingerprint of the
 signing key: `63F6 C499 246E 3699 CA04 726D 342F 12D2 0CE7 1CBD`.
 `ubuntu-drivers-common` comes along, Schnatter does not. On a fresh
-Ubuntu 26.04 server image APT installs [Pakete Neuinstallation] packages.
+Ubuntu 26.04 server image APT installs 392 packages.
 
 ## Known limitations
 
@@ -143,6 +144,10 @@ In particular:
 - **Page “Drivers”:**
   - A change needs `ubuntu-drivers-common`, a network connection and the
     password, and it only takes effect after a restart.
+  - In a virtual machine with software rendering (llvmpipe) the page
+    wrongly shows “OpenGL on the graphics card” for “This session:”. The
+    renderer above correctly says llvmpipe. A later version of the settings
+    fixes this.
   - The page only shows what `ubuntu-drivers` lists. The change with a
     real NVIDIA card is not tested yet, nor are computers with two graphics
     cards (such as notebooks with Intel and NVIDIA) and Secure Boot. For
@@ -206,15 +211,29 @@ As for Alpha 3, in the project's issue tracker,
 - **Languages:** lock screen, volume control and keyboard shortcuts help
   in isolated runs in five languages with screenshots; catalogs, launchers
   and descriptions in all packages 18 of 18.
-- [Packaging: statische Prüfung, Lintian, Probe-Installation, Kontrollbau]
+- Static package check (304 passed), Lintian without errors, trial
+  installation in an isolated copy of the system (96 checks passed, with
+  Italian as the system language 103, with screenshots), a control build
+  gave the same packages.
 - **Upgrade** in an isolated copy of the system: from Alpha 3.3 with
-  Schnatter (168 checks passed) [weitere Upgrade-Läufe]: nothing removed,
-  nothing held back, no questions; `ubuntu-drivers-common` new.
-- **In a virtual machine:** [Weg B Lauf 1: Upgrade, Pakete, Prüfskript,
-  Sitzung, Sichtproben]. New installation: [Weg B Lauf 2].
+  Schnatter (168 checks passed), without Schnatter (155) and from Alpha 3.2
+  with Schnatter (169): nothing removed, nothing held back, no questions;
+  `ubuntu-drivers-common` new.
+- **In a virtual machine:** Alpha 3.3 with Schnatter and the login screen
+  from the published repository, then the upgrade to 3.4: 6 Querencia
+  packages upgraded, `ubuntu-drivers-common` new, nothing removed, no
+  questions, own settings kept; session 28 of 28, login screen 3 of 3,
+  check script 107 passed (the other three messages are not about the
+  upgrade: two compared with a state before the login screen was
+  installed, one is the log of the running panel). Visual checks: the page
+  “Drivers”, undo, content search, tabs and “Extract Here” in Dateien, the
+  expired password in German and English including the change on the text
+  console and logging in with the new password, lock screen, volume control
+  and keyboard shortcuts help in Italian. New installation (392 packages
+  with `locales-all` and `ubuntu-drivers-common`, no Schnatter): check
+  script 108 of 108, session 28 of 28.
 - Not tested: a real driver change with restart, real NVIDIA, AMD or Intel
-  cards, Secure Boot, the password change on the text console with return
-  to the login screen [falls Weg B ihn nicht zeigt], the notification area
+  cards, Secure Boot, the notification area
   with Webex, Nextcloud or Discord, Schnatter with a real account, real
   Windows shares and network drives, login through GDM, real hardware.
 

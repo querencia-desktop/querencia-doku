@@ -66,6 +66,7 @@ Projekts; P1 ist wichtig, P2 mittel.
 | Punkt | Was das heißt |
 |---|---|
 | Treiberwechsel ungeprüft | Die Seite „Treiber“ ist nur mit nachgebildeten Karten geprüft. Ein echter Wechsel auf den NVIDIA-Treiber, Rechner mit zwei Grafikkarten und Secure Boot sind ungeprüft. Ein Wechsel braucht `ubuntu-drivers-common`, Netz und Passwort und wirkt erst nach einem Neustart. Vorher einen Snapshot anlegen. |
+| Treiber: „Diese Sitzung“ in VMs falsch | In einer virtuellen Maschine mit Software-Rendering (llvmpipe) zeigt die Seite „Treiber“ bei „Diese Sitzung:“ „OpenGL auf der Grafikkarte“; der Renderer darüber nennt richtig llvmpipe. Wird in einer späteren Fassung berichtigt. |
 | Falsche Auflösung nach dem Start einer VM (QD-027, P2) | Die durchgereichte Grafik meldet manchmal keine Bildschirmdaten; den Bildschirm kurz ab- und wieder anstecken hilft. |
 | Ton in VMs | Ohne Soundkarte zeigt der Lautstärkeregler nur „Dummy Output“. |
 | Alt+Druck in VMs | Kam bei der Probe nicht an; an echter Hardware zu prüfen. |

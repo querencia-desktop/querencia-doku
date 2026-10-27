@@ -65,6 +65,7 @@ list of open items; P1 is important, P2 medium.
 | Item | What it means |
 |---|---|
 | Driver change untested | The page “Drivers” is only tested with simulated cards. A real change to the NVIDIA driver, computers with two graphics cards and Secure Boot are untested. A change needs `ubuntu-drivers-common`, network and password and only takes effect after a restart. Take a snapshot first. |
+| Drivers: “This session” wrong in VMs | In a virtual machine with software rendering (llvmpipe) the page “Drivers” shows “OpenGL on the graphics card” for “This session:”; the renderer above correctly says llvmpipe. To be fixed in a later version. |
 | Wrong resolution after a VM starts (QD-027, P2) | The passed-through graphics sometimes report no monitor data; unplugging and replugging the monitor helps. |
 | Sound in VMs | Without a sound card the volume control only shows “Dummy Output”. |
 | Alt+Print in VMs | Did not arrive during the test; to be checked on real hardware. |
