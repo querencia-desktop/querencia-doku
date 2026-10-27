@@ -10,7 +10,7 @@ list of open items; P1 is important, P2 medium.
 
 | Item | What it means |
 |---|---|
-| Own login screen German and English only | The optional login screen (`querencia-anmeldung`) follows the system language for German and English; for Italian, Spanish or French it shows English. Without it, log in via GDM (choose “Querencia Desktop” at the gear) or on the text console with `querencia-session`. |
+| Own login screen German and English only | The optional login screen (`querencia-anmeldung`) follows the system language for German and English; for Italian, Spanish or French it shows English. For an expired password it still shows the English, technical message `Pam_acct_mgmt: NEW_AUTHTOK_REQD`. Without it, log in via GDM (choose “Querencia Desktop” at the gear) or on the text console with `querencia-session`. |
 | Side by side with an Ubuntu desktop not fully tested (QD-074, P1) | The test on an Ubuntu Desktop system is running. |
 | Look on the GDM path (QD-068, P2) | Querencia's font, icon and pointer defaults are still missing there; the session then looks different. In progress. |
 | Software offline on server systems (QD-067, P2) | See [Software](software.md#when-software-reports-no-network-connection). |

@@ -11,7 +11,7 @@ Projekts; P1 ist wichtig, P2 mittel.
 
 | Punkt | Was das heißt |
 |---|---|
-| Eigener Anmeldebildschirm nur Deutsch und Englisch | Der wahlweise Anmeldebildschirm (`querencia-anmeldung`) folgt der Systemsprache bei Deutsch und Englisch; bei Italienisch, Spanisch oder Französisch zeigt er Englisch. Ohne ihn wird über GDM („Querencia Desktop“ am Zahnrad wählen) oder an der Textkonsole mit `querencia-session` angemeldet. |
+| Eigener Anmeldebildschirm nur Deutsch und Englisch | Der wahlweise Anmeldebildschirm (`querencia-anmeldung`) folgt der Systemsprache bei Deutsch und Englisch; bei Italienisch, Spanisch oder Französisch zeigt er Englisch. Bei abgelaufenem Passwort zeigt er noch die englische, technische Meldung `Pam_acct_mgmt: NEW_AUTHTOK_REQD`. Ohne ihn wird über GDM („Querencia Desktop“ am Zahnrad wählen) oder an der Textkonsole mit `querencia-session` angemeldet. |
 | Neben einem Ubuntu-Desktop noch nicht fertig geprüft (QD-074, P1) | Die Probe auf einem Ubuntu-Desktop-System läuft. |
 | Aussehen auf dem GDM-Weg (QD-068, P2) | Schrift-, Symbol- und Zeigervorgaben von Querencia fehlen dort noch; die Sitzung sieht dann anders aus. In Arbeit. |
 | Software offline auf Server-Systemen (QD-067, P2) | Siehe [Software](software.md#wenn-software-keine-netzwerkverbindung-meldet). |

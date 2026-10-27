@@ -5,7 +5,7 @@
 Alpha 3.3 spricht fünf Sprachen: Deutsch, Englisch, Italienisch, Spanisch
 und Französisch. Neu sind außerdem ein Infobereich im Panel für die Symbole
 anderer Programme, zwei Korrekturen in Querencia Dateien und ein
-Anmeldebildschirm, der durchgehend eine Sprache spricht. Es sind 24
+Anmeldebildschirm, der jetzt auch die Namen der Sitzungen übersetzt. Es sind 24
 Debian-Pakete für Ubuntu 26.04 („resolute“) aus derselben signierten
 APT-Quelle; 18 davon sind neu gebaut oder neu in der Fassung.
 
@@ -60,11 +60,10 @@ APT-Quelle; 18 davon sind neu gebaut oder neu in der Fassung.
   Suche zeigt die Statusleiste wieder den Ordner; während der Suche zeigt
   sie die Zahl der Treffer und eine Auswahl in den Treffern. Beides stand
   bisher unter den bekannten Grenzen.
-- **Anmeldebildschirm in einer Sprache** (`querencia-anmeldung` 0.1.3,
-  wahlweise): Er folgt der Systemsprache durchgehend, Deutsch oder
-  Englisch, jetzt auch bei den Namen der Sitzungen und bei Meldungen der
-  Anmeldeprüfung (PAM), etwa bei einem abgelaufenen Passwort. Bei
-  anderen Systemsprachen zeigt er Englisch.
+- **Anmeldebildschirm** (`querencia-anmeldung` 0.1.3, wahlweise): Er
+  folgt der Systemsprache, Deutsch oder Englisch, bei Knöpfen und Uhr und
+  jetzt auch bei den Namen der Sitzungen. Bei anderen Systemsprachen zeigt
+  er Englisch.
 - **Software:** Thunderbird und Firefox stehen mit Beschreibung im
   Software-Center; installieren lassen sie sich, sobald ihre Paketquelle
   eingerichtet ist, sonst zeigen sie „Nicht verfügbar“. Snap-Hüllen werden
@@ -84,7 +83,7 @@ Paketsatz vom 27.10.2026 (24 Pakete).
 | querencia-desktop | 0.1.0~alpha3.3-1 | Metapaket, Versionsdatei „Alpha 3.3“, **neu:** empfiehlt `locales-all` |
 | querencia-shell | 0.1.0~alpha11-1 | **geändert:** Panel 0.4.0 (Infobereich), Arbeitsfläche 0.3.1; Tastenkürzel-Übersicht 0.2.2 und Thema 0.2.2 unverändert |
 | querencia-dateien | 0.2.4-1 | **geändert:** Kompaktansicht, Statusleiste nach der Suche |
-| querencia-anmeldung | 0.1.3-1 | **geändert:** Anmeldebildschirm durchgehend Deutsch oder Englisch, optional |
+| querencia-anmeldung | 0.1.3-1 | **geändert:** Anmeldebildschirm, Sitzungsnamen jetzt übersetzt, optional |
 | querencia-software | 0.1.7-1 | **geändert:** Thunderbird und Firefox mit Beschreibung |
 | querencia-editor | 0.2.5-1 | Texteditor |
 | querencia-terminal | 0.3.3-1 | Terminal |
@@ -161,6 +160,9 @@ behoben genannt. Davon besonders:
 - **Der Anmeldebildschirm kennt nur Deutsch und Englisch.** Bei
   Italienisch, Spanisch oder Französisch als Systemsprache zeigt er
   Englisch.
+- **Meldung bei abgelaufenem Passwort noch englisch und technisch:** Der
+  Anmeldebildschirm zeigt dann `Pam_acct_mgmt: NEW_AUTHTOK_REQD` statt
+  einer deutschen Aufforderung.
 - **Infobereich:**
   - Kein Infobereich für alte X11-Programme, die ihr Symbol über das ältere
     Verfahren (XEmbed) anbieten; sie zeigen weiter keines.
@@ -214,9 +216,9 @@ Wie Alpha 3, im Fehlertracker des Projekts,
   Kompaktansicht bei 50, 100 und 200 % ganz, Statusleiste nach Suche und
   Auswahl in Deutsch und Englisch; 21 Prüfläufe bestanden, 684 automatische
   Tests des Quellbaums.
-- **Anmeldebildschirm 0.1.3** in einer abgeschotteten Probe: Deutsch ganz
-  deutsch, Englisch ganz englisch, keine Mischung; 96 Konfigurationsfälle
-  bestanden.
+- **Anmeldebildschirm 0.1.3** in einer abgeschotteten Probe ohne echte
+  Anmeldeprüfung: Deutsch ganz deutsch, Englisch ganz englisch, keine
+  Mischung; 96 Konfigurationsfälle bestanden.
 - Statische Paketprüfung (300 bestanden), Lintian ohne Fehler,
   Probe-Installation in einer abgeschotteten Kopie des Systems (95 Prüfungen
   bestanden), ein Kontrollbau ergab dieselben Pakete.

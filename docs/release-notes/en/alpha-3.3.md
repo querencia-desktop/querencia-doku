@@ -4,8 +4,8 @@
 
 Alpha 3.3 speaks five languages: German, English, Italian, Spanish and
 French. Also new are a notification area in the panel for the icons of other
-programs, two fixes in Querencia Dateien and a login screen that speaks one
-language throughout. There are 24 Debian packages for Ubuntu 26.04
+programs, two fixes in Querencia Dateien and a login screen that now also
+translates the session names. There are 24 Debian packages for Ubuntu 26.04
 (“resolute”) from the same signed APT repository; 18 of them are newly
 built or new in this release.
 
@@ -58,11 +58,10 @@ built or new in this release.
   closing the search the status bar shows the folder again; during the
   search it shows the number of matches and a selection among them. Both
   were listed as known limitations so far.
-- **Login screen in one language** (`querencia-anmeldung` 0.1.3,
-  optional): it follows the system language throughout, German or English,
-  now also for the session names and for messages of the login check (PAM),
-  for example about an expired password. For other system languages it
-  shows English.
+- **Login screen** (`querencia-anmeldung` 0.1.3, optional): it follows
+  the system language, German or English, for buttons and clock and now
+  also for the session names. For other system languages it shows
+  English.
 - **Software:** Thunderbird and Firefox are listed with a description in
   the software center; they can be installed once their package source is
   set up, otherwise they show “Not available”. Snap wrapper packages are no
@@ -82,7 +81,7 @@ Package set of 27 October 2026 (24 packages).
 | querencia-desktop | 0.1.0~alpha3.3-1 | meta package, version file “Alpha 3.3”, **new:** recommends `locales-all` |
 | querencia-shell | 0.1.0~alpha11-1 | **changed:** panel 0.4.0 (notification area), desktop 0.3.1; keyboard shortcuts overview 0.2.2 and theme 0.2.2 unchanged |
 | querencia-dateien | 0.2.4-1 | **changed:** compact view, status bar after the search |
-| querencia-anmeldung | 0.1.3-1 | **changed:** login screen German or English throughout, optional |
+| querencia-anmeldung | 0.1.3-1 | **changed:** login screen, session names now translated, optional |
 | querencia-software | 0.1.7-1 | **changed:** Thunderbird and Firefox with a description |
 | querencia-editor | 0.2.5-1 | text editor |
 | querencia-terminal | 0.3.3-1 | terminal |
@@ -157,6 +156,9 @@ In particular:
   language they stay English.
 - **The login screen only knows German and English.** With Italian, Spanish
   or French as the system language it shows English.
+- **Message for an expired password still technical:** the login screen
+  then shows `Pam_acct_mgmt: NEW_AUTHTOK_REQD` instead of a prompt in the
+  system language, also in German.
 - **Notification area:**
   - No notification area for old X11 programs that offer their icon
     through the older method (XEmbed); they still show none.
@@ -208,8 +210,9 @@ As for Alpha 3, in the project's issue tracker,
   view complete at 50, 100 and 200 %, status bar after search and selection
   in German and English; 21 test runs passed, 684 automatic tests of the
   source tree.
-- **Login screen 0.1.3** in an isolated test: German entirely German,
-  English entirely English, no mixing; 96 configuration cases passed.
+- **Login screen 0.1.3** in an isolated test without a real login check:
+  German entirely German, English entirely English, no mixing; 96
+  configuration cases passed.
 - Static package check (300 passed), Lintian without errors, test
   installation in an isolated copy of the system (95 checks passed), a
   control build produced the same packages.
