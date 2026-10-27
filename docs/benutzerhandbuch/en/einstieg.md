@@ -28,9 +28,11 @@ the two panels.
 Like GNOME 2, Querencia has two panels.
 
 **Top:** on the left the Q logo with the menus **Anwendungen**
-(Applications), **Orte** (Places) and **System**; on the right the **clock**.
-Clicking the clock opens a month calendar. Volume and network icons can be
-added at the top right (see below).
+(Applications), **Orte** (Places) and **System**; on the right the
+**notification area** for the icons of other programs (see below), the bell
+of the notifications and the **clock**. Clicking the clock opens a month
+calendar. Volume and network icons can be added at the top right (see
+below).
 
 **Bottom:** on the left the **window list** (one button per window), on the
 right the **workspace switcher** with four workspaces.
@@ -59,6 +61,30 @@ in [Querencia Dateien](dateien.md).
 - **Abmelden …** (Log Out) and **Ausschalten …** (Shut Down) – with a
   question first, see [Session](sitzung.md).
 
+### Notification area
+
+Since Alpha 3.3 (panel 0.4.0). Programs that offer a status icon
+(StatusNotifierItem, also through libappindicator, such as Webex, Nextcloud
+or Discord) show it here, at the top right, left of the bell. Without icons
+the notification area is invisible.
+
+| Input | Effect |
+|---|---|
+| Pointer on the icon | the program's tooltip |
+| Left click | opens the program or brings its window to the front; some programs show their menu instead |
+| Right click | the program's menu in the Querencia style |
+| Middle button, scroll wheel | go to the program; what they do depends on the program |
+| Right click on the narrow edge left of the icons | “Remove From Panel”, “Move” |
+
+If a program asks for attention (e.g. for a new message), its button gets
+an orange background.
+
+If you customized the panel before Alpha 3.3, the notification area does not
+appear by itself: right-click a free spot of the top panel → “Add to Panel…”
+→ “Notification Area”. Limits (no XEmbed for old X11 programs, passive icons
+hidden) are listed under
+[Known limitations](bekannte-einschraenkungen.md#panel-and-desktop).
+
 ### Customising the panels
 
 Right-click a free spot of a panel to open the panel menu:
@@ -66,7 +92,8 @@ Right-click a free spot of a panel to open the panel menu:
 - **Zum Panel hinzufügen …** (Add to Panel) opens a list with a search field:
   Anwendungen, Orte, System, Fensterliste (window list),
   Arbeitsflächenumschalter (workspace switcher), Uhr (clock),
-  Anwendungsstarter … (launcher), Lautstärke (volume), Netzwerk (network). The
+  Anwendungsstarter … (launcher), Lautstärke (volume), Netzwerk (network),
+  Infobereich (Notification Area). The
   new item goes into the area (left, centre, right) that was clicked.
 - Right-click an item: **Aus dem Panel entfernen** (Remove from Panel), for
   launchers also **Starten** (Launch).

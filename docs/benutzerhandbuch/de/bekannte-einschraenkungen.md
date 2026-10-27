@@ -2,8 +2,8 @@
 
 [Zurück zum Inhalt](index.md)
 
-Stand Alpha 1 (20.10.2026), Querencia Dateien und Schnatter Stand Alpha 3.2
-(26.10.2026).
+Stand Alpha 1 (20.10.2026); Sprachen, Anmeldebildschirm, Infobereich,
+Querencia Dateien und Schnatter Stand Alpha 3.3 (27.10.2026).
 Die Kennungen (QD-…) verweisen auf die Liste der offenen Punkte des
 Projekts; P1 ist wichtig, P2 mittel.
 
@@ -11,7 +11,7 @@ Projekts; P1 ist wichtig, P2 mittel.
 
 | Punkt | Was das heißt |
 |---|---|
-| Eigener Anmeldebildschirm fehlt im Paket (QD-075, P1) | Angemeldet wird über GDM („Querencia Desktop“ am Zahnrad wählen) oder an der Textkonsole mit `querencia-session`. |
+| Eigener Anmeldebildschirm nur Deutsch und Englisch | Der wahlweise Anmeldebildschirm (`querencia-anmeldung`) folgt der Systemsprache bei Deutsch und Englisch; bei Italienisch, Spanisch oder Französisch zeigt er Englisch. Ohne ihn wird über GDM („Querencia Desktop“ am Zahnrad wählen) oder an der Textkonsole mit `querencia-session` angemeldet. |
 | Neben einem Ubuntu-Desktop noch nicht fertig geprüft (QD-074, P1) | Die Probe auf einem Ubuntu-Desktop-System läuft. |
 | Aussehen auf dem GDM-Weg (QD-068, P2) | Schrift-, Symbol- und Zeigervorgaben von Querencia fehlen dort noch; die Sitzung sieht dann anders aus. In Arbeit. |
 | Software offline auf Server-Systemen (QD-067, P2) | Siehe [Software](software.md#wenn-software-keine-netzwerkverbindung-meldet). |
@@ -28,13 +28,17 @@ Projekts; P1 ist wichtig, P2 mittel.
 | Bereich „Panels“ in den Einstellungen nur Anzeige (QD-046) | Ändern geht direkt im Panel. |
 | Bildschirm-Skalierung 1,5 (QD-028, P2) | Zentrierte oder gekachelte Hintergründe erscheinen zu klein. |
 | Vollbild von X11-Programmen (QD-065) | Manche X11-Programme liegen im Vollbild unter den Panels. In Arbeit. |
+| Infobereich: kein XEmbed | Alte X11-Programme, die ihr Symbol über das ältere Verfahren XEmbed anbieten, zeigen keines. Angezeigt werden Programme mit StatusNotifierItem (auch libappindicator). |
+| Infobereich: passive Symbole verborgen | Symbole, die ein Programm als „passiv“ meldet, bleiben verborgen; einen Knopf zum Aufklappen gibt es nicht. Viele Programme können ihr Symbol selbst immer zeigen. |
+| Infobereich: Programm schon vor dem Panel gestartet | Es meldet sich nicht immer an; dann das Programm neu starten. |
+| Infobereich mit echten Programmen | Geprüft mit Testprogrammen und der Bibliothek libayatana-appindicator, noch nicht mit Webex, Nextcloud oder Discord selbst. |
 
 ## Programme
 
 | Punkt | Was das heißt |
 |---|---|
-| Englisch noch nicht überall (QD-055, P1) | Panel, Arbeitsfläche, Einstellungen, Tastenkürzel-Übersicht und der Sperrbildschirm sind nur deutsch. |
-| Sprache und Region nicht einstellbar (QD-056, P2) | Texte sind deutsch, Datums- und Zahlenformate folgen noch der englischen Grundeinstellung der Sitzung. |
+| Einige Oberflächen nur deutsch | Seit Alpha 3.3 gibt es alle Programme, Panel und Arbeitsfläche auf Deutsch, Englisch, Italienisch, Spanisch und Französisch. Fest deutsch bleiben der Sperrbildschirm, das Fenster des Lautstärkereglers und die Tastenkürzel-Übersicht. Im Italienischen bleibt der Tastenname „Return“ in Menükürzeln englisch. |
+| Sprache und Region: nur Sprachen mit Locale | Die Seite bietet nur Sprachen an, für die eine Locale installiert ist. Das empfohlene Paket `locales-all` (rund 230 MB) bringt alle mit. Eine Änderung wirkt ab der nächsten Anmeldung. |
 | Nur eine Tastaturbelegung (QD-057, P1) | Mehrere Belegungen mit Umschalttaste fehlen. |
 | Systemdialoge teils englisch (QD-015, P2) | z. B. die „Meldung des Systems“ beim Verbinden mit einem Server in Querencia Dateien. |
 | Querencia Dateien: kein Rückgängig | Strg+Z und Umschalt+Strg+Z gibt es noch nicht. Gelöschtes lässt sich aus dem Papierkorb wiederherstellen. |
@@ -46,11 +50,8 @@ Projekts; P1 ist wichtig, P2 mittel.
 | Querencia Dateien: Server teils ungeprüft | Geprüft mit Testservern für SFTP, WebDAV und FTP. Eine gelungene Verbindung zu einer Windows-Freigabe (SMB) und Zertifikatsfragen bei Sicherem WebDAV sind ungeprüft. |
 | Querencia Dateien: „Kennwort merken“ im zweiten Versuch | Nach einem falschen Kennwort bietet ein WebDAV-Server das Merken nicht mehr an. |
 | Querencia Dateien: echte Geräte ungeprüft | Laufwerke und Netzlaufwerke sind nur mit Abbildern und Testservern geprüft, nicht mit echten USB-Geräten. |
-| Querencia Dateien: Kompaktansicht kürzt Namen | Lange Namen werden in der Kompaktansicht gekürzt. |
-| Querencia Dateien: Statusleiste nach der Suche leer | Nach einer Suche zeigt die Statusleiste nichts an. |
-| Kein Infobereich im Panel | Programme, die ein Symbol im Panel anzeigen wollen („Tray“), zeigen keines. |
 | Schnatter: keine Anrufe | Die Web-Engine von Ubuntu ist ohne WebRTC gebaut. |
-| Schnatter: Meldungen nur bei offenem Fenster | Schließen beendet Schnatter; ein Symbol im Panel gibt es nicht (kein Infobereich). |
+| Schnatter: Meldungen nur bei offenem Fenster | Schließen beendet Schnatter; ein Symbol im Infobereich zeigt Schnatter noch nicht. |
 | Schnatter: mit echtem Konto ungeprüft | Geprüft sind Umzug, Anmeldeseite und Fenster, nicht die Arbeit mit einem echten Konto. |
 | Bildbetrachter: Nebenfenster ohne Titelleiste | Ein zum zweiten Mal geöffneter Dialog erscheint ohne Titelleiste. |
 | Terminal: Einfügen mit der mittleren Maustaste | Eine Auswahl aus einem anderen Programm kommt nicht immer an. |

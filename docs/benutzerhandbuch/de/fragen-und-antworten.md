@@ -32,14 +32,19 @@ Ja. Rückfragen zählen nicht von selbst herunter. Einen Countdown kann man in
 `~/.config/querencia/sitzung.ini` einschalten, siehe [Sitzung](sitzung.md).
 
 **Warum sind einige Dialoge englisch?**
-Die Querencia-Programme sind deutsch und englisch; manche Dialoge kommen
-aus Systembibliotheken (z. B. GVfs, GTK-Dateidialog) und folgen deren
-Übersetzungen. Panel, Arbeitsfläche und Einstellungen sind bisher nur deutsch.
+Die Querencia-Programme, das Panel und die Arbeitsfläche gibt es seit
+Alpha 3.3 auf Deutsch, Englisch, Italienisch, Spanisch und Französisch.
+Manche Dialoge kommen aus Systembibliotheken (z. B. GVfs, GTK-Dateidialog)
+und folgen deren Übersetzungen; für GTK braucht es das Sprachpaket
+`language-pack-gnome-<xx>` der gewählten Sprache. Fest deutsch sind noch
+der Sperrbildschirm, das Fenster des Lautstärkereglers und die
+Tastenkürzel-Übersicht.
 
-**Wie stelle ich das Programm auf Englisch um?**
-Die Programme folgen der Spracheinstellung (`LANGUAGE`/`LANG`). Ein Bereich
-„Sprache und Region“ in den Einstellungen folgt; bis dahin kann man ein
-Programm zum Ausprobieren so starten:
+**Wie stelle ich eine andere Sprache ein?**
+In den Einstellungen unter „Sprache und Region“, wirksam ab der nächsten
+Anmeldung (siehe [Systemeinstellungen](einstellungen.md)). Fehlt dort eine
+Sprache, ist ihre Locale nicht installiert; das Paket `locales-all` bringt
+alle mit. Ein einzelnes Programm kann man zum Ausprobieren so starten:
 
 ```bash
 LANGUAGE=en querencia-rechner

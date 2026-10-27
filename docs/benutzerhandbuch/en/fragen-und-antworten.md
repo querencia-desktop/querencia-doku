@@ -32,14 +32,18 @@ Yes. Questions do not count down by themselves. A countdown can be switched
 on in `~/.config/querencia/sitzung.ini`, see [Session](sitzung.md).
 
 **Why are some parts German?**
-The Querencia programs are German and English; panel, desktop and settings
-are German only so far. Some dialogs come from system libraries (e.g. GVfs,
-the GTK file dialog) and follow their translations.
+Since Alpha 3.3 the Querencia programs, the panel and the desktop are
+available in German, English, Italian, Spanish and French. Still German only
+are the lock screen, the volume control window and the keyboard shortcuts
+overview. Some dialogs come from system libraries (e.g. GVfs, the GTK file
+dialog) and follow their translations; GTK needs the language pack
+`language-pack-gnome-<xx>` of the chosen language.
 
-**How do I switch a program to English?**
-The programs follow the language setting (`LANGUAGE`/`LANG`). A “language and
-region” area in the settings will follow; until then you can try a program
-like this:
+**How do I choose another language?**
+In the settings under “Language and Region”, effective from the next login
+(see [System Settings](einstellungen.md)). If a language is missing there,
+its locale is not installed; the package `locales-all` brings all of them.
+To try a single program, start it like this:
 
 ```bash
 LANGUAGE=en querencia-rechner

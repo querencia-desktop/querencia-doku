@@ -96,7 +96,7 @@ Die Daten liegen danach unter `~/.local/share/querencia-schnatter`,
 
 - **Keine Anrufe.** Die Web-Engine von Ubuntu ist ohne WebRTC gebaut.
 - **Meldungen nur bei offenem Fenster.** Schließen beendet Schnatter; ein
-  Symbol im Panel gibt es nicht, weil das Panel noch keinen Infobereich hat.
+  ein Symbol im Infobereich des Panels zeigt Schnatter noch nicht.
 - Nur ein Konto je Benutzer.
 - Mit echtem Konto ist Schnatter in der Test-VM nicht geprüft (siehe
   [Bekannte Einschränkungen](bekannte-einschraenkungen.md)).
