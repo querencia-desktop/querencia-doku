@@ -95,8 +95,8 @@ Afterwards the data is in `~/.local/share/querencia-schnatter`,
 
 - **No calls.** Ubuntu's web engine is built without WebRTC.
 - **Notifications only while the window is open.** Closing quits
-  Schnatter; there is no icon in the panel because the panel has no
-  notification area yet.
+  Schnatter; Schnatter does not show an icon in the panel's notification
+  area yet.
 - Only one account per user.
 - Schnatter has not been tested with a real account in the test VM (see
   [Known limitations](bekannte-einschraenkungen.md)).

@@ -35,7 +35,7 @@ aus- und einblenden. Die Rücktaste geht in den übergeordneten Ordner.
 |---|---|---|
 | Symbole | Strg+1 | große Symbole mit Namen, auf Wunsch mit weiteren Angaben darunter |
 | Liste | Strg+2 | Spalten Name, Größe, Typ und Änderungsdatum; Zugriffsrechte, Eigentümer und Gruppe zuschaltbar; ein Klick auf den Spaltenkopf sortiert |
-| Kompakt | Strg+3 | kleine Symbole mit Namen in Spalten nebeneinander; das Mausrad blättert waagrecht |
+| Kompakt | Strg+3 | kleine Symbole mit Namen in Spalten nebeneinander; das Mausrad blättert waagrecht. Die Spalten sind in jeder Zoomstufe so breit wie der längste Name (bis 42 Zeichen); längere Namen stehen ganz im Tooltip |
 
 - **Zoom:** Strg++ und Strg+- oder Strg+Mausrad, Strg+0 „Normale Größe“.
 - **Anordnen:** Ansicht → Objekte anordnen: nach Name, Größe, Typ oder
@@ -124,6 +124,9 @@ eingegebene Wort enthalten, ohne Rücksicht auf Groß- und Kleinschreibung.
   „Öffnen“ und „Im Ordner anzeigen“.
 - Esc hält eine laufende Suche an, ein zweites Esc schließt die Leiste und
   zeigt wieder den Ordner.
+- Die Statusleiste zeigt während der Suche die Zahl der Treffer, bei einer
+  Auswahl in den Treffern deren Name und Größe; nach dem Schließen wieder
+  den Ordner.
 - Verborgene Dateien werden nur gefunden, wenn sie angezeigt werden (Strg+H).
 - **Erweiterte Suche …** öffnet [Nach Dateien suchen](dateisuche.md) mit
   Ordner und Suchwort, etwa für die Suche im Dateiinhalt.

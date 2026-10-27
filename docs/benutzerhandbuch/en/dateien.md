@@ -35,7 +35,7 @@ in the “View” menu. Backspace goes to the parent folder.
 |---|---|---|
 | Icons | Ctrl+1 | large icons with names, optionally with more details below |
 | List | Ctrl+2 | columns Name, Size, Type and Date Modified; Permissions, Owner and Group can be added; a click on a column header sorts |
-| Compact | Ctrl+3 | small icons with names in columns side by side; the mouse wheel scrolls sideways |
+| Compact | Ctrl+3 | small icons with names in columns side by side; the mouse wheel scrolls sideways. At every zoom level the columns are as wide as the longest name (up to 42 characters); longer names appear in full in the tooltip |
 
 - **Zoom:** Ctrl++ and Ctrl+- or Ctrl+mouse wheel, Ctrl+0 “Normal Size”.
 - **Arrange:** View → Arrange Items: by name, size, type or modification
@@ -121,6 +121,9 @@ ignoring upper and lower case.
   “Open” and “Show in Folder”.
 - Esc stops a running search; a second Esc closes the bar and shows the
   folder again.
+- During the search the status bar shows the number of matches, for a
+  selection among the matches its name and size; after closing, the folder
+  again.
 - Hidden files are only found while they are shown (Ctrl+H).
 - **Advanced Search…** opens [Search for Files](dateisuche.md) with folder
   and search word, for example to search file contents.

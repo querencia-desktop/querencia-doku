@@ -2,56 +2,42 @@
 
 [Back to contents](index.md)
 
-State of Alpha 1 (20 October 2026), Querencia Dateien and Schnatter as of
-Alpha 3.2 (26 October 2026). The identifiers (QD-…) refer to the project's
+State of Alpha 1 (20 October 2026); languages, login screen, notification
+area, Querencia Dateien and Schnatter as of Alpha 3.3 (27 October 2026). The identifiers (QD-…) refer to the project's
 list of open items; P1 is important, P2 medium.
 
 ## Installation and login
 
 | Item | What it means |
 |---|---|
-| Ubuntu 26.04 only | The packages exist only for Ubuntu 26.04 (“resolute”), amd64. |
-| Not tested on real hardware | Testing was done in virtual machines. Real hardware, printing on a real printer and Windows shares (SMB) are not tested yet. |
-| Own login screen untested | Since Alpha 2.1 the optional login screen `querencia-anmeldung` uses the system language. Logging in through it with the package from the repository is not tested yet. |
-| greetd stays after removing `querencia-anmeldung` | If no login service was set up before (server image), greetd stays with a text login. Next to GDM, GDM comes back. |
-| Next to GNOME: shared settings | Querencia and GNOME read the same gsettings values; an icon theme changed in Querencia also applies in GNOME. Next to Ubuntu Desktop, Querencia shows the Yaru icons because Ubuntu sets the icon theme as a user value. GNOME programs also appear in the Querencia menu. |
-| Network connections only with NetworkManager | Connecting and disconnecting in the network applet only works when NetworkManager manages the network. Otherwise, on the server image the applet shows no device and Software cannot install anything; see [Software](software.md#when-software-reports-no-network-connection). |
-
-## Dark appearance
-
-| Item | What it means |
-|---|---|
-| Window frames and Files stay light | labwc draws the frames with its own theme, Querencia Files has a theme of its own. The session dialog, confirmations and the password prompt are dark only when the dark appearance is already on at login. |
-| Third-party GTK 3 programs do not follow | GTK 3 ignores “Prefer dark appearance”. The Querencia programs use GTK 4 and follow the setting (except as listed above). |
-| Keyboard focus after switching | After switching between light and dark in a running program, the keyboard focus may sit somewhere else than after a start. |
-| Changed theme only after a new login | The panel and the desktop take over a changed theme only after logging in again; switching between light and dark takes effect at once. |
-| Firefox as a snap | ignores the GTK theme. |
+| Own login screen German and English only | The optional login screen (`querencia-anmeldung`) follows the system language for German and English; for Italian, Spanish or French it shows English. For an expired password it still shows the English, technical message `Pam_acct_mgmt: NEW_AUTHTOK_REQD`. Without it, log in via GDM (choose “Querencia Desktop” at the gear) or on the text console with `querencia-session`. |
+| Side by side with an Ubuntu desktop not fully tested (QD-074, P1) | The test on an Ubuntu Desktop system is running. |
+| Look on the GDM path (QD-068, P2) | Querencia's font, icon and pointer defaults are still missing there; the session then looks different. In progress. |
+| Software offline on server systems (QD-067, P2) | See [Software](software.md#when-software-reports-no-network-connection). |
+| Package set behind the development environment | Some packages are one version older than the programs described here (see the release notes). |
 
 ## Panel and desktop
 
 | Item | What it means |
 |---|---|
-| Panel crash | In test runs the panel crashed the first time the Applications menu was opened. Since Alpha 2.1 it restarts by itself after a crash, after a few seconds and at most three times in ten minutes. If it does not come back: Ctrl+Alt+Del → Log Out, then log in again. The cause of the crash is being investigated. |
-| Workspace switcher without window thumbnails | The cells show no windows. |
-| Panel items cannot be moved between panels | Moving within one panel works; otherwise remove the item and add it to the other panel again. |
-| “Panels” area in the settings is display only | Change the panels directly. |
-| Display scale 1.5 | Centred or tiled backgrounds appear too small. |
-| Fullscreen of X11 programs | Some X11 programs lie under the panels in fullscreen. Super+F or Alt+F11 switches the active window to real fullscreen, which then covers the panels. |
-
-## Language
-
-| Item | What it means |
-|---|---|
-| German only | The panel, the desktop, the lock screen and the shortcut overview are German only for now; the programs speak German and English. |
-| System dialogs partly in another language | e.g. messages from GVfs when mounting in Files. |
-| Placeholder program identifiers | The panel and some programs still use placeholder identifiers (`org.example…`) until Alpha 3. This makes no difference in use. |
+| Window list shows all workspaces (QD-013, P2) | A setting “current workspace only” is in progress. |
+| Workspace switcher without window thumbnails (QD-012, P2) | The cells show no windows. |
+| Panel items cannot be moved between panels (QD-044) | Moving within one panel works. |
+| Panel from the package opens the old log-out dialog (QD-069, P2) | Affects the installed packages; in progress. |
+| “Panels” area in the settings is display only (QD-046) | Change the panels directly. |
+| Display scale 1.5 (QD-028, P2) | Centred or tiled backgrounds appear too small. |
+| Fullscreen of X11 programs (QD-065) | Some X11 programs lie under the panels in fullscreen. In progress. |
+| Notification area: no XEmbed | Old X11 programs that offer their icon through the older XEmbed method show none. Programs with StatusNotifierItem (also libappindicator) are shown. |
+| Notification area: passive icons hidden | Icons that a program reports as “passive” stay hidden; there is no button to expand them. Many programs can always show their icon themselves. |
+| Notification area: program started before the panel | It does not always register; then restart the program. |
+| Notification area with real programs | Tested with test programs and the libayatana-appindicator library, not yet with Webex, Nextcloud or Discord themselves. |
 
 ## Programs
 
 | Item | What it means |
 |---|---|
-| English not everywhere yet (QD-055, P1) | Panel, desktop, settings, the shortcut overview and the lock screen are German only. |
-| Language and region not adjustable (QD-056, P2) | Texts follow the language setting, date and number formats still follow the session's English base setting. |
+| Some surfaces German only | Since Alpha 3.3 all programs, the panel and the desktop are available in German, English, Italian, Spanish and French. The lock screen, the volume control window and the keyboard shortcuts overview stay German. In Italian the key name “Return” stays English in menu shortcuts. |
+| Language and Region: only languages with a locale | The page only offers languages for which a locale is installed. The recommended package `locales-all` (about 230 MB) brings all of them. A change takes effect from the next login. |
 | Only one keyboard layout (QD-057, P1) | Several layouts with a switch key are missing. |
 | System dialogs partly in another language (QD-015, P2) | e.g. the “Message from the system” when connecting to a server in Querencia Dateien. |
 | Querencia Dateien: no undo | Ctrl+Z and Shift+Ctrl+Z do not exist yet. Deleted items can be restored from the trash. |
@@ -63,11 +49,8 @@ list of open items; P1 is important, P2 medium.
 | Querencia Dateien: servers partly untested | Tested with test servers for SFTP, WebDAV and FTP. A successful connection to a Windows share (SMB) and certificate questions with Secure WebDAV are untested. |
 | Querencia Dateien: “Remember password” on the second try | After a wrong password a WebDAV server no longer offers to remember it. |
 | Querencia Dateien: real devices untested | Drives and network drives are only tested with images and test servers, not with real USB devices. |
-| Querencia Dateien: compact view shortens names | Long names are shortened in the compact view. |
-| Querencia Dateien: status bar empty after a search | After a search the status bar shows nothing. |
-| No notification area in the panel | Programs that want to show an icon in the panel (“tray”) show none. |
 | Schnatter: no calls | Ubuntu's web engine is built without WebRTC. |
-| Schnatter: notifications only while the window is open | Closing quits Schnatter; there is no icon in the panel (no notification area). |
+| Schnatter: notifications only while the window is open | Closing quits Schnatter; Schnatter does not show an icon in the notification area yet. |
 | Schnatter: untested with a real account | Tested are the move of the folders, the sign-in page and the window, not working with a real account. |
 | Image Viewer: secondary windows without title bar | A dialog opened for the second time appears without title bar. |
 | Terminal: middle-click paste | A selection from another program does not always arrive. |

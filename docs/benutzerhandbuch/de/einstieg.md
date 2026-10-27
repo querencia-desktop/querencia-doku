@@ -28,11 +28,10 @@ und Symbolen, dann die beiden Panels.
 Querencia hat wie GNOME 2 zwei Panels.
 
 **Oben** stehen links das Q-Logo mit den Menüs **Anwendungen**, **Orte** und
-**System**, rechts die **Glocke** (Mitteilungen) und die **Uhr**. Die Glocke
-zählt ungelesene Meldungen; ein Klick öffnet die Mitteilungszentrale (siehe
-[Benachrichtigungen](benachrichtigungen.md)). Ein Klick auf die Uhr öffnet
-einen Monatskalender. Lautstärke und Netzwerk lassen sich als Symbole oben
-rechts hinzufügen (siehe unten).
+**System**, rechts der **Infobereich** für die Symbole anderer Programme
+(siehe unten), die Glocke der Benachrichtigungen und die **Uhr**. Ein Klick
+auf die Uhr öffnet einen Monatskalender. Lautstärke und Netzwerk lassen sich
+als Symbole oben rechts hinzufügen (siehe unten).
 
 **Unten** stehen links der Knopf **Arbeitsfläche anzeigen** und die
 **Fensterliste** (ein Knopf je Fenster der aktuellen Arbeitsfläche), rechts
@@ -63,14 +62,37 @@ Ein Klick öffnet den Ort in [Querencia Dateien](dateien.md).
 - **Bildschirm sperren** (Strg+Alt+L), **Abmelden …** und **Ausschalten …**
   – Abmelden und Ausschalten mit Rückfrage, siehe [Sitzung](sitzung.md).
 
+### Infobereich
+
+Seit Alpha 3.3 (Panel 0.4.0). Programme, die ein Statussymbol anbieten
+(StatusNotifierItem, auch über libappindicator, etwa Webex, Nextcloud oder
+Discord), zeigen es hier, oben rechts vor der Glocke. Ohne Symbol ist der
+Infobereich unsichtbar.
+
+| Eingabe | Wirkung |
+|---|---|
+| Zeiger auf das Symbol | Tooltip des Programms |
+| Linksklick | öffnet das Programm bzw. holt sein Fenster nach vorn; manche Programme zeigen stattdessen ihr Menü |
+| Rechtsklick | Menü des Programms im Querencia-Stil |
+| Mittlere Taste, Mausrad | gehen an das Programm; was sie tun, bestimmt das Programm |
+| Rechtsklick auf den schmalen Rand links neben den Symbolen | „Aus dem Panel entfernen“, „Verschieben“ |
+
+Will ein Programm Aufmerksamkeit (z. B. bei einer neuen Nachricht), wird
+sein Knopf orange hinterlegt.
+
+Wer das Panel schon vor Alpha 3.3 angepasst hat, sieht den Infobereich
+nicht von selbst: Rechtsklick auf eine freie Stelle des oberen Panels →
+„Zum Panel hinzufügen …“ → „Infobereich“. Grenzen (kein XEmbed für alte
+X11-Programme, passive Symbole verborgen) stehen unter
+[Bekannte Einschränkungen](bekannte-einschraenkungen.md#panel-und-arbeitsfläche).
+
 ### Panel anpassen
 
 Rechtsklick auf eine freie Stelle eines Panels öffnet das Panelmenü:
 
 - **Zum Panel hinzufügen …** öffnet eine Liste mit Suchfeld: Anwendungen,
-  Orte, System, Fensterliste, Arbeitsfläche anzeigen,
-  Arbeitsflächenumschalter, Uhr, Mitteilungen, Anwendungsstarter …,
-  Lautstärke, Netzwerk. Das neue Element landet in dem
+  Orte, System, Fensterliste, Arbeitsflächenumschalter, Uhr,
+  Anwendungsstarter …, Lautstärke, Netzwerk, Infobereich. Das neue Element landet in dem
   Bereich (links, Mitte, rechts), in den geklickt wurde.
 - Rechtsklick auf ein Element: **Aus dem Panel entfernen**, bei Startern auch
   **Starten**.

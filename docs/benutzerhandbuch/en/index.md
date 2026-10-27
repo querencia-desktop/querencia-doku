@@ -5,8 +5,10 @@
 Querencia Desktop is a classic desktop environment in the style of GNOME 2
 (Ubuntu 10.04) for Wayland. It consists of the window manager labwc, two
 panels, a desktop with icons and a set of its own programs (Rust and GTK 4).
-The interface is German; most programs are also available in English. Parts
-that are still German only are named on each page.
+Since Alpha 3.3 the interface is available in German, English, Italian,
+Spanish and French (see [System Settings](einstellungen.md), “Language and
+Region”); this guide is available in German and English. Parts that are
+still German only are named on each page.
 
 > **Alpha.** Querencia is under development. This guide describes the
 > Alpha 2.1 package set of 22 October 2026 (see the

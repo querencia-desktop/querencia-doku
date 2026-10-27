@@ -81,13 +81,20 @@ backup.
 - Which program opens web pages, e-mail, text, images, music, video, folders,
   PDF and archives. The terminal is only shown.
 
-**Language and Region (Sprache und Region)**
-- Display language (language of menus and texts) and formats (date and time,
-  numbers, currency, paper, units).
-- Takes effect from the next login; programs that are already running keep
-  their language.
+**Language and Region**
+- **Display Language:** language of menus and texts. Since Alpha 3.3 there
+  are German, English, Italian, Spanish and French. Only languages for
+  which a locale is installed are offered; the package `locales-all`,
+  recommended by Querencia Desktop since Alpha 3.3, brings all of them
+  (about 230 MB). Programs without a translation show English.
+- **Formats:** date and time, numbers, currency, paper and units, also
+  different from the display language.
+- Effective from the next login; programs that are already running keep
+  their language. Texts of GTK itself (e.g. in the file dialog) come from
+  the system's language pack, `language-pack-gnome-<xx>`, for example
+  `sudo apt install language-pack-gnome-it`; without it they stay English.
 
-**About Querencia (Informationen über Querencia)**
+**Informationen über Querencia (about)**
 - Versions of the settings, of the system and of labwc.
 
 ## When does a change take effect?
@@ -99,5 +106,5 @@ the next login or when a keyboard is plugged in.
 
 ## Not included yet
 
-Power, startup programs and a writable “Panels” area are still missing. The
-settings themselves are available in German and English.
+Power, startup programs and a writable “Panels” area will follow in later
+versions.

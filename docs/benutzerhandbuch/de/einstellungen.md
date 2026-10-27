@@ -78,10 +78,17 @@ legen die Einstellungen eine Sicherung an.
   Ordner, PDF und Archive. Das Terminal wird nur angezeigt.
 
 **Sprache und Region**
-- Anzeigesprache (Sprache der Menüs und Texte) und Formate (Datum und
-  Uhrzeit, Zahlen, Währung, Papier, Maßeinheiten).
-- Wirkt ab der nächsten Anmeldung; schon laufende Programme behalten ihre
-  Sprache.
+- **Anzeigesprache:** Sprache der Menüs und Texte. Seit Alpha 3.3 gibt es
+  Deutsch, Englisch, Italienisch, Spanisch und Französisch. Angeboten
+  werden nur Sprachen, für die eine Locale installiert ist; das Paket
+  `locales-all`, das Querencia Desktop seit Alpha 3.3 empfiehlt, bringt
+  alle mit (rund 230 MB). Programme ohne Übersetzung zeigen Englisch.
+- **Formate:** Datum und Uhrzeit, Zahlen, Währung, Papier und Maße, auch
+  abweichend von der Anzeigesprache.
+- Wirksam ab der nächsten Anmeldung; laufende Programme behalten ihre
+  Sprache. Texte von GTK selbst (z. B. im Dateidialog) kommen aus dem
+  Sprachpaket des Systems, `language-pack-gnome-<xx>`, zum Beispiel
+  `sudo apt install language-pack-gnome-it`; ohne es bleiben sie englisch.
 
 **Informationen über Querencia**
 - Versionen der Einstellungen, des Systems und von labwc.
@@ -96,5 +103,5 @@ Tastatur.
 
 ## Noch nicht enthalten
 
-Energie, Startprogramme und ein schreibender Bereich „Panels“ fehlen noch.
-Die Einstellungen selbst gibt es auf Deutsch und Englisch.
+Energie, Startprogramme und ein schreibender Bereich „Panels“ folgen in
+späteren Fassungen.
