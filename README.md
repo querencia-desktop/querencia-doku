@@ -9,9 +9,9 @@ werden.
 Querencia Desktop, a classic GNOME-2-style desktop for Wayland. Alpha; the
 German text is the reference.
 
-> **Alpha.** Texte zu Querencia Desktop Alpha 3.2 (Stand 26.10.2026). Was neu
+> **Alpha.** Texte zu Querencia Desktop Alpha 3.3 (Stand 27.10.2026). Was neu
 > ist und welche Grenzen gelten, steht in den
-> [Release-Notes Alpha 3.2](docs/release-notes/de/alpha-3.2.md); Installation und
+> [Release-Notes Alpha 3.3](docs/release-notes/de/alpha-3.3.md); Installation und
 > Projektseite: <https://querencialinux.org>.
 
 ## Inhalt
@@ -21,6 +21,7 @@ German text is the reference.
 | [docs/benutzerhandbuch/de/](docs/benutzerhandbuch/de/index.md) | Benutzerhandbuch Deutsch: Einstieg, Tastenkürzel, je Programm eine Seite, bekannte Einschränkungen, Fragen und Antworten |
 | [docs/benutzerhandbuch/en/](docs/benutzerhandbuch/en/index.md) | dieselbe Struktur auf Englisch (Übersetzung) |
 | `docs/benutzerhandbuch/bilder/` | Bildschirmfotos aus abgeschotteten Prüfläufen, Herkunft in `herkunft.txt` |
+| [docs/release-notes/de/alpha-3.3.md](docs/release-notes/de/alpha-3.3.md) | Release-Notes Alpha 3.3 (fünf Sprachen, Infobereich, Dateien 0.2.4), Englisch unter [en/](docs/release-notes/en/alpha-3.3.md) |
 | [docs/release-notes/de/alpha-3.2.md](docs/release-notes/de/alpha-3.2.md) | Release-Notes Alpha 3.2 (Dateien 0.2.2, Schnatter 0.3.0), Englisch unter [en/](docs/release-notes/en/alpha-3.2.md) |
 | [docs/release-notes/de/alpha-3.1.md](docs/release-notes/de/alpha-3.1.md) | Release-Notes Alpha 3.1 (Dateien 0.2.1, Webhülle 0.2.0), Englisch unter [en/](docs/release-notes/en/alpha-3.1.md) |
 | [docs/release-notes/de/alpha-3.md](docs/release-notes/de/alpha-3.md) | Release-Notes Alpha 3 (Querencia Dateien statt Files), Englisch unter [en/](docs/release-notes/en/alpha-3.md) |
@@ -28,22 +29,14 @@ German text is the reference.
 | [docs/release-notes/de/alpha-2.md](docs/release-notes/de/alpha-2.md) | Release-Notes Alpha 2, Englisch unter [en/](docs/release-notes/en/alpha-2.md) |
 | [docs/release-notes/de/alpha-1.md](docs/release-notes/de/alpha-1.md) | Release-Notes Alpha 1, Englisch unter [en/](docs/release-notes/en/alpha-1.md) |
 | [docs/release-notes/de/alpha-1-web.md](docs/release-notes/de/alpha-1-web.md) | Kurztext Alpha 1 für die Webseite, Englisch unter [en/](docs/release-notes/en/alpha-1-web.md) |
-| [docs/release-notes/de/alpha-2.md](docs/release-notes/de/alpha-2.md) | Release-Notes Alpha 2, Englisch unter [en/](docs/release-notes/en/alpha-2.md) |
-| [docs/release-notes/de/alpha-3.md](docs/release-notes/de/alpha-3.md) | Release-Notes Alpha 3 (Querencia Dateien statt Files), Englisch unter [en/](docs/release-notes/en/alpha-3.md) |
-| [docs/release-notes/de/alpha-3.1.md](docs/release-notes/de/alpha-3.1.md) | Release-Notes Alpha 3.1 (Dateien 0.2.1, Webhülle 0.2.0), Englisch unter [en/](docs/release-notes/en/alpha-3.1.md) |
-| [docs/release-notes/de/alpha-3.2.md](docs/release-notes/de/alpha-3.2.md) | Release-Notes Alpha 3.2 (Dateien 0.2.2, Schnatter 0.3.0), Englisch unter [en/](docs/release-notes/en/alpha-3.2.md) |
-| [docs/release-notes/de/alpha-3.3.md](docs/release-notes/de/alpha-3.3.md) | Release-Notes Alpha 3.3 (fünf Sprachen, Infobereich, Dateien 0.2.4), Englisch unter [en/](docs/release-notes/en/alpha-3.3.md) |
 
 ## Stand
 
 | | |
 |---|---|
-| Fassung | Release-Notes Alpha 1 auf dem Stand des Paketsatzes, kein Tag |
-| Grundlage | Live-Stand der Entwicklungsumgebung, Paketsatz Alpha 1 und Prüfberichte vom 20.10.2026 |
-| Offen | signierte APT-Quelle (Bezugsweg der Pakete), Freigabe der Hintergründe (KI-erzeugt, siehe Lizenz); das Handbuch beschreibt noch den Stand vom Nachmittag des 20.10. |
-| Nachtrag 24.10.2026 | Handbuch: Querencia Dateien (Beta 0.2.0) statt Querencia Files; Release-Notes Alpha 3 als Entwurf |
-| Nachtrag 26.10.2026 | Release-Notes Alpha 3.1 und 3.2; Handbuch: Seite Schnatter, bekannte Einschränkungen auf Alpha 3.2 |
-| Nachtrag 27.10.2026 | Release-Notes Alpha 3.3; Handbuch: Infobereich im Panel, Sprache und Region, fünf Sprachen, Dateien 0.2.4, bekannte Einschränkungen auf Alpha 3.3 |
+| Fassung | Release-Notes Alpha 1 bis Alpha 3.3 auf dem Stand des jeweiligen Paketsatzes; Benutzerhandbuch mit Querencia Dateien (Beta), der Seite Schnatter (wahlweise), Infobereich im Panel, Sprache und Region (fünf Sprachen), bekannte Einschränkungen auf Alpha 3.3; kein Tag |
+| Grundlage | Paketsatz Alpha 3.3 vom 27.10.2026 (in der APT-Quelle seit 27.10.2026), davor Alpha 3.2 vom 26.10.2026, Alpha 3.1 und Alpha 3 vom 24.10.2026, der Quellcode der Programme |
+| Offen | Bildschirmfotos für Terminal und Schnatter fehlen; einzelne Bilder zeigen eine frühere Fassung des Programms (Herkunft in `docs/benutzerhandbuch/bilder/herkunft.txt`) |
 
 ## Bauen und Prüfen
 
