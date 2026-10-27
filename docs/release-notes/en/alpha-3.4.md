@@ -1,6 +1,6 @@
 # Querencia Desktop – Alpha 3.4
 
-**As of:** [Datum] · **Status:** in the APT repository since [Datum], [Uhrzeit]
+**As of:** 27 October 2026 · **Status:** in the APT repository since 27 October 2026, 20:56
 
 Alpha 3.4 adds a page “Drivers” for the graphics card to the system
 settings. Querencia Dateien can now undo steps, also search file contents,

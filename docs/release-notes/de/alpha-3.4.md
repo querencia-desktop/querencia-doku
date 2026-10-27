@@ -1,6 +1,6 @@
 # Querencia Desktop – Alpha 3.4
 
-**Stand:** [Datum] · **Status:** in der APT-Quelle seit [Datum], [Uhrzeit]
+**Stand:** 27.10.2026 · **Status:** in der APT-Quelle seit 27. Oktober 2026, 20:56
 
 Alpha 3.4 bringt in den Systemeinstellungen eine Seite „Treiber“ für die
 Grafikkarte. Querencia Dateien kann jetzt Schritte rückgängig machen, auch
