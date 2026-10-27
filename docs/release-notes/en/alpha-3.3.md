@@ -28,7 +28,12 @@ built or new in this release.
   is installed. The upgrade installs the package; it takes about 230 MB.
   Texts from GTK itself (for example in the file dialog) come from the
   system's language pack, `language-pack-gnome-<xx>`; the meta package
-  deliberately does not pull it in.
+  deliberately does not pull it in. If you install Querencia on an existing
+  Ubuntu, add it for your language yourself, for example for Italian:
+
+  ```bash
+  sudo apt install language-pack-gnome-it
+  ```
 - **Notification area in the panel (panel 0.4.0).** Programs that offer a
   status icon (StatusNotifierItem, also through libappindicator, such as
   Webex, Nextcloud or Discord) now show it at the top right, left of the

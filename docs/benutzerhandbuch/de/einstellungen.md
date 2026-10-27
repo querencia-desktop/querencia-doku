@@ -80,7 +80,8 @@ legen die Einstellungen eine Sicherung an.
   abweichend von der Anzeigesprache.
 - Wirksam ab der nächsten Anmeldung; laufende Programme behalten ihre
   Sprache. Texte von GTK selbst (z. B. im Dateidialog) kommen aus dem
-  Sprachpaket des Systems, `language-pack-gnome-<xx>`.
+  Sprachpaket des Systems, `language-pack-gnome-<xx>`, zum Beispiel
+  `sudo apt install language-pack-gnome-it`; ohne es bleiben sie englisch.
 
 **Informationen über Querencia**
 - Versionen der Einstellungen, des Systems und von labwc.

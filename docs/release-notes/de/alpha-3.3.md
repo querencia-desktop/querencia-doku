@@ -29,7 +29,13 @@ APT-Quelle; 18 davon sind neu gebaut oder neu in der Fassung.
   eine Locale installiert ist. Das Upgrade installiert das Paket mit; es
   belegt rund 230 MB. Texte von GTK selbst (etwa im Dateidialog) kommen aus
   dem Sprachpaket des Systems, `language-pack-gnome-<xx>`; das Metapaket
-  zieht es bewusst nicht nach.
+  zieht es bewusst nicht nach. Wer Querencia auf ein vorhandenes Ubuntu
+  installiert, holt es für seine Sprache selbst, zum Beispiel für
+  Italienisch:
+
+  ```bash
+  sudo apt install language-pack-gnome-it
+  ```
 - **Infobereich im Panel (Panel 0.4.0).** Programme, die ein Statussymbol
   anbieten (StatusNotifierItem, auch über libappindicator, etwa Webex,
   Nextcloud oder Discord), zeigen es jetzt oben rechts vor der Glocke:

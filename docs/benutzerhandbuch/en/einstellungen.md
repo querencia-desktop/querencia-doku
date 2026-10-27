@@ -83,7 +83,8 @@ backup.
   different from the display language.
 - Effective from the next login; programs that are already running keep
   their language. Texts of GTK itself (e.g. in the file dialog) come from
-  the system's language pack, `language-pack-gnome-<xx>`.
+  the system's language pack, `language-pack-gnome-<xx>`, for example
+  `sudo apt install language-pack-gnome-it`; without it they stay English.
 
 **Informationen über Querencia (about)**
 - Versions of the settings, of the system and of labwc.
