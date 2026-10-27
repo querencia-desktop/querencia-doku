@@ -26,6 +26,7 @@ German text is the reference.
 | [docs/release-notes/de/alpha-3.1.md](docs/release-notes/de/alpha-3.1.md) | Release-Notes Alpha 3.1 (Dateien 0.2.1, Webhülle 0.2.0), Englisch unter [en/](docs/release-notes/en/alpha-3.1.md) |
 | [docs/release-notes/de/alpha-3.2.md](docs/release-notes/de/alpha-3.2.md) | Release-Notes Alpha 3.2 (Dateien 0.2.2, Schnatter 0.3.0), Englisch unter [en/](docs/release-notes/en/alpha-3.2.md) |
 | [docs/release-notes/de/alpha-3.3.md](docs/release-notes/de/alpha-3.3.md) | Release-Notes Alpha 3.3 (fünf Sprachen, Infobereich, Dateien 0.2.4), Englisch unter [en/](docs/release-notes/en/alpha-3.3.md) |
+| [docs/release-notes/de/alpha-3.4.md](docs/release-notes/de/alpha-3.4.md) | Release-Notes Alpha 3.4 (Seite Treiber, Dateien 0.3.0, Anmeldung 0.1.4), Englisch unter [en/](docs/release-notes/en/alpha-3.4.md) |
 
 ## Stand
 
@@ -37,6 +38,7 @@ German text is the reference.
 | Nachtrag 24.10.2026 | Handbuch: Querencia Dateien (Beta 0.2.0) statt Querencia Files; Release-Notes Alpha 3 als Entwurf |
 | Nachtrag 26.10.2026 | Release-Notes Alpha 3.1 und 3.2; Handbuch: Seite Schnatter, bekannte Einschränkungen auf Alpha 3.2 |
 | Nachtrag 27.10.2026 | Release-Notes Alpha 3.3; Handbuch: Infobereich im Panel, Sprache und Region, fünf Sprachen, Dateien 0.2.4, bekannte Einschränkungen auf Alpha 3.3 |
+| Nachtrag 27.10.2026, abends | Release-Notes Alpha 3.4; Handbuch: Seite Treiber, Dateien 0.3.0 (Rückgängig, Inhaltssuche, Reiter, Hier entpacken), Anmeldebildschirm und abgelaufenes Passwort, Sperrbildschirm und Tastenkürzel in fünf Sprachen, bekannte Einschränkungen auf Alpha 3.4 |
 
 ## Bauen und Prüfen
 

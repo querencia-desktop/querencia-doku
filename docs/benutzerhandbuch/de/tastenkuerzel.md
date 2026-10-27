@@ -51,7 +51,7 @@ vergrößern/verkleinern/normale Größe · Strg+1/2/3 Symbol-/Listen-/
 Kompaktansicht · Strg+L Ort eingeben · Strg+F suchen (Esc hält die Suche an
 oder schließt die Leiste) · Strg+D Lesezeichen hinzufügen · Alt+←/→
 zurück/vor · Alt+↑ übergeordneter Ordner · Alt+Pos1 Persönlicher Ordner · F1
-Online-Hilfe. Rückgängig (Strg+Z) gibt es noch nicht.
+Online-Hilfe · Strg+Z rückgängig · Umschalt+Strg+Z wiederholen.
 
 **Querencia Terminal:** Strg+Umschalt+C kopieren · Strg+Umschalt+V oder
 Umschalt+Einfg einfügen · Menü-Taste oder Umschalt+F10 Kontextmenü.

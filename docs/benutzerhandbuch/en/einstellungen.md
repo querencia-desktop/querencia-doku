@@ -86,6 +86,39 @@ backup.
   the system's language pack, `language-pack-gnome-<xx>`, for example
   `sudo apt install language-pack-gnome-it`; without it they stay English.
 
+**Drivers** (since Alpha 3.4)
+- Also directly through System → Administration → “Drivers”.
+- **Graphics:** graphics card, kernel driver, OpenGL renderer and “This
+  session:”, that is whether OpenGL runs on the graphics card or as software
+  OpenGL (llvmpipe).
+- **Available Drivers:** the drivers Ubuntu knows for the card, with “free”
+  or “proprietary”, “recommended by Ubuntu” and the state (“in use”,
+  “installed, in use after a restart”, “available”, “not installed”).
+  Querencia's default is the free driver (“Free driver nouveau (Querencia
+  default)”); choose the NVIDIA driver only if you need it. “Search Again”
+  reads the list again.
+- **Changing:** choose a driver, “Apply Changes”. The question “Change
+  Driver?” lists the packages to be installed or removed; then the password
+  dialog asks for your own password. The packages come through PackageKit
+  from the network; progress is shown at the top of the page, with
+  “Cancel”. “Revert” discards the choice. Going back to the free driver
+  removes all packages of the NVIDIA driver with that number.
+- **Restart:** a new driver only applies after a restart. The page shows
+  “Restart the computer to load the new driver.” and the button
+  “Restart…”; it opens the session's restart question.
+- The list comes from the program `ubuntu-drivers` in the package
+  `ubuntu-drivers-common`, which the settings recommend. If it is missing,
+  the page offers “Install ubuntu-drivers-common…”.
+- **Software OpenGL:** with an NVIDIA card and the free driver the session
+  switches OpenGL to software at login, because web pages could crash
+  otherwise; Vulkan stays on the card. With the NVIDIA driver this is no
+  longer needed. It can be fixed in `~/.config/querencia/grafik.ini`
+  (`[Grafik]`, `Software-OpenGL = an` or `aus`).
+- In a virtual machine take a snapshot before a change. If there is no
+  picture after the restart, log in on the text console (Ctrl+Alt+F3) and
+  remove the NVIDIA packages again with `apt`. A real change is not tested
+  yet (see [Known limitations](bekannte-einschraenkungen.md)).
+
 **Informationen über Querencia (about)**
 - Versions of the settings, of the system and of labwc.
 

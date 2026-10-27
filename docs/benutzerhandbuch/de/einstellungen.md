@@ -83,6 +83,42 @@ legen die Einstellungen eine Sicherung an.
   Sprachpaket des Systems, `language-pack-gnome-<xx>`, zum Beispiel
   `sudo apt install language-pack-gnome-it`; ohne es bleiben sie englisch.
 
+**Treiber** (seit Alpha 3.4)
+- Auch direkt über System → Systemverwaltung → „Treiber“.
+- **Grafik:** Grafikkarte, Kerneltreiber, OpenGL-Renderer und „Diese
+  Sitzung:“, also ob OpenGL auf der Grafikkarte läuft oder als
+  Software-OpenGL (llvmpipe).
+- **Verfügbare Treiber:** die Treiber, die Ubuntu für die Karte kennt, mit
+  „frei“ oder „proprietär“, „von Ubuntu empfohlen“ und dem Zustand („in
+  Gebrauch“, „installiert, in Gebrauch nach einem Neustart“, „verfügbar“,
+  „nicht installiert“). Querencia-Vorgabe ist der freie Treiber („Freier
+  Treiber nouveau (Querencia-Vorgabe)“); den NVIDIA-Treiber nur wählen, wenn
+  man ihn braucht. „Erneut suchen“ liest die Liste neu.
+- **Wechseln:** Treiber wählen, „Änderungen anwenden“. Die Rückfrage
+  „Treiber wechseln?“ nennt die Pakete, die installiert oder entfernt
+  werden; dann fragt der Passwortdialog nach dem eigenen Passwort. Die
+  Pakete kommen über PackageKit aus dem Netz; der Fortschritt steht oben auf
+  der Seite, mit „Abbrechen“. „Zurücksetzen“ verwirft die Wahl. Zurück zum
+  freien Treiber entfernt die Seite alle Pakete des NVIDIA-Treibers dieser
+  Nummer.
+- **Neu starten:** Ein neuer Treiber gilt erst nach einem Neustart. Die
+  Seite zeigt „Den Rechner neu starten, damit der neue Treiber geladen
+  wird.“ und den Knopf „Neu starten …“; er öffnet die Rückfrage der Sitzung.
+- Die Liste liefert das Programm `ubuntu-drivers` aus dem Paket
+  `ubuntu-drivers-common`, das die Einstellungen empfehlen. Fehlt es, bietet
+  die Seite „ubuntu-drivers-common installieren …“ an.
+- **Software-OpenGL:** Bei einer NVIDIA-Karte mit dem freien Treiber stellt
+  die Sitzung OpenGL bei der Anmeldung auf Software um, weil Webseiten sonst
+  abstürzen konnten; Vulkan bleibt auf der Karte. Mit dem NVIDIA-Treiber ist
+  das nicht mehr nötig. Festlegen lässt es sich in
+  `~/.config/querencia/grafik.ini` (`[Grafik]`, `Software-OpenGL = an` oder
+  `aus`).
+- In einer virtuellen Maschine vor einem Wechsel einen Snapshot anlegen.
+  Kommt nach dem Neustart kein Bild, an der Textkonsole (Strg+Alt+F3)
+  anmelden und die NVIDIA-Pakete mit `apt` wieder entfernen. Ein echter
+  Wechsel ist noch nicht geprüft (siehe
+  [Bekannte Einschränkungen](bekannte-einschraenkungen.md)).
+
 **Informationen über Querencia**
 - Versionen der Einstellungen, des Systems und von labwc.
 

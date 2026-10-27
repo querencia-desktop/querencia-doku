@@ -61,6 +61,12 @@ own history.
 - **“Open in New Tab”** (Shift+Ctrl+O) is in the File menu and the context
   menus. Several selected folders open in one tab each.
 - Files dragged onto a tab header land in that tab's folder.
+- **Restore tabs at start** (since Alpha 3.4): if Querencia Dateien starts
+  without a folder, it reopens the tabs of the window closed last, in the
+  same order and with the same active tab. Places that cannot be reached
+  then are skipped; nothing is mounted. Only the folder is kept, not view,
+  zoom or history. Switch it off under Edit → Preferences → Behavior →
+  “Restore tabs at start”.
 
 ## Side pane and bookmarks
 
@@ -125,6 +131,13 @@ ignoring upper and lower case.
   selection among the matches its name and size; after closing, the folder
   again.
 - Hidden files are only found while they are shown (Ctrl+H).
+- **Also file contents** (switch in the search bar, since Alpha 3.4, off by
+  default): then text files up to 10 MB that contain all the words are hits
+  too. The column “Match” shows the first line with the word, the tooltip
+  “Line N: …” and, for a selected hit, the status bar as well. Binary
+  files, network places and documents such as odt or pdf are not read;
+  there is no index, large folders take time. The switch applies to the
+  window until it is closed.
 - **Advanced Search…** opens [Search for Files](dateisuche.md) with folder
   and search word, for example to search file contents.
 
@@ -157,6 +170,29 @@ installed; such programs always run sandboxed.
   for all files.
 - **Select:** Ctrl+A all, Shift+Ctrl+I invert selection.
 
+## Undo and redo
+
+Since Alpha 3.4 **Ctrl+Z** (Edit → Undo) takes back the last operation,
+**Shift+Ctrl+Z** (Edit → Redo) carries it out again. The menu says what
+happens, for example “Undo: Move of “a.txt””.
+
+| Operation | Undo |
+|---|---|
+| Moving, also by dragging | back to the old folders |
+| Renaming | old name |
+| Moving to the trash | restored from the trash |
+| Copying | the copies go to the trash without a question; the menu says “(to the trash)”. If the place has no trash, Querencia Dateien asks first whether to delete permanently. |
+| Create Folder, Create Document | empty: deleted, otherwise to the trash |
+
+- Each window has its own history for all its tabs, up to 50 steps. It
+  only lasts until the window or Querencia Dateien is closed.
+- **Cannot be undone:** deleting permanently (Shift+Del) and “Empty Trash”;
+  afterwards the history is empty. What was replaced or merged while
+  pasting does not come back. “Extract Here” is not in the history.
+- Items that are missing by now are skipped; if all are missing, “The
+  operation cannot be undone.” appears.
+- In text fields (for example while renaming) Ctrl+Z belongs to the field.
+
 ## Trash and deleting
 
 - **Del** moves the selection to the trash. In the trash (Go → Trash or the
@@ -179,6 +215,9 @@ installed; such programs always run sandboxed.
 - **Properties** (Alt+Return or Ctrl+I) with the tabs Basic, Permissions and
   Open With. Under Permissions you can also set “Allow executing file as
   program”.
+- **Extract Here** (since Alpha 3.4) is in the context menu of archives if
+  the Archive Manager is installed. It extracts every selected archive into
+  its folder and shows progress, questions and errors itself.
 
 ## Preferences
 
@@ -188,7 +227,7 @@ five tabs. Every change applies at once in all windows, without “Apply”.
 | Tab | What can be set |
 |---|---|
 | Views | view for new folders, arrangement, folders before files, hidden files, default zoom levels |
-| Behavior | single or double click to open, executable text files, asking before emptying and deleting, “Delete” command, location bar always as text field |
+| Behavior | single or double click to open, executable text files, asking before emptying and deleting, “Delete” command, location bar always as text field, “Restore tabs at start” |
 | Display | details below the name in the icon view, date format, “All columns have the same width” for the compact view |
 | List Columns | which columns the list view shows |
 | Preview | thumbnails (see [Thumbnails](#thumbnails)) |
@@ -208,13 +247,11 @@ All shortcuts: [Keyboard shortcuts](tastenkuerzel.md#programs) or Super+?.
 
 ## Good to know
 
-- Undo (Ctrl+Z) does not exist yet.
+- Undo only works within its own window and only until it is closed.
 - There is no column view as in Querencia Files.
-- Search only finds names, not file contents, and does not update the hits
-  when files change meanwhile. In the search results Del, F2 and
-  Ctrl+X/C/V have no effect.
-- Open tabs are not restored on the next start; tabs cannot be moved with
-  the mouse.
+- Search does not update the hits when files change meanwhile. In the
+  search results Del, F2 and Ctrl+X/C/V have no effect.
+- Tabs cannot be moved with the mouse.
 - “Count number of items” (Preview tab) is saved but has no effect yet.
 - If the system reports something on connecting that Querencia Dateien does
   not know, it appears as “Message from the system”, in English or German

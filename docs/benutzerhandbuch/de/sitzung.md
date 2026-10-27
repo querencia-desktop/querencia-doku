@@ -42,4 +42,5 @@ fragt nach dem eigenen Passwort.
 
 ## Gut zu wissen
 
-Der Sperrbildschirm und seine Meldungen sind nur deutsch.
+Den Sperrbildschirm gibt es seit Alpha 3.4 in allen fünf Sprachen; er
+folgt der Systemsprache.

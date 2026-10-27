@@ -9,7 +9,8 @@
 - **Ctrl+Alt+L** locks at once.
 - After **10 minutes** without input the screen locks itself.
 - The lock screen shows a clock and a password field on every screen; unlock
-  with your own password. The lock screen is German only.
+  with your own password. Since Alpha 3.4 the lock screen is available in
+  all five languages; it follows the system language.
 
 ## Session dialog
 
