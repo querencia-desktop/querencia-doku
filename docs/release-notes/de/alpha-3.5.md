@@ -50,7 +50,7 @@ Paketsatz vom [Datum] (24 Pakete).
 | Paket | Fassung | Inhalt |
 |---|---|---|
 | querencia-desktop | 0.1.0~alpha3.5-1 | Metapaket, Versionsdatei „Alpha 3.5“; Abhängigkeiten unverändert |
-| querencia-einstellungen | [Fassung Einstellungen] | **geändert:** Zeile „Diese Sitzung“ der Seite „Treiber“ nach gemessenem Renderer |
+| querencia-einstellungen | 0.2.1-1 | **geändert:** Zeile „Diese Sitzung“ der Seite „Treiber“ nach gemessenem Renderer |
 | querencia-anmeldung | 0.1.5-1 | **geändert:** Anmeldebildschirm auf Deutsch, Englisch, Italienisch, Spanisch, Französisch; optional |
 | querencia-dateien | 0.3.0-1 | Dateimanager (unverändert seit Alpha 3.4) |
 | querencia-shell | 0.1.0~alpha12-1 | Panel, Arbeitsfläche, Tastenkürzel-Hilfe, Lautstärkeregler (unverändert seit Alpha 3.4) |

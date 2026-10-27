@@ -48,7 +48,7 @@ Package set of [Datum] (24 packages).
 | Package | Version | Content |
 |---|---|---|
 | querencia-desktop | 0.1.0~alpha3.5-1 | Meta package, version file “Alpha 3.5”; dependencies unchanged |
-| querencia-einstellungen | [Fassung Einstellungen] | **changed:** line “This session” of the page “Drivers” follows the measured renderer |
+| querencia-einstellungen | 0.2.1-1 | **changed:** line “This session” of the page “Drivers” follows the measured renderer |
 | querencia-anmeldung | 0.1.5-1 | **changed:** login screen in German, English, Italian, Spanish, French; optional |
 | querencia-dateien | 0.3.0-1 | File manager (unchanged since Alpha 3.4) |
 | querencia-shell | 0.1.0~alpha12-1 | Panel, desktop, keyboard shortcuts help, volume control (unchanged since Alpha 3.4) |
