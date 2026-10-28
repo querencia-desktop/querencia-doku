@@ -12,7 +12,9 @@ system's package sources (Ubuntu archive).
 ## What Software can do
 
 - **Search** as you type, **categories**, **Installed**, **Updates** and an
-  **expert list** of all packages.
+  **expert list** of all packages. Programs that Ubuntu lists in two package
+  sources under slightly different IDs (such as Remmina) appear only once
+  since Alpha 3.6.
 - **Details page** with description, version, size, licence and homepage.
 - **Install, remove, update:** before removing, Software shows which packages
   go along and asks. Progress runs inside the window with “Cancel”; you can go

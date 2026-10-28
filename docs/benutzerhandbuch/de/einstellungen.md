@@ -21,6 +21,11 @@ legen die Einstellungen eine Sicherung an.
 - Wirkt sofort in allen GTK-Programmen, im Panel und auf der Arbeitsfläche.
   Die dunkle Darstellung färben nur Programme um, die sie auswerten; die
   Querencia-Programme behalten ihr Thema.
+- Ohne eigene Wahl gilt in der Querencia-Sitzung das Symbolthema
+  „Querencia“. Seit Alpha 3.6 folgen auch Panel, Arbeitsfläche und
+  Querencia Dateien dieser Vorgabe; vorher zeigten sie dann GNOME-Human.
+  Außerhalb der Querencia-Sitzung und wenn das gewählte Thema nicht
+  installiert ist, nehmen sie GNOME-Human.
 
 **Hintergrundbild**
 - Galerie der mitgelieferten Hintergründe mit Vorschau; ein Klick wählt,

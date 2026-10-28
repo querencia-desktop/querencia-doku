@@ -25,6 +25,11 @@ backup.
 - Takes effect at once in all GTK programs, the panel and the desktop. The
   dark appearance only changes programs that evaluate it; the Querencia
   programs keep their theme.
+- Without a choice of your own, the Querencia session uses the icon theme
+  “Querencia”. Since Alpha 3.6 the panel, the desktop and Querencia Dateien
+  follow this default too; before, they showed GNOME-Human in that case.
+  Outside the Querencia session, and when the chosen theme is not
+  installed, they use GNOME-Human.
 
 **Hintergrundbild (background)**
 - Gallery of the included backgrounds with preview; a click selects, Apply
