@@ -97,7 +97,7 @@ restart, choose “Querencia Desktop” at the gear icon (see
 [Alpha 1, installation](alpha-1.md#installation)). Fingerprint of the
 signing key: `63F6 C499 246E 3699 CA04 726D 342F 12D2 0CE7 1CBD`.
 On a fresh Ubuntu 26.04 server image APT installs
-[packages new installation] packages.
+392 packages.
 
 ## Known limitations
 
@@ -148,9 +148,20 @@ As in Alpha 3, in the project's issue tracker,
 - **Upgrade** in an isolated copy of the system: from Alpha 3.5 with
   Schnatter (167 checks passed), without Schnatter (154) and from Alpha 3.4
   with Schnatter (167): nothing removed, nothing held back, no questions.
-- **In a virtual machine:** [Weg B]
-- Not tested: Querencia Software with the new packages against a real
-  package manager in the virtual machine [Weg B], and as for Alpha 3.5 a
+- **In a virtual machine:** Alpha 3.5 with Schnatter and the login screen
+  from the published repository; before, the panel, the desktop and Dateien
+  showed GNOME-Human, and Software found Remmina twice. Then the upgrade to
+  3.6: 4 Querencia packages upgraded, none new, nothing removed, no
+  questions; check script 114 passed (the remaining message is the log of
+  the running panel), login screen 4 of 4. After logging out and in, the
+  panel, the desktop and Dateien show the flat Querencia icons and log
+  “Symbolthema Querencia (Vorgabe „Querencia“)”; Software finds Remmina
+  once. Check inside the session 28 of 29; the remaining point was a bug in
+  the check script itself, passed after the fix. New installation (392
+  packages with `locales-all` and `ubuntu-drivers-common`, no Schnatter):
+  check script 113 of 113, session as above, Dateien with Querencia icons,
+  Remmina once.
+- Not tested, as for Alpha 3.5: a
   real driver change with restart, real NVIDIA, AMD or Intel cards,
   computers with two graphics cards, Secure Boot, the login screen in
   Spanish and French in the virtual machine, real hardware.

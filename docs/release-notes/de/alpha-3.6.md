@@ -99,7 +99,7 @@ starten, am Zahnrad „Querencia Desktop“ wählen (siehe
 [Alpha 1, Installation](alpha-1.md#installation)). Fingerabdruck des
 Signierschlüssels: `63F6 C499 246E 3699 CA04 726D 342F 12D2 0CE7 1CBD`.
 Auf einem frischen Ubuntu-26.04-Server-Abbild installiert APT
-[Pakete Neuinstallation] Pakete.
+392 Pakete.
 
 ## Bekannte Grenzen
 
@@ -153,9 +153,20 @@ Wie Alpha 3, im Fehlertracker des Projekts,
   Schnatter (167 Prüfungen bestanden), ohne Schnatter (154) und von Alpha
   3.4 mit Schnatter (167): nichts entfernt, nichts zurückgehalten, keine
   Rückfragen.
-- **In einer virtuellen Maschine:** [Weg B]
-- Nicht geprüft: Querencia Software mit den neuen Paketen gegen eine
-  echte Paketverwaltung in der virtuellen Maschine [Weg B], dazu weiter wie bei Alpha 3.5 ein echter
+- **In einer virtuellen Maschine:** Alpha 3.5 mit Schnatter und
+  Anmeldebildschirm aus der veröffentlichten Quelle; vorher zeigten Panel,
+  Arbeitsfläche und Dateien GNOME-Human, und Software fand Remmina zweimal.
+  Dann das Upgrade auf 3.6: 4 Querencia-Pakete aktualisiert, keins neu,
+  nichts entfernt, keine Rückfragen; Prüfskript 114 bestanden (die übrige
+  Meldung ist das Protokoll des laufenden Panels), Anmeldebildschirm 4 von
+  4. Nach dem Ab- und Anmelden zeigen Panel, Arbeitsfläche und Dateien die
+  flachen Querencia-Symbole und melden „Symbolthema Querencia (Vorgabe
+  „Querencia“)“; Software findet Remmina einmal. Prüfung in der Sitzung 28
+  von 29; der übrige Punkt war ein Fehler im Prüfskript selbst, berichtigt
+  bestanden. Neuinstallation (392 Pakete mit `locales-all` und
+  `ubuntu-drivers-common`, kein Schnatter): Prüfskript 113 von 113, Sitzung
+  wie oben, Dateien mit Querencia-Symbolen, Remmina einmal.
+- Nicht geprüft, wie bei Alpha 3.5: ein echter
   Treiberwechsel mit Neustart, echte NVIDIA-, AMD- oder Intel-Karten,
   Rechner mit zwei Grafikkarten, Secure Boot, der Anmeldebildschirm auf
   Spanisch und Französisch in der virtuellen Maschine, echte Hardware.
