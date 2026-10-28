@@ -1,6 +1,6 @@
 # Querencia Desktop – Alpha 3.5
 
-**As of:** [Datum] · **Status:** in the APT repository since [Datum], [Uhrzeit]
+**As of:** 28 October 2026 · **Status:** in the APT repository since 28 October 2026, 12:07
 
 Alpha 3.5 is a maintenance release with two fixes. The login screen now
 also speaks Italian, Spanish and French. The page “Drivers” in the system
@@ -90,7 +90,9 @@ sudo apt full-upgrade
 the login screen; nothing new is installed. It downloads about 1.6 MB
 (3.6 MB with the login screen). Nothing is removed, and there is no question about
 configuration files. In a virtual machine the upgrade took about
-[Upgrade-Dauer], not counting the download. Then log out and log in again.
+53 seconds, not counting the download of the Querencia packages; it included
+a Ubuntu kernel that had just come out (221 MB). If Ubuntu updates arrive at
+the same time, the download is larger accordingly. Then log out and log in again.
 
 From Alpha 3.3 it works the same way; what else happens
 (`ubuntu-drivers-common` is newly installed) is described in the
@@ -103,7 +105,7 @@ restart, choose “Querencia Desktop” at the gear icon (see
 [Alpha 1, installation](alpha-1.md#installation)). Fingerprint of the
 signing key: `63F6 C499 246E 3699 CA04 726D 342F 12D2 0CE7 1CBD`.
 On a fresh Ubuntu 26.04 server image APT installs
-[Pakete Neuinstallation] packages.
+392 packages.
 
 ## Known limitations
 
@@ -150,14 +152,21 @@ As in Alpha 3, in the project's issue tracker,
 - **Upgrade** in an isolated copy of the system: from Alpha 3.4 with
   Schnatter (167 checks passed), without Schnatter (154) and from Alpha 3.3
   with Schnatter (168): nothing removed, nothing held back, no questions.
-- **In a virtual machine:** [Weg B Lauf 1: Upgrade von Alpha 3.4,
-  Sichtproben Treiberseite und Anmeldebildschirm auf Italienisch].
-  [Weg B Lauf 2: Neuinstallation].
+- **In a virtual machine:** Alpha 3.4 with Schnatter and the login screen
+  from the published repository, then the upgrade to 3.5: 3 Querencia
+  packages upgraded, nothing new, nothing removed, no questions; check
+  script 110 passed (the remaining message is the log of the running
+  panel), login screen 4 of 4, session 28 of 28. Checked by eye: page
+  “Drivers” with “Software rendering: no 3D acceleration …” and
+  `virtio_gpu`; the login screen in Italian with a wrong and an expired
+  password, counter-check in German. New installation (392 packages with
+  `locales-all` and `ubuntu-drivers-common`, no Schnatter): check script
+  109 of 109, session 28 of 28.
 - Not tested: a real driver change with restart, real NVIDIA, AMD or Intel
   cards, computers with two graphics cards, Secure Boot, the driver page in
   Italian, Spanish and French with screenshots, texts from GTK and
-  Linux-PAM on the login screen in Italian, Spanish and French, real
-  hardware.
+  Linux-PAM on the login screen in Italian, Spanish and French, the login
+  screen in Spanish and French in the virtual machine, real hardware.
 
 ## Licences and origin
 

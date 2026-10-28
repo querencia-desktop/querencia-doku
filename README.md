@@ -40,7 +40,7 @@ German text is the reference.
 | Nachtrag 26.10.2026 | Release-Notes Alpha 3.1 und 3.2; Handbuch: Seite Schnatter, bekannte Einschränkungen auf Alpha 3.2 |
 | Nachtrag 27.10.2026 | Release-Notes Alpha 3.3; Handbuch: Infobereich im Panel, Sprache und Region, fünf Sprachen, Dateien 0.2.4, bekannte Einschränkungen auf Alpha 3.3 |
 | Nachtrag 27.10.2026, abends | Release-Notes Alpha 3.4; Handbuch: Seite Treiber, Dateien 0.3.0 (Rückgängig, Inhaltssuche, Reiter, Hier entpacken), Anmeldebildschirm und abgelaufenes Passwort, Sperrbildschirm und Tastenkürzel in fünf Sprachen, bekannte Einschränkungen auf Alpha 3.4 |
-| Nachtrag 27./28.10.2026, nachts | Release-Notes Alpha 3.5; Handbuch: Zeile „Diese Sitzung“ der Seite Treiber (drei Fälle), Anmeldebildschirm in fünf Sprachen, bekannte Einschränkungen auf Alpha 3.5 |
+| Nachtrag 28.10.2026 | Release-Notes Alpha 3.5; Handbuch: Zeile „Diese Sitzung“ der Seite Treiber (drei Fälle), Anmeldebildschirm in fünf Sprachen, bekannte Einschränkungen auf Alpha 3.5 |
 
 ## Bauen und Prüfen
 

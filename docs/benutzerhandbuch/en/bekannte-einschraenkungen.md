@@ -4,7 +4,7 @@
 
 State of Alpha 1 (20 October 2026); notification area and Schnatter as of
 Alpha 3.3, Querencia Dateien as of Alpha 3.4, languages, login screen and
-drivers as of Alpha 3.5 ([Datum]). The identifiers (QD-…) refer to the project's
+drivers as of Alpha 3.5 (28 October 2026). The identifiers (QD-…) refer to the project's
 list of open items; P1 is important, P2 medium.
 
 ## Installation and login

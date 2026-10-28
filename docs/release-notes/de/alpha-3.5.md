@@ -1,6 +1,6 @@
 # Querencia Desktop – Alpha 3.5
 
-**Stand:** [Datum] · **Status:** in der APT-Quelle seit [Datum], [Uhrzeit]
+**Stand:** 28.10.2026 · **Status:** in der APT-Quelle seit 28. Oktober 2026, 12:07
 
 Alpha 3.5 ist ein Pflegestand mit zwei Korrekturen. Der Anmeldebildschirm
 spricht jetzt auch Italienisch, Spanisch und Französisch. Die Seite
@@ -92,7 +92,9 @@ sudo apt full-upgrade
 Anmeldebildschirm 3; neu installiert wird nichts. Dafür lädt es rund 1,6 MB
 herunter (mit Anmeldebildschirm 3,6 MB). Entfernt wird nichts, und es gibt
 keine Rückfrage zu Konfigurationsdateien. In einer virtuellen Maschine
-dauerte das Upgrade rund [Upgrade-Dauer], ohne die Zeit zum Herunterladen.
+dauerte das Upgrade rund 53 Sekunden, ohne die Zeit zum Herunterladen der
+Querencia-Pakete; darin war ein gerade erschienener Ubuntu-Kernel (221 MB).
+Wer zugleich Updates von Ubuntu bekommt, lädt entsprechend mehr.
 Danach abmelden und neu anmelden.
 
 Von Alpha 3.3 geht es genauso; was dabei sonst geschieht
@@ -106,7 +108,7 @@ starten, am Zahnrad „Querencia Desktop“ wählen (siehe
 [Alpha 1, Installation](alpha-1.md#installation)). Fingerabdruck des
 Signierschlüssels: `63F6 C499 246E 3699 CA04 726D 342F 12D2 0CE7 1CBD`.
 Auf einem frischen Ubuntu-26.04-Server-Abbild installiert APT
-[Pakete Neuinstallation] Pakete.
+392 Pakete.
 
 ## Bekannte Grenzen
 
@@ -155,14 +157,22 @@ Wie Alpha 3, im Fehlertracker des Projekts,
   Schnatter (167 Prüfungen bestanden), ohne Schnatter (154) und von Alpha
   3.3 mit Schnatter (168): nichts entfernt, nichts zurückgehalten, keine
   Rückfragen.
-- **In einer virtuellen Maschine:** [Weg B Lauf 1: Upgrade von Alpha 3.4,
-  Sichtproben Treiberseite und Anmeldebildschirm auf Italienisch].
-  [Weg B Lauf 2: Neuinstallation].
+- **In einer virtuellen Maschine:** Alpha 3.4 mit Schnatter und
+  Anmeldebildschirm aus der veröffentlichten Quelle, dann das Upgrade auf
+  3.5: 3 Querencia-Pakete aktualisiert, nichts neu, nichts entfernt, keine
+  Rückfragen; Prüfskript 110 bestanden (die übrige Meldung ist das
+  Protokoll des laufenden Panels), Anmeldebildschirm 4 von 4, Sitzung 28
+  von 28. Sichtproben: Seite „Treiber“ mit „Software-Darstellung: keine
+  3D-Beschleunigung …“ und `virtio_gpu`; Anmeldebildschirm auf Italienisch
+  samt falschem und abgelaufenem Passwort, Gegenprobe auf Deutsch.
+  Neuinstallation (392 Pakete mit `locales-all` und `ubuntu-drivers-common`,
+  kein Schnatter): Prüfskript 109 von 109, Sitzung 28 von 28.
 - Nicht geprüft: ein echter Treiberwechsel mit Neustart, echte NVIDIA-,
   AMD- oder Intel-Karten, Rechner mit zwei Grafikkarten, Secure Boot, die
   Treiberseite in Italienisch, Spanisch und Französisch mit
   Bildschirmfotos, Texte von GTK und Linux-PAM im Anmeldebildschirm auf
-  Italienisch, Spanisch und Französisch, echte Hardware.
+  Italienisch, Spanisch und Französisch, der Anmeldebildschirm auf Spanisch
+  und Französisch in der virtuellen Maschine, echte Hardware.
 
 ## Lizenzen und Herkunft
 

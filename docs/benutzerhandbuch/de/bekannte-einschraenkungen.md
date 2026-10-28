@@ -4,7 +4,7 @@
 
 Stand Alpha 1 (20.10.2026); Infobereich und Schnatter Stand Alpha 3.3,
 Querencia Dateien Stand Alpha 3.4, Sprachen, Anmeldebildschirm und Treiber
-Stand Alpha 3.5 ([Datum]).
+Stand Alpha 3.5 (28.10.2026).
 Die Kennungen (QD-…) verweisen auf die Liste der offenen Punkte des
 Projekts; P1 ist wichtig, P2 mittel.
 
