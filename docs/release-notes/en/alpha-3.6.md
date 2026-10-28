@@ -1,6 +1,6 @@
 # Querencia Desktop – Alpha 3.6
 
-**As of:** 28 October 2026 · **Status:** in the APT repository since [date], [time]
+**As of:** 28 October 2026 · **Status:** in the APT repository since 28 October 2026, 21:46
 
 Alpha 3.6 is a maintenance release with two fixes. On a fresh install the
 panel, the desktop and Querencia Dateien show the Querencia icons instead

@@ -1,6 +1,6 @@
 # Querencia Desktop – Alpha 3.6
 
-**Stand:** 28.10.2026 · **Status:** in der APT-Quelle seit [Datum], [Uhrzeit]
+**Stand:** 28.10.2026 · **Status:** in der APT-Quelle seit 28. Oktober 2026, 21:46
 
 Alpha 3.6 ist ein Pflegestand mit zwei Korrekturen. Panel, Arbeitsfläche
 und Querencia Dateien zeigen in einer frischen Installation die
