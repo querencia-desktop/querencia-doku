@@ -6,7 +6,7 @@ Alpha 3.5 is a maintenance release with two fixes. The login screen now
 also speaks Italian, Spanish and French. The page “Drivers” in the system
 settings shows correctly whether the session draws on the graphics card or
 in software. There are 24 Debian packages for Ubuntu 26.04 (“resolute”)
-from the same signed APT repository; [Zahl neu] of them are newly built.
+from the same signed APT repository; 3 of them are newly built.
 
 > **Alpha.** Meant for test systems, not for daily use. No security or
 > data-loss guarantees. Try it in a virtual machine with a snapshot first.
@@ -43,7 +43,7 @@ described in the [notes for Alpha 3.4](alpha-3.4.md).
 
 ## Versions
 
-Package set of [Datum] (24 packages).
+Package set of 27 October 2026 (24 packages).
 
 | Package | Version | Content |
 |---|---|---|
@@ -72,9 +72,9 @@ Package set of [Datum] (24 packages).
 | querencia-hintergruende | 0.2-1 | 16 backgrounds |
 | labwc | 0.9.8-0querencia5 | Backport of the window manager |
 
-From Dateien to labwc the packages are [byte-gleich mit Alpha 3.4].
+From Dateien to labwc the packages are byte-identical to Alpha 3.4.
 
-Checksum of the package list (SHA256SUMS): `[SHA256SUMS]`.
+Checksum of the package list (SHA256SUMS): `e19e14215b5d86f8174b7ef06b68e9d8de7f528221304327dd81172c99d6f509`.
 
 ## Upgrading from Alpha 3.4
 
@@ -86,9 +86,9 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
-`sudo apt upgrade` works as well. APT upgrades [Upgrade-Pakete] packages,
-[Upgrade-Pakete mit Anmeldung] with the login screen. It downloads about
-[Download-Größe]. Nothing is removed, and there is no question about
+`sudo apt upgrade` works as well. APT upgrades 2 packages, 3 with
+the login screen; nothing new is installed. It downloads about 1.6 MB
+(3.6 MB with the login screen). Nothing is removed, and there is no question about
 configuration files. In a virtual machine the upgrade took about
 [Upgrade-Dauer], not counting the download. Then log out and log in again.
 
@@ -143,8 +143,13 @@ As in Alpha 3, in the project's issue tracker,
   German and English: all its own texts in the language, clock by the
   language, expired password with the notice, a valid password starts the
   session; 102 configuration cases passed.
-- [Packaging: statische Prüfung, Lintian, Probe-Installation, Upgrade-Probe,
-  Kontrollbau]
+- Static package check (304 passed), Lintian without errors, test
+  installation in an isolated copy of the system (96 checks passed, 103
+  with Italian as system language), a control build gave the same
+  packages.
+- **Upgrade** in an isolated copy of the system: from Alpha 3.4 with
+  Schnatter (167 checks passed), without Schnatter (154) and from Alpha 3.3
+  with Schnatter (168): nothing removed, nothing held back, no questions.
 - **In a virtual machine:** [Weg B Lauf 1: Upgrade von Alpha 3.4,
   Sichtproben Treiberseite und Anmeldebildschirm auf Italienisch].
   [Weg B Lauf 2: Neuinstallation].

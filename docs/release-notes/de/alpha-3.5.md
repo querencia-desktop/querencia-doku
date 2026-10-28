@@ -6,7 +6,7 @@ Alpha 3.5 ist ein Pflegestand mit zwei Korrekturen. Der Anmeldebildschirm
 spricht jetzt auch Italienisch, Spanisch und Französisch. Die Seite
 „Treiber“ in den Systemeinstellungen zeigt richtig, ob die Sitzung auf der
 Grafikkarte zeichnet oder in Software. Es sind 24 Debian-Pakete für Ubuntu
-26.04 („resolute“) aus derselben signierten APT-Quelle; [Zahl neu] davon
+26.04 („resolute“) aus derselben signierten APT-Quelle; 3 davon
 sind neu gebaut.
 
 > **Alpha.** Für Testsysteme gedacht, nicht für den Alltag. Keine
@@ -45,7 +45,7 @@ steht in den [Hinweisen zu Alpha 3.4](alpha-3.4.md).
 
 ## Versionen
 
-Paketsatz vom [Datum] (24 Pakete).
+Paketsatz vom 27.10.2026 (24 Pakete).
 
 | Paket | Fassung | Inhalt |
 |---|---|---|
@@ -74,9 +74,9 @@ Paketsatz vom [Datum] (24 Pakete).
 | querencia-hintergruende | 0.2-1 | 16 Hintergründe |
 | labwc | 0.9.8-0querencia5 | Backport des Fensterverwalters |
 
-Von Dateien bis labwc sind die Pakete [byte-gleich mit Alpha 3.4].
+Von Dateien bis labwc sind die Pakete byte-gleich mit Alpha 3.4.
 
-Prüfsumme der Paketliste (SHA256SUMS): `[SHA256SUMS]`.
+Prüfsumme der Paketliste (SHA256SUMS): `e19e14215b5d86f8174b7ef06b68e9d8de7f528221304327dd81172c99d6f509`.
 
 ## Aktualisieren von Alpha 3.4
 
@@ -88,9 +88,9 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
-`sudo apt upgrade` genügt ebenfalls. APT aktualisiert [Upgrade-Pakete]
-Pakete, mit dem Anmeldebildschirm [Upgrade-Pakete mit Anmeldung]. Dafür
-lädt es rund [Download-Größe] herunter. Entfernt wird nichts, und es gibt
+`sudo apt upgrade` genügt ebenfalls. APT aktualisiert 2 Pakete, mit dem
+Anmeldebildschirm 3; neu installiert wird nichts. Dafür lädt es rund 1,6 MB
+herunter (mit Anmeldebildschirm 3,6 MB). Entfernt wird nichts, und es gibt
 keine Rückfrage zu Konfigurationsdateien. In einer virtuellen Maschine
 dauerte das Upgrade rund [Upgrade-Dauer], ohne die Zeit zum Herunterladen.
 Danach abmelden und neu anmelden.
@@ -147,8 +147,14 @@ Wie Alpha 3, im Fehlertracker des Projekts,
   Spanisch, Französisch, Deutsch und Englisch: alle eigenen Texte in der
   Sprache, Uhr nach der Sprache, abgelaufenes Passwort mit der Meldung,
   gültiges Passwort startet die Sitzung; 102 Konfigurationsfälle bestanden.
-- [Packaging: statische Prüfung, Lintian, Probe-Installation, Upgrade-Probe,
-  Kontrollbau]
+- Statische Paketprüfung (304 bestanden), Lintian ohne Fehler,
+  Probe-Installation in einer abgeschotteten Kopie des Systems (96
+  Prüfungen bestanden, mit italienischer Systemsprache 103), ein
+  Kontrollbau ergab dieselben Pakete.
+- **Upgrade** in einer abgeschotteten Kopie des Systems: von Alpha 3.4 mit
+  Schnatter (167 Prüfungen bestanden), ohne Schnatter (154) und von Alpha
+  3.3 mit Schnatter (168): nichts entfernt, nichts zurückgehalten, keine
+  Rückfragen.
 - **In einer virtuellen Maschine:** [Weg B Lauf 1: Upgrade von Alpha 3.4,
   Sichtproben Treiberseite und Anmeldebildschirm auf Italienisch].
   [Weg B Lauf 2: Neuinstallation].
