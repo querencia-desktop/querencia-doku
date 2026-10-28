@@ -22,14 +22,14 @@ backup.
 - Icon theme (e.g. Querencia, GNOME-Human, MATE) with preview, controls theme
   (Querencia-Klassisch or the built-in GTK theme), “Prefer dark appearance”,
   mouse pointer (theme and size 24/32/48).
-- Takes effect at once in all GTK programs, the panel and the desktop.
-- **Dark appearance:** since Alpha 2 the Querencia-Klassisch theme has a dark
-  variant. The panel, the desktop and the Querencia programs follow it;
-  running programs and the panel change at once, switching it off restores
-  the light appearance. For now the window frames (labwc) and Querencia
-  Files stay light; the session dialog, confirmations and the password prompt
-  are dark only when the dark appearance is already on at login. Third-party
-  GTK 3 programs do not follow the setting.
+- Takes effect at once in all GTK programs, the panel and the desktop. The
+  dark appearance only changes programs that evaluate it; the Querencia
+  programs keep their theme.
+- Without a choice of your own, the Querencia session uses the icon theme
+  “Querencia”. Since Alpha 3.6 the panel, the desktop and Querencia Dateien
+  follow this default too; before, they showed GNOME-Human in that case.
+  Outside the Querencia session, and when the chosen theme is not
+  installed, they use GNOME-Human.
 
 **Background Image (Hintergrundbild)**
 - Gallery of the included backgrounds with preview; a click selects, Apply

@@ -4,7 +4,7 @@
 
 Stand Alpha 1 (20.10.2026); Infobereich und Schnatter Stand Alpha 3.3,
 Querencia Dateien Stand Alpha 3.4, Sprachen, Anmeldebildschirm und Treiber
-Stand Alpha 3.5 (28.10.2026).
+Stand Alpha 3.5, Symbolthema Stand Alpha 3.6 (28.10.2026).
 Die Kennungen (QD-…) verweisen auf die Liste der offenen Punkte des
 Projekts; P1 ist wichtig, P2 mittel.
 
@@ -22,6 +22,7 @@ Projekts; P1 ist wichtig, P2 mittel.
 
 | Punkt | Was das heißt |
 |---|---|
+| Symbolthema nur in der Querencia-Sitzung | Ohne eigene Wahl zeigen Panel, Arbeitsfläche und Querencia Dateien seit Alpha 3.6 die Querencia-Symbole, aber nur in der Querencia-Sitzung. Neben Ubuntu Desktop zeigt Querencia die Yaru-Symbole, weil Ubuntu das Symbolthema als eigenen Wert setzt. |
 | Fensterliste zeigt alle Arbeitsflächen (QD-013, P2) | Eine Einstellung „nur aktuelle Arbeitsfläche“ ist in Arbeit. |
 | Arbeitsflächenumschalter ohne Fenster-Miniaturen (QD-012, P2) | Die Zellen zeigen keine Fenster. |
 | Panel-Elemente nicht zwischen den Panels verschiebbar (QD-044) | Innerhalb eines Panels geht Verschieben. |

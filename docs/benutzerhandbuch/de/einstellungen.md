@@ -19,13 +19,13 @@ legen die Einstellungen eine Sicherung an.
   Steuerelemente-Thema (Querencia-Klassisch oder GTK-Standard),
   „Dunkle Darstellung bevorzugen“, Mauszeiger (Thema und Größe 24/32/48).
 - Wirkt sofort in allen GTK-Programmen, im Panel und auf der Arbeitsfläche.
-- **Dunkle Darstellung:** Seit Alpha 2 hat das Thema Querencia-Klassisch
-  eine dunkle Fassung. Panel, Arbeitsfläche und die Querencia-Programme
-  folgen ihr; laufende Programme und das Panel wechseln sofort, Ausschalten
-  stellt die helle Darstellung wieder her. Hell bleiben vorerst die
-  Fensterrahmen (labwc) und Querencia Files; Sitzungsdialog, Rückfragen und
-  Passwortabfrage sind nur dunkel, wenn die dunkle Darstellung schon beim
-  Anmelden gilt. Fremde GTK-3-Programme folgen der Einstellung nicht.
+  Die dunkle Darstellung färben nur Programme um, die sie auswerten; die
+  Querencia-Programme behalten ihr Thema.
+- Ohne eigene Wahl gilt in der Querencia-Sitzung das Symbolthema
+  „Querencia“. Seit Alpha 3.6 folgen auch Panel, Arbeitsfläche und
+  Querencia Dateien dieser Vorgabe; vorher zeigten sie dann GNOME-Human.
+  Außerhalb der Querencia-Sitzung und wenn das gewählte Thema nicht
+  installiert ist, nehmen sie GNOME-Human.
 
 **Hintergrundbild**
 - Galerie der mitgelieferten Hintergründe mit Vorschau; ein Klick wählt,

@@ -31,6 +31,14 @@ German text is the reference.
 | [docs/release-notes/de/alpha-2.md](docs/release-notes/de/alpha-2.md) | Release-Notes Alpha 2, Englisch unter [en/](docs/release-notes/en/alpha-2.md) |
 | [docs/release-notes/de/alpha-1.md](docs/release-notes/de/alpha-1.md) | Release-Notes Alpha 1, Englisch unter [en/](docs/release-notes/en/alpha-1.md) |
 | [docs/release-notes/de/alpha-1-web.md](docs/release-notes/de/alpha-1-web.md) | Kurztext Alpha 1 für die Webseite, Englisch unter [en/](docs/release-notes/en/alpha-1-web.md) |
+| [docs/release-notes/de/alpha-2.md](docs/release-notes/de/alpha-2.md) | Release-Notes Alpha 2, Englisch unter [en/](docs/release-notes/en/alpha-2.md) |
+| [docs/release-notes/de/alpha-3.md](docs/release-notes/de/alpha-3.md) | Release-Notes Alpha 3 (Querencia Dateien statt Files), Englisch unter [en/](docs/release-notes/en/alpha-3.md) |
+| [docs/release-notes/de/alpha-3.1.md](docs/release-notes/de/alpha-3.1.md) | Release-Notes Alpha 3.1 (Dateien 0.2.1, Webhülle 0.2.0), Englisch unter [en/](docs/release-notes/en/alpha-3.1.md) |
+| [docs/release-notes/de/alpha-3.2.md](docs/release-notes/de/alpha-3.2.md) | Release-Notes Alpha 3.2 (Dateien 0.2.2, Schnatter 0.3.0), Englisch unter [en/](docs/release-notes/en/alpha-3.2.md) |
+| [docs/release-notes/de/alpha-3.3.md](docs/release-notes/de/alpha-3.3.md) | Release-Notes Alpha 3.3 (fünf Sprachen, Infobereich, Dateien 0.2.4), Englisch unter [en/](docs/release-notes/en/alpha-3.3.md) |
+| [docs/release-notes/de/alpha-3.4.md](docs/release-notes/de/alpha-3.4.md) | Release-Notes Alpha 3.4 (Seite Treiber, Dateien 0.3.0, Anmeldung 0.1.4), Englisch unter [en/](docs/release-notes/en/alpha-3.4.md) |
+| [docs/release-notes/de/alpha-3.5.md](docs/release-notes/de/alpha-3.5.md) | Release-Notes Alpha 3.5 (Anmeldung 0.1.5 in fünf Sprachen, Einstellungen 0.2.1 Seite Treiber), Englisch unter [en/](docs/release-notes/en/alpha-3.5.md) |
+| [docs/release-notes/de/alpha-3.6.md](docs/release-notes/de/alpha-3.6.md) | Release-Notes Alpha 3.6 (Querencia-Symbole in frischen Installationen, Software 0.1.8 ohne doppelte Programme), Englisch unter [en/](docs/release-notes/en/alpha-3.6.md) |
 
 ## Stand
 
@@ -44,6 +52,7 @@ German text is the reference.
 | Nachtrag 27.10.2026 | Release-Notes Alpha 3.3; Handbuch: Infobereich im Panel, Sprache und Region, fünf Sprachen, Dateien 0.2.4, bekannte Einschränkungen auf Alpha 3.3 |
 | Nachtrag 27.10.2026, abends | Release-Notes Alpha 3.4; Handbuch: Seite Treiber, Dateien 0.3.0 (Rückgängig, Inhaltssuche, Reiter, Hier entpacken), Anmeldebildschirm und abgelaufenes Passwort, Sperrbildschirm und Tastenkürzel in fünf Sprachen, bekannte Einschränkungen auf Alpha 3.4 |
 | Nachtrag 28.10.2026 | Release-Notes Alpha 3.5; Handbuch: Zeile „Diese Sitzung“ der Seite Treiber (drei Fälle), Anmeldebildschirm in fünf Sprachen, bekannte Einschränkungen auf Alpha 3.5 |
+| Nachtrag 28.10.2026, nachmittags | Release-Notes Alpha 3.6; Handbuch: Symbolvorgabe unter Erscheinungsbild, Software ohne doppelte Programme, bekannte Einschränkungen (Symbolthema) auf Alpha 3.6 |
 
 ## Bauen und Prüfen
 

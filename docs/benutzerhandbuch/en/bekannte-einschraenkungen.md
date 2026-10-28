@@ -4,7 +4,7 @@
 
 State of Alpha 1 (20 October 2026); notification area and Schnatter as of
 Alpha 3.3, Querencia Dateien as of Alpha 3.4, languages, login screen and
-drivers as of Alpha 3.5 (28 October 2026). The identifiers (QD-…) refer to the project's
+drivers as of Alpha 3.5, icon theme as of Alpha 3.6 (28 October 2026). The identifiers (QD-…) refer to the project's
 list of open items; P1 is important, P2 medium.
 
 ## Installation and login
@@ -21,6 +21,7 @@ list of open items; P1 is important, P2 medium.
 
 | Item | What it means |
 |---|---|
+| Icon theme only in the Querencia session | Without a choice of your own, the panel, the desktop and Querencia Dateien show the Querencia icons since Alpha 3.6, but only in the Querencia session. Next to Ubuntu Desktop, Querencia shows the Yaru icons, because Ubuntu sets the icon theme as a user value. |
 | Window list shows all workspaces (QD-013, P2) | A setting “current workspace only” is in progress. |
 | Workspace switcher without window thumbnails (QD-012, P2) | The cells show no windows. |
 | Panel items cannot be moved between panels (QD-044) | Moving within one panel works. |

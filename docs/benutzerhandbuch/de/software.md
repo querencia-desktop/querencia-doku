@@ -12,7 +12,9 @@ PackageKit, also aus den Paketquellen des Systems (Ubuntu-Archiv).
 ## Was Software kann
 
 - **Suchen** mit Sofortsuche, **Kategorien**, **Installiert**,
-  **Aktualisierungen** und eine **Expertenliste** aller Pakete.
+  **Aktualisierungen** und eine **Expertenliste** aller Pakete. Programme,
+  die Ubuntu in zwei Paketquellen unter leicht verschiedener Kennung führt
+  (etwa Remmina), stehen seit Alpha 3.6 nur einmal in der Liste.
 - **Detailseite** mit Beschreibung, Version, Größe, Lizenz und Homepage.
 - **Installieren, Entfernen, Aktualisieren:** Vor dem Entfernen zeigt Software,
   welche Pakete mitgehen, und fragt nach. Der Fortschritt läuft im Fenster mit
