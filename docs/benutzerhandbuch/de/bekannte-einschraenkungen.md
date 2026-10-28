@@ -3,8 +3,8 @@
 [Zurück zum Inhalt](index.md)
 
 Stand Alpha 1 (20.10.2026); Infobereich und Schnatter Stand Alpha 3.3,
-Sprachen, Anmeldebildschirm, Treiber und Querencia Dateien Stand Alpha 3.4
-(27.10.2026).
+Querencia Dateien Stand Alpha 3.4, Sprachen, Anmeldebildschirm und Treiber
+Stand Alpha 3.5 (28.10.2026).
 Die Kennungen (QD-…) verweisen auf die Liste der offenen Punkte des
 Projekts; P1 ist wichtig, P2 mittel.
 
@@ -12,7 +12,7 @@ Projekts; P1 ist wichtig, P2 mittel.
 
 | Punkt | Was das heißt |
 |---|---|
-| Eigener Anmeldebildschirm nur Deutsch und Englisch | Der wahlweise Anmeldebildschirm (`querencia-anmeldung`) folgt der Systemsprache bei Deutsch und Englisch; bei Italienisch, Spanisch oder Französisch zeigt er Englisch. Ein abgelaufenes Passwort meldet er seit Alpha 3.4 verständlich, ändern lässt es sich aber nur an der Textkonsole (siehe [Einstieg](einstieg.md#anmelden)). Ohne ihn wird über GDM („Querencia Desktop“ am Zahnrad wählen) oder an der Textkonsole mit `querencia-session` angemeldet. |
+| Eigener Anmeldebildschirm: Passwort und GTK-Texte | Der wahlweise Anmeldebildschirm (`querencia-anmeldung`) folgt seit Alpha 3.5 der Systemsprache in allen fünf Sprachen; einige Texte von GTK selbst (etwa der Tooltip am Auge) bleiben ohne `language-pack-gnome-<xx>-base` englisch. Ein abgelaufenes Passwort meldet er seit Alpha 3.4 verständlich, ändern lässt es sich aber nur an der Textkonsole (siehe [Einstieg](einstieg.md#anmelden)). Ohne ihn wird über GDM („Querencia Desktop“ am Zahnrad wählen) oder an der Textkonsole mit `querencia-session` angemeldet. |
 | Neben einem Ubuntu-Desktop noch nicht fertig geprüft (QD-074, P1) | Die Probe auf einem Ubuntu-Desktop-System läuft. |
 | Aussehen auf dem GDM-Weg (QD-068, P2) | Schrift-, Symbol- und Zeigervorgaben von Querencia fehlen dort noch; die Sitzung sieht dann anders aus. In Arbeit. |
 | Software offline auf Server-Systemen (QD-067, P2) | Siehe [Software](software.md#wenn-software-keine-netzwerkverbindung-meldet). |
@@ -65,6 +65,5 @@ Projekts; P1 ist wichtig, P2 mittel.
 | Punkt | Was das heißt |
 |---|---|
 | Treiberwechsel ungeprüft | Die Seite „Treiber“ ist nur mit nachgebildeten Karten geprüft. Ein echter Wechsel auf den NVIDIA-Treiber, Rechner mit zwei Grafikkarten und Secure Boot sind ungeprüft. Ein Wechsel braucht `ubuntu-drivers-common`, Netz und Passwort und wirkt erst nach einem Neustart. Vorher einen Snapshot anlegen. |
-| Treiber: „Diese Sitzung“ in VMs falsch | In einer virtuellen Maschine mit Software-Rendering (llvmpipe) zeigt die Seite „Treiber“ bei „Diese Sitzung:“ „OpenGL auf der Grafikkarte“; der Renderer darüber nennt richtig llvmpipe. Wird in einer späteren Fassung berichtigt. |
 | Falsche Auflösung nach dem Start einer VM (QD-027, P2) | Die durchgereichte Grafik meldet manchmal keine Bildschirmdaten; den Bildschirm kurz ab- und wieder anstecken hilft. |
 | Ton in VMs | Ohne Soundkarte zeigt der Lautstärkeregler nur „Dummy Output“. |

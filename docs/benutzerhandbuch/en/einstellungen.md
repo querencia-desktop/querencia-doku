@@ -97,8 +97,20 @@ backup.
 **Drivers** (since Alpha 3.4)
 - Also directly through System → Administration → “Drivers”.
 - **Graphics:** graphics card, kernel driver, OpenGL renderer and “This
-  session:”, that is whether OpenGL runs on the graphics card or as software
-  OpenGL (llvmpipe).
+  session:”. Since Alpha 3.5 (Einstellungen 0.2.1) this line follows the
+  measured renderer and the loaded kernel module and shows one of three
+  cases:
+  - “OpenGL on the graphics card with the free driver”,
+  - “OpenGL on the graphics card with the proprietary NVIDIA driver”,
+  - “Software rendering” with the reason: the session switched over at
+    login because of a graphics problem with this card (or because it is
+    switched on in `~/.config/querencia/grafik.ini`), or there is no 3D
+    acceleration, for example in a virtual machine without 3D graphics.
+
+  “OpenGL renderer:” names what the programs of the session get, such as
+  llvmpipe. If the session switched over, “Graphics card OpenGL:” names the
+  renderer of the graphics card. With virtual graphics the kernel driver
+  reads `virtio_gpu`.
 - **Available Drivers:** the drivers Ubuntu knows for the card, with “free”
   or “proprietary”, “recommended by Ubuntu” and the state (“in use”,
   “installed, in use after a restart”, “available”, “not installed”).
