@@ -9,9 +9,9 @@ werden.
 Querencia Desktop, a classic GNOME-2-style desktop for Wayland. Alpha; the
 German text is the reference.
 
-> **Alpha.** Texte zu Querencia Desktop Alpha 3.5 (Stand 28.10.2026). Was neu
+> **Alpha.** Texte zu Querencia Desktop Alpha 3.6 (Stand 28.10.2026). Was neu
 > ist und welche Grenzen gelten, steht in den
-> [Release-Notes Alpha 3.5](docs/release-notes/de/alpha-3.5.md); Installation und
+> [Release-Notes Alpha 3.6](docs/release-notes/de/alpha-3.6.md); Installation und
 > Projektseite: <https://querencialinux.org>.
 
 ## Inhalt
@@ -21,6 +21,7 @@ German text is the reference.
 | [docs/benutzerhandbuch/de/](docs/benutzerhandbuch/de/index.md) | Benutzerhandbuch Deutsch: Einstieg, Tastenkürzel, je Programm eine Seite, bekannte Einschränkungen, Fragen und Antworten |
 | [docs/benutzerhandbuch/en/](docs/benutzerhandbuch/en/index.md) | dieselbe Struktur auf Englisch (Übersetzung) |
 | `docs/benutzerhandbuch/bilder/` | Bildschirmfotos aus abgeschotteten Prüfläufen, Herkunft in `herkunft.txt` |
+| [docs/release-notes/de/alpha-3.6.md](docs/release-notes/de/alpha-3.6.md) | Release-Notes Alpha 3.6 (Querencia-Symbole in frischen Installationen, Software 0.1.8 ohne doppelte Programme), Englisch unter [en/](docs/release-notes/en/alpha-3.6.md) |
 | [docs/release-notes/de/alpha-3.5.md](docs/release-notes/de/alpha-3.5.md) | Release-Notes Alpha 3.5 (Anmeldung 0.1.5 in fünf Sprachen, Einstellungen 0.2.1 Seite Treiber), Englisch unter [en/](docs/release-notes/en/alpha-3.5.md) |
 | [docs/release-notes/de/alpha-3.4.md](docs/release-notes/de/alpha-3.4.md) | Release-Notes Alpha 3.4 (Seite Treiber, Dateien 0.3.0, Anmeldung 0.1.4), Englisch unter [en/](docs/release-notes/en/alpha-3.4.md) |
 | [docs/release-notes/de/alpha-3.3.md](docs/release-notes/de/alpha-3.3.md) | Release-Notes Alpha 3.3 (fünf Sprachen, Infobereich, Dateien 0.2.4), Englisch unter [en/](docs/release-notes/en/alpha-3.3.md) |
@@ -31,14 +32,6 @@ German text is the reference.
 | [docs/release-notes/de/alpha-2.md](docs/release-notes/de/alpha-2.md) | Release-Notes Alpha 2, Englisch unter [en/](docs/release-notes/en/alpha-2.md) |
 | [docs/release-notes/de/alpha-1.md](docs/release-notes/de/alpha-1.md) | Release-Notes Alpha 1, Englisch unter [en/](docs/release-notes/en/alpha-1.md) |
 | [docs/release-notes/de/alpha-1-web.md](docs/release-notes/de/alpha-1-web.md) | Kurztext Alpha 1 für die Webseite, Englisch unter [en/](docs/release-notes/en/alpha-1-web.md) |
-| [docs/release-notes/de/alpha-2.md](docs/release-notes/de/alpha-2.md) | Release-Notes Alpha 2, Englisch unter [en/](docs/release-notes/en/alpha-2.md) |
-| [docs/release-notes/de/alpha-3.md](docs/release-notes/de/alpha-3.md) | Release-Notes Alpha 3 (Querencia Dateien statt Files), Englisch unter [en/](docs/release-notes/en/alpha-3.md) |
-| [docs/release-notes/de/alpha-3.1.md](docs/release-notes/de/alpha-3.1.md) | Release-Notes Alpha 3.1 (Dateien 0.2.1, Webhülle 0.2.0), Englisch unter [en/](docs/release-notes/en/alpha-3.1.md) |
-| [docs/release-notes/de/alpha-3.2.md](docs/release-notes/de/alpha-3.2.md) | Release-Notes Alpha 3.2 (Dateien 0.2.2, Schnatter 0.3.0), Englisch unter [en/](docs/release-notes/en/alpha-3.2.md) |
-| [docs/release-notes/de/alpha-3.3.md](docs/release-notes/de/alpha-3.3.md) | Release-Notes Alpha 3.3 (fünf Sprachen, Infobereich, Dateien 0.2.4), Englisch unter [en/](docs/release-notes/en/alpha-3.3.md) |
-| [docs/release-notes/de/alpha-3.4.md](docs/release-notes/de/alpha-3.4.md) | Release-Notes Alpha 3.4 (Seite Treiber, Dateien 0.3.0, Anmeldung 0.1.4), Englisch unter [en/](docs/release-notes/en/alpha-3.4.md) |
-| [docs/release-notes/de/alpha-3.5.md](docs/release-notes/de/alpha-3.5.md) | Release-Notes Alpha 3.5 (Anmeldung 0.1.5 in fünf Sprachen, Einstellungen 0.2.1 Seite Treiber), Englisch unter [en/](docs/release-notes/en/alpha-3.5.md) |
-| [docs/release-notes/de/alpha-3.6.md](docs/release-notes/de/alpha-3.6.md) | Release-Notes Alpha 3.6 (Querencia-Symbole in frischen Installationen, Software 0.1.8 ohne doppelte Programme), Englisch unter [en/](docs/release-notes/en/alpha-3.6.md) |
 
 ## Stand
 
