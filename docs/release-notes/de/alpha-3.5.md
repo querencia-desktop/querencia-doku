@@ -91,10 +91,9 @@ sudo apt full-upgrade
 `sudo apt upgrade` genügt ebenfalls. APT aktualisiert 2 Pakete, mit dem
 Anmeldebildschirm 3; neu installiert wird nichts. Dafür lädt es rund 1,6 MB
 herunter (mit Anmeldebildschirm 3,6 MB). Entfernt wird nichts, und es gibt
-keine Rückfrage zu Konfigurationsdateien. In einer virtuellen Maschine
-dauerte das Upgrade rund 53 Sekunden, ohne die Zeit zum Herunterladen der
-Querencia-Pakete; darin war ein gerade erschienener Ubuntu-Kernel (221 MB).
-Wer zugleich Updates von Ubuntu bekommt, lädt entsprechend mehr.
+keine Rückfrage zu Konfigurationsdateien. Wer zugleich Updates von Ubuntu bekommt (in der Prüfung ein neuer Kernel),
+lädt entsprechend mehr und wartet länger; die Zeit für Querencia allein ist
+nicht getrennt gemessen.
 Danach abmelden und neu anmelden.
 
 Von Alpha 3.3 geht es genauso; was dabei sonst geschieht

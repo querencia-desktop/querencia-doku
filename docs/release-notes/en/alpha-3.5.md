@@ -89,10 +89,9 @@ sudo apt full-upgrade
 `sudo apt upgrade` works as well. APT upgrades 2 packages, 3 with
 the login screen; nothing new is installed. It downloads about 1.6 MB
 (3.6 MB with the login screen). Nothing is removed, and there is no question about
-configuration files. In a virtual machine the upgrade took about
-53 seconds, not counting the download of the Querencia packages; it included
-a Ubuntu kernel that had just come out (221 MB). If Ubuntu updates arrive at
-the same time, the download is larger accordingly. Then log out and log in again.
+configuration files. If Ubuntu updates arrive at the same time (a new kernel during the test), the
+download is larger and takes longer; the time for Querencia alone was not
+measured separately. Then log out and log in again.
 
 From Alpha 3.3 it works the same way; what else happens
 (`ubuntu-drivers-common` is newly installed) is described in the
